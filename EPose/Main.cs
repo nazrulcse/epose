@@ -16,5 +16,10 @@ namespace EPose
         {
             InitializeComponent();
         }
+
+        private void poweroff_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
