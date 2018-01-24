@@ -26,5 +26,16 @@ namespace EPose
         {
 
         }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            String searchValue = this.textBoxSearch.Text;
+            string selected = this.comboBoxCategory.GetItemText(this.comboBoxCategory.SelectedItem);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

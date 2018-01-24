@@ -36,5 +36,15 @@ namespace EPose
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            String searchValue = this.textBoxSearch.Text;
+        }
     }
 }

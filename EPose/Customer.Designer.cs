@@ -36,16 +36,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -62,7 +53,7 @@
             this.Balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pain_Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Due_Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxCategory = new System.Windows.Forms.ComboBox();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.poweroff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -70,7 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.tabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -157,129 +147,35 @@
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
-            // panel2
+            // textBoxSearch
             // 
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(0, 57);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(953, 55);
-            this.panel2.TabIndex = 8;
-            // 
-            // button7
-            // 
-            this.button7.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button7.Location = new System.Drawing.Point(691, 7);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(99, 37);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button6.Location = new System.Drawing.Point(586, 7);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(99, 37);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button5.Location = new System.Drawing.Point(429, 7);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(151, 37);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Purchase List";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button4.Location = new System.Drawing.Point(324, 7);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(99, 37);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Refund";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button3.Location = new System.Drawing.Point(219, 7);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(99, 37);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Payment";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button2.Location = new System.Drawing.Point(114, 7);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(99, 37);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Invoice";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button1.Location = new System.Drawing.Point(9, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 37);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Discount";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button8.Location = new System.Drawing.Point(819, 7);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(99, 37);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBox1.Location = new System.Drawing.Point(30, 164);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(278, 37);
-            this.textBox1.TabIndex = 11;
-            this.textBox1.Text = "serach by Id";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSearch.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.textBoxSearch.Location = new System.Drawing.Point(4, 164);
+            this.textBoxSearch.Multiline = true;
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(278, 37);
+            this.textBoxSearch.TabIndex = 11;
+            this.textBoxSearch.Text = "serach by Id";
+            this.textBoxSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(315, 164);
+            this.pictureBox7.Location = new System.Drawing.Point(289, 164);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(59, 37);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 13;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(37, 130);
+            this.label2.Location = new System.Drawing.Point(1, 130);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 17);
             this.label2.TabIndex = 14;
@@ -336,7 +232,7 @@
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(954, 0);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "NO Due Customer";
+            this.tabPage4.Text = "No Due Customer";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // dataGridView
@@ -404,35 +300,35 @@
             this.Due_Amount.Name = "Due_Amount";
             this.Due_Amount.Width = 140;
             // 
-            // comboBox1
+            // comboBoxCategory
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.AliceBlue;
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxCategory.BackColor = System.Drawing.Color.AliceBlue;
+            this.comboBoxCategory.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.comboBoxCategory.FormattingEnabled = true;
+            this.comboBoxCategory.Items.AddRange(new object[] {
             "Apon"});
-            this.comboBox1.Location = new System.Drawing.Point(510, 177);
-            this.comboBox1.MinimumSize = new System.Drawing.Size(20, 0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(383, 24);
-            this.comboBox1.TabIndex = 16;
-            this.comboBox1.Text = "All Category";
+            this.comboBoxCategory.Location = new System.Drawing.Point(511, 164);
+            this.comboBoxCategory.MinimumSize = new System.Drawing.Size(20, 0);
+            this.comboBoxCategory.Name = "comboBoxCategory";
+            this.comboBoxCategory.Size = new System.Drawing.Size(383, 24);
+            this.comboBoxCategory.TabIndex = 16;
+            this.comboBoxCategory.Text = "All Category";
+            this.comboBoxCategory.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(967, 530);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxCategory);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.dataGridView);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.ForeColor = System.Drawing.SystemColors.Highlight;
-            
+            this.Name = "Customer";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Customer_Load);
             this.panel4.ResumeLayout(false);
@@ -442,7 +338,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.tabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
@@ -460,16 +355,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabControl tabControl1;
@@ -486,6 +372,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Balance;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pain_Amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn Due_Amount;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxCategory;
     }
 }

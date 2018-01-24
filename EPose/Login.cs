@@ -35,11 +35,21 @@ namespace EPose
             Main main = new Main();
             main.Show();
             this.Hide();
+
+            String userid = this.userid.Text;
+            String password = this.password.Text;
+            String branch = this.branch.Text;
+
+            string selected = this.company.GetItemText(this.company.SelectedItem);
+            
+
         }
 
         private void cancle_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+          //  Application.Exit();
+            supplier supplier = new supplier();
+            supplier.Show();
         }
 
         private void panel2_MouseMove(object sender, MouseEventArgs e)
@@ -65,6 +75,11 @@ namespace EPose
         private void poweroff_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void userid_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
