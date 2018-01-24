@@ -20,28 +20,6 @@ namespace EPose
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Main main = new Main();
-            main.Show();
-            this.Hide();
-        }
-
-        private void cancle_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void panel2_MouseMove(object sender, MouseEventArgs e)
         {
             if (mouseDown)
@@ -63,6 +41,18 @@ namespace EPose
         }
 
         private void poweroff_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            Main main = new Main();
+            main.Show();
+            this.Hide();
+        }
+
+        private void cancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
