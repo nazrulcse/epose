@@ -40,7 +40,7 @@ namespace EPose
             String password = this.password.Text;
             String branch = this.branch.Text;
 
-            string selected = this.company.GetItemText(this.company.SelectedItem);
+            //string selected = this.company.GetItemText(this.company.SelectedItem);
             
 
         }
@@ -48,8 +48,8 @@ namespace EPose
         private void cancle_Click(object sender, EventArgs e)
         {
           //  Application.Exit();
-            supplier supplier = new supplier();
-            supplier.Show();
+           //supplier supplier = new supplier();
+            //supplier.Show();
         }
 
         private void panel2_MouseMove(object sender, MouseEventArgs e)
@@ -77,9 +77,16 @@ namespace EPose
             Application.Exit();
         }
 
-        private void userid_TextChanged(object sender, EventArgs e)
+        private void btn_login_Click(object sender, EventArgs e)
         {
+            Main main = new Main();
+            main.Show();
+            this.Hide();
+        }
 
+        private void cancel_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

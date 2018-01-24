@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace EPose
 {
-    public partial class Main : Form
+    public partial class product_category : Form
     {
-        public Main()
+        public product_category()
         {
             InitializeComponent();
-        }
-
-        private void poweroff_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void poweroff_Click_1(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
