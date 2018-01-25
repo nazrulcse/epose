@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.poweroff = new System.Windows.Forms.PictureBox();
             this.btnStocksReport = new System.Windows.Forms.Button();
             this.btnDailySales = new System.Windows.Forms.Button();
             this.btnPOS = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnDatabaseConfig = new System.Windows.Forms.Button();
             this.btnStaff = new System.Windows.Forms.Button();
-            this.poweroff = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.poweroff)).BeginInit();
@@ -55,6 +55,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(967, 40);
             this.panel2.TabIndex = 5;
+            // 
+            // poweroff
+            // 
+            this.poweroff.Dock = System.Windows.Forms.DockStyle.Right;
+            this.poweroff.Image = ((System.Drawing.Image)(resources.GetObject("poweroff.Image")));
+            this.poweroff.Location = new System.Drawing.Point(914, 0);
+            this.poweroff.Margin = new System.Windows.Forms.Padding(3, 3, 30, 3);
+            this.poweroff.Name = "poweroff";
+            this.poweroff.Size = new System.Drawing.Size(53, 40);
+            this.poweroff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.poweroff.TabIndex = 6;
+            this.poweroff.TabStop = false;
+            this.poweroff.Click += new System.EventHandler(this.poweroff_Click_1);
             // 
             // btnStocksReport
             // 
@@ -199,19 +212,7 @@
             this.btnStaff.Size = new System.Drawing.Size(83, 78);
             this.btnStaff.TabIndex = 18;
             this.btnStaff.UseVisualStyleBackColor = false;
-            // 
-            // poweroff
-            // 
-            this.poweroff.Dock = System.Windows.Forms.DockStyle.Right;
-            this.poweroff.Image = ((System.Drawing.Image)(resources.GetObject("poweroff.Image")));
-            this.poweroff.Location = new System.Drawing.Point(914, 0);
-            this.poweroff.Margin = new System.Windows.Forms.Padding(3, 3, 30, 3);
-            this.poweroff.Name = "poweroff";
-            this.poweroff.Size = new System.Drawing.Size(53, 40);
-            this.poweroff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.poweroff.TabIndex = 6;
-            this.poweroff.TabStop = false;
-            this.poweroff.Click += new System.EventHandler(this.poweroff_Click_1);
+            this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
             // 
             // pictureBox7
             // 

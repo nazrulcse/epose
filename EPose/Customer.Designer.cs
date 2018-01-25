@@ -45,7 +45,6 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sub_Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Customer_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,7 +77,7 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(967, 50);
+            this.panel4.Size = new System.Drawing.Size(1019, 50);
             this.panel4.TabIndex = 5;
             // 
             // poweroff
@@ -151,10 +150,10 @@
             // 
             this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSearch.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBoxSearch.Location = new System.Drawing.Point(4, 164);
-            this.textBoxSearch.Multiline = true;
+            this.textBoxSearch.Location = new System.Drawing.Point(16, 148);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(278, 37);
+            this.textBoxSearch.Size = new System.Drawing.Size(369, 30);
             this.textBoxSearch.TabIndex = 11;
             this.textBoxSearch.Text = "serach by Id";
             this.textBoxSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -162,10 +161,10 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(289, 164);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox7.Location = new System.Drawing.Point(394, 148);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(59, 37);
+            this.pictureBox7.Size = new System.Drawing.Size(45, 32);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 13;
             this.pictureBox7.TabStop = false;
@@ -175,7 +174,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(1, 130);
+            this.label2.Location = new System.Drawing.Point(16, 101);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 17);
             this.label2.TabIndex = 14;
@@ -189,18 +189,20 @@
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ItemSize = new System.Drawing.Size(122, 40);
-            this.tabControl1.Location = new System.Drawing.Point(0, 221);
+            this.tabControl1.Location = new System.Drawing.Point(0, 222);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(962, 42);
+            this.tabControl1.Size = new System.Drawing.Size(677, 42);
             this.tabControl1.TabIndex = 15;
             // 
             // tabPage1
             // 
             this.tabPage1.Location = new System.Drawing.Point(4, 44);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(954, 0);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Size = new System.Drawing.Size(669, 0);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Customer List";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -208,9 +210,10 @@
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 44);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(954, 0);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Size = new System.Drawing.Size(669, 0);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "BlackListed Customer";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -218,9 +221,10 @@
             // tabPage3
             // 
             this.tabPage3.Location = new System.Drawing.Point(4, 44);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(954, 0);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage3.Size = new System.Drawing.Size(669, 0);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Discountinued Customer";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -228,9 +232,10 @@
             // tabPage4
             // 
             this.tabPage4.Location = new System.Drawing.Point(4, 44);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(954, 0);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage4.Size = new System.Drawing.Size(669, 0);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "No Due Customer";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -240,7 +245,6 @@
             this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Name,
             this.Category,
             this.Sub_Category,
             this.Customer_Name,
@@ -248,19 +252,13 @@
             this.Balance,
             this.Pain_Amount,
             this.Due_Amount});
-            this.dataGridView.Location = new System.Drawing.Point(4, 263);
+            this.dataGridView.Location = new System.Drawing.Point(3, 268);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowTemplate.Height = 24;
-            this.dataGridView.Size = new System.Drawing.Size(954, 260);
+            this.dataGridView.Size = new System.Drawing.Size(1016, 303);
             this.dataGridView.TabIndex = 9;
             this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
-            // 
-            // Name
-            // 
-            this.Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Name.HeaderText = "ID";
-            this.Name.Name = "Name";
-            this.Name.Width = 120;
             // 
             // Category
             // 
@@ -307,10 +305,11 @@
             this.comboBoxCategory.FormattingEnabled = true;
             this.comboBoxCategory.Items.AddRange(new object[] {
             "Apon"});
-            this.comboBoxCategory.Location = new System.Drawing.Point(511, 164);
-            this.comboBoxCategory.MinimumSize = new System.Drawing.Size(20, 0);
+            this.comboBoxCategory.Location = new System.Drawing.Point(492, 154);
+            this.comboBoxCategory.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxCategory.MinimumSize = new System.Drawing.Size(25, 0);
             this.comboBoxCategory.Name = "comboBoxCategory";
-            this.comboBoxCategory.Size = new System.Drawing.Size(383, 24);
+            this.comboBoxCategory.Size = new System.Drawing.Size(509, 24);
             this.comboBoxCategory.TabIndex = 16;
             this.comboBoxCategory.Text = "All Category";
             this.comboBoxCategory.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -319,7 +318,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(967, 530);
+            this.ClientSize = new System.Drawing.Size(1019, 565);
             this.Controls.Add(this.comboBoxCategory);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label2);
@@ -328,6 +327,7 @@
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.panel4);
             this.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Customer";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Customer_Load);
@@ -355,7 +355,9 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
+
         private System.Windows.Forms.TextBox textBoxSearch;
+
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabControl tabControl1;
@@ -364,7 +366,6 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sub_Category;
         private System.Windows.Forms.DataGridViewTextBoxColumn Customer_Name;

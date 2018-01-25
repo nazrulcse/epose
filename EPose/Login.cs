@@ -13,7 +13,7 @@ namespace EPose
     public partial class Login : Form
     {
         private bool mouseDown;
-        private Point lastLocation;
+        public Point mouseLocation;
 
         public Login()
         {
@@ -56,15 +56,16 @@ namespace EPose
         {
             if (mouseDown)
             {
-                this.Location = new Point(
-                    (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
-                this.Update();
+               Point mousePos = Control.MousePosition;
+               mousePos.Offset(mouseLocation.X - 110, mouseLocation.Y);
+               Location = mousePos;
             }
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)
         {
             mouseDown = true;
+            mouseLocation = new Point(-e.X, -e.Y);
         }
 
         private void panel2_MouseUp(object sender, MouseEventArgs e)
@@ -87,6 +88,11 @@ namespace EPose
         private void cancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void rectangleShape1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

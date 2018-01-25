@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace EPose
 {
-    public partial class Settings : Form
+    public partial class Settings : Layout
     {
         public Settings()
         {
@@ -55,6 +55,16 @@ namespace EPose
         private void button8_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void rectangleShape3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

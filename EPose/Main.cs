@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EPose.Service;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace EPose
         public Main()
         {
             InitializeComponent();
+            SyncService.run();
         }
 
         private void poweroff_Click(object sender, EventArgs e)
@@ -25,6 +27,12 @@ namespace EPose
         private void poweroff_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnStaff_Click(object sender, EventArgs e)
+        {
+            Employee emp = new Employee();
+            emp.Show();
         }
     }
 }

@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace EPose
+{
+    public partial class PurchaseReturn : Layout
+    {
+        public PurchaseReturn()
+        {
+            InitializeComponent();
+        }
+
+        private void PurchaseReturn_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employeeList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+    }
+}

@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace EPose
 {
-    public partial class product_category : Form
+    public partial class PurchaseOrder : Layout
     {
-        public product_category()
+        public PurchaseOrder()
         {
             InitializeComponent();
+        }
+
+        private void PurchaseOrder_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
