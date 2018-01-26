@@ -41,10 +41,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 6.9.10\Assemblies\v4.5\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 6.9.10\Assemblies\v4.5\MySql.Data.Entity.EF6.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -166,12 +162,6 @@
     <Compile Include="PurchaseReturn.Designer.cs">
       <DependentUpon>PurchaseReturn.cs</DependentUpon>
     </Compile>
-    <Compile Include="roundedButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="roundedButton.Designer.cs">
-      <DependentUpon>roundedButton.cs</DependentUpon>
-    </Compile>
     <Compile Include="Service\Object_Model\Employee.cs" />
     <Compile Include="Service\SyncService.cs" />
     <Compile Include="Service\Sync\DownStream.cs" />
@@ -245,9 +235,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PurchaseReturn.resx">
       <DependentUpon>PurchaseReturn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="roundedButton.resx">
-      <DependentUpon>roundedButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
