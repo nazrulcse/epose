@@ -34,5 +34,30 @@ namespace EPose
             Employee emp = new Employee();
             emp.Show();
         }
+
+        private void btnCategory_Click(object sender, EventArgs e)
+        {
+            new Invoice().Show();
+        }
+
+        private void btnDatabaseConfig_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnStocksReport_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
