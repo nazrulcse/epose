@@ -23,5 +23,10 @@ namespace EPose
                 employeeList.Rows.Add(employee.id, employee.departmentId, employee.employee);
             }
         }
+
+        private void employeeList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
