@@ -122,29 +122,40 @@
             // 
             this.Department.HeaderText = "Department";
             this.Department.Name = "Department";
+            this.Department.Width = 107;
             // 
             // Phone
             // 
             this.Phone.HeaderText = "Phone";
             this.Phone.Name = "Phone";
+            this.Phone.Width = 74;
             // 
             // Email
             // 
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
+            this.Email.Width = 67;
             // 
             // Designation
             // 
+            this.Designation.FillWeight = 120F;
             this.Designation.HeaderText = "Designation";
+            this.Designation.MinimumWidth = 10;
             this.Designation.Name = "Designation";
+            this.Designation.Width = 108;
             // 
             // EName
             // 
+            this.EName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.EName.HeaderText = "Name";
+            this.EName.MinimumWidth = 10;
             this.EName.Name = "EName";
+            this.EName.Width = 70;
             // 
             // employeeList
             // 
+            this.employeeList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.employeeList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.employeeList.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.employeeList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.employeeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -159,6 +170,7 @@
             this.employeeList.Location = new System.Drawing.Point(0, 0);
             this.employeeList.Margin = new System.Windows.Forms.Padding(4);
             this.employeeList.Name = "employeeList";
+            this.employeeList.RowHeadersWidth = 52;
             this.employeeList.Size = new System.Drawing.Size(992, 445);
             this.employeeList.TabIndex = 0;
             this.employeeList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeeList_CellContentClick);

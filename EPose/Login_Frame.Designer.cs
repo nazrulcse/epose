@@ -35,19 +35,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cancel = new System.Windows.Forms.Label();
-            this.btn_login = new System.Windows.Forms.Label();
-            this.branch = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.password = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.userid = new System.Windows.Forms.TextBox();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.rectangleShape3 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.panel4 = new System.Windows.Forms.Panel();
             this.poweroff = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -55,6 +42,19 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.rectangleShape3 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.cancel = new System.Windows.Forms.Label();
+            this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.btn_login = new System.Windows.Forms.Label();
+            this.branch = new System.Windows.Forms.TextBox();
+            this.password = new System.Windows.Forms.TextBox();
+            this.userid = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -118,8 +118,8 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.pictureBox8);
-            this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.cancel);
             this.panel3.Controls.Add(this.btn_login);
             this.panel3.Controls.Add(this.branch);
@@ -146,156 +146,6 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 12;
             this.pictureBox8.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
-            this.label3.Location = new System.Drawing.Point(4, 21);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(696, 28);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Welcome To Syftet POS! Please enter your userid and password.";
-            // 
-            // cancel
-            // 
-            this.cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(63)))), ((int)(((byte)(58)))));
-            this.cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancel.ForeColor = System.Drawing.Color.White;
-            this.cancel.Location = new System.Drawing.Point(563, 319);
-            this.cancel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(120, 41);
-            this.cancel.TabIndex = 6;
-            this.cancel.Text = "Cancel";
-            this.cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.cancel.Click += new System.EventHandler(this.cancel_Click);
-            // 
-            // btn_login
-            // 
-            this.btn_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
-            this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_login.ForeColor = System.Drawing.Color.White;
-            this.btn_login.Location = new System.Drawing.Point(417, 316);
-            this.btn_login.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(131, 44);
-            this.btn_login.TabIndex = 5;
-            this.btn_login.Text = "Log In";
-            this.btn_login.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
-            // 
-            // branch
-            // 
-            this.branch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.branch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.branch.Location = new System.Drawing.Point(325, 255);
-            this.branch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.branch.Name = "branch";
-            this.branch.Size = new System.Drawing.Size(358, 34);
-            this.branch.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
-            this.label4.Location = new System.Drawing.Point(320, 224);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 25);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Branch";
-            // 
-            // password
-            // 
-            this.password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password.Location = new System.Drawing.Point(325, 181);
-            this.password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(358, 34);
-            this.password.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
-            this.label2.Location = new System.Drawing.Point(320, 149);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 25);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Password";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
-            this.label1.Location = new System.Drawing.Point(320, 79);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "User ID";
-            // 
-            // userid
-            // 
-            this.userid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.userid.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userid.Location = new System.Drawing.Point(325, 106);
-            this.userid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.userid.Name = "userid";
-            this.userid.Size = new System.Drawing.Size(358, 34);
-            this.userid.TabIndex = 0;
-            // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.rectangleShape3,
-            this.rectangleShape2,
-            this.rectangleShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(724, 415);
-            this.shapeContainer1.TabIndex = 10;
-            this.shapeContainer1.TabStop = false;
-            // 
-            // rectangleShape3
-            // 
-            this.rectangleShape3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(63)))), ((int)(((byte)(58)))));
-            this.rectangleShape3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(63)))), ((int)(((byte)(58)))));
-            this.rectangleShape3.CornerRadius = 5;
-            this.rectangleShape3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(63)))), ((int)(((byte)(58)))));
-            this.rectangleShape3.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
-            this.rectangleShape3.Location = new System.Drawing.Point(576, 322);
-            this.rectangleShape3.Name = "rectangleShape3";
-            this.rectangleShape3.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(63)))), ((int)(((byte)(58)))));
-            this.rectangleShape3.Size = new System.Drawing.Size(98, 34);
-            // 
-            // rectangleShape2
-            // 
-            this.rectangleShape2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(63)))), ((int)(((byte)(58)))));
-            this.rectangleShape2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(63)))), ((int)(((byte)(58)))));
-            this.rectangleShape2.CornerRadius = 5;
-            this.rectangleShape2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(63)))), ((int)(((byte)(58)))));
-            this.rectangleShape2.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
-            this.rectangleShape2.Location = new System.Drawing.Point(561, 315);
-            this.rectangleShape2.Name = "rectangleShape2";
-            this.rectangleShape2.Size = new System.Drawing.Size(124, 46);
-            // 
-            // rectangleShape1
-            // 
-            this.rectangleShape1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
-            this.rectangleShape1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
-            this.rectangleShape1.CornerRadius = 5;
-            this.rectangleShape1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
-            this.rectangleShape1.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
-            this.rectangleShape1.Location = new System.Drawing.Point(437, 318);
-            this.rectangleShape1.Name = "rectangleShape1";
-            this.rectangleShape1.Size = new System.Drawing.Size(106, 35);
-            this.rectangleShape1.Click += new System.EventHandler(this.rectangleShape1_Click);
             // 
             // panel4
             // 
@@ -379,6 +229,156 @@
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(318, 17);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(322, 39);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Please Login First";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
+            this.label4.Location = new System.Drawing.Point(320, 224);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 25);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Branch";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
+            this.label2.Location = new System.Drawing.Point(320, 149);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 25);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Password";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
+            this.label1.Location = new System.Drawing.Point(320, 79);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "User ID";
+            // 
+            // shapeContainer1
+            // 
+            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.rectangleShape3,
+            this.rectangleShape2,
+            this.rectangleShape1});
+            this.shapeContainer1.Size = new System.Drawing.Size(724, 415);
+            this.shapeContainer1.TabIndex = 10;
+            this.shapeContainer1.TabStop = false;
+            // 
+            // rectangleShape2
+            // 
+            this.rectangleShape2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(63)))), ((int)(((byte)(58)))));
+            this.rectangleShape2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(63)))), ((int)(((byte)(58)))));
+            this.rectangleShape2.CornerRadius = 5;
+            this.rectangleShape2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(63)))), ((int)(((byte)(58)))));
+            this.rectangleShape2.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
+            this.rectangleShape2.Location = new System.Drawing.Point(561, 315);
+            this.rectangleShape2.Name = "rectangleShape2";
+            this.rectangleShape2.Size = new System.Drawing.Size(124, 46);
+            // 
+            // rectangleShape3
+            // 
+            this.rectangleShape3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(63)))), ((int)(((byte)(58)))));
+            this.rectangleShape3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(63)))), ((int)(((byte)(58)))));
+            this.rectangleShape3.CornerRadius = 5;
+            this.rectangleShape3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(63)))), ((int)(((byte)(58)))));
+            this.rectangleShape3.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
+            this.rectangleShape3.Location = new System.Drawing.Point(576, 322);
+            this.rectangleShape3.Name = "rectangleShape3";
+            this.rectangleShape3.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(63)))), ((int)(((byte)(58)))));
+            this.rectangleShape3.Size = new System.Drawing.Size(98, 34);
+            // 
+            // cancel
+            // 
+            this.cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(63)))), ((int)(((byte)(58)))));
+            this.cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancel.ForeColor = System.Drawing.Color.White;
+            this.cancel.Location = new System.Drawing.Point(563, 319);
+            this.cancel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.cancel.Name = "cancel";
+            this.cancel.Size = new System.Drawing.Size(120, 41);
+            this.cancel.TabIndex = 6;
+            this.cancel.Text = "Cancel";
+            this.cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cancel.Click += new System.EventHandler(this.cancel_Click);
+            // 
+            // rectangleShape1
+            // 
+            this.rectangleShape1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.rectangleShape1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.rectangleShape1.CornerRadius = 5;
+            this.rectangleShape1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.rectangleShape1.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
+            this.rectangleShape1.Location = new System.Drawing.Point(437, 318);
+            this.rectangleShape1.Name = "rectangleShape1";
+            this.rectangleShape1.Size = new System.Drawing.Size(106, 35);
+            this.rectangleShape1.Click += new System.EventHandler(this.rectangleShape1_Click);
+            // 
+            // btn_login
+            // 
+            this.btn_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_login.ForeColor = System.Drawing.Color.White;
+            this.btn_login.Location = new System.Drawing.Point(417, 316);
+            this.btn_login.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.btn_login.Name = "btn_login";
+            this.btn_login.Size = new System.Drawing.Size(131, 44);
+            this.btn_login.TabIndex = 5;
+            this.btn_login.Text = "Log In";
+            this.btn_login.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
+            // 
+            // branch
+            // 
+            this.branch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.branch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.branch.Location = new System.Drawing.Point(325, 255);
+            this.branch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.branch.Name = "branch";
+            this.branch.Size = new System.Drawing.Size(358, 34);
+            this.branch.TabIndex = 7;
+            // 
+            // password
+            // 
+            this.password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password.Location = new System.Drawing.Point(325, 181);
+            this.password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(358, 34);
+            this.password.TabIndex = 3;
+            // 
+            // userid
+            // 
+            this.userid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.userid.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userid.Location = new System.Drawing.Point(325, 106);
+            this.userid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userid.Name = "userid";
+            this.userid.Size = new System.Drawing.Size(358, 34);
+            this.userid.TabIndex = 0;
+            // 
             // Login_Frame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -416,12 +416,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox userid;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox password;
-        private System.Windows.Forms.TextBox branch;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox poweroff;
         private System.Windows.Forms.PictureBox pictureBox6;
@@ -430,13 +424,19 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
-        private System.Windows.Forms.Label btn_login;
-        private System.Windows.Forms.Label cancel;
-        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label cancel;
+        private System.Windows.Forms.Label btn_login;
+        private System.Windows.Forms.TextBox branch;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox password;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox userid;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape3;
+        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape2;
+        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
     }
 }

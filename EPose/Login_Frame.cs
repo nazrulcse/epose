@@ -36,9 +36,7 @@ namespace EPose
             main.Show();
             this.Hide();
 
-            String userid = this.userid.Text;
-            String password = this.password.Text;
-            String branch = this.branch.Text;
+            
 
             //string selected = this.company.GetItemText(this.company.SelectedItem);
             

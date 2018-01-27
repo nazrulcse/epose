@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.employeeList = new System.Windows.Forms.DataGridView();
             this.EName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Designation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeeList)).BeginInit();
             this.SuspendLayout();
@@ -43,10 +43,23 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.employeeList);
-            this.panel1.Location = new System.Drawing.Point(12, 417);
+            this.panel1.Location = new System.Drawing.Point(5, 287);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1331, 301);
+            this.panel1.Size = new System.Drawing.Size(924, 301);
             this.panel1.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label3.Location = new System.Drawing.Point(23, 239);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(208, 28);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Department List :(565)";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // employeeList
             // 
@@ -64,54 +77,47 @@
             this.employeeList.Location = new System.Drawing.Point(0, 0);
             this.employeeList.Margin = new System.Windows.Forms.Padding(4);
             this.employeeList.Name = "employeeList";
-            this.employeeList.Size = new System.Drawing.Size(1331, 301);
-            this.employeeList.TabIndex = 2;
+            this.employeeList.Size = new System.Drawing.Size(924, 301);
+            this.employeeList.TabIndex = 3;
             // 
             // EName
             // 
             this.EName.HeaderText = "Name";
             this.EName.Name = "EName";
+            this.EName.Width = 200;
             // 
             // Designation
             // 
             this.Designation.HeaderText = "Designation";
             this.Designation.Name = "Designation";
+            this.Designation.Width = 160;
             // 
             // Email
             // 
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
+            this.Email.Width = 160;
             // 
             // Phone
             // 
             this.Phone.HeaderText = "Phone";
             this.Phone.Name = "Phone";
+            this.Phone.Width = 160;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "Department";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 210;
             // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(13, 354);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(208, 28);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Department List :(565)";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Department
+            // Department_Frame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1343, 730);
+            this.ClientSize = new System.Drawing.Size(933, 589);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
-            this.Name = "Department";
+            this.Name = "Department_Frame";
             this.Text = "Department";
             this.Load += new System.EventHandler(this.Department_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
@@ -125,12 +131,12 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView employeeList;
         private System.Windows.Forms.DataGridViewTextBoxColumn EName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Designation;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.Label label3;
     }
 }
