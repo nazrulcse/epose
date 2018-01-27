@@ -34,12 +34,12 @@
             this.all_employee = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataPanel = new System.Windows.Forms.Panel();
-            this.employeeList = new System.Windows.Forms.DataGridView();
-            this.EName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Designation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Designation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeList = new System.Windows.Forms.DataGridView();
             this.controlPanel.SuspendLayout();
             this.dataPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeeList)).BeginInit();
@@ -118,6 +118,31 @@
             this.dataPanel.Size = new System.Drawing.Size(992, 445);
             this.dataPanel.TabIndex = 4;
             // 
+            // Department
+            // 
+            this.Department.HeaderText = "Department";
+            this.Department.Name = "Department";
+            // 
+            // Phone
+            // 
+            this.Phone.HeaderText = "Phone";
+            this.Phone.Name = "Phone";
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            // 
+            // Designation
+            // 
+            this.Designation.HeaderText = "Designation";
+            this.Designation.Name = "Designation";
+            // 
+            // EName
+            // 
+            this.EName.HeaderText = "Name";
+            this.EName.Name = "EName";
+            // 
             // employeeList
             // 
             this.employeeList.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
@@ -137,31 +162,6 @@
             this.employeeList.Size = new System.Drawing.Size(992, 445);
             this.employeeList.TabIndex = 0;
             this.employeeList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeeList_CellContentClick);
-            // 
-            // EName
-            // 
-            this.EName.HeaderText = "Name";
-            this.EName.Name = "EName";
-            // 
-            // Designation
-            // 
-            this.Designation.HeaderText = "Designation";
-            this.Designation.Name = "Designation";
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            // 
-            // Phone
-            // 
-            this.Phone.HeaderText = "Phone";
-            this.Phone.Name = "Phone";
-            // 
-            // Department
-            // 
-            this.Department.HeaderText = "Department";
-            this.Department.Name = "Department";
             // 
             // Employee_Frame
             // 
@@ -187,11 +187,11 @@
 
         private System.Windows.Forms.Panel controlPanel;
         private System.Windows.Forms.Panel dataPanel;
-        private System.Windows.Forms.DataGridView employeeList;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox active_employee;
         private System.Windows.Forms.CheckBox all_employee;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView employeeList;
         private System.Windows.Forms.DataGridViewTextBoxColumn EName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Designation;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;

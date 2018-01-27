@@ -118,29 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="poweroff.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAA/dJREFUWEe1VltPU0EQ7qN3/4PXR42/RCPV9JwDCEZ4FWMUEuKLJhiMP0ACIUQe
-        TEw0YIzIxZpSKCih9YLxUoovtlyDXErFgut8w26Vw/RQQL/kS0/3m53Znd2dXV+hGLDtA/2WZUVsu5F+
-        X0ccZ6bPsn5qTnMbaX22HYCt7rZzhG37ODltjlhWhoKqArlEbIoEAke1m61jqKJiT5/j3CVHK3853iqz
-        /bZ9p7+oaLd2WxgGi4uPUfARweF2+bbfcY5o996gEZ+i4FOCk53RtifDlnVSh5GhZ15w8MVEQi3E46Im
-        kgaRNxMxx9m71bQbSJoH34p7Qm84qUNeGuTaiovX6R6s12HXgKNGjZ67/U1NjVr48kVNRyK5NgN8D5aX
-        qx8TE2qebGLXruVs8jC7bin4nMuGzA91dWp1eZmDfR8dzbUb8P+yMrVIAwBWMhn1/ubNnJ1IKlocfMjv
-        P+hVZDAbOAQSPT2qzbZzmgG+aRLqcSCgxoJBbsum0yp65UrO1k2qnulwefl+H5dXwYBJazr36RM7jD9/
-        rp74/RzI6AbmP7R2skl0d3P77MiI976wrPM+pEIUiR9u32ZHSO1Tmp1bN3C3P6WBpCcnWRu5dWuDbkg1
-        5x4ygItFNEiFQuwk2tS0buaGBu522Maam1lL0pK4dUNahgEffcy4BcO03lShy5dF3UDSequqWFtMpUSd
-        SYXJh+tUFIm/VlbYSaikRNQNJK23tJS1VfIh6SDVnmXPAaAzELlwQdSnP39WUx8/ihr6AKvZrKwTzQCm
-        JRFcoPQBw1evivqjs2eZkhal4wvMJ5OizsQSeG3CMTr3QLylRdS9GL9/n/smurpEHVzbhB7HsO/GDXaS
-        Hh9Xg3mWQSJsl/QGDtfWijYgH0M6MgFJBF9YlkpFo+wo2dEh2khMdnZyn29DQ+qFUD8MaQDn+LFJf/CG
-        E42eVVaqH3Nz7DBF1dArE9BSOnhmdlY9u3RJtAMp/emg37+P7wNqaHIbGIYoCx1U080gMpTar62tfEcg
-        4CBdQrHr17kto6sfgndQHeilvpJPkG7DBg4O4PVKjVm3kWGQ0thOs0kOD3MALyDtbRcvqpcewXH0wyUl
-        h3X4NeD1KhkbIhM4ct30LhilnY3jhTMO4jtOqe+qrmYbr5mDNPs6HfYP8Ayn2+md1OFvYlO1FxWph2fO
-        qAenTzPxjTavDWdIxz4WLC3dpcOuB14pKA5Sx39BqnzjryzrkA4nA0/n/zEIBB9wnBM6jDc4E/R6dTvZ
-        LpH2TWfuBp7O1LmemPd0bEbsdmy4vGteCPS+aEThkIJIhC31a9hw1HYCPCDxhkP9pgAD2Ce4TkH+pjZo
-        KK+5CrcpfL7fZca6sR1nW+0AAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="btnStocksReport.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAIAAAB7GkOtAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1

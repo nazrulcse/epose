@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace EPose
 {
-    public partial class Main_Frame : Form
+    public partial class Main_Frame : Layout_Frame
     {
         public Main_Frame()
         {
@@ -47,7 +47,7 @@ namespace EPose
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
@@ -74,6 +74,16 @@ namespace EPose
         private void btnDailySales_Click(object sender, EventArgs e)
         {
             new DailyHighlights_Frame().Show();
+        }
+
+        private void Main_Frame_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            new Settings_Frame().Show();
         }
     }
 }

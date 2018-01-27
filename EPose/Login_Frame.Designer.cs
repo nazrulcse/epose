@@ -132,8 +132,9 @@
             this.panel3.Location = new System.Drawing.Point(155, 69);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(711, 405);
+            this.panel3.Size = new System.Drawing.Size(724, 415);
             this.panel3.TabIndex = 2;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // pictureBox8
             // 
@@ -257,7 +258,7 @@
             this.rectangleShape3,
             this.rectangleShape2,
             this.rectangleShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(711, 405);
+            this.shapeContainer1.Size = new System.Drawing.Size(724, 415);
             this.shapeContainer1.TabIndex = 10;
             this.shapeContainer1.TabStop = false;
             // 

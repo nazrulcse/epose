@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Frame));
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.poweroff = new System.Windows.Forms.PictureBox();
             this.btnStocksReport = new System.Windows.Forms.Button();
             this.btnDailySales = new System.Windows.Forms.Button();
             this.btnPOS = new System.Windows.Forms.Button();
@@ -41,34 +39,8 @@
             this.btnDatabaseConfig = new System.Windows.Forms.Button();
             this.btnStaff = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.poweroff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
-            this.panel2.Controls.Add(this.poweroff);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1289, 49);
-            this.panel2.TabIndex = 5;
-            // 
-            // poweroff
-            // 
-            this.poweroff.Dock = System.Windows.Forms.DockStyle.Right;
-            this.poweroff.Image = ((System.Drawing.Image)(resources.GetObject("poweroff.Image")));
-            this.poweroff.Location = new System.Drawing.Point(1218, 0);
-            this.poweroff.Margin = new System.Windows.Forms.Padding(4, 4, 40, 4);
-            this.poweroff.Name = "poweroff";
-            this.poweroff.Size = new System.Drawing.Size(71, 49);
-            this.poweroff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.poweroff.TabIndex = 6;
-            this.poweroff.TabStop = false;
-            this.poweroff.Click += new System.EventHandler(this.poweroff_Click_1);
             // 
             // btnStocksReport
             // 
@@ -98,7 +70,7 @@
             this.btnDailySales.FlatAppearance.BorderSize = 0;
             this.btnDailySales.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
             this.btnDailySales.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDailySales.Location = new System.Drawing.Point(537, 345);
+            this.btnDailySales.Location = new System.Drawing.Point(571, 345);
             this.btnDailySales.Margin = new System.Windows.Forms.Padding(4);
             this.btnDailySales.Name = "btnDailySales";
             this.btnDailySales.Size = new System.Drawing.Size(111, 96);
@@ -152,7 +124,7 @@
             this.btnCategory.FlatAppearance.BorderSize = 0;
             this.btnCategory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
             this.btnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCategory.Location = new System.Drawing.Point(537, 186);
+            this.btnCategory.Location = new System.Drawing.Point(571, 186);
             this.btnCategory.Margin = new System.Windows.Forms.Padding(4);
             this.btnCategory.Name = "btnCategory";
             this.btnCategory.Size = new System.Drawing.Size(111, 96);
@@ -188,7 +160,7 @@
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExit.Location = new System.Drawing.Point(537, 507);
+            this.btnExit.Location = new System.Drawing.Point(571, 507);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(111, 96);
@@ -242,6 +214,7 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox7.TabIndex = 19;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // Main_Frame
             // 
@@ -259,14 +232,20 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDatabaseConfig);
             this.Controls.Add(this.btnStaff);
-            this.Controls.Add(this.panel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Main_Frame";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.poweroff)).EndInit();
+            this.Load += new System.EventHandler(this.Main_Frame_Load);
+            this.Controls.SetChildIndex(this.btnStaff, 0);
+            this.Controls.SetChildIndex(this.btnDatabaseConfig, 0);
+            this.Controls.SetChildIndex(this.btnExit, 0);
+            this.Controls.SetChildIndex(this.btnSettings, 0);
+            this.Controls.SetChildIndex(this.btnCategory, 0);
+            this.Controls.SetChildIndex(this.btnProduct, 0);
+            this.Controls.SetChildIndex(this.btnPOS, 0);
+            this.Controls.SetChildIndex(this.btnDailySales, 0);
+            this.Controls.SetChildIndex(this.btnStocksReport, 0);
+            this.Controls.SetChildIndex(this.pictureBox7, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
@@ -274,7 +253,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnStocksReport;
         private System.Windows.Forms.Button btnDailySales;
         private System.Windows.Forms.Button btnPOS;
@@ -284,7 +262,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnDatabaseConfig;
         private System.Windows.Forms.Button btnStaff;
-        private System.Windows.Forms.PictureBox poweroff;
         private System.Windows.Forms.PictureBox pictureBox7;
 
     }
