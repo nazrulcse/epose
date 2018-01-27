@@ -15,6 +15,8 @@ namespace EPose
         public Brand_Frame()
         {
             InitializeComponent();
+            this.setTitle("Brand Window");
+           
         }
 
         private void Brand_Load(object sender, EventArgs e)

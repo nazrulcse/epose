@@ -63,5 +63,10 @@ namespace EPose
             Settings_Frame st = new Settings_Frame();
             st.Show();
         }
+
+        private void Layout_Frame_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -53,17 +53,18 @@
             this.controlPanel.Controls.Add(this.label1);
             this.controlPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlPanel.Location = new System.Drawing.Point(0, 49);
-            this.controlPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.controlPanel.Margin = new System.Windows.Forms.Padding(4);
             this.controlPanel.Name = "controlPanel";
             this.controlPanel.Size = new System.Drawing.Size(992, 114);
             this.controlPanel.TabIndex = 3;
+            this.controlPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.controlPanel_Paint);
             // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Bookman Old Style", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(15, 60);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(590, 35);
             this.textBox1.TabIndex = 1;
@@ -75,7 +76,7 @@
             this.active_employee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.active_employee.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.active_employee.Location = new System.Drawing.Point(736, 55);
-            this.active_employee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.active_employee.Margin = new System.Windows.Forms.Padding(4);
             this.active_employee.Name = "active_employee";
             this.active_employee.Size = new System.Drawing.Size(226, 29);
             this.active_employee.TabIndex = 2;
@@ -88,7 +89,7 @@
             this.all_employee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.all_employee.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.all_employee.Location = new System.Drawing.Point(733, 18);
-            this.all_employee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.all_employee.Margin = new System.Windows.Forms.Padding(4);
             this.all_employee.Name = "all_employee";
             this.all_employee.Size = new System.Drawing.Size(236, 29);
             this.all_employee.TabIndex = 1;
@@ -112,7 +113,7 @@
             this.dataPanel.Controls.Add(this.employeeList);
             this.dataPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataPanel.Location = new System.Drawing.Point(0, 163);
-            this.dataPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataPanel.Margin = new System.Windows.Forms.Padding(4);
             this.dataPanel.Name = "dataPanel";
             this.dataPanel.Size = new System.Drawing.Size(992, 445);
             this.dataPanel.TabIndex = 4;
@@ -131,7 +132,7 @@
             this.employeeList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.employeeList.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.employeeList.Location = new System.Drawing.Point(0, 0);
-            this.employeeList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.employeeList.Margin = new System.Windows.Forms.Padding(4);
             this.employeeList.Name = "employeeList";
             this.employeeList.Size = new System.Drawing.Size(992, 445);
             this.employeeList.TabIndex = 0;
@@ -162,15 +163,15 @@
             this.Department.HeaderText = "Department";
             this.Department.Name = "Department";
             // 
-            // Employee
+            // Employee_Frame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(992, 608);
             this.Controls.Add(this.dataPanel);
             this.Controls.Add(this.controlPanel);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.Name = "Employee";
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Name = "Employee_Frame";
             this.Text = "Employee";
             this.Controls.SetChildIndex(this.controlPanel, 0);
             this.Controls.SetChildIndex(this.dataPanel, 0);

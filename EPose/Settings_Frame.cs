@@ -15,6 +15,7 @@ namespace EPose
         public Settings_Frame()
         {
             InitializeComponent();
+            this.setTitle("Settings Window");
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -63,6 +64,16 @@ namespace EPose
         }
 
         private void label26_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Settings_Frame_Load(object sender, EventArgs e)
         {
 
         }

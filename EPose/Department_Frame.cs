@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace EPose
 {
-    public partial class Department_Frame : Layout
+    public partial class Department_Frame : Layout_Frame
     {
         public Department_Frame()
         {
             InitializeComponent();
+            this.setTitle("Department Window");
         }
 
         private void Department_Load(object sender, EventArgs e)

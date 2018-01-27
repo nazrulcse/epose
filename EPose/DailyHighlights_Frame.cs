@@ -15,6 +15,7 @@ namespace EPose
         public DailyHighlights_Frame()
         {
             InitializeComponent();
+            this.setTitle("Daily Highilight Window");
         }
 
         private void DailyHighlights_Load(object sender, EventArgs e)

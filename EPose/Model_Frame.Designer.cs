@@ -58,10 +58,10 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.employeeList);
-            this.panel1.Location = new System.Drawing.Point(4, 310);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(5, 382);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(968, 245);
+            this.panel1.Size = new System.Drawing.Size(1291, 302);
             this.panel1.TabIndex = 3;
             // 
             // employeeList
@@ -78,8 +78,9 @@
             this.employeeList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.employeeList.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.employeeList.Location = new System.Drawing.Point(0, 0);
+            this.employeeList.Margin = new System.Windows.Forms.Padding(4);
             this.employeeList.Name = "employeeList";
-            this.employeeList.Size = new System.Drawing.Size(968, 245);
+            this.employeeList.Size = new System.Drawing.Size(1291, 302);
             this.employeeList.TabIndex = 2;
             // 
             // EName
@@ -110,10 +111,10 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(459, 203);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox7.Location = new System.Drawing.Point(612, 250);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(50, 28);
+            this.pictureBox7.Size = new System.Drawing.Size(67, 34);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 17;
             this.pictureBox7.TabStop = false;
@@ -122,9 +123,10 @@
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Bookman Old Style", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(10, 203);
+            this.textBox1.Location = new System.Drawing.Point(13, 250);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(443, 30);
+            this.textBox1.Size = new System.Drawing.Size(590, 35);
             this.textBox1.TabIndex = 16;
             this.textBox1.Text = "Search by name, code......";
             // 
@@ -135,7 +137,7 @@
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.rectangleShape4});
-            this.shapeContainer1.Size = new System.Drawing.Size(971, 555);
+            this.shapeContainer1.Size = new System.Drawing.Size(1295, 683);
             this.shapeContainer1.TabIndex = 18;
             this.shapeContainer1.TabStop = false;
             // 
@@ -155,9 +157,10 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(800, 115);
+            this.label3.Location = new System.Drawing.Point(1067, 142);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 38);
+            this.label3.Size = new System.Drawing.Size(204, 47);
             this.label3.TabIndex = 19;
             this.label3.Text = "Generate code";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -168,10 +171,10 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btn_login);
             this.panel2.Controls.Add(this.shapeContainer2);
-            this.panel2.Location = new System.Drawing.Point(633, 263);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(844, 324);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(336, 41);
+            this.panel2.Size = new System.Drawing.Size(448, 50);
             this.panel2.TabIndex = 32;
             // 
             // label2
@@ -179,9 +182,10 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(233, 0);
+            this.label2.Location = new System.Drawing.Point(311, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 38);
+            this.label2.Size = new System.Drawing.Size(136, 47);
             this.label2.TabIndex = 8;
             this.label2.Text = "Delete";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -191,9 +195,10 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(121, 1);
+            this.label1.Location = new System.Drawing.Point(161, 1);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 38);
+            this.label1.Size = new System.Drawing.Size(136, 47);
             this.label1.TabIndex = 7;
             this.label1.Text = "Edit ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -203,9 +208,10 @@
             this.btn_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
             this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.ForeColor = System.Drawing.Color.White;
-            this.btn_login.Location = new System.Drawing.Point(4, 2);
+            this.btn_login.Location = new System.Drawing.Point(5, 2);
+            this.btn_login.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(102, 38);
+            this.btn_login.Size = new System.Drawing.Size(136, 47);
             this.btn_login.TabIndex = 6;
             this.btn_login.Text = "View Details";
             this.btn_login.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -219,7 +225,7 @@
             this.rectangleShape2,
             this.rectangleShape3,
             this.rectangleShape1});
-            this.shapeContainer2.Size = new System.Drawing.Size(336, 41);
+            this.shapeContainer2.Size = new System.Drawing.Size(448, 50);
             this.shapeContainer2.TabIndex = 0;
             this.shapeContainer2.TabStop = false;
             // 
@@ -256,19 +262,19 @@
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(140, 46);
             // 
-            // Model
+            // Model_Frame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(971, 555);
+            this.ClientSize = new System.Drawing.Size(1295, 683);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.shapeContainer1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Model";
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "Model_Frame";
             this.Text = "Model";
             this.Load += new System.EventHandler(this.Model_Load);
             this.Controls.SetChildIndex(this.shapeContainer1, 0);

@@ -68,35 +68,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BoothClosing.cs">
+    <Compile Include="BoothClosing_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BoothClosing.Designer.cs">
-      <DependentUpon>BoothClosing.cs</DependentUpon>
+    <Compile Include="BoothClosing_Frame.Designer.cs">
+      <DependentUpon>BoothClosing_Frame.cs</DependentUpon>
     </Compile>
-    <Compile Include="Brand.cs">
+    <Compile Include="Brand_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Brand.Designer.cs">
-      <DependentUpon>Brand.cs</DependentUpon>
+    <Compile Include="Brand_Frame.Designer.cs">
+      <DependentUpon>Brand_Frame.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer.cs">
+    <Compile Include="Customer_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer.Designer.cs">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <Compile Include="Customer_Frame.Designer.cs">
+      <DependentUpon>Customer_Frame.cs</DependentUpon>
     </Compile>
-    <Compile Include="DailyHighlights.cs">
+    <Compile Include="DailyHighlights_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DailyHighlights.Designer.cs">
-      <DependentUpon>DailyHighlights.cs</DependentUpon>
+    <Compile Include="DailyHighlights_Frame.Designer.cs">
+      <DependentUpon>DailyHighlights_Frame.cs</DependentUpon>
     </Compile>
-    <Compile Include="DamageProduct.cs">
+    <Compile Include="DamageProduct_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DamageProduct.Designer.cs">
-      <DependentUpon>DamageProduct.cs</DependentUpon>
+    <Compile Include="DamageProduct_Frame.Designer.cs">
+      <DependentUpon>DamageProduct_Frame.cs</DependentUpon>
     </Compile>
     <Compile Include="Department_Frame.cs">
       <SubType>Form</SubType>
@@ -104,135 +104,135 @@
     <Compile Include="Department_Frame.Designer.cs">
       <DependentUpon>Department_Frame.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employee.cs">
+    <Compile Include="Employee_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Employee.Designer.cs">
-      <DependentUpon>Employee.cs</DependentUpon>
+    <Compile Include="Employee_Frame.Designer.cs">
+      <DependentUpon>Employee_Frame.cs</DependentUpon>
     </Compile>
-    <Compile Include="Invoice.cs">
+    <Compile Include="Invoice_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Invoice.Designer.cs">
-      <DependentUpon>Invoice.cs</DependentUpon>
+    <Compile Include="Invoice_Frame.Designer.cs">
+      <DependentUpon>Invoice_Frame.cs</DependentUpon>
     </Compile>
-    <Compile Include="Layout.cs">
+    <Compile Include="Layout_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Layout.Designer.cs">
-      <DependentUpon>Layout.cs</DependentUpon>
+    <Compile Include="Layout_Frame.Designer.cs">
+      <DependentUpon>Layout_Frame.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
+    <Compile Include="Main_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="Main_Frame.Designer.cs">
+      <DependentUpon>Main_Frame.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Login_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Login_Frame.Designer.cs">
+      <DependentUpon>Login_Frame.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model.cs">
+    <Compile Include="Model_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Model.Designer.cs">
-      <DependentUpon>Model.cs</DependentUpon>
+    <Compile Include="Model_Frame.Designer.cs">
+      <DependentUpon>Model_Frame.cs</DependentUpon>
     </Compile>
-    <Compile Include="Product.cs">
+    <Compile Include="Product_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Product.Designer.cs">
-      <DependentUpon>Product.cs</DependentUpon>
+    <Compile Include="Product_Frame.Designer.cs">
+      <DependentUpon>Product_Frame.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProductSubCategory.cs">
+    <Compile Include="ProductSubCategory_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProductSubCategory.Designer.cs">
-      <DependentUpon>ProductSubCategory.cs</DependentUpon>
+    <Compile Include="ProductSubCategory_Frame.Designer.cs">
+      <DependentUpon>ProductSubCategory_Frame.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProductCategory.cs">
+    <Compile Include="ProductCategory_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProductCategory.Designer.cs">
-      <DependentUpon>ProductCategory.cs</DependentUpon>
+    <Compile Include="ProductCategory_Frame.Designer.cs">
+      <DependentUpon>ProductCategory_Frame.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PurchaseOrder.cs">
+    <Compile Include="PurchaseOrder_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PurchaseOrder.Designer.cs">
-      <DependentUpon>PurchaseOrder.cs</DependentUpon>
+    <Compile Include="PurchaseOrder_Frame.Designer.cs">
+      <DependentUpon>PurchaseOrder_Frame.cs</DependentUpon>
     </Compile>
-    <Compile Include="PurchaseReturn.cs">
+    <Compile Include="PurchaseReturn_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PurchaseReturn.Designer.cs">
-      <DependentUpon>PurchaseReturn.cs</DependentUpon>
+    <Compile Include="PurchaseReturn_Frame.Designer.cs">
+      <DependentUpon>PurchaseReturn_Frame.cs</DependentUpon>
     </Compile>
     <Compile Include="Service\Object_Model\Employee.cs" />
     <Compile Include="Service\SyncService.cs" />
     <Compile Include="Service\Sync\DownStream.cs" />
     <Compile Include="Service\Sync\UpStream.cs" />
     <Compile Include="Service\WebAPI.cs" />
-    <Compile Include="Settings.cs">
+    <Compile Include="Settings_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Settings.Designer.cs">
-      <DependentUpon>Settings.cs</DependentUpon>
+    <Compile Include="Settings_Frame.Designer.cs">
+      <DependentUpon>Settings_Frame.cs</DependentUpon>
     </Compile>
-    <Compile Include="supplier.cs">
+    <Compile Include="supplier_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="supplier.Designer.cs">
-      <DependentUpon>supplier.cs</DependentUpon>
+    <Compile Include="supplier_Frame.Designer.cs">
+      <DependentUpon>supplier_Frame.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BoothClosing.resx">
-      <DependentUpon>BoothClosing.cs</DependentUpon>
+    <EmbeddedResource Include="BoothClosing_Frame.resx">
+      <DependentUpon>BoothClosing_Frame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Brand.resx">
-      <DependentUpon>Brand.cs</DependentUpon>
+    <EmbeddedResource Include="Brand_Frame.resx">
+      <DependentUpon>Brand_Frame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer.resx">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <EmbeddedResource Include="Customer_Frame.resx">
+      <DependentUpon>Customer_Frame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DailyHighlights.resx">
-      <DependentUpon>DailyHighlights.cs</DependentUpon>
+    <EmbeddedResource Include="DailyHighlights_Frame.resx">
+      <DependentUpon>DailyHighlights_Frame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DamageProduct.resx">
-      <DependentUpon>DamageProduct.cs</DependentUpon>
+    <EmbeddedResource Include="DamageProduct_Frame.resx">
+      <DependentUpon>DamageProduct_Frame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Department_Frame.resx">
       <DependentUpon>Department_Frame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employee.resx">
-      <DependentUpon>Employee.cs</DependentUpon>
+    <EmbeddedResource Include="Employee_Frame.resx">
+      <DependentUpon>Employee_Frame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Invoice.resx">
-      <DependentUpon>Invoice.cs</DependentUpon>
+    <EmbeddedResource Include="Invoice_Frame.resx">
+      <DependentUpon>Invoice_Frame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Layout.resx">
-      <DependentUpon>Layout.cs</DependentUpon>
+    <EmbeddedResource Include="Layout_Frame.resx">
+      <DependentUpon>Layout_Frame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="Main_Frame.resx">
+      <DependentUpon>Main_Frame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Login_Frame.resx">
+      <DependentUpon>Login_Frame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Model.resx">
-      <DependentUpon>Model.cs</DependentUpon>
+    <EmbeddedResource Include="Model_Frame.resx">
+      <DependentUpon>Model_Frame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Product.resx">
-      <DependentUpon>Product.cs</DependentUpon>
+    <EmbeddedResource Include="Product_Frame.resx">
+      <DependentUpon>Product_Frame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductSubCategory.resx">
-      <DependentUpon>ProductSubCategory.cs</DependentUpon>
+    <EmbeddedResource Include="ProductSubCategory_Frame.resx">
+      <DependentUpon>ProductSubCategory_Frame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductCategory.resx">
-      <DependentUpon>ProductCategory.cs</DependentUpon>
+    <EmbeddedResource Include="ProductCategory_Frame.resx">
+      <DependentUpon>ProductCategory_Frame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -243,17 +243,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="PurchaseOrder.resx">
-      <DependentUpon>PurchaseOrder.cs</DependentUpon>
+    <EmbeddedResource Include="PurchaseOrder_Frame.resx">
+      <DependentUpon>PurchaseOrder_Frame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PurchaseReturn.resx">
-      <DependentUpon>PurchaseReturn.cs</DependentUpon>
+    <EmbeddedResource Include="PurchaseReturn_Frame.resx">
+      <DependentUpon>PurchaseReturn_Frame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Settings.resx">
-      <DependentUpon>Settings.cs</DependentUpon>
+    <EmbeddedResource Include="Settings_Frame.resx">
+      <DependentUpon>Settings_Frame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="supplier.resx">
-      <DependentUpon>supplier.cs</DependentUpon>
+    <EmbeddedResource Include="supplier_Frame.resx">
+      <DependentUpon>supplier_Frame.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

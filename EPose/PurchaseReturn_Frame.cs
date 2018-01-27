@@ -15,6 +15,7 @@ namespace EPose
         public PurchaseReturn_Frame()
         {
             InitializeComponent();
+            this.setTitle("Purchase Order Window");
         }
 
         private void PurchaseReturn_Load(object sender, EventArgs e)
