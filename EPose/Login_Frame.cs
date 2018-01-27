@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EPose.Orm;
+using EPose.Model;
 
 namespace EPose
 {
@@ -83,6 +85,16 @@ namespace EPose
             Main_Frame main = new Main_Frame();
             main.Show();
             this.Hide();
+
+            //EmployeeModel em = new EmployeeModel();
+            //dynamic employee = em.find(em, "315");
+            //Console.WriteLine("Employee.name: " + employee.name);
+
+            //EmployeeModel em = new EmployeeModel();
+            //em.name = "Md Nazrul Islam";
+            //em.id = DateTime.Now.Millisecond.ToString();
+            //em.is_active = false;
+            //em.create(em);
         }
 
         private void cancel_Click(object sender, EventArgs e)

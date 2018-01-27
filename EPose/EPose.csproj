@@ -134,12 +134,17 @@
     <Compile Include="Login_Frame.Designer.cs">
       <DependentUpon>Login_Frame.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\EmployeeModel.cs" />
+    <Compile Include="Model\InvoiceModel.cs" />
     <Compile Include="Model_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Model_Frame.Designer.cs">
       <DependentUpon>Model_Frame.cs</DependentUpon>
     </Compile>
+    <Compile Include="Orm\ActiveRecord.cs" />
+    <Compile Include="Orm\ObjectBuilder.cs" />
+    <Compile Include="Orm\SQLConn.cs" />
     <Compile Include="Product_Frame.cs">
       <SubType>Form</SubType>
     </Compile>

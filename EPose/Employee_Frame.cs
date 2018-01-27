@@ -1,4 +1,5 @@
-﻿using Service;
+﻿using EPose.Model;
+using Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,11 +18,13 @@ namespace EPose
         {
             InitializeComponent();
             this.setTitle("Employee Window");
-            WebAPI wp = new WebAPI();
-            var employees = wp.syncEmployee();
+            //WebAPI wp = new WebAPI();
+            //var employees = wp.syncEmployee();
+            EmployeeModel emp = new EmployeeModel();
+            dynamic employees = emp.all(emp);
             foreach (var employee in employees)
             {
-                employeeList.Rows.Add(employee.id, employee.departmentId, employee.employee);
+                employeeList.Rows.Add(employee.id, employee.name, employee.department);
             }
         }
 

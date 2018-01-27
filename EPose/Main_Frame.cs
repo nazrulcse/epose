@@ -16,7 +16,7 @@ namespace EPose
         public Main_Frame()
         {
             InitializeComponent();
-            SyncService.run();
+            //SyncService.run();
         }
 
         private void poweroff_Click(object sender, EventArgs e)
@@ -37,7 +37,7 @@ namespace EPose
 
         private void btnCategory_Click(object sender, EventArgs e)
         {
-            new Invoice_Frame().Show();
+            
         }
 
         private void btnDatabaseConfig_Click(object sender, EventArgs e)
@@ -58,6 +58,16 @@ namespace EPose
         private void btnStocksReport_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void leftMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnPOS_Click(object sender, EventArgs e)
+        {
+            new Invoice_Frame().Show();
         }
     }
 }

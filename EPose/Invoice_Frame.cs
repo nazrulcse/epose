@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EPose.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,9 +19,29 @@ namespace EPose
             this.setTitle("Invoice Form");
         }
 
-        private void Invoice_Load(object sender, EventArgs e)
+        private void Invoice_Frame_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                InvoiceModel inv = new InvoiceModel();
+                var ms = (DateTime.Now - DateTime.MinValue).TotalMilliseconds;
+                inv.id = ms.ToString();
+                inv.number = "inv-" + ms.ToString();
+                inv.date = DateTime.Today;
+                inv.department_id = "1";
+                dynamic invoice = inv.create(inv);
+                if (invoice != null)
+                {
+                    invoiceNumber.Text = "" + invoice.number;
+                }
+                else
+                {
+                    invoiceNumber.Text = "Unable to create Invoice";
+                }
+            }
+            catch (Exception ex) {
+                invoiceNumber.Text = "Error: " + ex.Message.ToString();
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)
