@@ -18,6 +18,11 @@ namespace EPose
             InitializeComponent();
         }
 
+        public void setTitle(String title)
+        {
+            formTitle.Text = title;
+        }
+
         private void titleBar_MouseDown(object sender, MouseEventArgs e)
         {
             mouseLocation = new Point(-e.X, -e.Y);

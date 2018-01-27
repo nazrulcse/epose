@@ -15,6 +15,7 @@ namespace EPose
         public Invoice()
         {
             InitializeComponent();
+            this.setTitle("Invoice Form");
         }
 
         private void Invoice_Load(object sender, EventArgs e)
