@@ -22,57 +22,30 @@ namespace EPose
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Main_Frame main = new Main_Frame();
-            main.Show();
-            this.Hide();
-
-            String userid = this.userid.Text;
-            String password = this.password.Text;
-            String branch = this.branch.Text;
-
-            //string selected = this.company.GetItemText(this.company.SelectedItem);
-            
-
-        }
-
-        private void cancle_Click(object sender, EventArgs e)
-        {
-          //  Application.Exit();
-           //supplier supplier = new supplier();
-            //supplier.Show();
-        }
-
-        private void panel2_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (mouseDown)
-            {
-               Point mousePos = Control.MousePosition;
-               mousePos.Offset(mouseLocation.X - 110, mouseLocation.Y);
-               Location = mousePos;
-            }
-        }
-
-        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        private void topHeader_MouseDown(object sender, MouseEventArgs e)
         {
             mouseDown = true;
             mouseLocation = new Point(-e.X, -e.Y);
         }
 
-        private void panel2_MouseUp(object sender, MouseEventArgs e)
+        private void topHeader_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                Point mousePos = Control.MousePosition;
+                mousePos.Offset(mouseLocation.X - 110, mouseLocation.Y);
+                Location = mousePos;
+            }
+        }
+
+        private void topHeader_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
+        }
+
+        private void cancle_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void poweroff_Click(object sender, EventArgs e)
@@ -100,11 +73,6 @@ namespace EPose
         private void cancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void rectangleShape1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

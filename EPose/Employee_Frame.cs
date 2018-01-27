@@ -24,7 +24,7 @@ namespace EPose
             dynamic employees = emp.all(emp);
             foreach (var employee in employees)
             {
-                employeeList.Rows.Add(employee.id, employee.name, employee.department);
+                employeeList.Rows.Add(employee.name, employee.designation, employee.email, employee.mobile, employee.present_address, employee.country, employee.department, employee.joining_date);
             }
         }
 

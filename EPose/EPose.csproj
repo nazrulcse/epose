@@ -194,6 +194,12 @@
     <Compile Include="supplier_Frame.Designer.cs">
       <DependentUpon>supplier_Frame.cs</DependentUpon>
     </Compile>
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BoothClosing_Frame.resx">
       <DependentUpon>BoothClosing_Frame.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +229,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Frame.resx">
       <DependentUpon>Main_Frame.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Frame.resx">
       <DependentUpon>Login_Frame.cs</DependentUpon>
@@ -259,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="supplier_Frame.resx">
       <DependentUpon>supplier_Frame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
