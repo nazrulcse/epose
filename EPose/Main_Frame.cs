@@ -37,7 +37,7 @@ namespace EPose
 
         private void btnCategory_Click(object sender, EventArgs e)
         {
-            new Invoice_Frame().Show();
+            new ProductCategory_Frame().Show();
         }
 
         private void btnDatabaseConfig_Click(object sender, EventArgs e)
@@ -52,12 +52,28 @@ namespace EPose
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-
+            new Settings_Frame().Show();
         }
 
         private void btnStocksReport_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            Product_Frame product_Frame = new Product_Frame();
+            product_Frame.Show();
+        }
+
+        private void btnPOS_Click(object sender, EventArgs e)
+        {
+            new Invoice_Frame().Show();
+        }
+
+        private void btnDailySales_Click(object sender, EventArgs e)
+        {
+            new DailyHighlights_Frame().Show();
         }
     }
 }

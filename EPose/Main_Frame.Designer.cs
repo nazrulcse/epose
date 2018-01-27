@@ -52,7 +52,7 @@
             this.panel2.Controls.Add(this.poweroff);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1289, 49);
             this.panel2.TabIndex = 5;
@@ -81,7 +81,7 @@
             this.btnStocksReport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
             this.btnStocksReport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnStocksReport.Location = new System.Drawing.Point(885, 345);
-            this.btnStocksReport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStocksReport.Margin = new System.Windows.Forms.Padding(4);
             this.btnStocksReport.Name = "btnStocksReport";
             this.btnStocksReport.Size = new System.Drawing.Size(111, 96);
             this.btnStocksReport.TabIndex = 10;
@@ -99,11 +99,12 @@
             this.btnDailySales.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
             this.btnDailySales.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDailySales.Location = new System.Drawing.Point(537, 345);
-            this.btnDailySales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDailySales.Margin = new System.Windows.Forms.Padding(4);
             this.btnDailySales.Name = "btnDailySales";
             this.btnDailySales.Size = new System.Drawing.Size(111, 96);
             this.btnDailySales.TabIndex = 11;
             this.btnDailySales.UseVisualStyleBackColor = false;
+            this.btnDailySales.Click += new System.EventHandler(this.btnDailySales_Click);
             // 
             // btnPOS
             // 
@@ -116,11 +117,12 @@
             this.btnPOS.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
             this.btnPOS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPOS.Location = new System.Drawing.Point(249, 345);
-            this.btnPOS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPOS.Margin = new System.Windows.Forms.Padding(4);
             this.btnPOS.Name = "btnPOS";
             this.btnPOS.Size = new System.Drawing.Size(111, 96);
             this.btnPOS.TabIndex = 12;
             this.btnPOS.UseVisualStyleBackColor = false;
+            this.btnPOS.Click += new System.EventHandler(this.btnPOS_Click);
             // 
             // btnProduct
             // 
@@ -133,11 +135,12 @@
             this.btnProduct.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
             this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnProduct.Location = new System.Drawing.Point(885, 186);
-            this.btnProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnProduct.Margin = new System.Windows.Forms.Padding(4);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Size = new System.Drawing.Size(111, 96);
             this.btnProduct.TabIndex = 13;
             this.btnProduct.UseVisualStyleBackColor = false;
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
             // btnCategory
             // 
@@ -150,7 +153,7 @@
             this.btnCategory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
             this.btnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCategory.Location = new System.Drawing.Point(537, 186);
-            this.btnCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCategory.Margin = new System.Windows.Forms.Padding(4);
             this.btnCategory.Name = "btnCategory";
             this.btnCategory.Size = new System.Drawing.Size(111, 96);
             this.btnCategory.TabIndex = 14;
@@ -168,7 +171,7 @@
             this.btnSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSettings.Location = new System.Drawing.Point(249, 507);
-            this.btnSettings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSettings.Margin = new System.Windows.Forms.Padding(4);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(111, 96);
             this.btnSettings.TabIndex = 15;
@@ -186,7 +189,7 @@
             this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.Location = new System.Drawing.Point(537, 507);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(111, 96);
             this.btnExit.TabIndex = 16;
@@ -204,7 +207,7 @@
             this.btnDatabaseConfig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
             this.btnDatabaseConfig.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDatabaseConfig.Location = new System.Drawing.Point(885, 507);
-            this.btnDatabaseConfig.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDatabaseConfig.Margin = new System.Windows.Forms.Padding(4);
             this.btnDatabaseConfig.Name = "btnDatabaseConfig";
             this.btnDatabaseConfig.Size = new System.Drawing.Size(111, 96);
             this.btnDatabaseConfig.TabIndex = 17;
@@ -222,7 +225,7 @@
             this.btnStaff.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
             this.btnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnStaff.Location = new System.Drawing.Point(249, 186);
-            this.btnStaff.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStaff.Margin = new System.Windows.Forms.Padding(4);
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.Size = new System.Drawing.Size(111, 96);
             this.btnStaff.TabIndex = 18;
@@ -233,14 +236,14 @@
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
             this.pictureBox7.Location = new System.Drawing.Point(0, 688);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(60, 59);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox7.TabIndex = 19;
             this.pictureBox7.TabStop = false;
             // 
-            // Main
+            // Main_Frame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -259,7 +262,7 @@
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Main";
+            this.Name = "Main_Frame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel2.ResumeLayout(false);
