@@ -15,6 +15,7 @@ namespace EPose
         public Product_Frame()
         {
             InitializeComponent();
+            this.setTitle("Product Window");
         }
 
         private void Product_Load(object sender, EventArgs e)

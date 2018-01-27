@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customer_Frame));
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.poweroff = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -53,10 +49,6 @@
             this.Pain_Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Due_Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBoxCategory = new System.Windows.Forms.ComboBox();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.poweroff)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -64,54 +56,6 @@
             this.tabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.poweroff);
-            this.panel4.Controls.Add(this.pictureBox6);
-            this.panel4.Controls.Add(this.pictureBox5);
-            this.panel4.Controls.Add(this.pictureBox4);
-            this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1019, 50);
-            this.panel4.TabIndex = 5;
-            // 
-            // poweroff
-            // 
-            this.poweroff.Image = ((System.Drawing.Image)(resources.GetObject("poweroff.Image")));
-            this.poweroff.Location = new System.Drawing.Point(903, 9);
-            this.poweroff.Margin = new System.Windows.Forms.Padding(4);
-            this.poweroff.Name = "poweroff";
-            this.poweroff.Size = new System.Drawing.Size(35, 31);
-            this.poweroff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.poweroff.TabIndex = 5;
-            this.poweroff.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(837, 9);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(37, 31);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 6;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(785, 9);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(35, 31);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 7;
-            this.pictureBox5.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -174,7 +118,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(16, 101);
+            this.label2.Location = new System.Drawing.Point(13, 127);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 17);
@@ -314,7 +258,7 @@
             this.comboBoxCategory.Text = "All Category";
             this.comboBoxCategory.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // Customer
+            // Customer_Frame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -325,16 +269,16 @@
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.dataGridView);
-            this.Controls.Add(this.panel4);
             this.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Customer";
+            this.Name = "Customer_Frame";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Customer_Load);
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.poweroff)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.Controls.SetChildIndex(this.dataGridView, 0);
+            this.Controls.SetChildIndex(this.textBoxSearch, 0);
+            this.Controls.SetChildIndex(this.pictureBox7, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.tabControl1, 0);
+            this.Controls.SetChildIndex(this.comboBoxCategory, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -348,13 +292,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox poweroff;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
 
         private System.Windows.Forms.TextBox textBoxSearch;
 
@@ -374,5 +311,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Pain_Amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn Due_Amount;
         private System.Windows.Forms.ComboBox comboBoxCategory;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

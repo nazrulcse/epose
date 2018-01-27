@@ -16,6 +16,7 @@ namespace EPose
         public Employee_Frame()
         {
             InitializeComponent();
+            this.setTitle("Employee Window");
             WebAPI wp = new WebAPI();
             var employees = wp.syncEmployee();
             foreach (var employee in employees)
@@ -25,6 +26,11 @@ namespace EPose
         }
 
         private void employeeList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void controlPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -15,6 +15,7 @@ namespace EPose
         public Booth_closing()
         {
             InitializeComponent();
+            this.setTitle("Booth Closing window");
         }
 
         private void Booth_closing_Load(object sender, EventArgs e)

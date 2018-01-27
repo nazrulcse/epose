@@ -15,6 +15,7 @@ namespace EPose
         public ProductSubCategory_Frame()
         {
             InitializeComponent();
+            this.setTitle("Product SubCategory Window");
         }
 
         private void ProductSubCategory_Load(object sender, EventArgs e)

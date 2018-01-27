@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace EPose
 {
-    public partial class Customer_Frame : Form
+    public partial class Customer_Frame : Layout_Frame
     {
         public Customer_Frame()
         {
             InitializeComponent();
+            this.setTitle("Customer Window");
         }
 
         private void Customer_Load(object sender, EventArgs e)

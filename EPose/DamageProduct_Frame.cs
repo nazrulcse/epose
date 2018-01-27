@@ -15,6 +15,7 @@ namespace EPose
         public DamageProduct_Frame()
         {
             InitializeComponent();
+            this.setTitle("Damage Product Window");
         }
 
         private void DamageProduct_Load(object sender, EventArgs e)
