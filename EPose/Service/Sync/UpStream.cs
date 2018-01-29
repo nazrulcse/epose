@@ -8,5 +8,8 @@ namespace EPose.Service.Sync
 {
     class UpStream
     {
+        public static void webAcknowledgement(String[] log_ids) {
+           
+        }
     }
 }

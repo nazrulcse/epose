@@ -7,21 +7,22 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using EPose.Model;
 
 namespace Service
 {
     class WebAPI
     {
-        public const string API = "http://accounts.tangailenterprise.com";
-        //public const string API = "http://192.168.0.113:3001";
-        public HttpResponseMessage getRequest(String api, String model)
+        //public const string API = "http://accounts.tangailenterprise.com";
+        public const string API = "http://192.168.0.113:3000/api/v1/";
+        public static HttpResponseMessage getRequest(String action_url, String model)
         {
-            const string URL = API + "/api/users";
-            string urlParameters = "?api_key=123";
+            string URL = API + "" + action_url;
+            string urlParameters = "?company_id=1";
 
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(URL);
-
+            Console.WriteLine("API URL: " + URL);
             // Add an Accept header for JSON format.
             client.DefaultRequestHeaders.Accept.Add(
             new MediaTypeWithQualityHeaderValue("application/json"));
@@ -29,25 +30,5 @@ namespace Service
             HttpResponseMessage response = client.GetAsync(urlParameters).Result;  // Blocking call!
             return response;
         }
-
-        public IEnumerable<Employee> syncEmployee()
-        {
-            HttpResponseMessage response = this.getRequest("/api/users", "users");  // Blocking call!
-            if (response.IsSuccessStatusCode)
-            {
-                return response.Content.ReadAsAsync<IEnumerable<Employee>>().Result;
-                //Console.WriteLine("" + dataObjects.GetType());
-                //foreach (var obj in dataObjects)
-                //{
-                    //Console.WriteLine("" + obj.id);
-                //}
-            }
-            else
-            {
-                MessageBox.Show("Api response with status: " + (int)response.StatusCode);
-                return response.Content.ReadAsAsync<IEnumerable<Employee>>().Result;
-            }
-        }
-
     }
 }

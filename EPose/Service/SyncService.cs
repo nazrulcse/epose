@@ -1,9 +1,11 @@
-﻿using Service;
+﻿using EPose.Service.Sync;
+using Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EPose.Service.WebService;
 
 namespace EPose.Service
 {
@@ -11,8 +13,9 @@ namespace EPose.Service
     {
         public static void run() {
             Console.WriteLine("Sync service started...");
-            WebAPI wp = new WebAPI();
-            wp.syncEmployee();
+            DepartmentService.perform();
+            //WebAPI wp = new WebAPI();
+            //wp.syncEmployee();
         }
     }
 }

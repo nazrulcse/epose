@@ -65,5 +65,25 @@ namespace EPose
         {
             new ProductCategory_Frame().Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            new Department_Frame().Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Main_Frame_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

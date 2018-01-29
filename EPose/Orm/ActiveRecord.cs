@@ -55,32 +55,81 @@ namespace EPose.Orm
 
         public object find(dynamic modelObject, String id)
         {
-            return getFromDatabase(modelObject, id);
+            var table_name = modelObject.getTable();
+            var query = "Select * from " + table_name + " where id = '" + id + "'";
+            dynamic objects = getFromDatabase(modelObject, query);
+            if (objects != null)
+            {
+                return objects[0];
+            }
+            return modelObject;
         }
 
         public object all(dynamic modelObject)
         {
-            return getFromDatabase(modelObject, null);
+            var table_name = modelObject.getTable();
+            var query = "Select * from " + table_name;
+            return getFromDatabase(modelObject, query);
         }
 
-        public object getFromDatabase(dynamic modelObject, String id)
+
+        public object where(dynamic modelObject, string condition)
         {
             var table_name = modelObject.getTable();
             Type objType = modelObject.GetType();
-            var query = "Select * from " + table_name;
-            if (id != null)
+            var query = "Select * from " + table_name + " " + condition;
+            return getFromDatabase(modelObject, query);
+        }
+       
+        public object delete(dynamic modelObject, string condition)
+        {
+            var table_name = modelObject.getTable();
+            Type objType = modelObject.GetType();
+            var query = "delete from " + table_name + " " + condition;
+            return getFromDatabase(modelObject, query);
+        }
+
+        public object update_attributes(dynamic modelObject, string condition)
+        {
+
+            Boolean first = true;
+            var table_name = modelObject.getTable();
+            Type objType = modelObject.GetType();
+            StringBuilder table_columns = new StringBuilder();
+            StringBuilder table_values = new StringBuilder();
+            var arrFields = modelObject.attrAccess();
+
+
+            for (var i = 0; i < arrFields.Length; i++)
             {
-                query = "Select * from " + table_name + " where id = '" + id + "'";
-                dynamic objects = readExecuteQuery(modelObject, query);
-                if (objects != null)
-                {
-                    return objects[0];
-                }
+                string field = arrFields[i];
+             
             }
-            else {
-                return readExecuteQuery(modelObject, query);
+            var query = "update" + table_name + " set (" + table_columns + ") VALUES (" + table_values + ")";
+            Console.WriteLine("update " + table_name + " set (" + table_columns + ") VALUES (" + table_values + ");");
+            var objResult = executeQuery(query);
+            if (objResult)
+            {
+                return modelObject;
             }
-            return modelObject;
+            else
+            {
+                return null;
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+        public object getFromDatabase(dynamic modelObject, String query)
+        {
+           return readExecuteQuery(modelObject, query);
         }
 
         public Boolean executeQuery(String query) {

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EPose.Model;
+using Service;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +18,30 @@ namespace EPose
         {
             InitializeComponent();
             this.setTitle("Department Window");
+           
+            //var employees = wp.syncEmployee();
+
+            DepartmentModel depart = new DepartmentModel();
+            dynamic departments = depart.all(depart);
+
+           
+           
+            
+            foreach (var department in departments) {
+
+                departmentList.Rows.Add(department.id, department.name, department.description);
+              
+            }
+            this.labelDepartment.Text = "" + departments.Count;
+                       //  WebAPI wp = new WebAPI();
+
+
+            // dynamic departments = wp.syncDepartment("/departments?company_id=1");
+
+            //foreach( var department in departments) {
+              //  departmentList.Rows.Add(department.id, department.name, department.description, department.company_id);
+            //}
+
         }
 
         private void Department_Load(object sender, EventArgs e)
@@ -27,5 +53,12 @@ namespace EPose
         {
 
         }
+
+        private void employeeList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+      
     }
 }

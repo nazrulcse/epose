@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EPose.Orm;
 using EPose.Model;
+using EPose.Service;
 
 namespace EPose
 {
@@ -20,6 +21,11 @@ namespace EPose
         public Login_Frame()
         {
             InitializeComponent();
+        }
+
+        private void Login_Frame_Load(object sender, EventArgs e)
+        {
+            //SyncService.run();
         }
 
         private void topHeader_MouseDown(object sender, MouseEventArgs e)

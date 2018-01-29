@@ -32,5 +32,10 @@ namespace EPose
         {
 
         }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
