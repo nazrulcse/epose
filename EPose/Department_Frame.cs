@@ -20,13 +20,9 @@ namespace EPose
             this.setTitle("Department Window");
            
             //var employees = wp.syncEmployee();
-
             DepartmentModel depart = new DepartmentModel();
             dynamic departments = depart.all(depart);
 
-           
-           
-            
             foreach (var department in departments) {
 
                 departmentList.Rows.Add(department.id, department.name, department.description);

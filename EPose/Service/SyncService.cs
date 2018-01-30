@@ -13,7 +13,8 @@ namespace EPose.Service
     {
         public static void run() {
             Console.WriteLine("Sync service started...");
-            DepartmentService.perform();
+           // DepartmentService.perform();
+            EmployeeService.perform();
             //WebAPI wp = new WebAPI();
             //wp.syncEmployee();
         }

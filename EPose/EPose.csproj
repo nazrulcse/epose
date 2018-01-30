@@ -186,6 +186,7 @@
     <Compile Include="Service\Sync\UpStream.cs" />
     <Compile Include="Service\WebAPI.cs" />
     <Compile Include="Service\WebService\DepartmentService.cs" />
+    <Compile Include="Service\WebService\EmployeeService.cs" />
     <Compile Include="Settings_Frame.cs">
       <SubType>Form</SubType>
     </Compile>

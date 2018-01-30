@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace EPose
 {
-    public partial class supplier_Frame : Form
+    public partial class supplier_Frame :Layout_Frame
     {
         public supplier_Frame()
         {
             InitializeComponent();
+            this.setTitle("Supplier Window");
         }
 
         private void supplier_Load(object sender, EventArgs e)

@@ -14,11 +14,11 @@ namespace Service
     class WebAPI
     {
         //public const string API = "http://accounts.tangailenterprise.com";
-        public const string API = "http://192.168.0.113:3000/api/v1/";
+        public const string API = "http://f9d78401.ngrok.io/api/v1/";
         public static HttpResponseMessage getRequest(String action_url, String model)
         {
             string URL = API + "" + action_url;
-            string urlParameters = "?company_id=1";
+            string urlParameters = "?department_id=1";
 
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(URL);
@@ -27,8 +27,14 @@ namespace Service
             client.DefaultRequestHeaders.Accept.Add(
             new MediaTypeWithQualityHeaderValue("application/json"));
             // List data response.
-            HttpResponseMessage response = client.GetAsync(urlParameters).Result;  // Blocking call!
-            return response;
+            try {
+                HttpResponseMessage response = client.GetAsync(urlParameters).Result;  // Blocking call!
+                return response;
+            }
+            catch( Exception ex){
+                MessageBox.Show("Error: " + ex.Message.ToString());
+                return client.GetAsync(urlParameters).Result;
+            }
         }
     }
 }

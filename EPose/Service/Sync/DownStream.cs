@@ -28,7 +28,7 @@ namespace EPose.Service.Sync
 
         public static IEnumerable<EmployeeModel> syncEmployee()
         {
-            HttpResponseMessage response = WebAPI.getRequest("/api/users", "users");  // Blocking call!
+            HttpResponseMessage response = WebAPI.getRequest("employees", "employees");  // Blocking call!
             if (response.IsSuccessStatusCode)
             {
                 return response.Content.ReadAsAsync<IEnumerable<EmployeeModel>>().Result;
@@ -39,5 +39,9 @@ namespace EPose.Service.Sync
                 return response.Content.ReadAsAsync<IEnumerable<EmployeeModel>>().Result;
             }
         }
+
+       
+
+
     }
 }

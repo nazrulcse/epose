@@ -26,6 +26,8 @@ namespace EPose
             {
                 employeeList.Rows.Add(employee.name, employee.designation, employee.email, employee.mobile, employee.present_address, employee.country, employee.department, employee.joining_date);
             }
+
+            this.employeeLabel.Text = "" + employees.Count;
         }
 
         private void employeeList_CellContentClick(object sender, DataGridViewCellEventArgs e)
