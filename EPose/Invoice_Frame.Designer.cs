@@ -53,6 +53,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.invoiceItems = new System.Windows.Forms.DataGridView();
+            this.EName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
@@ -83,13 +90,6 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.EName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.topPanel.SuspendLayout();
             this.topRightPanel.SuspendLayout();
             this.topLeftPanel.SuspendLayout();
@@ -107,19 +107,19 @@
             this.topPanel.Controls.Add(this.topRightPanel);
             this.topPanel.Controls.Add(this.topLeftPanel);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topPanel.Location = new System.Drawing.Point(0, 49);
-            this.topPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topPanel.Location = new System.Drawing.Point(4, 49);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(4);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1333, 76);
+            this.topPanel.Size = new System.Drawing.Size(1331, 76);
             this.topPanel.TabIndex = 4;
             // 
             // topRightPanel
             // 
             this.topRightPanel.Controls.Add(this.invoiceNumber);
             this.topRightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.topRightPanel.Location = new System.Drawing.Point(916, 0);
+            this.topRightPanel.Location = new System.Drawing.Point(857, 0);
             this.topRightPanel.Name = "topRightPanel";
-            this.topRightPanel.Size = new System.Drawing.Size(556, 94);
+            this.topRightPanel.Size = new System.Drawing.Size(474, 76);
             this.topRightPanel.TabIndex = 4;
             // 
             // invoiceNumber
@@ -147,9 +147,9 @@
             this.topLeftPanel.Controls.Add(this.label17);
             this.topLeftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.topLeftPanel.Location = new System.Drawing.Point(0, 0);
-            this.topLeftPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topLeftPanel.Margin = new System.Windows.Forms.Padding(4);
             this.topLeftPanel.Name = "topLeftPanel";
-            this.topLeftPanel.Size = new System.Drawing.Size(892, 94);
+            this.topLeftPanel.Size = new System.Drawing.Size(850, 76);
             this.topLeftPanel.TabIndex = 4;
             // 
             // textBox20
@@ -231,7 +231,7 @@
             this.barcodeInput.Location = new System.Drawing.Point(11, 35);
             this.barcodeInput.Margin = new System.Windows.Forms.Padding(2);
             this.barcodeInput.Name = "barcodeInput";
-            this.barcodeInput.Size = new System.Drawing.Size(238, 26);
+            this.barcodeInput.Size = new System.Drawing.Size(238, 30);
             this.barcodeInput.TabIndex = 1;
             this.barcodeInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.barcodeInput_KeyDown);
             // 
@@ -260,10 +260,10 @@
             this.panelBody.Controls.Add(this.textBox5);
             this.panelBody.Controls.Add(this.label6);
             this.panelBody.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBody.Location = new System.Drawing.Point(0, 798);
-            this.panelBody.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelBody.Location = new System.Drawing.Point(4, 644);
+            this.panelBody.Margin = new System.Windows.Forms.Padding(4);
             this.panelBody.Name = "panelBody";
-            this.panelBody.Size = new System.Drawing.Size(1333, 100);
+            this.panelBody.Size = new System.Drawing.Size(1331, 100);
             this.panelBody.TabIndex = 5;
             // 
             // textBox9
@@ -319,7 +319,7 @@
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.Location = new System.Drawing.Point(529, 54);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(5);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(105, 30);
             this.textBox7.TabIndex = 36;
@@ -342,7 +342,7 @@
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.Location = new System.Drawing.Point(383, 55);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(5);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(115, 30);
             this.textBox6.TabIndex = 34;
@@ -365,7 +365,7 @@
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(155, 57);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(5);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(177, 30);
             this.textBox5.TabIndex = 32;
@@ -387,9 +387,9 @@
             // 
             this.panel2.Controls.Add(this.invoiceItems);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(3, 116);
+            this.panel2.Location = new System.Drawing.Point(4, 125);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(843, 529);
+            this.panel2.Size = new System.Drawing.Size(843, 519);
             this.panel2.TabIndex = 0;
             // 
             // invoiceItems
@@ -409,8 +409,50 @@
             this.invoiceItems.Location = new System.Drawing.Point(0, 0);
             this.invoiceItems.Margin = new System.Windows.Forms.Padding(4);
             this.invoiceItems.Name = "invoiceItems";
-            this.invoiceItems.Size = new System.Drawing.Size(843, 529);
+            this.invoiceItems.Size = new System.Drawing.Size(843, 519);
             this.invoiceItems.TabIndex = 9;
+            // 
+            // EName
+            // 
+            this.EName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.EName.HeaderText = "Sl No";
+            this.EName.Name = "EName";
+            // 
+            // Email
+            // 
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Email.HeaderText = "Item Name";
+            this.Email.Name = "Email";
+            // 
+            // Department
+            // 
+            this.Department.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Department.HeaderText = "Unite";
+            this.Department.Name = "Department";
+            // 
+            // Price
+            // 
+            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            // 
+            // vat
+            // 
+            this.vat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.vat.HeaderText = "VAT";
+            this.vat.Name = "vat";
+            // 
+            // discount
+            // 
+            this.discount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.discount.HeaderText = "Disc(%)";
+            this.discount.Name = "discount";
+            // 
+            // total
+            // 
+            this.total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.total.HeaderText = "Total";
+            this.total.Name = "total";
             // 
             // panel1
             // 
@@ -419,9 +461,9 @@
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(862, 116);
+            this.panel1.Location = new System.Drawing.Point(861, 125);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(474, 529);
+            this.panel1.Size = new System.Drawing.Size(474, 519);
             this.panel1.TabIndex = 6;
             // 
             // panel8
@@ -557,13 +599,11 @@
             // 
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
             this.textBox3.Location = new System.Drawing.Point(188, 85);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(189, 30);
-
             this.textBox3.TabIndex = 36;
             this.textBox3.Text = "0.00";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -572,13 +612,11 @@
             // 
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
             this.textBox4.Location = new System.Drawing.Point(188, 126);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(189, 30);
-
             this.textBox4.TabIndex = 35;
             this.textBox4.Text = "0.00";
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -588,10 +626,8 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Desktop;
-
             this.label5.Location = new System.Drawing.Point(58, 130);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 20);
             this.label5.TabIndex = 32;
@@ -602,10 +638,8 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
-
             this.label4.Location = new System.Drawing.Point(68, 89);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(114, 20);
             this.label4.TabIndex = 31;
@@ -616,10 +650,8 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.Desktop;
-
             this.label11.Location = new System.Drawing.Point(86, 50);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(73, 20);
             this.label11.TabIndex = 30;
@@ -629,10 +661,8 @@
             // 
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.Desktop;
-
             this.label12.Location = new System.Drawing.Point(73, 8);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(123, 28);
             this.label12.TabIndex = 28;
@@ -675,10 +705,8 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-
             this.checkBox1.Location = new System.Drawing.Point(301, 124);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(18, 17);
             this.checkBox1.TabIndex = 37;
@@ -688,10 +716,8 @@
             // 
             this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
             this.textBox16.Location = new System.Drawing.Point(52, 117);
             this.textBox16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(326, 30);
             this.textBox16.TabIndex = 36;
@@ -700,10 +726,8 @@
             // 
             this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
             this.textBox13.Location = new System.Drawing.Point(264, 87);
             this.textBox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(135, 30);
             this.textBox13.TabIndex = 35;
@@ -714,10 +738,8 @@
             // 
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
             this.textBox12.Location = new System.Drawing.Point(158, 87);
             this.textBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(133, 30);
             this.textBox12.TabIndex = 34;
@@ -728,10 +750,8 @@
             // 
             this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
             this.textBox17.Location = new System.Drawing.Point(52, 87);
             this.textBox17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(133, 30);
             this.textBox17.TabIndex = 33;
@@ -744,10 +764,8 @@
             this.label16.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.Desktop;
-
             this.label16.Location = new System.Drawing.Point(285, 70);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(76, 18);
             this.label16.TabIndex = 32;
@@ -759,10 +777,8 @@
             this.label13.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.Desktop;
-
             this.label13.Location = new System.Drawing.Point(60, 70);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(65, 18);
             this.label13.TabIndex = 30;
@@ -774,10 +790,8 @@
             this.label15.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.Desktop;
-
             this.label15.Location = new System.Drawing.Point(179, 70);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(50, 18);
             this.label15.TabIndex = 31;
@@ -816,55 +830,11 @@
             this.label14.TabIndex = 16;
             this.label14.Text = "Customer";
             // 
-            // EName
-            // 
-            this.EName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.EName.HeaderText = "Sl No";
-            this.EName.Name = "EName";
-            // 
-            // Email
-            // 
-            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Email.HeaderText = "Item Name";
-            this.Email.Name = "Email";
-            // 
-            // Department
-            // 
-            this.Department.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Department.HeaderText = "Unite";
-            this.Department.Name = "Department";
-            // 
-            // Price
-            // 
-            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
-            // 
-            // vat
-            // 
-            this.vat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.vat.HeaderText = "VAT";
-            this.vat.Name = "vat";
-            // 
-            // discount
-            // 
-            this.discount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.discount.HeaderText = "Disc(%)";
-            this.discount.Name = "discount";
-            // 
-            // total
-            // 
-            this.total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.total.HeaderText = "Total";
-            this.total.Name = "total";
-            // 
             // Invoice_Frame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
             this.ClientSize = new System.Drawing.Size(1339, 748);
-
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelBody);

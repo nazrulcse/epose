@@ -79,7 +79,6 @@ namespace EPose
 
         public void addProduct(dynamic product) {
 
-            invoiceItems.Rows.Clear();
             invoiceItems.Rows.Add(product.barcode, product.name, "10", product.sale_price, "15%", "2%", product.sale_price*1);
             barcodeInput.Text = "";
 
@@ -89,6 +88,17 @@ namespace EPose
         private void employeeList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Control | Keys.S))
+            {
+                new ProductSearch_Frame().Show();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }
