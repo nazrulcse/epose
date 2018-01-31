@@ -105,14 +105,15 @@
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage7);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(2, 102);
+            this.tabControl1.Location = new System.Drawing.Point(4, 49);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(6, 15);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1198, 644);
+            this.tabControl1.Size = new System.Drawing.Size(1190, 615);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
@@ -124,7 +125,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1190, 587);
+            this.tabPage1.Size = new System.Drawing.Size(1182, 558);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Genaral Settings";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -470,7 +471,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(1190, 587);
+            this.tabPage2.Size = new System.Drawing.Size(1184, 558);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Global Settings";
             // 
@@ -908,7 +909,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 53);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1190, 587);
+            this.tabPage3.Size = new System.Drawing.Size(1184, 558);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Printer settings";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -917,7 +918,7 @@
             // 
             this.tabPage4.Location = new System.Drawing.Point(4, 53);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1190, 587);
+            this.tabPage4.Size = new System.Drawing.Size(1184, 558);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "API configuration for web";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -926,7 +927,7 @@
             // 
             this.tabPage5.Location = new System.Drawing.Point(4, 53);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1190, 587);
+            this.tabPage5.Size = new System.Drawing.Size(1184, 558);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Customer invoice setup";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -935,7 +936,7 @@
             // 
             this.tabPage6.Location = new System.Drawing.Point(4, 53);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1190, 587);
+            this.tabPage6.Size = new System.Drawing.Size(1184, 558);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "VAT setup";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -944,7 +945,7 @@
             // 
             this.tabPage7.Location = new System.Drawing.Point(4, 53);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1190, 587);
+            this.tabPage7.Size = new System.Drawing.Size(1184, 558);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Bank setup";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -953,7 +954,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 738);
+            this.ClientSize = new System.Drawing.Size(1198, 669);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Settings_Frame";

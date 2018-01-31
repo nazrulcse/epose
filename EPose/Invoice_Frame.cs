@@ -85,5 +85,10 @@ namespace EPose
 
 
         }
+
+        private void employeeList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

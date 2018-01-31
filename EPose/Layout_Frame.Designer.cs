@@ -55,9 +55,9 @@
             this.titleBar.Controls.Add(this.pictureBox1);
             this.titleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.titleBar.Location = new System.Drawing.Point(0, 0);
-            this.titleBar.Margin = new System.Windows.Forms.Padding(4);
+            this.titleBar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.titleBar.Name = "titleBar";
-            this.titleBar.Size = new System.Drawing.Size(885, 40);
+            this.titleBar.Size = new System.Drawing.Size(1180, 49);
             this.titleBar.TabIndex = 2;
             this.titleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.titleBar_MouseDown);
             this.titleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.titleBar_MouseMove);
@@ -96,11 +96,13 @@
             this.btnexit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnexit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnexit.Image = ((System.Drawing.Image)(resources.GetObject("btnexit.Image")));
+
             this.btnexit.Location = new System.Drawing.Point(856, 0);
             this.btnexit.Margin = new System.Windows.Forms.Padding(4);
             this.btnexit.Name = "btnexit";
             this.btnexit.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnexit.Size = new System.Drawing.Size(29, 40);
+
             this.btnexit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnexit.TabIndex = 3;
             this.btnexit.TabStop = false;
@@ -111,9 +113,10 @@
             this.formTitle.BackColor = System.Drawing.Color.Transparent;
             this.formTitle.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.formTitle.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.formTitle.Location = new System.Drawing.Point(39, 0);
+            this.formTitle.Location = new System.Drawing.Point(52, 0);
+            this.formTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.formTitle.Name = "formTitle";
-            this.formTitle.Size = new System.Drawing.Size(577, 40);
+            this.formTitle.Size = new System.Drawing.Size(769, 49);
             this.formTitle.TabIndex = 3;
             this.formTitle.Text = "Main window";
             this.formTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -123,10 +126,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(5, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(7, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 30);
+            this.pictureBox1.Size = new System.Drawing.Size(39, 37);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -135,40 +138,43 @@
             // 
             this.leftBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
             this.leftBorder.Dock = System.Windows.Forms.DockStyle.Left;
-            this.leftBorder.Location = new System.Drawing.Point(0, 40);
+            this.leftBorder.Location = new System.Drawing.Point(0, 49);
+            this.leftBorder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.leftBorder.Name = "leftBorder";
-            this.leftBorder.Size = new System.Drawing.Size(3, 507);
+            this.leftBorder.Size = new System.Drawing.Size(4, 624);
             this.leftBorder.TabIndex = 3;
             // 
             // rightBorder
             // 
             this.rightBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
             this.rightBorder.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rightBorder.Location = new System.Drawing.Point(882, 40);
+            this.rightBorder.Location = new System.Drawing.Point(1176, 49);
+            this.rightBorder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rightBorder.Name = "rightBorder";
-            this.rightBorder.Size = new System.Drawing.Size(3, 507);
+            this.rightBorder.Size = new System.Drawing.Size(4, 624);
             this.rightBorder.TabIndex = 3;
             // 
             // bottomBorder
             // 
             this.bottomBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
             this.bottomBorder.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bottomBorder.Location = new System.Drawing.Point(3, 544);
+            this.bottomBorder.Location = new System.Drawing.Point(4, 669);
+            this.bottomBorder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bottomBorder.Name = "bottomBorder";
-            this.bottomBorder.Size = new System.Drawing.Size(879, 3);
+            this.bottomBorder.Size = new System.Drawing.Size(1172, 4);
             this.bottomBorder.TabIndex = 3;
             // 
             // Layout_Frame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 547);
+            this.ClientSize = new System.Drawing.Size(1180, 673);
             this.Controls.Add(this.bottomBorder);
             this.Controls.Add(this.rightBorder);
             this.Controls.Add(this.leftBorder);
             this.Controls.Add(this.titleBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "Layout_Frame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Layout";
