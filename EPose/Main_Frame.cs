@@ -73,17 +73,42 @@ namespace EPose
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            new Department_Frame().Show();
+            new supplier_Frame().Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            new Employee_Frame().Show();
         }
 
         private void Main_Frame_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            new Customer_Frame().Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            new DamageProduct_Frame().Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            new Product_Frame().Show();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            new Settings_Frame().Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            new payment_Frame().Show();
         }
     }
 }

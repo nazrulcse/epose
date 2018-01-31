@@ -43,7 +43,7 @@
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.employeeList = new System.Windows.Forms.DataGridView();
+            this.supplierList = new System.Windows.Forms.DataGridView();
             this.EName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Designation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,7 +56,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supplierList)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox3
@@ -117,20 +117,20 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.employeeList);
+            this.panel1.Controls.Add(this.supplierList);
             this.panel1.Location = new System.Drawing.Point(0, 183);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(730, 246);
             this.panel1.TabIndex = 13;
             // 
-            // employeeList
+            // supplierList
             // 
-            this.employeeList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.employeeList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.employeeList.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.employeeList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.employeeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.employeeList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.supplierList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.supplierList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.supplierList.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.supplierList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.supplierList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.supplierList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EName,
             this.Designation,
             this.Email,
@@ -139,13 +139,13 @@
             this.Country,
             this.Department,
             this.Address});
-            this.employeeList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.employeeList.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.employeeList.Location = new System.Drawing.Point(0, 0);
-            this.employeeList.Name = "employeeList";
-            this.employeeList.RowHeadersWidth = 52;
-            this.employeeList.Size = new System.Drawing.Size(730, 246);
-            this.employeeList.TabIndex = 4;
+            this.supplierList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.supplierList.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.supplierList.Location = new System.Drawing.Point(0, 0);
+            this.supplierList.Name = "supplierList";
+            this.supplierList.RowHeadersWidth = 52;
+            this.supplierList.Size = new System.Drawing.Size(730, 246);
+            this.supplierList.TabIndex = 4;
             // 
             // EName
             // 
@@ -240,7 +240,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.employeeList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supplierList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,7 +252,7 @@
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView employeeList;
+        private System.Windows.Forms.DataGridView supplierList;
         private System.Windows.Forms.DataGridViewTextBoxColumn EName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Designation;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;

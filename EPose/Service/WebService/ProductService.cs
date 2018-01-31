@@ -7,22 +7,22 @@ using System.Threading.Tasks;
 
 namespace EPose.Service.WebService
 {
-    class SupplierService
+    class ProductService
     {
 
         public static void perform()
         {
             int i = 0;
             String[] successRecords = new String[100];
-            dynamic suppliers = DownStream.syncSupplier();
-            foreach (var supplier in suppliers)
+            dynamic products = DownStream.syncProduct();
+            foreach (var product in products)
             {
                 try
                 {
-                    var response = ActionPerform.perform(supplier, supplier.action);
+                    var response = ActionPerform.perform(product, product.action);
                     if (response)
                     {
-                        successRecords[i++] = supplier.log_id;
+                        successRecords[i++] = product.log_id;
                     }
                     else
                     {

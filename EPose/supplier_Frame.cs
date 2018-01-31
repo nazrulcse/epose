@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EPose.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,17 @@ namespace EPose
         {
             InitializeComponent();
             this.setTitle("Supplier Window");
+
+           SupplierModel sup = new SupplierModel();
+           dynamic suppliers = sup.all(sup);
+
+           foreach (var supplier in suppliers)
+            {
+
+                supplierList.Rows.Add(supplier.id, supplier.name, supplier.company,supplier.address,supplier.city,supplier.email,supplier.mobile,supplier.department_id);
+
+            }
+
         }
 
         private void supplier_Load(object sender, EventArgs e)

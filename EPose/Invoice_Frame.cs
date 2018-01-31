@@ -24,6 +24,9 @@ namespace EPose
         {
             try
             {
+                
+          
+
                 //InvoiceModel inv = new InvoiceModel();
                 //var ms = (DateTime.Now - DateTime.MinValue).TotalMilliseconds;
                 //inv.id = ms.ToString();
@@ -59,14 +62,28 @@ namespace EPose
                 }
                 else
                 {
-                    addProduct();
+                    String barcode = barcodeInput.Text;
+                    ProductModel pm = new ProductModel();
+                    dynamic products = pm.where(pm, "barcode = '" + barcode + "'");
+                    if (products.Count > 0)
+                    {
+                        addProduct(products[0]);
+                    }
+                    else {
+                        MessageBox.Show("Product Not Available");
+                      
+                    }
                 }
             }
         }
 
-        public void addProduct() {
-            invoiceItems.Rows.Add("2545", barcodeInput.Text, 1, 254, 0, 0, 254);
+        public void addProduct(dynamic product) {
+
+            invoiceItems.Rows.Clear();
+            invoiceItems.Rows.Add(product.barcode, product.name, "10", product.sale_price, "15%", "2%", product.sale_price*1);
             barcodeInput.Text = "";
+
+
         }
     }
 }

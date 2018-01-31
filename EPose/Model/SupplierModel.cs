@@ -16,8 +16,8 @@ namespace EPose.Model
         public string city { get; set; }
         public string email { get; set; }
         public string mobile { get; set; }
+        public string action { get; set; }
         public string department_id { get; set; }
-        public bool is_active { get; set; }
         public string log_id { get; set; }
 
 
@@ -28,7 +28,7 @@ namespace EPose.Model
 
         public Array attrAccess()
         {
-            return new String[] { "id", "name", "company", "address", "city", "email", "mobile", "department_id", "is_active", "log_id" };
+            return new String[] { "id", "name", "company", "address", "city", "email", "mobile", "department_id" };
         }
     }
 }

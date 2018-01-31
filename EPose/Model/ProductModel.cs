@@ -26,16 +26,18 @@ namespace EPose.Model
         public int stock { get; set; }
         public bool is_active { get; set; }
         public string log_id { get; set; }
+        public string action { get; set; }
+
 
 
         public string getTable()
         {
-            return "`products";
+            return "products";
         }
 
         public Array attrAccess()
         {
-            return new String[] { "id", "barcode", "name", "description", "department", "category", "sub_category", "model", "brand", "re_order_level", "cost_price", "sale_price", "expirable", "discountable", "stock", "is_active", "log_id" };
+            return new String[] { "id", "barcode", "name", "description", "department", "category", "sub_category", "model", "brand", "re_order_level", "cost_price", "sale_price", "expirable", "discountable", "stock", "is_active" };
         }
     }
 }

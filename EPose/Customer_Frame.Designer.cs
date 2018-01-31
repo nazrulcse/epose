@@ -44,10 +44,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.comboBoxCategory = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.employeeList = new System.Windows.Forms.DataGridView();
+            this.customerList = new System.Windows.Forms.DataGridView();
             this.EName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Designation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,12 +58,13 @@
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalCustomerLevel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerList)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox4
@@ -122,15 +123,15 @@
             this.pictureBox7.TabStop = false;
             this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
-            // label2
+            // label
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(12, 88);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 13);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Total Customer:";
+            this.label.AutoSize = true;
+            this.label.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label.Location = new System.Drawing.Point(12, 87);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(81, 13);
+            this.label.TabIndex = 14;
+            this.label.Text = "Total Customer:";
             // 
             // comboBoxCategory
             // 
@@ -139,7 +140,7 @@
             this.comboBoxCategory.FormattingEnabled = true;
             this.comboBoxCategory.Items.AddRange(new object[] {
             "Apon"});
-            this.comboBoxCategory.Location = new System.Drawing.Point(369, 125);
+            this.comboBoxCategory.Location = new System.Drawing.Point(496, 134);
             this.comboBoxCategory.MinimumSize = new System.Drawing.Size(20, 0);
             this.comboBoxCategory.Name = "comboBoxCategory";
             this.comboBoxCategory.Size = new System.Drawing.Size(383, 21);
@@ -149,20 +150,20 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.employeeList);
+            this.panel1.Controls.Add(this.customerList);
             this.panel1.Location = new System.Drawing.Point(3, 174);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(882, 282);
             this.panel1.TabIndex = 17;
             // 
-            // employeeList
+            // customerList
             // 
-            this.employeeList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.employeeList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.employeeList.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.employeeList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.employeeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.employeeList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.customerList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.customerList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.customerList.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.customerList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.customerList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.customerList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EName,
             this.Designation,
             this.Email,
@@ -173,13 +174,13 @@
             this.Address,
             this.Column1,
             this.Column2});
-            this.employeeList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.employeeList.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.employeeList.Location = new System.Drawing.Point(0, 0);
-            this.employeeList.Name = "employeeList";
-            this.employeeList.RowHeadersWidth = 52;
-            this.employeeList.Size = new System.Drawing.Size(882, 282);
-            this.employeeList.TabIndex = 3;
+            this.customerList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customerList.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.customerList.Location = new System.Drawing.Point(0, 0);
+            this.customerList.Name = "customerList";
+            this.customerList.RowHeadersWidth = 52;
+            this.customerList.Size = new System.Drawing.Size(882, 282);
+            this.customerList.TabIndex = 3;
             // 
             // EName
             // 
@@ -267,14 +268,24 @@
             this.Column2.Name = "Column2";
             this.Column2.Width = 83;
             // 
+            // totalCustomerLevel
+            // 
+            this.totalCustomerLevel.AutoSize = true;
+            this.totalCustomerLevel.Location = new System.Drawing.Point(99, 87);
+            this.totalCustomerLevel.Name = "totalCustomerLevel";
+            this.totalCustomerLevel.Size = new System.Drawing.Size(13, 13);
+            this.totalCustomerLevel.TabIndex = 18;
+            this.totalCustomerLevel.Text = "0";
+            // 
             // Customer_Frame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(888, 459);
+            this.Controls.Add(this.totalCustomerLevel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.comboBoxCategory);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.textBoxSearch);
             this.ForeColor = System.Drawing.SystemColors.Highlight;
@@ -284,15 +295,16 @@
             this.Load += new System.EventHandler(this.Customer_Load);
             this.Controls.SetChildIndex(this.textBoxSearch, 0);
             this.Controls.SetChildIndex(this.pictureBox7, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.label, 0);
             this.Controls.SetChildIndex(this.comboBoxCategory, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.totalCustomerLevel, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.employeeList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,13 +316,13 @@
         private System.Windows.Forms.TextBox textBoxSearch;
 
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label;
         private System.Windows.Forms.ComboBox comboBoxCategory;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView employeeList;
+        private System.Windows.Forms.DataGridView customerList;
         private System.Windows.Forms.DataGridViewTextBoxColumn EName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Designation;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
@@ -321,5 +333,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.Label totalCustomerLevel;
     }
 }

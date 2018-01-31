@@ -135,9 +135,12 @@
       <DependentUpon>Login_Frame.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ActivityLogModel.cs" />
+    <Compile Include="Model\CustomerModel.cs" />
     <Compile Include="Model\DepartmentModel.cs" />
     <Compile Include="Model\EmployeeModel.cs" />
     <Compile Include="Model\InvoiceModel.cs" />
+    <Compile Include="Model\ProductModel.cs" />
+    <Compile Include="Model\SupplierModel.cs" />
     <Compile Include="Model_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +150,12 @@
     <Compile Include="Orm\ActiveRecord.cs" />
     <Compile Include="Orm\ObjectBuilder.cs" />
     <Compile Include="Orm\SQLConn.cs" />
+    <Compile Include="payment_Frame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payment_Frame.Designer.cs">
+      <DependentUpon>payment_Frame.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,8 +194,11 @@
     <Compile Include="Service\Sync\DownStream.cs" />
     <Compile Include="Service\Sync\UpStream.cs" />
     <Compile Include="Service\WebAPI.cs" />
+    <Compile Include="Service\WebService\CustomerService.cs" />
     <Compile Include="Service\WebService\DepartmentService.cs" />
     <Compile Include="Service\WebService\EmployeeService.cs" />
+    <Compile Include="Service\WebService\ProductService.cs" />
+    <Compile Include="Service\WebService\SupplierService.cs" />
     <Compile Include="Settings_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Model_Frame.resx">
       <DependentUpon>Model_Frame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payment_Frame.resx">
+      <DependentUpon>payment_Frame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Product_Frame.resx">
       <DependentUpon>Product_Frame.cs</DependentUpon>

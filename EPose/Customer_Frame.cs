@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EPose.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,13 @@ namespace EPose
 
         private void Customer_Load(object sender, EventArgs e)
         {
+            CustomerModel cust = new CustomerModel();
+            dynamic customers = cust.all(cust);
+            foreach( var customer in customers){
+                customerList.Rows.Add(customer.id, customer.name, customer.company, customer.address, customer.city, customer.email, customer.mobile, customer.department_id, customer.initial_balance, customer.credit_limit);
+            }
+            this.totalCustomerLevel.Text = "" + customers.Count;
+          
 
         }
 

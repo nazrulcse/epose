@@ -117,11 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="pictureBox3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAjhJREFUWEftV0svA1EUrr9TrUdsEAQJiYWVJQliIWHBxt7Kyo5gZ0OnpN5BIp7B
+        DAAACwwBP0AiyAAAAjhJREFUWEftV0svA1EUrr9TrUdsEAQJiYWVJQliIWHBxt7Kyo5gZ0OnpN5BIp7B
         RiKiiiAZM1VSpcXUVJ+Oe6YeUZ17O221Fk4yq+be893v+845PTodBkBOrvmySm/im43cZctvfphDbxKq
         MaeSW0nOCTMGToDMfrxFyY8vz2zir4caObFch5RkC4DBLDTqUO+sATAJTf8A0sqAUWslpUuCtnUnHN77
         IfIKIAUiMGx7hDxz1O3l01fq5c0C0L3tgmKLndofMHmYJI6NWd4LQ0ePMGB9SB6A3RuCE08Aaucdqpfg
@@ -134,10 +137,13 @@
         YII=
 </value>
   </data>
+  <metadata name="pictureBox2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAZVJREFUWEdjcG86om5Tvee4dfnev9aVe/+Tin3bDv8nFfu0Hvrr137oWEzvMRUG
+        DAAACwwBP0AiyAAAAZVJREFUWEdjcG86om5Tvee4dfnev9aVe/+Tin3bDv8nFfu0Hvrr137oWEzvMRUG
         i7JdJ4xLdv0nF7s1HvhPLvZsPnCAwaSUfMtBjibXcpA+16a93xnI9TlMHyUOcGnc/3PUAUM7BExLd/9P
         mHzyf+bMM2CcCGSTkiYoSgNR/cf/33/15T8yuPXsE30cYFq2+/+TN99QLAdx6OYAkO+RwaPXX/8fu/H6
         /5rjj+kTAlnA+EYGeXPOkGQxLJ2QnQayZp1FcUDunLP0c8CZO+/+P32LGv+gKLj59NP/vZdfkOQQskLg
@@ -147,6 +153,15 @@
         xzwG7W2e6QAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="textBoxSearch.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="pictureBox7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="pictureBox7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQMAAADCCAMAAAB6zFdcAAAABGdBTUEAALGPC/xhBQAAAMNQTFRF////
@@ -200,6 +215,12 @@
         OoYAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="panel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="supplierList.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="EName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -222,6 +243,9 @@
     <value>True</value>
   </metadata>
   <metadata name="Address.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
 </root>

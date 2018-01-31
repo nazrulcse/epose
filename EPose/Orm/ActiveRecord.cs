@@ -77,7 +77,7 @@ namespace EPose.Orm
         {
             var table_name = modelObject.getTable();
             Type objType = modelObject.GetType();
-            var query = "Select * from " + table_name + " " + condition;
+            var query = "Select * from " + table_name + " where(" + condition + ")";
             return getFromDatabase(modelObject, query);
         }
        
