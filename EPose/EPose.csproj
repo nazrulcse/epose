@@ -139,6 +139,7 @@
     <Compile Include="Model\DepartmentModel.cs" />
     <Compile Include="Model\EmployeeModel.cs" />
     <Compile Include="Model\InvoiceModel.cs" />
+    <Compile Include="Model\PaymentModel.cs" />
     <Compile Include="Model\ProductModel.cs" />
     <Compile Include="Model\SupplierModel.cs" />
     <Compile Include="Model_Frame.cs">
