@@ -14,40 +14,68 @@ namespace EPose
     public partial class ProductSearch_Frame : Layout_Frame
     {
         Invoice_Frame invoice;
+        dynamic search_products; 
         public ProductSearch_Frame(Invoice_Frame inv)
         {
             InitializeComponent();
             this.invoice = inv;
         }
 
-        private void barcode_KeyDown_1(object sender, KeyEventArgs e)
+        public void add(dynamic products)
+        {
+            productItems.Rows.Clear();
+            this.search_products = products;
+            foreach(var p in products){
+                productItems.Rows.Add(p.barcode, p.name, "10", p.sale_price, "15%", "2%", p.sale_price * 1);
+            }
+           
+           // if (product != null)
+           // {
+           //  productItems.Rows.Add(product.barcode, product.name, "10", product.sale_price, "15%", "2%", product.sale_price * 1);
+           //  productItems.Rows[0].Selected = true;
+           // }
+          
+        }
+
+        private void barcode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Return)
             {
-                String barcod = barcode.Text;
+                productItems.Rows[0].Selected = true;
+                productItems.Focus();
+            }
+        }
+
+        private void barcode_TextChanged(object sender, EventArgs e)
+        {
+            String barcod = barcode.Text;
+            if (barcod == "")
+            {
+                productItems.Rows.Clear();
+            }
+            else
+            {
                 ProductModel pm = new ProductModel();
-                dynamic products = pm.where(pm, "barcode = '" + barcod + "'");
+                dynamic products = pm.where(pm, "barcode like '%" + barcod + "%'");
                 if (products.Count > 0)
                 {
-                    this.invoice.addProduct(products[0]);
-                    add(products[0]);
+                    // this.invoice.addProduct(products[0]);
+                    add(products);
                 }
                 else
                 {
-                    MessageBox.Show("Product Not Available");
+                    productItems.Rows.Clear();
                 }
             }
         }
 
-        public void add(dynamic product)
+        private void productItems_KeyDown(object sender, KeyEventArgs e)
         {
-            productItems.Rows.Add(product.barcode, product.name, "10", product.sale_price, "15%", "2%", product.sale_price * 1);
-            barcode.Text = "";
-
+            if(e.KeyCode == Keys.Enter) {
+                 this.invoice.addProduct(search_products[ productItems.SelectedRows[0].Index]);
+                this.Close();
+            }
         }
 
-       
-
-       
     }
 }

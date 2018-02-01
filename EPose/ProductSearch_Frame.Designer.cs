@@ -69,7 +69,8 @@
             this.barcode.Name = "barcode";
             this.barcode.Size = new System.Drawing.Size(290, 30);
             this.barcode.TabIndex = 2;
-            this.barcode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.barcode_KeyDown_1);
+            this.barcode.TextChanged += new System.EventHandler(this.barcode_TextChanged);
+            this.barcode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.barcode_KeyDown);
             // 
             // panel1
             // 
@@ -98,6 +99,7 @@
             this.productItems.Name = "productItems";
             this.productItems.Size = new System.Drawing.Size(1082, 367);
             this.productItems.TabIndex = 10;
+            this.productItems.KeyDown += new System.Windows.Forms.KeyEventHandler(this.productItems_KeyDown);
             // 
             // EName
             // 
