@@ -72,7 +72,7 @@ namespace EPose
         private void productItems_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Enter) {
-                 this.invoice.addProduct(search_products[ productItems.SelectedRows[0].Index]);
+                 this.invoice.addProduct(search_products[productItems.SelectedRows[0].Index]);
                 this.Close();
             }
         }

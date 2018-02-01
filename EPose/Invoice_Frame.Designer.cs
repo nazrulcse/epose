@@ -526,8 +526,9 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(112, 60);
             this.button8.TabIndex = 2;
-            this.button8.Text = "Settel Payment";
+            this.button8.Text = "Payment";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 

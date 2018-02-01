@@ -13,21 +13,22 @@ namespace EPose
 {
     public partial class payment_Frame : Layout_Frame
     {
-        public payment_Frame()
+
+        dynamic invoice;
+        public payment_Frame( dynamic invoice)
         {
             InitializeComponent();
-            this.setTitle("Payment Window");
-            
-          
-
+            this.setTitle("Payment Window"); 
+            this.invoice = invoice;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             PaymentModel payment = new PaymentModel();
             payment.global_id = "111";
-            payment.payment_type = "bikash";
-            payment.invoice_id = "122";
+            string selected = this.paymentType.GetItemText(this.paymentType.SelectedItem);
+            payment.payment_type = selected;
+            payment.invoice_id = invoice.id;
             payment.amount = 23.4;
             payment.transaction_token = "7070";
             payment.create(payment);
