@@ -11,35 +11,42 @@ using System.Windows.Forms;
 
 namespace EPose
 {
-    public partial class ProductSearch_Frame : Form
+    public partial class ProductSearch_Frame : Layout_Frame
     {
-        public ProductSearch_Frame()
+        Invoice_Frame invoice;
+        public ProductSearch_Frame(Invoice_Frame inv)
         {
             InitializeComponent();
+            this.invoice = inv;
         }
 
-        private void barcode_KeyDown(object sender, KeyEventArgs e)
+        private void barcode_KeyDown_1(object sender, KeyEventArgs e)
         {
-           
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            String barcod = barcode.Text;
-            ProductModel pm = new ProductModel();
-            dynamic products = pm.where(pm, "barcode = '" + barcod + "'");
-            if (products.Count > 0)
+            if (e.KeyCode == Keys.Return)
             {
-
-                Invoice_Frame inv = new Invoice_Frame();
-                inv.addProduct(products[0]);
-            }
-            else
-            {
-                MessageBox.Show("Product Not Available");
-
+                String barcod = barcode.Text;
+                ProductModel pm = new ProductModel();
+                dynamic products = pm.where(pm, "barcode = '" + barcod + "'");
+                if (products.Count > 0)
+                {
+                    this.invoice.addProduct(products[0]);
+                    add(products[0]);
+                }
+                else
+                {
+                    MessageBox.Show("Product Not Available");
+                }
             }
         }
+
+        public void add(dynamic product)
+        {
+            productItems.Rows.Add(product.barcode, product.name, "10", product.sale_price, "15%", "2%", product.sale_price * 1);
+            barcode.Text = "";
+
+        }
+
+       
 
        
     }

@@ -13,6 +13,7 @@ namespace EPose
 {
     public partial class Invoice_Frame : Layout_Frame
     {
+        Product_Frame pro = new Product_Frame();
         public Invoice_Frame()
         {
             InitializeComponent();
@@ -22,12 +23,10 @@ namespace EPose
 
         private void Invoice_Frame_Load(object sender, EventArgs e)
         {
+           
             try
             {
-                
-          
-
-                //InvoiceModel inv = new InvoiceModel();
+               //InvoiceModel inv = new InvoiceModel();
                 //var ms = (DateTime.Now - DateTime.MinValue).TotalMilliseconds;
                 //inv.id = ms.ToString();
                 //inv.number = "inv-" + ms.ToString();
@@ -77,25 +76,18 @@ namespace EPose
             }
         }
 
-        public void addProduct(dynamic product) {
-
-            invoiceItems.Rows.Add(product.barcode, product.name, "10", product.sale_price, "15%", "2%", product.sale_price*1);
+        public void addProduct(dynamic product)
+        {
+           this.invoiceItems.Rows.Add(product.barcode, product.name, "10", product.sale_price, "15%", "2%", product.sale_price*1);
             barcodeInput.Text = "";
 
-
         }
-
-        private void employeeList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (keyData == (Keys.Control | Keys.S))
             {
-                new ProductSearch_Frame().Show();
+                new ProductSearch_Frame(this).Show();
                 return true;
             }
             return base.ProcessCmdKey(ref msg, keyData);
