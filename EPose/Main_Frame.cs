@@ -108,7 +108,7 @@ namespace EPose
 
         private void button6_Click(object sender, EventArgs e)
         {
-            new payment_Frame().Show();
+           // new payment_Frame().Show();
         }
     }
 }
