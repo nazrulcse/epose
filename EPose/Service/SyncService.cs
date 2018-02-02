@@ -18,9 +18,16 @@ namespace EPose.Service
             //ProductService.perform();
             //SupplierService.perform();
            // CustomerService.perform();
-
+           // var timer = new System.Threading.Timer((e) =>
+           // {
+             //   ProductService.perform();
+               // Console.WriteLine("successfull call");
+            //}, null, TimeSpan.Zero, TimeSpan.FromMinutes(2));
             //WebAPI wp = new WebAPI();
             //wp.syncEmployee();
         }
     }
+
+    
+
 }

@@ -14,7 +14,7 @@ namespace Service
     class WebAPI
     {
         //public const string API = "http://accounts.tangailenterprise.com";
-        public const string API = "http://596f4925.ngrok.io/api/v1/";
+        public const string API = "http://f40c5b31.ngrok.io/api/v1/";
         public static HttpResponseMessage getRequest(String action_url, String model)
         {
             string URL = API + "" + action_url;

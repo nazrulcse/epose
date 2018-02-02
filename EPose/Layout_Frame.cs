@@ -73,5 +73,10 @@ namespace EPose
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            //pictureBox2.BackColor = Color.FromArgb(255, 0, 0);
+        }
     }
 }

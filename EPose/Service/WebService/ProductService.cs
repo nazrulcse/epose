@@ -15,6 +15,7 @@ namespace EPose.Service.WebService
             int i = 0;
             String[] successRecords = new String[100];
             dynamic products = DownStream.syncProduct();
+            Console.WriteLine("" + products);
             foreach (var product in products)
             {
                 try

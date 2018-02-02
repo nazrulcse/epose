@@ -22,22 +22,31 @@ namespace EPose
             this.invoice = invoice;
         }
 
+        private void payment_Frame_Load(object sender, EventArgs e)
+        {
+          
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
+            
             PaymentModel payment = new PaymentModel();
             payment.global_id = "111";
-            string selected = this.paymentType.GetItemText(this.paymentType.SelectedItem);
-            payment.payment_type = selected;
+            payment.payment_type = this.paymentType.GetItemText(this.paymentType.SelectedItem);
             payment.invoice_id = invoice.id;
-            payment.amount = 23.4;
-            payment.transaction_token = "7070";
+            payment.amount = Convert.ToDouble(amountTextBox.Text);
+            payment.transaction_token =  new Random().Next(1000)+invoice.id;
+            payment.date = DateTime.Today; ;
             payment.create(payment);
 
             dynamic payments = payment.all(payment);
+            paymentList.Rows.Clear();
             foreach (var pay in payments)
             {
-                paymentList.Rows.Add(pay.global_id, pay.payment_type, pay.invoice_id, pay.amount, pay.transaction_token, pay.transaction_token);
+                paymentList.Rows.Add(pay.global_id, pay.payment_type, pay.invoice_id, pay.amount, pay.transaction_token,pay.date);
             }
         }
+
+       
     }
 }

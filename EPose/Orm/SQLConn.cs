@@ -40,7 +40,7 @@ namespace EPose.Orm
 				ServerMySQL = Interaction.GetSetting(AppName, "DBSection", "DB_Host", "127.0.0.1");
 				PortMySQL = Interaction.GetSetting(AppName, "DBSection", "DB_Port", "3306");
 				UserNameMySQL = Interaction.GetSetting(AppName, "DBSection", "DB_User", "root");
-				PwdMySQL = Interaction.GetSetting(AppName, "DBSection", "DB_Password", "root");
+				PwdMySQL = Interaction.GetSetting(AppName, "DBSection", "DB_Password", "");
 			} catch {
 				Interaction.MsgBox("System registry was not established, you can set/save " + "these settings by pressing F1", MsgBoxStyle.Information);
 			}
