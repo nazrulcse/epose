@@ -80,6 +80,12 @@
     <Compile Include="Brand_Frame.Designer.cs">
       <DependentUpon>Brand_Frame.cs</DependentUpon>
     </Compile>
+    <Compile Include="Connection_frame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connection_frame.Designer.cs">
+      <DependentUpon>Connection_frame.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Brand_Frame.resx">
       <DependentUpon>Brand_Frame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Connection_frame.resx">
+      <DependentUpon>Connection_frame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer_Frame.resx">
       <DependentUpon>Customer_Frame.cs</DependentUpon>

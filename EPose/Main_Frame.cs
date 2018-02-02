@@ -110,5 +110,10 @@ namespace EPose
         {
            // new payment_Frame().Show();
         }
+
+        private void btnDatabaseConfig_Click(object sender, EventArgs e)
+        {
+            new Connection_frame().Show(); 
+        }
     }
 }

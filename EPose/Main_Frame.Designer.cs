@@ -621,6 +621,7 @@
             this.btnDatabaseConfig.Size = new System.Drawing.Size(83, 78);
             this.btnDatabaseConfig.TabIndex = 37;
             this.btnDatabaseConfig.UseVisualStyleBackColor = false;
+            this.btnDatabaseConfig.Click += new System.EventHandler(this.btnDatabaseConfig_Click);
             // 
             // btnStaff
             // 
