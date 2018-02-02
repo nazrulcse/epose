@@ -115,5 +115,33 @@ namespace EPose
         {
             new Connection_frame().Show(); 
         }
+
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Control | Keys.P))
+            {
+                new Product_Frame().Show();
+                return true;
+            }
+            else if(keyData == (Keys.Control | Keys.C)){
+                new Customer_Frame().Show();
+            }
+            else if(keyData == (Keys.Control | Keys.I)){
+                new Invoice_Frame().Show();
+            }
+            else if(keyData == (Keys.Control | Keys.S)){
+                new Settings_Frame().Show();
+            }
+            else if (keyData == (Keys.Control | Keys.D))
+            {
+                new Connection_frame().Show();
+            }
+            else{
+            
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
     }
 }

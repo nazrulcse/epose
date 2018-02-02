@@ -47,18 +47,6 @@ namespace EPose
                 }
             
         }
-
-         private void label1_Click(object sender, EventArgs e)
-         {
-
-         }
-
-         private void employeeLabel_Click(object sender, EventArgs e)
-         {
-
-         }
-
-       
-        
+  
     }
 }

@@ -26,7 +26,7 @@ namespace EPose
             foreach( var customer in customers){
                 customerList.Rows.Add(customer.id, customer.name, customer.company, customer.address, customer.city, customer.email, customer.mobile, customer.department_id, customer.initial_balance, customer.credit_limit);
             }
-          
+            this.customerLabel.Text = "" + customers.Count;
         }
 
         private void searchBox_TextChanged(object sender, EventArgs e)
@@ -37,7 +37,7 @@ namespace EPose
             if (customers.Count > 0)
             {
 
-                this.employeeLabel.Text = "" + customers.Count;
+                this.customerLabel.Text = "" + customers.Count;
                 customerList.Rows.Clear();
                 foreach (var customer in customers)
                 {

@@ -25,7 +25,7 @@ namespace EPose
 
                 productList.Rows.Add(product.id, product.barcode,product.name,product.description,product.department,product.category,product.sub_category,product.model,product.brand, product.re_order_level,product.cost_price,product.sale_price,product.expirable,product.discountable,product.stock);
             }
-
+            this.productLabel.Text = "" + products.Count;
         }
 
         private void Product_Load(object sender, EventArgs e)
@@ -41,7 +41,7 @@ namespace EPose
             if (products.Count > 0)
             {
 
-                this.employeeLabel.Text = "" + products.Count;
+                this.productLabel.Text = "" + products.Count;
                 productList.Rows.Clear();
                 foreach (var product in products)
                 {
