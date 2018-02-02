@@ -26,25 +26,27 @@ namespace EPose
             foreach( var customer in customers){
                 customerList.Rows.Add(customer.id, customer.name, customer.company, customer.address, customer.city, customer.email, customer.mobile, customer.department_id, customer.initial_balance, customer.credit_limit);
             }
-            this.totalCustomerLevel.Text = "" + customers.Count;
           
-
         }
 
-        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void searchBox_TextChanged(object sender, EventArgs e)
         {
+            String searchValue = searchBox.Text;
+            CustomerModel cus = new CustomerModel();
+            dynamic customers = cus.where(cus, "name like '%" + searchValue + "%'");
+            if (customers.Count > 0)
+            {
 
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-            String searchValue = this.textBoxSearch.Text;
-            string selected = this.comboBoxCategory.GetItemText(this.comboBoxCategory.SelectedItem);
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+                this.employeeLabel.Text = "" + customers.Count;
+                customerList.Rows.Clear();
+                foreach (var customer in customers)
+                {
+                    customerList.Rows.Add(customer.id, customer.name, customer.company, customer.address, customer.city, customer.email, customer.mobile, customer.department_id, customer.initial_balance, customer.credit_limit);
+                }
+            }
             
         }
+
+      
     }
 }

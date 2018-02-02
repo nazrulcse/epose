@@ -204,6 +204,7 @@
             this.employeeLabel.Size = new System.Drawing.Size(29, 16);
             this.employeeLabel.TabIndex = 3;
             this.employeeLabel.Text = "123";
+            this.employeeLabel.Click += new System.EventHandler(this.employeeLabel_Click);
             // 
             // controlPanel
             // 
@@ -226,6 +227,7 @@
             this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Total  Result:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Employee_Frame
             // 
