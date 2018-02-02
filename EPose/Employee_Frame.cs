@@ -30,14 +30,25 @@ namespace EPose
             this.employeeLabel.Text = "" + employees.Count;
         }
 
-        private void employeeList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            String searchValue = searchBox.Text;
+            EmployeeModel emp = new EmployeeModel();
+                dynamic employees = emp.where(emp, "name like '%" + searchValue + "%'");
+                if (employees.Count > 0)
+                {
+                    
+                    this.employeeLabel.Text = "" + employees.Count;
+                    employeeList.Rows.Clear();
+                    foreach (var employee in employees)
+                    {
+                        employeeList.Rows.Add(employee.name, employee.designation, employee.email, employee.mobile, employee.present_address, employee.country, employee.department, employee.joining_date);
+                    }
+                }
+            
         }
 
-        private void controlPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
+        
     }
 }

@@ -99,5 +99,10 @@ namespace EPose
             payment_Frame payment = new payment_Frame(this.inv);
             payment.Show();
         }
+
+        private void barcodeInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

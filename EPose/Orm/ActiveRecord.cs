@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace EPose.Orm
 {
@@ -160,7 +161,7 @@ namespace EPose.Orm
                 SQLConn.ConnDB();
                 SQLConn.cmd = new MySqlCommand(query, SQLConn.conn);
                 SQLConn.dr = SQLConn.cmd.ExecuteReader();
-                var objectList = ObjectBuilder.DataReader2Obj(SQLConn.dr, objectModel);
+               var objectList = ObjectBuilder.DataReader2Obj(SQLConn.dr, objectModel);
                 return objectList;
             //}
             //catch (Exception ex)

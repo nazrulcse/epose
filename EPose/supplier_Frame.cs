@@ -23,7 +23,7 @@ namespace EPose
 
            foreach (var supplier in suppliers)
             {
-
+                this.employeeLabel.Text = "" + suppliers.Count;
                 supplierList.Rows.Add(supplier.id, supplier.name, supplier.company,supplier.address,supplier.city,supplier.email,supplier.mobile,supplier.department_id);
 
             }
@@ -35,29 +35,20 @@ namespace EPose
            
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+               private void searchBox_TextChanged(object sender, EventArgs e)
         {
-           
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-            String searchValue = this.textBoxSearch.Text;
+            String searchValue = searchBox.Text;
+            SupplierModel sup = new SupplierModel();
+            dynamic suppliers = sup.where(sup, "name like '%" + searchValue + "%'");
+            if (suppliers.Count > 0)
+            {
+                this.employeeLabel.Text = "" + suppliers.Count;
+                supplierList.Rows.Clear();
+                foreach (var supplier in suppliers)
+                {
+                    supplierList.Rows.Add(supplier.id, supplier.name, supplier.company, supplier.address, supplier.city, supplier.email, supplier.mobile, supplier.department_id);
+                }
+            }
         }
     }
 }

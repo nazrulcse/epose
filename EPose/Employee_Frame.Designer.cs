@@ -36,11 +36,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.controlPanel = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.active_employee = new System.Windows.Forms.CheckBox();
-            this.all_employee = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.dataPanel = new System.Windows.Forms.Panel();
             this.employeeList = new System.Windows.Forms.DataGridView();
             this.EName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,70 +46,16 @@
             this.Country = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.all_employee = new System.Windows.Forms.CheckBox();
+            this.active_employee = new System.Windows.Forms.CheckBox();
+            this.searchBox = new System.Windows.Forms.TextBox();
             this.employeeLabel = new System.Windows.Forms.Label();
-            this.controlPanel.SuspendLayout();
+            this.controlPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.dataPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeeList)).BeginInit();
+            this.controlPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // controlPanel
-            // 
-            this.controlPanel.Controls.Add(this.employeeLabel);
-            this.controlPanel.Controls.Add(this.textBox1);
-            this.controlPanel.Controls.Add(this.active_employee);
-            this.controlPanel.Controls.Add(this.all_employee);
-            this.controlPanel.Controls.Add(this.label1);
-            this.controlPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.controlPanel.Location = new System.Drawing.Point(3, 40);
-            this.controlPanel.Name = "controlPanel";
-            this.controlPanel.Size = new System.Drawing.Size(983, 93);
-            this.controlPanel.TabIndex = 3;
-            this.controlPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.controlPanel_Paint);
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Bookman Old Style", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(11, 49);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(443, 30);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Search by name, designation, phone......";
-            // 
-            // active_employee
-            // 
-            this.active_employee.AutoSize = true;
-            this.active_employee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.active_employee.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.active_employee.Location = new System.Drawing.Point(776, 49);
-            this.active_employee.Name = "active_employee";
-            this.active_employee.Size = new System.Drawing.Size(180, 24);
-            this.active_employee.TabIndex = 2;
-            this.active_employee.Text = "Only Active Employee";
-            this.active_employee.UseVisualStyleBackColor = true;
-            // 
-            // all_employee
-            // 
-            this.all_employee.AutoSize = true;
-            this.all_employee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.all_employee.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.all_employee.Location = new System.Drawing.Point(774, 19);
-            this.all_employee.Name = "all_employee";
-            this.all_employee.Size = new System.Drawing.Size(191, 24);
-            this.all_employee.TabIndex = 1;
-            this.all_employee.Text = "All Employee Including ";
-            this.all_employee.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(8, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Employee List: ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dataPanel
             // 
@@ -148,7 +89,6 @@
             this.employeeList.RowHeadersWidth = 52;
             this.employeeList.Size = new System.Drawing.Size(983, 504);
             this.employeeList.TabIndex = 0;
-            this.employeeList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeeList_CellContentClick);
             // 
             // EName
             // 
@@ -220,14 +160,72 @@
             this.Address.HeaderText = "Joining";
             this.Address.Name = "Address";
             // 
+            // all_employee
+            // 
+            this.all_employee.AutoSize = true;
+            this.all_employee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.all_employee.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.all_employee.Location = new System.Drawing.Point(774, 19);
+            this.all_employee.Name = "all_employee";
+            this.all_employee.Size = new System.Drawing.Size(191, 24);
+            this.all_employee.TabIndex = 1;
+            this.all_employee.Text = "All Employee Including ";
+            this.all_employee.UseVisualStyleBackColor = true;
+            // 
+            // active_employee
+            // 
+            this.active_employee.AutoSize = true;
+            this.active_employee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.active_employee.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.active_employee.Location = new System.Drawing.Point(776, 49);
+            this.active_employee.Name = "active_employee";
+            this.active_employee.Size = new System.Drawing.Size(180, 24);
+            this.active_employee.TabIndex = 2;
+            this.active_employee.Text = "Only Active Employee";
+            this.active_employee.UseVisualStyleBackColor = true;
+            // 
+            // searchBox
+            // 
+            this.searchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.searchBox.Font = new System.Drawing.Font("Bookman Old Style", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBox.Location = new System.Drawing.Point(11, 49);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(293, 30);
+            this.searchBox.TabIndex = 1;
+            this.searchBox.Text = "Search by name";
+            this.searchBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // employeeLabel
             // 
             this.employeeLabel.AutoSize = true;
             this.employeeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeLabel.Location = new System.Drawing.Point(128, 16);
+            this.employeeLabel.Location = new System.Drawing.Point(94, 19);
             this.employeeLabel.Name = "employeeLabel";
-            this.employeeLabel.Size = new System.Drawing.Size(0, 16);
+            this.employeeLabel.Size = new System.Drawing.Size(29, 16);
             this.employeeLabel.TabIndex = 3;
+            this.employeeLabel.Text = "123";
+            // 
+            // controlPanel
+            // 
+            this.controlPanel.Controls.Add(this.label1);
+            this.controlPanel.Controls.Add(this.employeeLabel);
+            this.controlPanel.Controls.Add(this.searchBox);
+            this.controlPanel.Controls.Add(this.active_employee);
+            this.controlPanel.Controls.Add(this.all_employee);
+            this.controlPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.controlPanel.Location = new System.Drawing.Point(3, 40);
+            this.controlPanel.Name = "controlPanel";
+            this.controlPanel.Size = new System.Drawing.Size(983, 93);
+            this.controlPanel.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Total  Result:";
             // 
             // Employee_Frame
             // 
@@ -240,22 +238,22 @@
             this.Text = "Employee";
             this.Controls.SetChildIndex(this.controlPanel, 0);
             this.Controls.SetChildIndex(this.dataPanel, 0);
-            this.controlPanel.ResumeLayout(false);
-            this.controlPanel.PerformLayout();
             this.dataPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.employeeList)).EndInit();
+            this.controlPanel.ResumeLayout(false);
+            this.controlPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel controlPanel;
         private System.Windows.Forms.Panel dataPanel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox active_employee;
         private System.Windows.Forms.CheckBox all_employee;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.CheckBox active_employee;
+        private System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.Label employeeLabel;
+        private System.Windows.Forms.Panel controlPanel;
         private System.Windows.Forms.DataGridView employeeList;
         private System.Windows.Forms.DataGridViewTextBoxColumn EName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Designation;
@@ -265,7 +263,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Country;
         private System.Windows.Forms.DataGridViewTextBoxColumn Department;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private System.Windows.Forms.Label employeeLabel;
+        private System.Windows.Forms.Label label1;
 
     }
 }
