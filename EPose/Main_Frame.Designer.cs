@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Frame));
             this.poweroff = new System.Windows.Forms.PictureBox();
             this.leftMenu = new System.Windows.Forms.Panel();
@@ -72,6 +73,14 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.poweroff)).BeginInit();
             this.leftMenu.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -87,7 +96,7 @@
             this.poweroff.Dock = System.Windows.Forms.DockStyle.Right;
             this.poweroff.ErrorImage = ((System.Drawing.Image)(resources.GetObject("poweroff.ErrorImage")));
             this.poweroff.Image = ((System.Drawing.Image)(resources.GetObject("poweroff.Image")));
-            this.poweroff.Location = new System.Drawing.Point(788, 0);
+            this.poweroff.Location = new System.Drawing.Point(800, 0);
             this.poweroff.Margin = new System.Windows.Forms.Padding(3, 3, 30, 3);
             this.poweroff.Name = "poweroff";
             this.poweroff.Size = new System.Drawing.Size(44, 43);
@@ -125,7 +134,7 @@
             this.leftMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftMenu.Location = new System.Drawing.Point(0, 0);
             this.leftMenu.Name = "leftMenu";
-            this.leftMenu.Size = new System.Drawing.Size(203, 640);
+            this.leftMenu.Size = new System.Drawing.Size(203, 653);
             this.leftMenu.TabIndex = 4;
             // 
             // label12
@@ -454,9 +463,9 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(203, 637);
+            this.panel4.Location = new System.Drawing.Point(203, 650);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(832, 3);
+            this.panel4.Size = new System.Drawing.Size(844, 3);
             this.panel4.TabIndex = 21;
             // 
             // panel1
@@ -465,7 +474,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(203, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(832, 8);
+            this.panel1.Size = new System.Drawing.Size(844, 8);
             this.panel1.TabIndex = 28;
             // 
             // panel2
@@ -475,7 +484,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(203, 8);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(832, 43);
+            this.panel2.Size = new System.Drawing.Size(844, 43);
             this.panel2.TabIndex = 29;
             // 
             // pictureBox2
@@ -644,9 +653,9 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(1035, 0);
+            this.panel6.Location = new System.Drawing.Point(1047, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(3, 640);
+            this.panel6.Size = new System.Drawing.Size(3, 653);
             this.panel6.TabIndex = 39;
             // 
             // panel7
@@ -655,7 +664,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(203, 51);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(832, 43);
+            this.panel7.Size = new System.Drawing.Size(844, 43);
             this.panel7.TabIndex = 40;
             // 
             // label13
@@ -665,17 +674,104 @@
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(200)))));
             this.label13.Location = new System.Drawing.Point(0, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(832, 43);
+            this.label13.Size = new System.Drawing.Size(844, 43);
             this.label13.TabIndex = 20;
             this.label13.Text = "Welcome! POS Main Control Window";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(925, 476);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 13);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "Database Connection";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(908, 460);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(155, 25);
+            this.label14.TabIndex = 45;
+            this.label14.Text = "Database Settings (Ctrl+D)";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(533, 624);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(143, 20);
+            this.label15.TabIndex = 46;
+            this.label15.Text = "Employee (Ctrl+E)";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(907, 624);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(143, 20);
+            this.label16.TabIndex = 47;
+            this.label16.Text = "Close X";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label17
+            // 
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Black;
+            this.label17.Location = new System.Drawing.Point(722, 307);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(155, 25);
+            this.label17.TabIndex = 48;
+            this.label17.Text = "Product (Ctrl+P)";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label18
+            // 
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Black;
+            this.label18.Location = new System.Drawing.Point(722, 460);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(155, 25);
+            this.label18.TabIndex = 49;
+            this.label18.Text = "Invoice (Ctrl+I)";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label19
+            // 
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(722, 624);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(155, 25);
+            this.label19.TabIndex = 50;
+            this.label19.Text = "Settings (Ctrl+S)";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Main_Frame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1038, 640);
+            this.ClientSize = new System.Drawing.Size(1050, 653);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.btnStaff);
             this.Controls.Add(this.btnStocksReport);
@@ -706,6 +802,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -757,6 +854,14 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
 
     }
 }

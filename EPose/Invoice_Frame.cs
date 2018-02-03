@@ -15,6 +15,7 @@ namespace EPose
     {
         Product_Frame pro = new Product_Frame();
         InvoiceModel inv;
+        double sumOfprice = 0.0;
         public Invoice_Frame()
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace EPose
 
         private void Invoice_Frame_Load(object sender, EventArgs e)
         {
-           
+            setWindowSize(); 
             try
             {
                this.inv = new InvoiceModel();
@@ -79,8 +80,13 @@ namespace EPose
 
         public void addProduct(dynamic product)
         {
-           this.invoiceItems.Rows.Add(product.barcode, product.name, "10", product.sale_price, "15%", "2%", product.sale_price*1);
+
+            topDisplay.Text = "1 " + product.unit + " @ " + product.sale_price;
+            double total = product.sale_price*1;
+            sumOfprice += total;
+            this.invoiceItems.Rows.Add(product.barcode, product.name, product.unit, product.sale_price, "15%", "2%", total);
             barcodeInput.Text = "";
+            totalTextBox.Text = "" + sumOfprice;
 
         }
 
@@ -104,5 +110,37 @@ namespace EPose
         {
 
         }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        public void setWindowSize() {
+            int windowWidth = Screen.PrimaryScreen.Bounds.Width;
+            int windowHeight = Screen.PrimaryScreen.Bounds.Height;
+            this.Width = (windowWidth - 200);
+            this.Height = (windowHeight - 100);
+            invoicePanel.Width = Convert.ToInt32(this.Width - 320);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+            try {
+                int SelectedRow = invoiceItems.SelectedRows[0].Index; ;
+                dynamic cellValue = invoiceItems.Rows[SelectedRow].Cells["total"].Value;
+                double total = Convert.ToDouble(Convert.ToString(cellValue));
+                sumOfprice -= total;
+                totalTextBox.Text = "" + sumOfprice;
+                invoiceItems.Rows.RemoveAt(SelectedRow);
+            }
+            catch(Exception exception){
+                MessageBox.Show("Please Select a Row");
+            }
+           
+        }
+
+      
     }
 }
