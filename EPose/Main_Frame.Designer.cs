@@ -754,7 +754,7 @@
             this.label19.ForeColor = System.Drawing.Color.Black;
             this.label19.Location = new System.Drawing.Point(722, 624);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(155, 25);
+            this.label19.Size = new System.Drawing.Size(155, 20);
             this.label19.TabIndex = 50;
             this.label19.Text = "Settings (Ctrl+S)";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -793,7 +793,6 @@
             this.Name = "Main_Frame";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Main_Frame_Load);
             ((System.ComponentModel.ISupportInitialize)(this.poweroff)).EndInit();
             this.leftMenu.ResumeLayout(false);
             this.panel5.ResumeLayout(false);

@@ -28,6 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new System.Windows.Forms.Panel();
             this.invoiceNumber = new System.Windows.Forms.Label();
             this.topLeftPanel = new System.Windows.Forms.Panel();
@@ -217,8 +224,6 @@
             this.barcodeInput.Name = "barcodeInput";
             this.barcodeInput.Size = new System.Drawing.Size(179, 26);
             this.barcodeInput.TabIndex = 1;
-            this.barcodeInput.TextChanged += new System.EventHandler(this.barcodeInput_TextChanged);
-            this.barcodeInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.barcodeInput_KeyDown);
             // 
             // label17
             // 
@@ -241,7 +246,7 @@
             this.topDisplay.Name = "topDisplay";
             this.topDisplay.Size = new System.Drawing.Size(1116, 40);
             this.topDisplay.TabIndex = 50;
-            this.topDisplay.Text = "0 KG @ 0";
+            this.topDisplay.Text = "0 unit @ 0 tk";
             this.topDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelBody
@@ -320,6 +325,7 @@
             this.textBox7.Size = new System.Drawing.Size(79, 26);
             this.textBox7.TabIndex = 36;
             this.textBox7.Text = "0.0";
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
             // 
@@ -342,6 +348,7 @@
             this.textBox6.Size = new System.Drawing.Size(87, 26);
             this.textBox6.TabIndex = 34;
             this.textBox6.Text = "0.0";
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
@@ -370,7 +377,7 @@
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(36, 50);
+            this.label6.Location = new System.Drawing.Point(143, 19);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 23);
             this.label6.TabIndex = 31;
@@ -409,42 +416,56 @@
             // EName
             // 
             this.EName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.EName.DefaultCellStyle = dataGridViewCellStyle1;
             this.EName.HeaderText = "Sl No";
             this.EName.Name = "EName";
             // 
             // Email
             // 
             this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Email.DefaultCellStyle = dataGridViewCellStyle2;
             this.Email.HeaderText = "Item Name";
             this.Email.Name = "Email";
             // 
             // Department
             // 
             this.Department.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Department.DefaultCellStyle = dataGridViewCellStyle3;
             this.Department.HeaderText = "Unite";
             this.Department.Name = "Department";
             // 
             // Price
             // 
             this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Price.DefaultCellStyle = dataGridViewCellStyle4;
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
             // 
             // vat
             // 
             this.vat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.vat.DefaultCellStyle = dataGridViewCellStyle5;
             this.vat.HeaderText = "VAT";
             this.vat.Name = "vat";
             // 
             // discount
             // 
             this.discount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.discount.DefaultCellStyle = dataGridViewCellStyle6;
             this.discount.HeaderText = "Disc(%)";
             this.discount.Name = "discount";
             // 
             // total
             // 
             this.total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.total.DefaultCellStyle = dataGridViewCellStyle7;
             this.total.HeaderText = "Total";
             this.total.Name = "total";
             // 
@@ -471,9 +492,8 @@
             this.panel8.Location = new System.Drawing.Point(5, 275);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(346, 146);
+            this.panel8.Size = new System.Drawing.Size(322, 146);
             this.panel8.TabIndex = 36;
-            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // button10
             // 
@@ -484,7 +504,7 @@
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(103, 46);
             this.button10.TabIndex = 4;
-            this.button10.Text = "Delete";
+            this.button10.Text = "Payment";
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
@@ -511,6 +531,7 @@
             this.button7.TabIndex = 1;
             this.button7.Text = "Remove Item";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -539,7 +560,7 @@
             this.panel9.Location = new System.Drawing.Point(5, 141);
             this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(311, 131);
+            this.panel9.Size = new System.Drawing.Size(322, 131);
             this.panel9.TabIndex = 35;
             // 
             // receiptAmount
@@ -655,7 +676,7 @@
             this.panel6.Location = new System.Drawing.Point(5, 5);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(311, 133);
+            this.panel6.Size = new System.Drawing.Size(322, 133);
             this.panel6.TabIndex = 33;
             // 
             // textBox14
@@ -672,7 +693,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(274, 102);
+            this.checkBox1.Location = new System.Drawing.Point(271, 108);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
@@ -683,7 +704,7 @@
             // 
             this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(25, 95);
+            this.textBox16.Location = new System.Drawing.Point(23, 101);
             this.textBox16.Margin = new System.Windows.Forms.Padding(2);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(245, 26);
@@ -764,7 +785,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(272, 41);
+            this.checkBox2.Location = new System.Drawing.Point(271, 36);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(15, 14);
@@ -775,7 +796,7 @@
             // 
             this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(25, 34);
+            this.textBox10.Location = new System.Drawing.Point(25, 29);
             this.textBox10.Margin = new System.Windows.Forms.Padding(2);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(243, 26);
@@ -787,7 +808,7 @@
             this.label14.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label14.Location = new System.Drawing.Point(102, 13);
+            this.label14.Location = new System.Drawing.Point(110, 12);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(60, 15);
             this.label14.TabIndex = 16;
@@ -881,6 +902,8 @@
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label topDisplay;
+        private System.Windows.Forms.Label invoiceNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn EName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Department;
@@ -888,8 +911,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn vat;
         private System.Windows.Forms.DataGridViewTextBoxColumn discount;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
-        private System.Windows.Forms.Label topDisplay;
-        private System.Windows.Forms.Label invoiceNumber;
 
 
     }

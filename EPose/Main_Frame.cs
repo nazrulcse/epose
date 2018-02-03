@@ -66,10 +66,7 @@ namespace EPose
             new ProductCategory_Frame().Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-           
-        }
+        
 
         private void button2_Click_1(object sender, EventArgs e)
         {
@@ -79,11 +76,6 @@ namespace EPose
         private void button3_Click(object sender, EventArgs e)
         {
             new Employee_Frame().Show();
-        }
-
-        private void Main_Frame_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void button10_Click(object sender, EventArgs e)

@@ -81,7 +81,7 @@ namespace EPose
         public void addProduct(dynamic product)
         {
 
-            topDisplay.Text = "1 " + product.unit + " @ " + product.sale_price;
+            topDisplay.Text = "1 " + product.unit + " @ " + product.sale_price + " Tk";
             double total = product.sale_price*1;
             sumOfprice += total;
             this.invoiceItems.Rows.Add(product.barcode, product.name, product.unit, product.sale_price, "15%", "2%", total);
@@ -106,16 +106,6 @@ namespace EPose
             payment.Show();
         }
 
-        private void barcodeInput_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel8_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         public void setWindowSize() {
             int windowWidth = Screen.PrimaryScreen.Bounds.Width;
             int windowHeight = Screen.PrimaryScreen.Bounds.Height;
@@ -124,10 +114,10 @@ namespace EPose
             invoicePanel.Width = Convert.ToInt32(this.Width - 320);
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
-
-            try {
+            try
+            {
                 int SelectedRow = invoiceItems.SelectedRows[0].Index; ;
                 dynamic cellValue = invoiceItems.Rows[SelectedRow].Cells["total"].Value;
                 double total = Convert.ToDouble(Convert.ToString(cellValue));
@@ -135,11 +125,18 @@ namespace EPose
                 totalTextBox.Text = "" + sumOfprice;
                 invoiceItems.Rows.RemoveAt(SelectedRow);
             }
-            catch(Exception exception){
+            catch (Exception exception)
+            {
                 MessageBox.Show("Please Select a Row");
             }
-           
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            new payment_Frame(inv).Show();
+        }
+
+       
 
       
     }
