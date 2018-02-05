@@ -15,11 +15,13 @@ namespace EPose
     {
 
         dynamic invoice;
-        public payment_Frame( dynamic invoice)
+        Invoice_Frame invoice_form;
+        public payment_Frame( dynamic invoice, Invoice_Frame invf)
         {
             InitializeComponent();
             this.setTitle("Payment Window"); 
             this.invoice = invoice;
+            this.invoice_form = invf;
         }
 
         private void payment_Frame_Load(object sender, EventArgs e)
@@ -46,6 +48,56 @@ namespace EPose
                 paymentList.Rows.Add(pay.global_id, pay.payment_type, pay.invoice_id, pay.amount, pay.transaction_token,pay.date);
             }
         }
+
+        private void paymentType_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                amountTextBox.Focus();
+            }
+        }
+
+        private void amountTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (e.KeyChar == 13)
+            {
+                if (amountTextBox.Text == "0.0")
+                {
+                    MessageBox.Show("Enter amount");
+                    amountTextBox.Focus();
+                }
+                DialogResult dialogResult = MessageBox.Show("", "Are you want to pay??", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    button1.PerformClick();
+                    this.invoice_form.paidAmount(amountTextBox.Text);
+                    
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    Console.WriteLine("No");
+                }
+            }
+           
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Control | Keys.T))
+            {
+                paymentType.Focus();
+                return true;
+            }
+            else if (keyData == (Keys.Control | Keys.A))
+            {
+                amountTextBox.Focus();
+            }
+           
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+       
 
        
     }

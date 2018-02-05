@@ -23,7 +23,7 @@ namespace EPose
             this.ActiveControl = barcodeInput;
         }
 
-        private void Invoice_Frame_Load(object sender, EventArgs e)
+            private void Invoice_Frame_Load(object sender, EventArgs e)
         {
             setWindowSize(); 
             try
@@ -59,7 +59,7 @@ namespace EPose
             if(e.KeyCode == Keys.Return) {
                 if (barcodeInput.Text == "")
                 {
-                    receiptAmount.Focus();
+                    receivedAmount.Focus();
                 }
                 else
                 {
@@ -102,7 +102,7 @@ namespace EPose
 
         private void button8_Click(object sender, EventArgs e)
         {
-            payment_Frame payment = new payment_Frame(this.inv);
+            payment_Frame payment = new payment_Frame(this.inv, this);
             payment.Show();
         }
 
@@ -133,11 +133,25 @@ namespace EPose
 
         private void button10_Click(object sender, EventArgs e)
         {
-            new payment_Frame(inv).Show();
+            new payment_Frame(inv, this).Show();
         }
 
-       
+        public void paidAmount(String amount) {
+            this.textBoxPaid.Text = amount;
+        }
+
+        private void receivedAmount_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) {
+                double amountReceived = Convert.ToDouble(receivedAmount.Text);
+                double paidAmount = Convert.ToDouble(textBoxPaid.Text);
+                textBoxChange.Text = "" + (amountReceived - paidAmount);
+            }
+            
+        }
 
       
     }
+
+       
 }

@@ -36,18 +36,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.paymentList = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.amountTextBox = new System.Windows.Forms.TextBox();
-            this.paymentType = new System.Windows.Forms.ComboBox();
             this.EName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Designation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Joining = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.amountTextBox = new System.Windows.Forms.TextBox();
+            this.paymentType = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.paymentList)).BeginInit();
             this.panel2.SuspendLayout();
@@ -56,10 +56,10 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.paymentList);
-            this.panel1.Location = new System.Drawing.Point(5, 218);
+            this.panel1.Location = new System.Drawing.Point(2, 218);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(877, 327);
+            this.panel1.Size = new System.Drawing.Size(818, 327);
             this.panel1.TabIndex = 4;
             // 
             // paymentList
@@ -81,78 +81,8 @@
             this.paymentList.Location = new System.Drawing.Point(0, 0);
             this.paymentList.Name = "paymentList";
             this.paymentList.RowHeadersWidth = 52;
-            this.paymentList.Size = new System.Drawing.Size(877, 327);
-            this.paymentList.TabIndex = 8;
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.amountTextBox);
-            this.panel2.Controls.Add(this.paymentType);
-            this.panel2.Location = new System.Drawing.Point(24, 74);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(409, 124);
-            this.panel2.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(120, 67);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 16);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Amount";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(104, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 16);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Pament By";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(332, 88);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(73, 32);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Pay";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // amountTextBox
-            // 
-            this.amountTextBox.Location = new System.Drawing.Point(178, 66);
-            this.amountTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.amountTextBox.Name = "amountTextBox";
-            this.amountTextBox.Size = new System.Drawing.Size(92, 20);
-            this.amountTextBox.TabIndex = 2;
-            this.amountTextBox.Text = "0.0";
-            this.amountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // paymentType
-            // 
-            this.paymentType.FormattingEnabled = true;
-            this.paymentType.Items.AddRange(new object[] {
-            "Bikash",
-            "Cash",
-            "Card",
-            "Rocket"});
-            this.paymentType.Location = new System.Drawing.Point(178, 27);
-            this.paymentType.Margin = new System.Windows.Forms.Padding(2);
-            this.paymentType.Name = "paymentType";
-            this.paymentType.Size = new System.Drawing.Size(92, 21);
-            this.paymentType.TabIndex = 1;
-            this.paymentType.Text = "Select Pament";
+            this.paymentList.Size = new System.Drawing.Size(818, 327);
+            this.paymentList.TabIndex = 9;
             // 
             // EName
             // 
@@ -213,11 +143,83 @@
             this.Column2.HeaderText = "Date";
             this.Column2.Name = "Column2";
             // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.amountTextBox);
+            this.panel2.Controls.Add(this.paymentType);
+            this.panel2.Location = new System.Drawing.Point(197, 67);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(409, 137);
+            this.panel2.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(120, 67);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 16);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Amount";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(104, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 16);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Pament By";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(293, 93);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(61, 30);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Pay";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // amountTextBox
+            // 
+            this.amountTextBox.Location = new System.Drawing.Point(178, 66);
+            this.amountTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.amountTextBox.Name = "amountTextBox";
+            this.amountTextBox.Size = new System.Drawing.Size(92, 20);
+            this.amountTextBox.TabIndex = 2;
+            this.amountTextBox.Text = "0.0";
+            this.amountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.amountTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.amountTextBox_KeyPress);
+            // 
+            // paymentType
+            // 
+            this.paymentType.FormattingEnabled = true;
+            this.paymentType.Items.AddRange(new object[] {
+            "Bikash",
+            "Cash",
+            "Card",
+            "Rocket"});
+            this.paymentType.Location = new System.Drawing.Point(178, 27);
+            this.paymentType.Margin = new System.Windows.Forms.Padding(2);
+            this.paymentType.Name = "paymentType";
+            this.paymentType.Size = new System.Drawing.Size(149, 21);
+            this.paymentType.TabIndex = 1;
+            this.paymentType.Text = "Select Pament";
+            this.paymentType.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.paymentType_KeyPress);
+            // 
             // payment_Frame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 547);
+            this.ClientSize = new System.Drawing.Size(823, 547);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(5);
@@ -237,13 +239,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView paymentList;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox paymentType;
         private System.Windows.Forms.TextBox amountTextBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView paymentList;
         private System.Windows.Forms.DataGridViewTextBoxColumn EName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Designation;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;

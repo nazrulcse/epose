@@ -52,9 +52,9 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBoxChange = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxPaid = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -74,7 +74,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.receiptAmount = new System.Windows.Forms.TextBox();
+            this.receivedAmount = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -255,9 +255,9 @@
             this.panelBody.Controls.Add(this.textBox8);
             this.panelBody.Controls.Add(this.label10);
             this.panelBody.Controls.Add(this.label9);
-            this.panelBody.Controls.Add(this.textBox7);
+            this.panelBody.Controls.Add(this.textBoxChange);
             this.panelBody.Controls.Add(this.label8);
-            this.panelBody.Controls.Add(this.textBox6);
+            this.panelBody.Controls.Add(this.textBoxPaid);
             this.panelBody.Controls.Add(this.label7);
             this.panelBody.Controls.Add(this.totalTextBox);
             this.panelBody.Controls.Add(this.label6);
@@ -315,17 +315,17 @@
             this.label9.TabIndex = 37;
             this.label9.Text = "Return";
             // 
-            // textBox7
+            // textBoxChange
             // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(397, 44);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(79, 26);
-            this.textBox7.TabIndex = 36;
-            this.textBox7.Text = "0.0";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxChange.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxChange.Location = new System.Drawing.Point(397, 44);
+            this.textBoxChange.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxChange.Name = "textBoxChange";
+            this.textBoxChange.Size = new System.Drawing.Size(79, 26);
+            this.textBoxChange.TabIndex = 36;
+            this.textBoxChange.Text = "0.0";
+            this.textBoxChange.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
             // 
@@ -338,17 +338,17 @@
             this.label8.Text = "Change";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox6
+            // textBoxPaid
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(287, 45);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(87, 26);
-            this.textBox6.TabIndex = 34;
-            this.textBox6.Text = "0.0";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxPaid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxPaid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPaid.Location = new System.Drawing.Point(287, 45);
+            this.textBoxPaid.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxPaid.Name = "textBoxPaid";
+            this.textBoxPaid.Size = new System.Drawing.Size(87, 26);
+            this.textBoxPaid.TabIndex = 34;
+            this.textBoxPaid.Text = "0.0";
+            this.textBoxPaid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
@@ -549,7 +549,7 @@
             // 
             this.panel9.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.receiptAmount);
+            this.panel9.Controls.Add(this.receivedAmount);
             this.panel9.Controls.Add(this.textBox2);
             this.panel9.Controls.Add(this.textBox3);
             this.panel9.Controls.Add(this.textBox4);
@@ -563,16 +563,17 @@
             this.panel9.Size = new System.Drawing.Size(322, 131);
             this.panel9.TabIndex = 35;
             // 
-            // receiptAmount
+            // receivedAmount
             // 
-            this.receiptAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.receiptAmount.Font = new System.Drawing.Font("Bookman Old Style", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receiptAmount.Location = new System.Drawing.Point(141, 5);
-            this.receiptAmount.Margin = new System.Windows.Forms.Padding(2);
-            this.receiptAmount.Multiline = true;
-            this.receiptAmount.Name = "receiptAmount";
-            this.receiptAmount.Size = new System.Drawing.Size(139, 25);
-            this.receiptAmount.TabIndex = 2;
+            this.receivedAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.receivedAmount.Font = new System.Drawing.Font("Bookman Old Style", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receivedAmount.Location = new System.Drawing.Point(141, 5);
+            this.receivedAmount.Margin = new System.Windows.Forms.Padding(2);
+            this.receivedAmount.Multiline = true;
+            this.receivedAmount.Name = "receivedAmount";
+            this.receivedAmount.Size = new System.Drawing.Size(139, 25);
+            this.receivedAmount.TabIndex = 2;
+            this.receivedAmount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.receivedAmount_KeyDown);
             // 
             // textBox2
             // 
@@ -867,9 +868,9 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBoxChange;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxPaid;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox totalTextBox;
         private System.Windows.Forms.Label label6;
@@ -881,7 +882,7 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox receiptAmount;
+        private System.Windows.Forms.TextBox receivedAmount;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
