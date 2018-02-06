@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new System.Windows.Forms.Panel();
             this.invoiceNumber = new System.Windows.Forms.Label();
             this.topLeftPanel = new System.Windows.Forms.Panel();
@@ -86,14 +86,14 @@
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBoxBalance = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.textBoxCreditLimit = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBoxCustomer = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.topPanel.SuspendLayout();
             this.topLeftPanel.SuspendLayout();
@@ -416,56 +416,56 @@
             // EName
             // 
             this.EName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.EName.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.EName.DefaultCellStyle = dataGridViewCellStyle8;
             this.EName.HeaderText = "Sl No";
             this.EName.Name = "EName";
             // 
             // Email
             // 
             this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Email.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Email.DefaultCellStyle = dataGridViewCellStyle9;
             this.Email.HeaderText = "Item Name";
             this.Email.Name = "Email";
             // 
             // Department
             // 
             this.Department.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Department.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Department.DefaultCellStyle = dataGridViewCellStyle10;
             this.Department.HeaderText = "Unite";
             this.Department.Name = "Department";
             // 
             // Price
             // 
             this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Price.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Price.DefaultCellStyle = dataGridViewCellStyle11;
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
             // 
             // vat
             // 
             this.vat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.vat.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.vat.DefaultCellStyle = dataGridViewCellStyle12;
             this.vat.HeaderText = "VAT";
             this.vat.Name = "vat";
             // 
             // discount
             // 
             this.discount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.discount.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.discount.DefaultCellStyle = dataGridViewCellStyle13;
             this.discount.HeaderText = "Disc(%)";
             this.discount.Name = "discount";
             // 
             // total
             // 
             this.total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.total.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.total.DefaultCellStyle = dataGridViewCellStyle14;
             this.total.HeaderText = "Total";
             this.total.Name = "total";
             // 
@@ -666,14 +666,14 @@
             this.panel6.Controls.Add(this.textBox14);
             this.panel6.Controls.Add(this.checkBox1);
             this.panel6.Controls.Add(this.textBox16);
-            this.panel6.Controls.Add(this.textBox13);
+            this.panel6.Controls.Add(this.textBoxBalance);
             this.panel6.Controls.Add(this.textBox12);
-            this.panel6.Controls.Add(this.textBox17);
+            this.panel6.Controls.Add(this.textBoxCreditLimit);
             this.panel6.Controls.Add(this.label16);
             this.panel6.Controls.Add(this.label13);
             this.panel6.Controls.Add(this.label15);
             this.panel6.Controls.Add(this.checkBox2);
-            this.panel6.Controls.Add(this.textBox10);
+            this.panel6.Controls.Add(this.textBoxCustomer);
             this.panel6.Controls.Add(this.label14);
             this.panel6.Location = new System.Drawing.Point(5, 5);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
@@ -712,17 +712,17 @@
             this.textBox16.Size = new System.Drawing.Size(245, 26);
             this.textBox16.TabIndex = 36;
             // 
-            // textBox13
+            // textBoxBalance
             // 
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(184, 71);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(102, 26);
-            this.textBox13.TabIndex = 35;
-            this.textBox13.Text = "0";
-            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxBalance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBalance.Location = new System.Drawing.Point(184, 71);
+            this.textBoxBalance.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxBalance.Name = "textBoxBalance";
+            this.textBoxBalance.Size = new System.Drawing.Size(102, 26);
+            this.textBoxBalance.TabIndex = 35;
+            this.textBoxBalance.Text = "0";
+            this.textBoxBalance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox12
             // 
@@ -736,17 +736,17 @@
             this.textBox12.Text = "0";
             this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox17
+            // textBoxCreditLimit
             // 
-            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.Location = new System.Drawing.Point(25, 71);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(100, 26);
-            this.textBox17.TabIndex = 33;
-            this.textBox17.Text = "0";
-            this.textBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxCreditLimit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxCreditLimit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCreditLimit.Location = new System.Drawing.Point(25, 71);
+            this.textBoxCreditLimit.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxCreditLimit.Name = "textBoxCreditLimit";
+            this.textBoxCreditLimit.Size = new System.Drawing.Size(100, 26);
+            this.textBoxCreditLimit.TabIndex = 33;
+            this.textBoxCreditLimit.Text = "0";
+            this.textBoxCreditLimit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label16
             // 
@@ -794,15 +794,18 @@
             this.checkBox2.TabIndex = 29;
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
-            // textBox10
+            // textBoxCustomer
             // 
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(25, 29);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(243, 26);
-            this.textBox10.TabIndex = 26;
+            this.textBoxCustomer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.textBoxCustomer.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.textBoxCustomer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCustomer.Location = new System.Drawing.Point(25, 29);
+            this.textBoxCustomer.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxCustomer.Name = "textBoxCustomer";
+            this.textBoxCustomer.Size = new System.Drawing.Size(243, 26);
+            this.textBoxCustomer.TabIndex = 26;
+            this.textBoxCustomer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxCustomer_KeyDown);
             // 
             // label14
             // 
@@ -895,14 +898,14 @@
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBoxBalance;
         private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox textBoxCreditLimit;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBoxCustomer;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label topDisplay;
         private System.Windows.Forms.Label invoiceNumber;

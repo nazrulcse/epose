@@ -23,9 +23,10 @@ namespace EPose
             this.ActiveControl = barcodeInput;
         }
 
-            private void Invoice_Frame_Load(object sender, EventArgs e)
+        private void Invoice_Frame_Load(object sender, EventArgs e)
         {
-            setWindowSize(); 
+            setWindowSize();
+            textBoxCustomer.AutoCompleteCustomSource = this.getCustomerName();
             try
             {
                this.inv = new InvoiceModel();
@@ -156,6 +157,39 @@ namespace EPose
         }
 
       
+
+        public AutoCompleteStringCollection getCustomerName()
+        {
+            AutoCompleteStringCollection col = new AutoCompleteStringCollection();
+
+            CustomerModel cust = new CustomerModel();
+            dynamic customers = cust.all(cust);
+
+            foreach (var customer in customers)
+            {
+                col.Add(customer.name +" (" +customer.id+")");
+            }
+
+            return col;
+        }
+
+        private void textBoxCustomer_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                String name = textBoxCustomer.Text;
+                String aaa = name.Substring(name.IndexOf('(') + 1);
+                String id = aaa.Substring(0, aaa.IndexOf(')'));
+               
+               CustomerModel cust = new CustomerModel();
+               dynamic customers = cust.where(cust,"id = "+id);
+               textBoxCreditLimit.Text = ""+customers[0].credit_limit;
+               textBoxBalance.Text = ""+customers[0].initial_balance;
+                 
+            }
+        }
+             
+   
     }
 
        

@@ -30,14 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.testBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.testBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // testBindingSource
+            // 
+            this.testBindingSource.DataSource = typeof(EPose.Test);
+            // 
             // reportViewer1
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.testBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
@@ -47,10 +50,6 @@
             this.reportViewer1.ServerReport.ReportServerUrl = new System.Uri("", System.UriKind.Relative);
             this.reportViewer1.Size = new System.Drawing.Size(718, 470);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // testBindingSource
-            // 
-            this.testBindingSource.DataSource = typeof(EPose.Test);
             // 
             // InvoiceReport_Frame
             // 
