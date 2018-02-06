@@ -70,7 +70,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.buttonReport = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -486,7 +486,7 @@
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.button10);
-            this.panel8.Controls.Add(this.button9);
+            this.panel8.Controls.Add(this.buttonReport);
             this.panel8.Controls.Add(this.button7);
             this.panel8.Controls.Add(this.button6);
             this.panel8.Location = new System.Drawing.Point(5, 275);
@@ -508,17 +508,18 @@
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // button9
+            // buttonReport
             // 
-            this.button9.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(60, 84);
-            this.button9.Margin = new System.Windows.Forms.Padding(2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(98, 46);
-            this.button9.TabIndex = 3;
-            this.button9.Text = "Discount";
-            this.button9.UseVisualStyleBackColor = false;
+            this.buttonReport.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonReport.Location = new System.Drawing.Point(60, 84);
+            this.buttonReport.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonReport.Name = "buttonReport";
+            this.buttonReport.Size = new System.Drawing.Size(98, 46);
+            this.buttonReport.TabIndex = 3;
+            this.buttonReport.Text = "Report";
+            this.buttonReport.UseVisualStyleBackColor = false;
+            this.buttonReport.Click += new System.EventHandler(this.buttonReport_Click);
             // 
             // button7
             // 
@@ -878,7 +879,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button buttonReport;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel9;

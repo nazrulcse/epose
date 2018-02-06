@@ -150,6 +150,11 @@ namespace EPose
             
         }
 
+        private void buttonReport_Click(object sender, EventArgs e)
+        {
+            new InvoiceReport_Frame().Show();
+        }
+
       
     }
 

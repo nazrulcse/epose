@@ -32,5 +32,15 @@ namespace EPose.Properties {
                 return ((string)(this["tangailConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;database=epose")]
+        public string eposeConnectionString {
+            get {
+                return ((string)(this["eposeConnectionString"]));
+            }
+        }
     }
 }
