@@ -117,16 +117,27 @@ namespace EPose.Orm
             {
                 return null;
             }
-
-
-
         }
 
 
+        public object update_attribute(dynamic modelObject, string fieldName,String value,string id)
+        {
+            var table_name = modelObject.getTable();
+            Type objType = modelObject.GetType();
 
 
-
-
+            var query = "update " + table_name + " set " + fieldName + " = " + value + "  where id = "+id;
+            Console.WriteLine("update " + table_name + " set " + fieldName + " = " + value + " where id = " + id);
+            var objResult = executeQuery(query);
+            if (objResult)
+            {
+                return modelObject;
+            }
+            else
+            {
+                return null;
+            }
+        }
 
         public object getFromDatabase(dynamic modelObject, String query)
         {

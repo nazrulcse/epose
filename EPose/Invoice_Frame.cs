@@ -185,6 +185,8 @@ namespace EPose
                dynamic customers = cust.where(cust,"id = "+id);
                textBoxCreditLimit.Text = ""+customers[0].credit_limit;
                textBoxBalance.Text = ""+customers[0].initial_balance;
+
+               inv.update_attribute(inv, "customer_id",id,inv.id);
                  
             }
         }
