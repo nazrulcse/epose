@@ -151,49 +151,52 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.amountTextBox);
             this.panel2.Controls.Add(this.paymentType);
-            this.panel2.Location = new System.Drawing.Point(197, 67);
+            this.panel2.Location = new System.Drawing.Point(157, 46);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(409, 137);
+            this.panel2.Size = new System.Drawing.Size(582, 158);
             this.panel2.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(120, 67);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(161, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 16);
+            this.label2.Size = new System.Drawing.Size(76, 24);
             this.label2.TabIndex = 6;
             this.label2.Text = "Amount";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(104, 27);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(151, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 16);
+            this.label1.Size = new System.Drawing.Size(109, 24);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Pament By";
+            this.label1.Text = "Payment By";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(293, 93);
+            this.button1.BackColor = System.Drawing.Color.LightGreen;
+            this.button1.Location = new System.Drawing.Point(447, 106);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(61, 30);
+            this.button1.Size = new System.Drawing.Size(106, 35);
             this.button1.TabIndex = 4;
             this.button1.Text = "Pay";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // amountTextBox
             // 
-            this.amountTextBox.Location = new System.Drawing.Point(178, 66);
+            this.amountTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.amountTextBox.Location = new System.Drawing.Point(265, 77);
             this.amountTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.amountTextBox.Multiline = true;
             this.amountTextBox.Name = "amountTextBox";
-            this.amountTextBox.Size = new System.Drawing.Size(92, 20);
+            this.amountTextBox.Size = new System.Drawing.Size(142, 24);
             this.amountTextBox.TabIndex = 2;
             this.amountTextBox.Text = "0.0";
             this.amountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -201,18 +204,20 @@
             // 
             // paymentType
             // 
+            this.paymentType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paymentType.FormattingEnabled = true;
             this.paymentType.Items.AddRange(new object[] {
             "Bikash",
             "Cash",
             "Card",
             "Rocket"});
-            this.paymentType.Location = new System.Drawing.Point(178, 27);
+            this.paymentType.Location = new System.Drawing.Point(265, 24);
             this.paymentType.Margin = new System.Windows.Forms.Padding(2);
             this.paymentType.Name = "paymentType";
-            this.paymentType.Size = new System.Drawing.Size(149, 21);
+            this.paymentType.Size = new System.Drawing.Size(142, 28);
             this.paymentType.TabIndex = 1;
-            this.paymentType.Text = "Select Pament";
+            this.paymentType.Text = "Select Payment";
+            this.paymentType.SelectedIndexChanged += new System.EventHandler(this.paymentType_SelectedIndexChanged);
             this.paymentType.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.paymentType_KeyPress);
             // 
             // payment_Frame

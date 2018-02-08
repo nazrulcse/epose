@@ -135,5 +135,10 @@ namespace EPose
 
             return base.ProcessCmdKey(ref msg, keyData);
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

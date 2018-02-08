@@ -97,6 +97,11 @@ namespace EPose
 
             return base.ProcessCmdKey(ref msg, keyData);
         }
+
+        private void paymentType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
        
 
        

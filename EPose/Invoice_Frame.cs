@@ -98,6 +98,11 @@ namespace EPose
                 new ProductSearch_Frame(this).Show();
                 return true;
             }
+            
+            else if (keyData == (Keys.Control | Keys.M)){
+                new MemberShip_Frame().Show();
+            }
+            
             return base.ProcessCmdKey(ref msg, keyData);
         }
 

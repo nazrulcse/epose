@@ -150,11 +150,18 @@
     <Compile Include="Login_Frame.Designer.cs">
       <DependentUpon>Login_Frame.cs</DependentUpon>
     </Compile>
+    <Compile Include="MemberShip_Frame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberShip_Frame.Designer.cs">
+      <DependentUpon>MemberShip_Frame.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\ActivityLogModel.cs" />
     <Compile Include="Model\CustomerModel.cs" />
     <Compile Include="Model\DepartmentModel.cs" />
     <Compile Include="Model\EmployeeModel.cs" />
     <Compile Include="Model\InvoiceModel.cs" />
+    <Compile Include="Model\MemberShipModel.cs" />
     <Compile Include="Model\PaymentModel.cs" />
     <Compile Include="Model\ProductModel.cs" />
     <Compile Include="Model\SupplierModel.cs" />
@@ -281,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Frame.resx">
       <DependentUpon>Login_Frame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberShip_Frame.resx">
+      <DependentUpon>MemberShip_Frame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Model_Frame.resx">
       <DependentUpon>Model_Frame.cs</DependentUpon>
