@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EPose.Orm;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EPose.Model
 {
-    class ActivityLogModel
+    class ActivityLogModel : ActiveRecord
     {
         public string id { get; set; }
         public string model { get; set; }

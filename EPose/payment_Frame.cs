@@ -41,7 +41,7 @@ namespace EPose
             payment.date = DateTime.Today; ;
             payment.create(payment);
 
-            dynamic payments = payment.all(payment);
+            dynamic payments = payment.where(payment, "transaction_token =" + payment.transaction_token);
             paymentList.Rows.Clear();
             foreach (var pay in payments)
             {
@@ -98,12 +98,6 @@ namespace EPose
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
-        private void paymentType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-       
-
-       
+        
     }
 }

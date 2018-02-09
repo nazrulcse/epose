@@ -89,5 +89,15 @@ namespace EPose
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
+        public void changeColor(TextBox box, String ev) {
+            if (ev == "enter")
+            {
+                box.BackColor = Color.FromName("ActiveCaption");
+            }
+            else {
+                box.BackColor = Color.FromName("white");
+            }
+        }
+
     }
 }
