@@ -41,6 +41,16 @@ namespace EPose
             payment.date = DateTime.Today; ;
             payment.create(payment);
 
+
+            ActivityLogModel log = new ActivityLogModel();
+            log.model = "payment";
+            log.action = "create";
+            log.date = DateTime.Now;
+            log.ref_id = payment.global_id;
+            log.department_id = invoice.department_id;
+            log.create(log);
+
+
             dynamic payments = payment.where(payment, "transaction_token =" + payment.transaction_token);
             paymentList.Rows.Clear();
             foreach (var pay in payments)

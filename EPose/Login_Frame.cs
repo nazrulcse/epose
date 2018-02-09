@@ -26,6 +26,7 @@ namespace EPose
         private void Login_Frame_Load(object sender, EventArgs e)
         {
            SyncService.run();
+           DepartmentSettings.getData(); 
         }
 
         private void topHeader_MouseDown(object sender, MouseEventArgs e)
@@ -79,6 +80,12 @@ namespace EPose
         private void cancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Connection_frame cnf = new Connection_frame();
+            cnf.Show();
         }
     }
 }

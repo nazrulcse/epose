@@ -34,6 +34,8 @@ namespace EPose
         private string TstUserNameMySQL;
         private string TstPwdMySQL;
         private string TstDBNameMySQL;
+        private string DepartmentId;
+        private string TillId;
 
         private void Connection_frame_Load(object sender, EventArgs e)
         {
@@ -43,10 +45,12 @@ namespace EPose
             txtUserName.Text = SQLConn.UserNameMySQL;
             txtPassword.Text = SQLConn.PwdMySQL;
             txtDatabase.Text = SQLConn.DBNameMySQL;
+            txtDepartmentId.Text = DepartmentSettings.DepartmentId;
+            txtTillId.Text = DepartmentSettings.TillId;
         }
 
-       
-        private void cmdTest_Click(object sender, EventArgs e)
+
+        private void cmdTest_Click_1(object sender, System.EventArgs e)
         {
             //Test database connection
 
@@ -55,12 +59,9 @@ namespace EPose
             TstUserNameMySQL = txtUserName.Text;
             TstPwdMySQL = txtPassword.Text;
             TstDBNameMySQL = txtDatabase.Text;
-
             if (TstServerMySQL == "" || TstPortMySQL == "" || TstUserNameMySQL == "" || TstDBNameMySQL == "")
             {
-
                 MessageBox.Show("Please Fill the input Box properly");
-
             }
 
             else
@@ -68,22 +69,23 @@ namespace EPose
                 try
                 {
                     SQLConn.conn.ConnectionString = "Server = '" + TstServerMySQL + "';  " + "Port = '" + TstPortMySQL + "'; " + "Database = '" + TstDBNameMySQL + "'; " + "user id = '" + TstUserNameMySQL + "'; " + "password = '" + TstPwdMySQL + "'";
-
-
                     SQLConn.conn.Open();
                     Interaction.MsgBox("Test connection successful", MsgBoxStyle.Information, "Database Settings");
-
                 }
                 catch
                 {
                     Interaction.MsgBox("The system failed to establish a connection", MsgBoxStyle.Information, "Database Settings");
-
                 }
                 SQLConn.DisconnMy();
             }
         }
 
-        private void cmdSave_Click(object sender, System.EventArgs e)
+        private void cmdClose_Click_1(object sender, System.EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cmdSave_Click_1(object sender, System.EventArgs e)
         {
             TstServerMySQL = txtServerHost.Text;
             TstPortMySQL = txtPort.Text;
@@ -91,15 +93,15 @@ namespace EPose
             TstPwdMySQL = txtPassword.Text;
             TstDBNameMySQL = txtDatabase.Text;
 
+            String departmentId = txtDepartmentId.Text;
+
             if (TstServerMySQL == "" || TstPortMySQL == "" || TstUserNameMySQL == "" || TstDBNameMySQL == "")
             {
-
                 MessageBox.Show("Please Fill the input Box properly");
-              
             }
 
-            else{
-
+            else
+            {
                 try
                 {
                     SQLConn.conn.ConnectionString = "Server = '" + TstServerMySQL + "';  " + "Port = '" + TstPortMySQL + "'; " + "Database = '" + TstDBNameMySQL + "'; " + "user id = '" + TstUserNameMySQL + "'; " + "password = '" + TstPwdMySQL + "'";
@@ -110,6 +112,7 @@ namespace EPose
                     SQLConn.UserNameMySQL = txtUserName.Text;
                     SQLConn.PortMySQL = txtPort.Text;
                     SQLConn.PwdMySQL = txtPassword.Text;
+                    SQLConn.department_Id = txtDepartmentId.Text;
 
                     SQLConn.SaveData();
                     this.Close();
@@ -123,9 +126,16 @@ namespace EPose
             }
         }
 
-        private void cmdClose_Click(object sender, System.EventArgs e)
+        private void exitForm_Click(object sender, System.EventArgs e)
         {
             this.Close();
+        }
+
+        private void saveDepartment_Click(object sender, System.EventArgs e)
+        {
+            DepartmentSettings.DepartmentId = txtDepartmentId.Text;
+            DepartmentSettings.TillId = txtTillId.Text;
+            DepartmentSettings.SaveData();
         }
     }
 }

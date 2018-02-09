@@ -22,7 +22,8 @@ namespace EPose.Orm
 		public static string sqL;
 		public static DataSet ds = new DataSet();
 		public static MySqlCommand cmd;
-		public static MySqlDataReader dr;
+        public static MySqlDataReader dr;
+        public static string department_Id;
 
         public static bool adding;
         public static bool updating;
@@ -70,7 +71,8 @@ namespace EPose.Orm
 			Interaction.SaveSetting(AppName, "DBSection", "DB_IP", ServerMySQL);
 			Interaction.SaveSetting(AppName, "DBSection", "DB_Port", PortMySQL);
 			Interaction.SaveSetting(AppName, "DBSection", "DB_User", UserNameMySQL);
-			Interaction.SaveSetting(AppName, "DBSection", "DB_Password", PwdMySQL);
+            Interaction.SaveSetting(AppName, "DBSection", "DB_Password", PwdMySQL);
+            Interaction.SaveSetting(AppName, "DBSection", "departmentId", department_Id);
 			Interaction.MsgBox("Database connection settings are saved.", MsgBoxStyle.Information);
 		}
 	}
