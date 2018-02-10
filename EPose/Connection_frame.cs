@@ -52,7 +52,7 @@ namespace EPose
             txtTillId.Text = DepartmentSettings.TillId;
             textBoxVatChalan.Text = DepartmentSettings.vatChalan;
             textBoxVatRegestration.Text = DepartmentSettings.vatRegstration;
-            textBoxAdress.Text = DepartmentSettings.address;
+            textBoxAdress.Text = DepartmentSettings.address; 
                 ;
         }
 
