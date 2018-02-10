@@ -70,10 +70,10 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.productList);
-            this.panel1.Location = new System.Drawing.Point(2, 176);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(3, 159);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1149, 458);
+            this.panel1.Size = new System.Drawing.Size(1532, 498);
             this.panel1.TabIndex = 3;
             // 
             // productList
@@ -102,10 +102,11 @@
             this.productList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productList.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.productList.Location = new System.Drawing.Point(0, 0);
+            this.productList.Margin = new System.Windows.Forms.Padding(4);
             this.productList.Name = "productList";
             this.productList.RowHeadersWidth = 52;
-            this.productList.Size = new System.Drawing.Size(1149, 458);
-            this.productList.TabIndex = 8;
+            this.productList.Size = new System.Drawing.Size(1532, 498);
+            this.productList.TabIndex = 10;
             // 
             // EName
             // 
@@ -183,7 +184,7 @@
             this.Column1.DefaultCellStyle = dataGridViewCellStyle9;
             this.Column1.HeaderText = "Brand";
             this.Column1.Name = "Column1";
-            this.Column1.Width = 60;
+            this.Column1.Width = 71;
             // 
             // Column2
             // 
@@ -191,7 +192,7 @@
             this.Column2.DefaultCellStyle = dataGridViewCellStyle10;
             this.Column2.HeaderText = "Re Order Level";
             this.Column2.Name = "Column2";
-            this.Column2.Width = 96;
+            this.Column2.Width = 119;
             // 
             // Column3
             // 
@@ -199,7 +200,7 @@
             this.Column3.DefaultCellStyle = dataGridViewCellStyle11;
             this.Column3.HeaderText = "Cost Price";
             this.Column3.Name = "Column3";
-            this.Column3.Width = 74;
+            this.Column3.Width = 89;
             // 
             // Column4
             // 
@@ -207,7 +208,7 @@
             this.Column4.DefaultCellStyle = dataGridViewCellStyle12;
             this.Column4.HeaderText = "Sale Price";
             this.Column4.Name = "Column4";
-            this.Column4.Width = 74;
+            this.Column4.Width = 89;
             // 
             // Column5
             // 
@@ -215,7 +216,7 @@
             this.Column5.DefaultCellStyle = dataGridViewCellStyle13;
             this.Column5.HeaderText = "Expirable";
             this.Column5.Name = "Column5";
-            this.Column5.Width = 75;
+            this.Column5.Width = 91;
             // 
             // Column6
             // 
@@ -223,7 +224,7 @@
             this.Column6.DefaultCellStyle = dataGridViewCellStyle14;
             this.Column6.HeaderText = "Discountable";
             this.Column6.Name = "Column6";
-            this.Column6.Width = 94;
+            this.Column6.Width = 115;
             // 
             // Column7
             // 
@@ -231,24 +232,27 @@
             this.Column7.DefaultCellStyle = dataGridViewCellStyle15;
             this.Column7.HeaderText = "Stock";
             this.Column7.Name = "Column7";
-            this.Column7.Width = 60;
+            this.Column7.Width = 68;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 63);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1337, 68);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.Size = new System.Drawing.Size(118, 24);
             this.label1.TabIndex = 7;
             this.label1.Text = "Total  Result:";
             // 
             // productLabel
             // 
             this.productLabel.AutoSize = true;
-            this.productLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productLabel.Location = new System.Drawing.Point(79, 63);
+            this.productLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productLabel.Location = new System.Drawing.Point(1477, 66);
+            this.productLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.productLabel.Name = "productLabel";
-            this.productLabel.Size = new System.Drawing.Size(29, 16);
+            this.productLabel.Size = new System.Drawing.Size(45, 25);
             this.productLabel.TabIndex = 6;
             this.productLabel.Text = "123";
             // 
@@ -256,26 +260,28 @@
             // 
             this.searchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.searchBox.Font = new System.Drawing.Font("Bookman Old Style", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBox.Location = new System.Drawing.Point(5, 112);
+            this.searchBox.Location = new System.Drawing.Point(7, 98);
+            this.searchBox.Margin = new System.Windows.Forms.Padding(4);
             this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(293, 30);
+            this.searchBox.Size = new System.Drawing.Size(390, 35);
             this.searchBox.TabIndex = 5;
             this.searchBox.Text = "Search by name";
             this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
+            this.searchBox.Enter += new System.EventHandler(this.searchBox_Enter);
+            this.searchBox.Leave += new System.EventHandler(this.searchBox_Leave);
             // 
             // Product_Frame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1153, 636);
+            this.ClientSize = new System.Drawing.Size(1537, 662);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.productLabel);
             this.Controls.Add(this.searchBox);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Product_Frame";
             this.Text = "Product";
-            this.Load += new System.EventHandler(this.Product_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.searchBox, 0);
             this.Controls.SetChildIndex(this.productLabel, 0);
@@ -290,6 +296,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label productLabel;
+        private System.Windows.Forms.TextBox searchBox;
         private System.Windows.Forms.DataGridView productList;
         private System.Windows.Forms.DataGridViewTextBoxColumn EName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Designation;
@@ -306,8 +315,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label productLabel;
-        private System.Windows.Forms.TextBox searchBox;
     }
 }

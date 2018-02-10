@@ -18,6 +18,8 @@ namespace EPose
             InitializeComponent();
             this.setTitle("Product Window");
 
+            this.ActiveControl = searchBox;
+
             ProductModel pro = new ProductModel();
             dynamic products = pro.all(pro);
 
@@ -27,12 +29,6 @@ namespace EPose
             }
             this.productLabel.Text = "" + products.Count;
         }
-
-        private void Product_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
             String searchValue = searchBox.Text;
@@ -48,6 +44,18 @@ namespace EPose
                     productList.Rows.Add(product.id, product.barcode, product.name, product.description, product.department, product.category, product.sub_category, product.model, product.brand, product.re_order_level, product.cost_price, product.sale_price, product.expirable, product.discountable, product.stock);
                 }
             }
+        }
+
+        private void searchBox_Enter(object sender, EventArgs e)
+        {
+           // searchBox.Text = "";
+            changeColor(searchBox, "enter");
+        }
+
+        private void searchBox_Leave(object sender, EventArgs e)
+        {
+            changeColor(searchBox, "out");
+            searchBox.Text = "Search by name";
         }
     }
 }
