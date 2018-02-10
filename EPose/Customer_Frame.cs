@@ -17,6 +17,7 @@ namespace EPose
         {
             InitializeComponent();
             this.setTitle("Customer Window");
+            this.ActiveControl = searchBox;
         }
 
         private void Customer_Load(object sender, EventArgs e)
@@ -45,6 +46,19 @@ namespace EPose
                 }
             }
             
+        }
+
+        private void searchBox_Enter(object sender, EventArgs e)
+        {
+            changeColor(searchBox, "enter");
+
+        }
+
+        private void searchBox_Leave(object sender, EventArgs e)
+        {
+
+            changeColor(searchBox, "out");
+            searchBox.Text = "Search by name";
         }
 
       
