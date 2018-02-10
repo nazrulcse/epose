@@ -27,6 +27,7 @@ namespace EPose
         {
            SyncService.run();
            DepartmentSettings.getData(); 
+           
         }
 
         private void topHeader_MouseDown(object sender, MouseEventArgs e)
@@ -86,6 +87,10 @@ namespace EPose
         {
             Connection_frame cnf = new Connection_frame();
             cnf.Show();
+        }
+
+        public void loadFromFile() { 
+        
         }
     }
 }
