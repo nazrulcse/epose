@@ -55,7 +55,16 @@ namespace EPose
 
         private void btnexit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult dialogResult = MessageBox.Show("", "Are you want to Close The Form?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+               
+            }
+
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
