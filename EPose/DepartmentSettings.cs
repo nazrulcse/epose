@@ -16,6 +16,9 @@ namespace EPose
     {
         public static string DepartmentId;
         public static string TillId;
+        public static string vatChalan;
+        public static string vatRegstration;
+        public static string address;
 
         public static void getData()
         {
@@ -24,6 +27,9 @@ namespace EPose
             {
                 DepartmentId = Interaction.GetSetting(AppName, "DptSection", "Department_Id", "1");
                 TillId = Interaction.GetSetting(AppName, "DptSection", "Till_Id", "1");
+                vatChalan = Interaction.GetSetting(AppName, "DptSection", "vat_chalan", "1");
+                vatRegstration = Interaction.GetSetting(AppName, "DptSection", "vat_regestration", "1");
+                address = Interaction.GetSetting(AppName, "DptSection", "adress", "1");
             }
             catch
             {
@@ -36,6 +42,9 @@ namespace EPose
             string AppName = Application.ProductName;
             Interaction.SaveSetting(AppName, "DptSection", "Department_Id", DepartmentId);
             Interaction.SaveSetting(AppName, "DptSection", "Till_Id", TillId);
+            Interaction.SaveSetting(AppName, "DptSection", "vat_chalan", vatChalan);
+            Interaction.SaveSetting(AppName, "DptSection", "vat_regestration", vatRegstration);
+            Interaction.SaveSetting(AppName, "DptSection", "adress", address);
             Interaction.MsgBox("Department settings are saved.", MsgBoxStyle.Information);
         }
     }

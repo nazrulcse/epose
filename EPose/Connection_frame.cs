@@ -35,7 +35,10 @@ namespace EPose
         private string TstPwdMySQL;
         private string TstDBNameMySQL;
         private string DepartmentId;
-        private string TillId;
+        private string vatChalan;
+        private string vatRegestration;
+        private string vatAdress;
+        
 
         private void Connection_frame_Load(object sender, EventArgs e)
         {
@@ -47,6 +50,10 @@ namespace EPose
             txtDatabase.Text = SQLConn.DBNameMySQL;
             txtDepartmentId.Text = DepartmentSettings.DepartmentId;
             txtTillId.Text = DepartmentSettings.TillId;
+            textBoxVatChalan.Text = DepartmentSettings.vatChalan;
+            textBoxVatRegestration.Text = DepartmentSettings.vatRegstration;
+            textBoxAdress.Text = DepartmentSettings.address;
+                ;
         }
 
 
@@ -135,7 +142,12 @@ namespace EPose
         {
             DepartmentSettings.DepartmentId = txtDepartmentId.Text;
             DepartmentSettings.TillId = txtTillId.Text;
+            DepartmentSettings.vatChalan = textBoxVatChalan.Text;
+            DepartmentSettings.vatRegstration = textBoxVatRegestration.Text;
+            DepartmentSettings.address = textBoxAdress.Text;
             DepartmentSettings.SaveData();
         }
+
+       
     }
 }
