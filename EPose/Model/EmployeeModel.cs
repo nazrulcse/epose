@@ -13,6 +13,7 @@ namespace EPose.Model
         public string name { get; set; }
         public string email { get; set; }
         public string password { get; set; }
+        public string login_id { get; set; }
         public string image { get; set; }
         public string mobile { get; set; }
         public string present_address { get; set; }
@@ -32,7 +33,7 @@ namespace EPose.Model
         }
 
         public Array attrAccess() {
-            return new String[] { "id", "name", "email", "password", "image", "mobile", "present_address", "country", "department", "department_id", "designation", "joining_date", "is_active" };
+            return new String[] { "id", "name", "email", "password", "image", "mobile", "present_address", "country", "department", "department_id", "designation", "joining_date", "is_active", "login_id" };
         }
     }
 }

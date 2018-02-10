@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="eposeDataSet" targetNamespace="http://tempuri.org/eposeDataSet1.xsd" xmlns:mstns="http://tempuri.org/eposeDataSet1.xsd" xmlns="http://tempuri.org/eposeDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="eposeConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="eposeConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.EPose.Properties.Settings.GlobalReference.Default.eposeConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="invoice_itemsTableAdapter" GeneratorDataComponentClassName="invoice_itemsTableAdapter" Name="invoice_items" UserDataComponentName="invoice_itemsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="eposeConnectionString (Settings)" DbObjectName="epose.invoice_items" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id`, `item_name`, `unite`, `price`, `vat`, `discount`, `total` FROM `invoice_items`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="eposeDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="eposeDataSet" msprop:Generator_UserDSName="eposeDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="invoice_items" msprop:Generator_TableClassName="invoice_itemsDataTable" msprop:Generator_TableVarName="tableinvoice_items" msprop:Generator_TablePropName="invoice_items" msprop:Generator_RowDeletingName="invoice_itemsRowDeleting" msprop:Generator_RowChangingName="invoice_itemsRowChanging" msprop:Generator_RowEvHandlerName="invoice_itemsRowChangeEventHandler" msprop:Generator_RowDeletedName="invoice_itemsRowDeleted" msprop:Generator_UserTableName="invoice_items" msprop:Generator_RowChangedName="invoice_itemsRowChanged" msprop:Generator_RowEvArgName="invoice_itemsRowChangeEvent" msprop:Generator_RowClassName="invoice_itemsRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

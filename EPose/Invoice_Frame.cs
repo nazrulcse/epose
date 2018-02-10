@@ -28,37 +28,6 @@ namespace EPose
         {
             setWindowSize();
             textBoxCustomer.AutoCompleteCustomSource = this.getCustomerName();
-            try
-            {
-               this.inv = new InvoiceModel();
-                var ms = (DateTime.Now - DateTime.MinValue).TotalMilliseconds;
-                inv.id = ms.ToString();
-                inv.number = "inv-" + ms.ToString();
-                inv.date = DateTime.Today;
-                inv.department_id = "1";
-                dynamic invoice = inv.create(inv);
-
-                ActivityLogModel log = new ActivityLogModel();
-                log.model = "invoice";
-                log.action = "create";
-                log.date = DateTime.Now;
-                log.ref_id = inv.id;
-                log.department_id = inv.department_id;
-                log.create(log);
-
-
-                if (invoice != null)
-                {
-                    invoiceNumber.Text = "" + invoice.number;
-                }
-                else
-                {
-                   invoiceNumber.Text = "Unable to create Invoice";
-                }
-            }
-            catch (Exception ex) {
-                invoiceNumber.Text = "Error: " + ex.Message.ToString();
-            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -92,37 +61,66 @@ namespace EPose
 
         public void addProduct(dynamic product)
         {
-
-            topDisplay.Text = "1 " + product.unit + " @ " + product.sale_price + " Tk";
-            double total = product.sale_price*1;
+            topDisplay.Text = "1" + product.unit + " @ " + product.sale_price + " Tk";
+            double total = product.sale_price * 1;
             sumOfprice += total;
-
             //calculate vat per product
-            double vat = product.sale_price*(product.vat/100);
+            double vat = product.sale_price * (product.vat/100);
             //add per product vat to total vat
             sumOfVat += vat;
-
-            this.invoiceItems.Rows.Add(product.barcode, product.name, product.unit, product.sale_price, product.vat+"%", "2%", total);
+            this.invoiceItems.Rows.Add(product.barcode, product.name, product.unit, product.sale_price, product.vat + "%", "0%", total);
             barcodeInput.Text = "";
             totalTextBox.Text = "" + sumOfprice;
             textBoxVat.Text = "" + sumOfVat;
             textBoxNetDue.Text = "" + (sumOfprice + sumOfVat);
+            createLineItem(product);
+        }
 
+        public void createLineItem(dynamic product) {
+            InvoiceItemModel inv_item = new InvoiceItemModel();
+            var ms = (DateTime.Now - DateTime.MinValue).TotalMilliseconds * 10;
+            inv_item.id = "INT" + ms.ToString();
+            inv_item.quantity = 1;
+            inv_item.unit = product.unit;
+            inv_item.price = product.sale_price;
+            inv_item.vat = product.vat;
+            inv_item.total = product.sale_price;
+            inv_item.name = product.name;
+            inv_item.invoice_id = this.inv.id;
+            //inv_item.date = DateTime.Today;
+            inv_item.create(inv_item);
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-            if (keyData == (Keys.Control | Keys.S))
-            {
-                new ProductSearch_Frame(this).Show();
-                return true;
+            switch (keyData) { 
+                case (Keys.Control | Keys.S):
+                    new ProductSearch_Frame(this).Show();
+                    return true;
+                case (Keys.Control | Keys.N):
+                    if (this.inv == null)
+                    {
+                        createInvoice();
+                    }
+                    else {
+                        MessageBox.Show("Complete Current Invoice");
+                    }
+                    break;
+                case (Keys.Control | Keys.M):
+                    MemberShip_Frame memberShip = new MemberShip_Frame(sumOfprice);
+                    memberShip.Show();
+                    break;
+                case (Keys.Control | Keys.A):
+                    if (this.inv != null)
+                    {
+                        payment_Frame payment = new payment_Frame(this.inv, this);
+                        payment.Show();
+                    }
+                    else {
+                        MessageBox.Show("Invoice not initialize");
+                    }
+                    break;
             }
-            
-            else if (keyData == (Keys.Control | Keys.M)){
-                MemberShip_Frame memberShip = new MemberShip_Frame(sumOfprice);
-                memberShip.Show();
-            }
-            
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
@@ -166,13 +164,47 @@ namespace EPose
             this.totalTextBox.Text = amount;
         }
 
-
         private void buttonReport_Click(object sender, EventArgs e)
         {
-            new InvoiceReport_Frame().Show();
+            PosReceipt psr = new PosReceipt(this.inv);
+            psr.print();
         }
 
-      
+        public void createInvoice() {
+            try
+            {
+                this.inv = new InvoiceModel();
+                var ms = (DateTime.Now - DateTime.MinValue).TotalMilliseconds * 10;
+                inv.id = ms.ToString();
+                inv.number = "IN" + ms.ToString();
+                inv.date = DateTime.Today;
+                inv.department_id = "1";
+                dynamic invoice = inv.create(inv);
+                if (invoice != null)
+                {
+                    TrackLog();
+                    invoiceNumber.Text = "" + invoice.number;
+                }
+                else
+                {
+                    invoiceNumber.Text = "Unable to create Invoice";
+                }
+            }
+            catch (Exception ex)
+            {
+                invoiceNumber.Text = "Error: " + ex.Message.ToString();
+            }
+        }
+
+        public void TrackLog() {
+            ActivityLogModel log = new ActivityLogModel();
+            log.model = "invoice";
+            log.action = "create";
+            log.date = DateTime.Now;
+            log.ref_id = inv.id;
+            log.department_id = inv.department_id;
+            log.create(log);
+        }
 
         public AutoCompleteStringCollection getCustomerName()
         {
@@ -207,8 +239,6 @@ namespace EPose
             }
         }
 
-        
-
         private void barcodeInput_Enter(object sender, EventArgs e)
         {
             changeColor(barcodeInput, "enter");
@@ -228,7 +258,6 @@ namespace EPose
                 double amountAfterDisount = totalamount - discountAmount;
                 textBoxNetDue.Text = "" + amountAfterDisount;
                 textBoxDiscount.BackColor = Color.LawnGreen;
-
             }
 
         }

@@ -57,10 +57,11 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.paymentList);
-            this.panel1.Location = new System.Drawing.Point(2, 165);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(3, 143);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(635, 240);
+            this.panel1.Size = new System.Drawing.Size(725, 263);
             this.panel1.TabIndex = 4;
             // 
             // paymentList
@@ -82,12 +83,12 @@
             this.paymentList.Location = new System.Drawing.Point(0, 0);
             this.paymentList.Name = "paymentList";
             this.paymentList.RowHeadersWidth = 52;
-            this.paymentList.Size = new System.Drawing.Size(635, 240);
+            this.paymentList.Size = new System.Drawing.Size(725, 263);
             this.paymentList.TabIndex = 12;
             // 
             // EName
             // 
-            this.EName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.EName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2, 0, 2, 2);
@@ -95,6 +96,7 @@
             this.EName.HeaderText = "Id";
             this.EName.MinimumWidth = 10;
             this.EName.Name = "EName";
+            this.EName.Width = 75;
             // 
             // Designation
             // 
@@ -142,21 +144,25 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.amountTextBox);
             this.panel2.Controls.Add(this.paymentType);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(3, 40);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(635, 105);
+            this.panel2.Size = new System.Drawing.Size(725, 105);
             this.panel2.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(56, 57);
             this.label2.Name = "label2";
@@ -167,6 +173,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(56, 17);
             this.label1.Name = "label1";
@@ -190,6 +197,7 @@
             // 
             // amountTextBox
             // 
+            this.amountTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.amountTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.amountTextBox.Location = new System.Drawing.Point(214, 56);
             this.amountTextBox.Margin = new System.Windows.Forms.Padding(2);
@@ -222,7 +230,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(640, 409);
+            this.ClientSize = new System.Drawing.Size(731, 409);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(5);

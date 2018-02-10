@@ -66,6 +66,18 @@ namespace EPose.Orm
             return modelObject;
         }
 
+        public object find_by(dynamic modelObject, String field, String value)
+        {
+            var table_name = modelObject.getTable();
+            var query = "Select * from " + table_name + " where " + field + "= '" + value + "'";
+            dynamic objects = getFromDatabase(modelObject, query);
+            if (objects.Count > 0)
+            {
+                return objects[0];
+            }
+            return null;
+        }
+
         public object all(dynamic modelObject)
         {
             var table_name = modelObject.getTable();
@@ -92,19 +104,14 @@ namespace EPose.Orm
 
         public object update_attributes(dynamic modelObject, string condition)
         {
-
-            Boolean first = true;
             var table_name = modelObject.getTable();
             Type objType = modelObject.GetType();
             StringBuilder table_columns = new StringBuilder();
             StringBuilder table_values = new StringBuilder();
             var arrFields = modelObject.attrAccess();
-
-
             for (var i = 0; i < arrFields.Length; i++)
             {
                 string field = arrFields[i];
-             
             }
             var query = "update" + table_name + " set (" + table_columns + ") VALUES (" + table_values + ")";
             Console.WriteLine("update " + table_name + " set (" + table_columns + ") VALUES (" + table_values + ");");
@@ -124,8 +131,6 @@ namespace EPose.Orm
         {
             var table_name = modelObject.getTable();
             Type objType = modelObject.GetType();
-
-
             var query = "update " + table_name + " set " + fieldName + " = " + value + "  where id = "+id;
             Console.WriteLine("update " + table_name + " set " + fieldName + " = " + value + " where id = " + id);
             var objResult = executeQuery(query);
@@ -143,8 +148,6 @@ namespace EPose.Orm
         {
             var table_name = modelObject.getTable();
             Type objType = modelObject.GetType();
-
-
             var query = "update " + table_name + " set " + fieldName + " = " + value + "  where id = " + id;
             Console.WriteLine("update " + table_name + " set " + fieldName + " = " + value + " where id = " + id);
             var objResult = executeQuery(query);

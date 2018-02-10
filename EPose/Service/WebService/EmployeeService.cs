@@ -28,7 +28,7 @@ namespace EPose.Service.WebService
                     }
                     else
                     {
-                        Console.WriteLine("Unable to create department");
+                        Console.WriteLine("Unable to create employee");
                     }
                 }
                 catch (Exception ex)

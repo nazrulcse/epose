@@ -34,7 +34,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Tablix Name="Tablix1">
+      <Tablix Name="Invoice">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
@@ -214,21 +214,21 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Dock">
+                    <Textbox Name="barcode">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Dock.Value</Value>
+                              <Value>=Fields!barcode.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Dock</rd:DefaultName>
+                      <rd:DefaultName>barcode</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -244,21 +244,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox5">
+                    <Textbox Name="number">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!number.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox5</rd:DefaultName>
+                      <rd:DefaultName>number</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -274,21 +274,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox11">
+                    <Textbox Name="id">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!id.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox11</rd:DefaultName>
+                      <rd:DefaultName>id</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -304,21 +304,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox9">
+                    <Textbox Name="department_id">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!department_id.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox9</rd:DefaultName>
+                      <rd:DefaultName>department_id</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -334,21 +334,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox7">
+                    <Textbox Name="customer_id">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!customer_id.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox7</rd:DefaultName>
+                      <rd:DefaultName>customer_id</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -426,223 +426,35 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="AcceptButton">
-          <DataField>AcceptButton</DataField>
-          <rd:TypeName>System.Windows.Forms.IButtonControl</rd:TypeName>
-        </Field>
-        <Field Name="AccessibleDescription">
-          <DataField>AccessibleDescription</DataField>
+        <Field Name="barcode">
+          <DataField>barcode</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="AccessibleName">
-          <DataField>AccessibleName</DataField>
+        <Field Name="customer_id">
+          <DataField>customer_id</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="AccessibleRole">
-          <DataField>AccessibleRole</DataField>
-          <rd:TypeName>System.Windows.Forms.AccessibleRole</rd:TypeName>
+        <Field Name="date">
+          <DataField>date</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="AllowDrop">
-          <DataField>AllowDrop</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="Anchor">
-          <DataField>Anchor</DataField>
-          <rd:TypeName>System.Windows.Forms.AnchorStyles</rd:TypeName>
-        </Field>
-        <Field Name="AutoScroll">
-          <DataField>AutoScroll</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="AutoScrollMargin">
-          <DataField>AutoScrollMargin</DataField>
-          <rd:TypeName>System.Drawing.Size</rd:TypeName>
-        </Field>
-        <Field Name="AutoScrollMinSize">
-          <DataField>AutoScrollMinSize</DataField>
-          <rd:TypeName>System.Drawing.Size</rd:TypeName>
-        </Field>
-        <Field Name="AutoSize">
-          <DataField>AutoSize</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="AutoSizeMode">
-          <DataField>AutoSizeMode</DataField>
-          <rd:TypeName>System.Windows.Forms.AutoSizeMode</rd:TypeName>
-        </Field>
-        <Field Name="AutoValidate">
-          <DataField>AutoValidate</DataField>
-          <rd:TypeName>System.Windows.Forms.AutoValidate</rd:TypeName>
-        </Field>
-        <Field Name="BackColor">
-          <DataField>BackColor</DataField>
-          <rd:TypeName>System.Drawing.Color</rd:TypeName>
-        </Field>
-        <Field Name="BackgroundImage">
-          <DataField>BackgroundImage</DataField>
-          <rd:TypeName>System.Drawing.Image</rd:TypeName>
-        </Field>
-        <Field Name="BackgroundImageLayout">
-          <DataField>BackgroundImageLayout</DataField>
-          <rd:TypeName>System.Windows.Forms.ImageLayout</rd:TypeName>
-        </Field>
-        <Field Name="CancelButton">
-          <DataField>CancelButton</DataField>
-          <rd:TypeName>System.Windows.Forms.IButtonControl</rd:TypeName>
-        </Field>
-        <Field Name="CausesValidation">
-          <DataField>CausesValidation</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="ContextMenuStrip">
-          <DataField>ContextMenuStrip</DataField>
-          <rd:TypeName>System.Windows.Forms.ContextMenuStrip</rd:TypeName>
-        </Field>
-        <Field Name="ControlBox">
-          <DataField>ControlBox</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="Cursor">
-          <DataField>Cursor</DataField>
-          <rd:TypeName>System.Windows.Forms.Cursor</rd:TypeName>
-        </Field>
-        <Field Name="DataBindings">
-          <DataField>DataBindings</DataField>
-          <rd:TypeName>System.Windows.Forms.ControlBindingsCollection</rd:TypeName>
-        </Field>
-        <Field Name="Dock">
-          <DataField>Dock</DataField>
-          <rd:TypeName>System.Windows.Forms.DockStyle</rd:TypeName>
-        </Field>
-        <Field Name="Enabled">
-          <DataField>Enabled</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="Font">
-          <DataField>Font</DataField>
-          <rd:TypeName>System.Drawing.Font</rd:TypeName>
-        </Field>
-        <Field Name="ForeColor">
-          <DataField>ForeColor</DataField>
-          <rd:TypeName>System.Drawing.Color</rd:TypeName>
-        </Field>
-        <Field Name="FormBorderStyle">
-          <DataField>FormBorderStyle</DataField>
-          <rd:TypeName>System.Windows.Forms.FormBorderStyle</rd:TypeName>
-        </Field>
-        <Field Name="HelpButton">
-          <DataField>HelpButton</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="Icon">
-          <DataField>Icon</DataField>
-          <rd:TypeName>System.Drawing.Icon</rd:TypeName>
-        </Field>
-        <Field Name="ImeMode">
-          <DataField>ImeMode</DataField>
-          <rd:TypeName>System.Windows.Forms.ImeMode</rd:TypeName>
-        </Field>
-        <Field Name="IsMdiContainer">
-          <DataField>IsMdiContainer</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="KeyPreview">
-          <DataField>KeyPreview</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="Location">
-          <DataField>Location</DataField>
-          <rd:TypeName>System.Drawing.Point</rd:TypeName>
-        </Field>
-        <Field Name="MainMenuStrip">
-          <DataField>MainMenuStrip</DataField>
-          <rd:TypeName>System.Windows.Forms.MenuStrip</rd:TypeName>
-        </Field>
-        <Field Name="MaximizeBox">
-          <DataField>MaximizeBox</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="MaximumSize">
-          <DataField>MaximumSize</DataField>
-          <rd:TypeName>System.Drawing.Size</rd:TypeName>
-        </Field>
-        <Field Name="MinimizeBox">
-          <DataField>MinimizeBox</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="MinimumSize">
-          <DataField>MinimumSize</DataField>
-          <rd:TypeName>System.Drawing.Size</rd:TypeName>
-        </Field>
-        <Field Name="Opacity">
-          <DataField>Opacity</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="Padding">
-          <DataField>Padding</DataField>
-          <rd:TypeName>System.Windows.Forms.Padding</rd:TypeName>
-        </Field>
-        <Field Name="RightToLeft">
-          <DataField>RightToLeft</DataField>
-          <rd:TypeName>System.Windows.Forms.RightToLeft</rd:TypeName>
-        </Field>
-        <Field Name="RightToLeftLayout">
-          <DataField>RightToLeftLayout</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="ShowIcon">
-          <DataField>ShowIcon</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="ShowInTaskbar">
-          <DataField>ShowInTaskbar</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="Size">
-          <DataField>Size</DataField>
-          <rd:TypeName>System.Drawing.Size</rd:TypeName>
-        </Field>
-        <Field Name="SizeGripStyle">
-          <DataField>SizeGripStyle</DataField>
-          <rd:TypeName>System.Windows.Forms.SizeGripStyle</rd:TypeName>
-        </Field>
-        <Field Name="StartPosition">
-          <DataField>StartPosition</DataField>
-          <rd:TypeName>System.Windows.Forms.FormStartPosition</rd:TypeName>
-        </Field>
-        <Field Name="Tag">
-          <DataField>Tag</DataField>
-          <rd:TypeName>System.Object</rd:TypeName>
-        </Field>
-        <Field Name="Text">
-          <DataField>Text</DataField>
+        <Field Name="department_id">
+          <DataField>department_id</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="TopMost">
-          <DataField>TopMost</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="TransparencyKey">
-          <DataField>TransparencyKey</DataField>
-          <rd:TypeName>System.Drawing.Color</rd:TypeName>
-        </Field>
-        <Field Name="UseWaitCursor">
-          <DataField>UseWaitCursor</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="Visible">
-          <DataField>Visible</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="WindowState">
-          <DataField>WindowState</DataField>
-          <rd:TypeName>System.Windows.Forms.FormWindowState</rd:TypeName>
+        <Field Name="number">
+          <DataField>number</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>EPose</rd:DataSetName>
-        <rd:TableName>Test</rd:TableName>
-        <rd:ObjectDataSourceType>EPose.Test, EPose, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:DataSetName>EPose.Model</rd:DataSetName>
+        <rd:TableName>InvoiceModel</rd:TableName>
+        <rd:ObjectDataSourceType>EPose.Model.InvoiceModel, EPose, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

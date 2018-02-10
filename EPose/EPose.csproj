@@ -35,6 +35,9 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="DevOne.Security.Cryptography.BCrypt">
+      <HintPath>..\packages\BCrypt.1.0.0.0\lib\DevOne.Security.Cryptography.BCrypt.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.PointOfService, Version=1.14.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Microsoft Point Of Service\SDK\Microsoft.PointOfService.dll</HintPath>
@@ -121,6 +124,11 @@
     <Compile Include="Employee_Frame.Designer.cs">
       <DependentUpon>Employee_Frame.cs</DependentUpon>
     </Compile>
+    <Compile Include="eposeDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eposeDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="InvoiceReport_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +169,7 @@
     <Compile Include="Model\CustomerModel.cs" />
     <Compile Include="Model\DepartmentModel.cs" />
     <Compile Include="Model\EmployeeModel.cs" />
+    <Compile Include="Model\InvoiceItemModel.cs" />
     <Compile Include="Model\InvoiceModel.cs" />
     <Compile Include="Model\MemberShipModel.cs" />
     <Compile Include="Model\PaymentModel.cs" />
@@ -181,6 +190,7 @@
     <Compile Include="payment_Frame.Designer.cs">
       <DependentUpon>payment_Frame.cs</DependentUpon>
     </Compile>
+    <Compile Include="PosReceipt.cs" />
     <Compile Include="ProductSearch_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -336,8 +346,18 @@
     <EmbeddedResource Include="Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="eposeDataSet1.xsc">
+      <DependentUpon>eposeDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="eposeDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>eposeDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="eposeDataSet1.xss">
+      <DependentUpon>eposeDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\Test.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -357,6 +377,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
     <Folder Include="Resources\" />
     <Folder Include="Service\PosService\" />
   </ItemGroup>

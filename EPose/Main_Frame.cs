@@ -16,7 +16,7 @@ namespace EPose
         public Main_Frame()
         {
             InitializeComponent();
-            SyncService.run();
+            //SyncService.run();
         }
 
         private void poweroff_Click(object sender, EventArgs e)
