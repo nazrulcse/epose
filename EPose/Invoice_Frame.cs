@@ -35,7 +35,7 @@ namespace EPose
                 inv.id = ms.ToString();
                 inv.number = "inv-" + ms.ToString();
                 inv.date = DateTime.Today;
-                inv.department_id = "1";
+                inv.department_id = DepartmentSettings.DepartmentId;
                 dynamic invoice = inv.create(inv);
 
                 ActivityLogModel log = new ActivityLogModel();
@@ -43,7 +43,7 @@ namespace EPose
                 log.action = "create";
                 log.date = DateTime.Now;
                 log.ref_id = inv.id;
-                log.department_id = inv.department_id;
+                log.department_id = DepartmentSettings.DepartmentId;
                 log.create(log);
 
 
@@ -122,7 +122,10 @@ namespace EPose
                 MemberShip_Frame memberShip = new MemberShip_Frame(sumOfprice);
                 memberShip.Show();
             }
-            
+            else if (keyData == (Keys.Control | Keys.P))
+            {
+                new payment_Frame(inv, this).Show();
+            }
             return base.ProcessCmdKey(ref msg, keyData);
         }
 

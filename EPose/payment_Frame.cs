@@ -19,6 +19,7 @@ namespace EPose
         public payment_Frame( dynamic invoice, Invoice_Frame invf)
         {
             InitializeComponent();
+            this.ActiveControl = paymentType;
             this.setTitle("Payment Window"); 
             this.invoice = invoice;
             this.invoice_form = invf;
@@ -47,7 +48,8 @@ namespace EPose
             log.action = "create";
             log.date = DateTime.Now;
             log.ref_id = payment.global_id;
-            log.department_id = invoice.department_id;
+            log.department_id = DepartmentSettings.DepartmentId;
+;
             log.create(log);
 
 
@@ -106,6 +108,17 @@ namespace EPose
            
 
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void amountTextBox_Enter(object sender, EventArgs e)
+        {
+            changeColor(amountTextBox, "enter");
+            amountTextBox.Text = "";
+        }
+
+        private void amountTextBox_Leave(object sender, EventArgs e)
+        {
+
         }
 
         
