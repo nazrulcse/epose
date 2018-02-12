@@ -34,7 +34,7 @@ namespace EPose
         {
             String searchValue = searchBox.Text;
             CustomerModel cus = new CustomerModel();
-            dynamic customers = cus.where(cus, "name like '%" + searchValue + "%'");
+            dynamic customers = cus.where(cus, "name like '%" + searchValue + "%' or email like '%" + searchValue + "%' or mobile like '%"+ searchValue + "%'");
             if (customers.Count > 0)
             {
 
@@ -51,16 +51,11 @@ namespace EPose
         private void searchBox_Enter(object sender, EventArgs e)
         {
             changeColor(searchBox, "enter");
-
         }
 
         private void searchBox_Leave(object sender, EventArgs e)
         {
-
-            changeColor(searchBox, "out");
-            searchBox.Text = "Search by name";
+          changeColor(searchBox, "out");
         }
-
-      
     }
 }

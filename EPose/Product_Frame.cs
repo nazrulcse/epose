@@ -25,7 +25,7 @@ namespace EPose
 
             foreach( var product in products){
 
-                productList.Rows.Add(product.id, product.barcode,product.name,product.description,product.department,product.category,product.sub_category,product.model,product.brand, product.re_order_level,product.cost_price,product.sale_price,product.expirable,product.discountable,product.stock);
+                productList.Rows.Add(product.barcode, product.name, product.category, product.sub_category, product.model, product.brand, product.re_order_level, product.cost_price, product.sale_price, product.expirable, product.discountable, product.stock, product.product_code);
             }
             this.productLabel.Text = "" + products.Count;
         }
@@ -33,7 +33,8 @@ namespace EPose
         {
             String searchValue = searchBox.Text;
             ProductModel pro = new ProductModel();
-            dynamic products = pro.where(pro, "name like '%" + searchValue + "%'");
+            dynamic products = pro.where(pro, "name like '%" + searchValue + "%' or barcode like'%" + searchValue + "%'  or product_code like'%" + searchValue + "%'");
+            
             if (products.Count > 0)
             {
 
@@ -41,7 +42,7 @@ namespace EPose
                 productList.Rows.Clear();
                 foreach (var product in products)
                 {
-                    productList.Rows.Add(product.id, product.barcode, product.name, product.description, product.department, product.category, product.sub_category, product.model, product.brand, product.re_order_level, product.cost_price, product.sale_price, product.expirable, product.discountable, product.stock);
+                    productList.Rows.Add(product.barcode, product.name, product.category, product.sub_category, product.model, product.brand, product.re_order_level, product.cost_price, product.sale_price, product.expirable, product.discountable, product.stock, product.product_code);
                 }
             }
         }
@@ -55,7 +56,6 @@ namespace EPose
         private void searchBox_Leave(object sender, EventArgs e)
         {
             changeColor(searchBox, "out");
-            searchBox.Text = "Search by name";
         }
     }
 }

@@ -51,19 +51,19 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtTillId = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtDepartmentId = new System.Windows.Forms.TextBox();
-            this.saveDepartment = new System.Windows.Forms.Button();
-            this.exitForm = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBoxVatRegestration = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBoxVatChalan = new System.Windows.Forms.TextBox();
-            this.textBoxAdress = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBoxAdress = new System.Windows.Forms.RichTextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBoxVatChalan = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBoxVatRegestration = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.exitForm = new System.Windows.Forms.Button();
+            this.saveDepartment = new System.Windows.Forms.Button();
+            this.txtDepartmentId = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtTillId = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.GroupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -358,49 +358,112 @@
             this.tabPage2.Text = "Department";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // groupBox2
             // 
-            this.label8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(101, 79);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(185, 34);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Code :";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.groupBox2.Controls.Add(this.textBoxAdress);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.textBoxVatChalan);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.textBoxVatRegestration);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.exitForm);
+            this.groupBox2.Controls.Add(this.saveDepartment);
+            this.groupBox2.Controls.Add(this.txtDepartmentId);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.txtTillId);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(740, 442);
+            this.groupBox2.TabIndex = 32;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Department Settings";
             // 
-            // txtTillId
+            // textBoxAdress
             // 
-            this.txtTillId.BackColor = System.Drawing.Color.White;
-            this.txtTillId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTillId.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTillId.Location = new System.Drawing.Point(323, 134);
-            this.txtTillId.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTillId.Name = "txtTillId";
-            this.txtTillId.Size = new System.Drawing.Size(231, 32);
-            this.txtTillId.TabIndex = 14;
+            this.textBoxAdress.Font = new System.Drawing.Font("Verdana", 12F);
+            this.textBoxAdress.Location = new System.Drawing.Point(323, 288);
+            this.textBoxAdress.Name = "textBoxAdress";
+            this.textBoxAdress.Size = new System.Drawing.Size(231, 67);
+            this.textBoxAdress.TabIndex = 25;
+            this.textBoxAdress.Text = "";
             // 
-            // label7
+            // label14
             // 
-            this.label7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(101, 127);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(185, 34);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Till Setting ID:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label14.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(101, 288);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(204, 34);
+            this.label14.TabIndex = 24;
+            this.label14.Text = "Adress :";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtDepartmentId
+            // textBoxVatChalan
             // 
-            this.txtDepartmentId.BackColor = System.Drawing.Color.White;
-            this.txtDepartmentId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDepartmentId.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDepartmentId.Location = new System.Drawing.Point(323, 82);
-            this.txtDepartmentId.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDepartmentId.Name = "txtDepartmentId";
-            this.txtDepartmentId.Size = new System.Drawing.Size(231, 32);
-            this.txtDepartmentId.TabIndex = 13;
+            this.textBoxVatChalan.BackColor = System.Drawing.Color.White;
+            this.textBoxVatChalan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxVatChalan.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxVatChalan.Location = new System.Drawing.Point(323, 189);
+            this.textBoxVatChalan.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxVatChalan.Name = "textBoxVatChalan";
+            this.textBoxVatChalan.Size = new System.Drawing.Size(231, 32);
+            this.textBoxVatChalan.TabIndex = 19;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(101, 238);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(204, 34);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "Vat Regestration:";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // textBoxVatRegestration
+            // 
+            this.textBoxVatRegestration.BackColor = System.Drawing.Color.White;
+            this.textBoxVatRegestration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxVatRegestration.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxVatRegestration.Location = new System.Drawing.Point(323, 241);
+            this.textBoxVatRegestration.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxVatRegestration.Name = "textBoxVatRegestration";
+            this.textBoxVatRegestration.Size = new System.Drawing.Size(231, 32);
+            this.textBoxVatRegestration.TabIndex = 20;
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(101, 186);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(185, 34);
+            this.label13.TabIndex = 21;
+            this.label13.Text = "Vat Chalan:";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // exitForm
+            // 
+            this.exitForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
+            this.exitForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitForm.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
+            this.exitForm.FlatAppearance.BorderSize = 0;
+            this.exitForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitForm.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitForm.ForeColor = System.Drawing.Color.White;
+            this.exitForm.Location = new System.Drawing.Point(588, 373);
+            this.exitForm.Margin = new System.Windows.Forms.Padding(4);
+            this.exitForm.Name = "exitForm";
+            this.exitForm.Size = new System.Drawing.Size(129, 47);
+            this.exitForm.TabIndex = 18;
+            this.exitForm.Text = "Exit";
+            this.exitForm.UseVisualStyleBackColor = false;
+            this.exitForm.Click += new System.EventHandler(this.exitForm_Click);
             // 
             // saveDepartment
             // 
@@ -423,114 +486,49 @@
             this.saveDepartment.UseVisualStyleBackColor = false;
             this.saveDepartment.Click += new System.EventHandler(this.saveDepartment_Click);
             // 
-            // exitForm
+            // txtDepartmentId
             // 
-            this.exitForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
-            this.exitForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exitForm.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
-            this.exitForm.FlatAppearance.BorderSize = 0;
-            this.exitForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitForm.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitForm.ForeColor = System.Drawing.Color.White;
-            this.exitForm.Location = new System.Drawing.Point(588, 373);
-            this.exitForm.Margin = new System.Windows.Forms.Padding(4);
-            this.exitForm.Name = "exitForm";
-            this.exitForm.Size = new System.Drawing.Size(129, 47);
-            this.exitForm.TabIndex = 18;
-            this.exitForm.Text = "Exit";
-            this.exitForm.UseVisualStyleBackColor = false;
-            this.exitForm.Click += new System.EventHandler(this.exitForm_Click);
+            this.txtDepartmentId.BackColor = System.Drawing.Color.White;
+            this.txtDepartmentId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDepartmentId.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDepartmentId.Location = new System.Drawing.Point(323, 82);
+            this.txtDepartmentId.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDepartmentId.Name = "txtDepartmentId";
+            this.txtDepartmentId.Size = new System.Drawing.Size(231, 32);
+            this.txtDepartmentId.TabIndex = 13;
             // 
-            // label13
+            // label7
             // 
-            this.label13.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(101, 186);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(185, 34);
-            this.label13.TabIndex = 21;
-            this.label13.Text = "Vat Chalan:";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(101, 127);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(185, 34);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Till Setting ID:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBoxVatRegestration
+            // txtTillId
             // 
-            this.textBoxVatRegestration.BackColor = System.Drawing.Color.White;
-            this.textBoxVatRegestration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxVatRegestration.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxVatRegestration.Location = new System.Drawing.Point(323, 241);
-            this.textBoxVatRegestration.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxVatRegestration.Name = "textBoxVatRegestration";
-            this.textBoxVatRegestration.Size = new System.Drawing.Size(231, 32);
-            this.textBoxVatRegestration.TabIndex = 20;
+            this.txtTillId.BackColor = System.Drawing.Color.White;
+            this.txtTillId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTillId.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTillId.Location = new System.Drawing.Point(323, 134);
+            this.txtTillId.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTillId.Name = "txtTillId";
+            this.txtTillId.Size = new System.Drawing.Size(231, 32);
+            this.txtTillId.TabIndex = 14;
             // 
-            // label11
+            // label8
             // 
-            this.label11.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(101, 238);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(204, 34);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "Vat Regestration:";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBoxVatChalan
-            // 
-            this.textBoxVatChalan.BackColor = System.Drawing.Color.White;
-            this.textBoxVatChalan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxVatChalan.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxVatChalan.Location = new System.Drawing.Point(323, 189);
-            this.textBoxVatChalan.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxVatChalan.Name = "textBoxVatChalan";
-            this.textBoxVatChalan.Size = new System.Drawing.Size(231, 32);
-            this.textBoxVatChalan.TabIndex = 19;
-            // 
-            // textBoxAdress
-            // 
-            this.textBoxAdress.BackColor = System.Drawing.Color.White;
-            this.textBoxAdress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxAdress.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAdress.Location = new System.Drawing.Point(323, 291);
-            this.textBoxAdress.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxAdress.Name = "textBoxAdress";
-            this.textBoxAdress.Size = new System.Drawing.Size(231, 32);
-            this.textBoxAdress.TabIndex = 23;
-            // 
-            // label14
-            // 
-            this.label14.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(101, 288);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(204, 34);
-            this.label14.TabIndex = 24;
-            this.label14.Text = "Adress :";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.textBoxAdress);
-            this.groupBox2.Controls.Add(this.textBoxVatChalan);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.textBoxVatRegestration);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.exitForm);
-            this.groupBox2.Controls.Add(this.saveDepartment);
-            this.groupBox2.Controls.Add(this.txtDepartmentId);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.txtTillId);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(4, 4);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(740, 442);
-            this.groupBox2.TabIndex = 32;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Department Settings";
+            this.label8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(101, 79);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(185, 34);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Code :";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Connection_frame
             // 
@@ -582,7 +580,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox2;
         internal System.Windows.Forms.Label label14;
-        internal System.Windows.Forms.TextBox textBoxAdress;
         internal System.Windows.Forms.TextBox textBoxVatChalan;
         internal System.Windows.Forms.Label label11;
         internal System.Windows.Forms.TextBox textBoxVatRegestration;
@@ -593,6 +590,7 @@
         internal System.Windows.Forms.Label label7;
         internal System.Windows.Forms.TextBox txtTillId;
         internal System.Windows.Forms.Label label8;
+        private System.Windows.Forms.RichTextBox textBoxAdress;
 
     }
 }
