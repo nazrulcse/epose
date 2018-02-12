@@ -15,7 +15,7 @@ namespace EPose.Service
             Console.WriteLine("Sync service started...");
            // DepartmentService.perform();
             EmployeeService.perform();
-            //ProductService.perform();
+          //  ProductService.perform();
             //SupplierService.perform();
            // CustomerService.perform();
            // var timer = new System.Threading.Timer((e) =>

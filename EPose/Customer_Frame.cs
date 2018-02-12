@@ -57,7 +57,5 @@ namespace EPose
         {
           changeColor(searchBox, "out");
         }
-
-      
     }
 }

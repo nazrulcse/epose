@@ -45,6 +45,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Product_Frame));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.productLabel = new System.Windows.Forms.Label();
+            this.searchBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.productList = new System.Windows.Forms.DataGridView();
             this.Designation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,10 +63,6 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.productLabel = new System.Windows.Forms.Label();
-            this.searchBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productList)).BeginInit();
             this.SuspendLayout();
@@ -70,11 +70,61 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.productList);
-            this.panel1.Location = new System.Drawing.Point(3, 159);
+            this.panel1.Location = new System.Drawing.Point(3, 133);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1187, 449);
+            this.panel1.Size = new System.Drawing.Size(1187, 475);
             this.panel1.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(975, 91);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 24);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Total  Result:";
+            // 
+            // productLabel
+            // 
+            this.productLabel.AutoSize = true;
+            this.productLabel.BackColor = System.Drawing.Color.Transparent;
+            this.productLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productLabel.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.productLabel.Location = new System.Drawing.Point(1101, 91);
+            this.productLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.productLabel.Name = "productLabel";
+            this.productLabel.Size = new System.Drawing.Size(45, 25);
+            this.productLabel.TabIndex = 6;
+            this.productLabel.Text = "123";
+            // 
+            // searchBox
+            // 
+            this.searchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.searchBox.Font = new System.Drawing.Font("Bookman Old Style", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBox.Location = new System.Drawing.Point(256, 87);
+            this.searchBox.Margin = new System.Windows.Forms.Padding(4);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(649, 35);
+            this.searchBox.TabIndex = 5;
+            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
+            this.searchBox.Enter += new System.EventHandler(this.searchBox_Enter);
+            this.searchBox.Leave += new System.EventHandler(this.searchBox_Leave);
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.label5.Location = new System.Drawing.Point(228, 50);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(714, 36);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Search By Name/BarCode/Product Code";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // productList
             // 
@@ -120,8 +170,8 @@
             this.productList.Margin = new System.Windows.Forms.Padding(4);
             this.productList.Name = "productList";
             this.productList.RowHeadersWidth = 52;
-            this.productList.Size = new System.Drawing.Size(1187, 449);
-            this.productList.TabIndex = 13;
+            this.productList.Size = new System.Drawing.Size(1187, 475);
+            this.productList.TabIndex = 14;
             // 
             // Designation
             // 
@@ -234,56 +284,6 @@
             this.Column8.Name = "Column8";
             this.Column8.Width = 83;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(975, 111);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 24);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Total  Result:";
-            // 
-            // productLabel
-            // 
-            this.productLabel.AutoSize = true;
-            this.productLabel.BackColor = System.Drawing.Color.Transparent;
-            this.productLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productLabel.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.productLabel.Location = new System.Drawing.Point(1101, 111);
-            this.productLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.productLabel.Name = "productLabel";
-            this.productLabel.Size = new System.Drawing.Size(45, 25);
-            this.productLabel.TabIndex = 6;
-            this.productLabel.Text = "123";
-            // 
-            // searchBox
-            // 
-            this.searchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.searchBox.Font = new System.Drawing.Font("Bookman Old Style", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBox.Location = new System.Drawing.Point(256, 108);
-            this.searchBox.Margin = new System.Windows.Forms.Padding(4);
-            this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(649, 35);
-            this.searchBox.TabIndex = 5;
-            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
-            this.searchBox.Enter += new System.EventHandler(this.searchBox_Enter);
-            this.searchBox.Leave += new System.EventHandler(this.searchBox_Leave);
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
-            this.label5.Location = new System.Drawing.Point(228, 62);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(714, 36);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Search By Name/BarCode/Product Code";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Product_Frame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -317,8 +317,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label productLabel;
         private System.Windows.Forms.TextBox searchBox;
-        private System.Windows.Forms.DataGridView productList;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView productList;
         private System.Windows.Forms.DataGridViewTextBoxColumn Designation;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Country;
