@@ -44,15 +44,7 @@ namespace EPose
         private void Connection_frame_Load(object sender, EventArgs e)
         {
             //this.Location = new Point(178, 127);
-            List<string> value = new List<string>();
-            foreach (var line in File.ReadAllLines("D:/epose/New folder/DatabaseConnectionFile.txt"))
-            {
-                value.Add(line);
-                
-            }
-            string[] a = value.ToArray();
-
-            Console.WriteLine(value);
+        
 
 
             txtServerHost.Text = SQLConn.ServerMySQL;
@@ -126,25 +118,24 @@ namespace EPose
                     SQLConn.conn.ConnectionString = "Server = '" + TstServerMySQL + "';  " + "Port = '" + TstPortMySQL + "'; " + "Database = '" + TstDBNameMySQL + "'; " + "user id = '" + TstUserNameMySQL + "'; " + "password = '" + TstPwdMySQL + "'";
                     SQLConn.conn.Open();
 
-                    SQLConn.DBNameMySQL = txtDatabase.Text;
+                  SQLConn.DBNameMySQL = txtDatabase.Text;
                     SQLConn.ServerMySQL = txtServerHost.Text;
-                    SQLConn.UserNameMySQL = txtUserName.Text;
-                    SQLConn.PortMySQL = txtPort.Text;
+                   SQLConn.UserNameMySQL = txtUserName.Text;
+                   SQLConn.PortMySQL = txtPort.Text;
                     SQLConn.PwdMySQL = txtPassword.Text;
-                    SQLConn.department_Id = txtDepartmentId.Text;
+                   //SQLConn.department_Id = txtDepartmentId.Text;
 
-                    SQLConn.SaveData();
-
-                    using (StreamWriter objWriter = new StreamWriter("D:/epose/New folder/DatabaseConnectionFile.txt"))
+                   SQLConn.SaveData();
+                    string startupPath = System.IO.Directory.GetCurrentDirectory();
+                    using (StreamWriter objWriter = new StreamWriter(startupPath+"/DatabaseConnectionFile.txt"))
                     {
-                        objWriter.WriteLine(txtDatabase.Text);
                         objWriter.WriteLine(txtServerHost.Text);
-                        objWriter.WriteLine(txtUserName.Text);
                         objWriter.WriteLine(txtPort.Text);
+                        objWriter.WriteLine(txtUserName.Text);
                         objWriter.WriteLine(txtPassword.Text);
-                        
-
-                        MessageBox.Show("Details have been saved");
+                        objWriter.WriteLine(txtDatabase.Text);
+                    
+                        MessageBox.Show("Details have been saved to file");
                     }
 
 

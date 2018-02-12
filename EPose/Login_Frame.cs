@@ -11,6 +11,7 @@ using EPose.Orm;
 using EPose.Model;
 using EPose.Service;
 using DevOne.Security.Cryptography.BCrypt;
+using System.IO;
 
 namespace EPose
 {
@@ -30,6 +31,27 @@ namespace EPose
            DepartmentSettings.getData();
            branch.Text = DepartmentSettings.DepartmentId;
            branch.Enabled = false;
+
+
+            //read dataBase Information from external file And save to the application temporary memory
+            List<string> value = new List<string>();
+            string startupPath = System.IO.Directory.GetCurrentDirectory();
+            foreach (var line in File.ReadAllLines(startupPath+"/DatabaseConnectionFile.txt"))
+            {
+              value.Add(line);
+           }
+              string[] databaseInformation = value.ToArray();
+              SQLConn.ServerMySQL = databaseInformation[0];
+              SQLConn.PortMySQL = databaseInformation[1];
+              SQLConn.UserNameMySQL = databaseInformation[2]; 
+              SQLConn.PwdMySQL = databaseInformation[3];
+              SQLConn.DBNameMySQL = databaseInformation[4];
+              SQLConn.SaveData();
+
+              
+              
+              Console.WriteLine(startupPath);
+              
         }
 
         private void topHeader_MouseDown(object sender, MouseEventArgs e)
