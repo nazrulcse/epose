@@ -72,7 +72,6 @@ namespace EPose.Orm
 			Interaction.SaveSetting(AppName, "DBSection", "DB_Port", PortMySQL);
 			Interaction.SaveSetting(AppName, "DBSection", "DB_User", UserNameMySQL);
             Interaction.SaveSetting(AppName, "DBSection", "DB_Password", PwdMySQL);
-            Interaction.SaveSetting(AppName, "DBSection", "departmentId", department_Id);
 			Interaction.MsgBox("Database connection settings are saved.", MsgBoxStyle.Information);
 		}
 	}

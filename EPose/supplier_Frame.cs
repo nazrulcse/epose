@@ -24,7 +24,7 @@ namespace EPose
            foreach (var supplier in suppliers)
             {
                 this.employeeLabel.Text = "" + suppliers.Count;
-                supplierList.Rows.Add(supplier.id, supplier.name, supplier.company,supplier.address,supplier.city,supplier.email,supplier.mobile,supplier.department_id);
+                supplierList.Rows.Add(supplier.id, supplier.name, supplier.company,supplier.address,supplier.city,supplier.email,supplier.mobile);
 
             }
 
@@ -32,7 +32,7 @@ namespace EPose
 
         private void supplier_Load(object sender, EventArgs e)
         {
-           
+            this.ActiveControl = searchBox;
         }
 
                private void searchBox_TextChanged(object sender, EventArgs e)
@@ -46,9 +46,20 @@ namespace EPose
                 supplierList.Rows.Clear();
                 foreach (var supplier in suppliers)
                 {
-                    supplierList.Rows.Add(supplier.id, supplier.name, supplier.company, supplier.address, supplier.city, supplier.email, supplier.mobile, supplier.department_id);
+                    supplierList.Rows.Add(supplier.id, supplier.name, supplier.company, supplier.address, supplier.city, supplier.email, supplier.mobile);
                 }
             }
         }
+
+               private void searchBox_Leave(object sender, EventArgs e)
+               {
+                   changeColor(searchBox, "out");
+                   searchBox.Text = "Search by name";
+               }
+
+               private void searchBox_Enter(object sender, EventArgs e)
+               {
+                   changeColor(searchBox, "enter");
+               }
     }
 }

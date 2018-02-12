@@ -36,7 +36,7 @@
       <HintPath>..\..\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="DevOne.Security.Cryptography.BCrypt">
-      <HintPath>..\packages\BCrypt.1.0.0.0\lib\DevOne.Security.Cryptography.BCrypt.dll</HintPath>
+      <HintPath>C:\Users\DELL\Downloads\DevOne.Security.Cryptography.BCrypt.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.PointOfService, Version=1.14.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
