@@ -113,5 +113,9 @@ namespace EPose
             Connection_frame cnf = new Connection_frame();
             cnf.Show();
         }
+
+        public void loadFromFile() { 
+        
+        }
     }
 }

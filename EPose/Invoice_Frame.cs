@@ -53,7 +53,6 @@ namespace EPose
                     }
                     else {
                         MessageBox.Show("Product Not Available");
-                      
                     }
                 }
             }
@@ -285,7 +284,7 @@ namespace EPose
 
         private void textBoxDiscount_Enter(object sender, EventArgs e)
         {
-            textBoxDiscount.Text = "";
+            //textBoxDiscount.Text = "";
             changeColor(textBoxDiscount, "enter");
         }
 

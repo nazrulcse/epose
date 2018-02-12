@@ -35,7 +35,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label1 = new System.Windows.Forms.Label();
             this.barcode = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.productItems = new System.Windows.Forms.DataGridView();
@@ -46,25 +45,16 @@
             this.vat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productItems)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(463, 81);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Enter Barcode";
             // 
             // barcode
             // 
             this.barcode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.barcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.barcode.Location = new System.Drawing.Point(403, 119);
+            this.barcode.Location = new System.Drawing.Point(402, 139);
             this.barcode.Margin = new System.Windows.Forms.Padding(2);
             this.barcode.Name = "barcode";
             this.barcode.Size = new System.Drawing.Size(290, 30);
@@ -157,20 +147,31 @@
             this.total.HeaderText = "Total";
             this.total.Name = "total";
             // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.MediumTurquoise;
+            this.label5.Location = new System.Drawing.Point(282, 63);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(549, 74);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Please Insert Barcode";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ProductSearch_Frame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1083, 573);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.barcode);
-            this.Controls.Add(this.label1);
             this.Name = "ProductSearch_Frame";
             this.ShowInTaskbar = false;
             this.Text = "ProductSearch_Frame";
-            this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.barcode, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.productItems)).EndInit();
             this.ResumeLayout(false);
@@ -180,7 +181,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox barcode;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView productItems;
@@ -191,5 +191,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn vat;
         private System.Windows.Forms.DataGridViewTextBoxColumn discount;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -174,6 +174,7 @@
     <Compile Include="Model\MemberShipModel.cs" />
     <Compile Include="Model\PaymentModel.cs" />
     <Compile Include="Model\ProductModel.cs" />
+    <Compile Include="Model\SettingsModel.cs" />
     <Compile Include="Model\SupplierModel.cs" />
     <Compile Include="Model_Frame.cs">
       <SubType>Form</SubType>

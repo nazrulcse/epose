@@ -18,6 +18,7 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using System.Linq;
 using System.Xml.Linq;
+using System.IO;
 
 namespace EPose
 {
@@ -35,11 +36,25 @@ namespace EPose
         private string TstPwdMySQL;
         private string TstDBNameMySQL;
         private string DepartmentId;
-        private string TillId;
+        private string vatChalan;
+        private string vatRegestration;
+        private string vatAdress;
+        
 
         private void Connection_frame_Load(object sender, EventArgs e)
         {
             //this.Location = new Point(178, 127);
+            List<string> value = new List<string>();
+            foreach (var line in File.ReadAllLines("D:/epose/New folder/DatabaseConnectionFile.txt"))
+            {
+                value.Add(line);
+                
+            }
+            string[] a = value.ToArray();
+
+            Console.WriteLine(value);
+
+
             txtServerHost.Text = SQLConn.ServerMySQL;
             txtPort.Text = SQLConn.PortMySQL;
             txtUserName.Text = SQLConn.UserNameMySQL;
@@ -47,6 +62,10 @@ namespace EPose
             txtDatabase.Text = SQLConn.DBNameMySQL;
             txtDepartmentId.Text = DepartmentSettings.DepartmentId;
             txtTillId.Text = DepartmentSettings.TillId;
+            textBoxVatChalan.Text = DepartmentSettings.vatChalan;
+            textBoxVatRegestration.Text = DepartmentSettings.vatRegstration;
+            textBoxAdress.Text = DepartmentSettings.address; 
+                ;
         }
 
 
@@ -115,6 +134,21 @@ namespace EPose
                     SQLConn.department_Id = txtDepartmentId.Text;
 
                     SQLConn.SaveData();
+
+                    using (StreamWriter objWriter = new StreamWriter("D:/epose/New folder/DatabaseConnectionFile.txt"))
+                    {
+                        objWriter.WriteLine(txtDatabase.Text);
+                        objWriter.WriteLine(txtServerHost.Text);
+                        objWriter.WriteLine(txtUserName.Text);
+                        objWriter.WriteLine(txtPort.Text);
+                        objWriter.WriteLine(txtPassword.Text);
+                        
+
+                        MessageBox.Show("Details have been saved");
+                    }
+
+
+
                     this.Close();
                 }
                 catch
@@ -135,7 +169,12 @@ namespace EPose
         {
             DepartmentSettings.DepartmentId = txtDepartmentId.Text;
             DepartmentSettings.TillId = txtTillId.Text;
+            DepartmentSettings.vatChalan = textBoxVatChalan.Text;
+            DepartmentSettings.vatRegstration = textBoxVatRegestration.Text;
+            DepartmentSettings.address = textBoxAdress.Text;
             DepartmentSettings.SaveData();
         }
+
+       
     }
 }

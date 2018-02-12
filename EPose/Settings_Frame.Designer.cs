@@ -84,6 +84,22 @@
             this.checkBox14 = new System.Windows.Forms.CheckBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.textLeft = new System.Windows.Forms.TextBox();
+            this.textBottom = new System.Windows.Forms.TextBox();
+            this.textRight = new System.Windows.Forms.TextBox();
+            this.printerType = new System.Windows.Forms.ComboBox();
+            this.cmdSave = new System.Windows.Forms.Button();
+            this.cmdClose = new System.Windows.Forms.Button();
+            this.txtTop = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.txtPrinterSize = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
@@ -94,6 +110,8 @@
             this.tabPage2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.GroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -176,7 +194,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1187, 487);
             this.tableLayoutPanel1.TabIndex = 21;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint_1);
             // 
             // label12
             // 
@@ -471,7 +488,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(1184, 558);
+            this.tabPage2.Size = new System.Drawing.Size(1182, 558);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Global Settings";
             // 
@@ -906,19 +923,234 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.GroupBox1);
             this.tabPage3.Location = new System.Drawing.Point(4, 53);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1184, 558);
+            this.tabPage3.Size = new System.Drawing.Size(1182, 558);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Printer settings";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // GroupBox1
+            // 
+            this.GroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.GroupBox1.Controls.Add(this.label32);
+            this.GroupBox1.Controls.Add(this.label30);
+            this.GroupBox1.Controls.Add(this.label29);
+            this.GroupBox1.Controls.Add(this.label28);
+            this.GroupBox1.Controls.Add(this.textLeft);
+            this.GroupBox1.Controls.Add(this.textBottom);
+            this.GroupBox1.Controls.Add(this.textRight);
+            this.GroupBox1.Controls.Add(this.printerType);
+            this.GroupBox1.Controls.Add(this.cmdSave);
+            this.GroupBox1.Controls.Add(this.cmdClose);
+            this.GroupBox1.Controls.Add(this.txtTop);
+            this.GroupBox1.Controls.Add(this.label31);
+            this.GroupBox1.Controls.Add(this.label33);
+            this.GroupBox1.Controls.Add(this.txtPrinterSize);
+            this.GroupBox1.Controls.Add(this.label35);
+            this.GroupBox1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox1.Location = new System.Drawing.Point(4, 0);
+            this.GroupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.GroupBox1.Name = "GroupBox1";
+            this.GroupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.GroupBox1.Size = new System.Drawing.Size(1182, 555);
+            this.GroupBox1.TabIndex = 32;
+            this.GroupBox1.TabStop = false;
+            this.GroupBox1.Text = "Printer Settings";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(318, 142);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(45, 17);
+            this.label32.TabIndex = 32;
+            this.label32.Text = "Right";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(382, 142);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(61, 17);
+            this.label30.TabIndex = 31;
+            this.label30.Text = "Bottom";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(474, 142);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(35, 17);
+            this.label29.TabIndex = 30;
+            this.label29.Text = "Left";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(241, 142);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(33, 17);
+            this.label28.TabIndex = 29;
+            this.label28.Text = "Top";
+            this.label28.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // textLeft
+            // 
+            this.textLeft.BackColor = System.Drawing.Color.White;
+            this.textLeft.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textLeft.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textLeft.Location = new System.Drawing.Point(464, 163);
+            this.textLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.textLeft.Name = "textLeft";
+            this.textLeft.Size = new System.Drawing.Size(57, 32);
+            this.textLeft.TabIndex = 28;
+            this.textLeft.Text = "0";
+            this.textLeft.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBottom
+            // 
+            this.textBottom.BackColor = System.Drawing.Color.White;
+            this.textBottom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBottom.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBottom.Location = new System.Drawing.Point(385, 163);
+            this.textBottom.Margin = new System.Windows.Forms.Padding(4);
+            this.textBottom.Name = "textBottom";
+            this.textBottom.Size = new System.Drawing.Size(57, 32);
+            this.textBottom.TabIndex = 27;
+            this.textBottom.Text = "0";
+            this.textBottom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textRight
+            // 
+            this.textRight.BackColor = System.Drawing.Color.White;
+            this.textRight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textRight.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textRight.Location = new System.Drawing.Point(310, 163);
+            this.textRight.Margin = new System.Windows.Forms.Padding(4);
+            this.textRight.Name = "textRight";
+            this.textRight.Size = new System.Drawing.Size(57, 32);
+            this.textRight.TabIndex = 26;
+            this.textRight.Text = "0";
+            this.textRight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // printerType
+            // 
+            this.printerType.FormattingEnabled = true;
+            this.printerType.Items.AddRange(new object[] {
+            "A4 Printer",
+            "Thermal Printer"});
+            this.printerType.Location = new System.Drawing.Point(231, 57);
+            this.printerType.Name = "printerType";
+            this.printerType.Size = new System.Drawing.Size(290, 28);
+            this.printerType.TabIndex = 25;
+            this.printerType.Text = "Select Printer";
+            // 
+            // cmdSave
+            // 
+            this.cmdSave.BackColor = System.Drawing.Color.PowderBlue;
+            this.cmdSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdSave.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.cmdSave.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.Highlight;
+            this.cmdSave.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.cmdSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdSave.Location = new System.Drawing.Point(537, 231);
+            this.cmdSave.Margin = new System.Windows.Forms.Padding(4);
+            this.cmdSave.Name = "cmdSave";
+            this.cmdSave.Size = new System.Drawing.Size(145, 48);
+            this.cmdSave.TabIndex = 22;
+            this.cmdSave.Text = "Save Settings";
+            this.cmdSave.UseVisualStyleBackColor = false;
+            this.cmdSave.Click += new System.EventHandler(this.cmdSave_Click);
+            // 
+            // cmdClose
+            // 
+            this.cmdClose.BackColor = System.Drawing.Color.PowderBlue;
+            this.cmdClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdClose.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.cmdClose.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.Highlight;
+            this.cmdClose.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.cmdClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdClose.Location = new System.Drawing.Point(690, 231);
+            this.cmdClose.Margin = new System.Windows.Forms.Padding(4);
+            this.cmdClose.Name = "cmdClose";
+            this.cmdClose.Size = new System.Drawing.Size(100, 48);
+            this.cmdClose.TabIndex = 23;
+            this.cmdClose.Text = "&Close";
+            this.cmdClose.UseVisualStyleBackColor = false;
+            this.cmdClose.Click += new System.EventHandler(this.cmdClose_Click);
+            // 
+            // txtTop
+            // 
+            this.txtTop.BackColor = System.Drawing.Color.White;
+            this.txtTop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTop.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTop.Location = new System.Drawing.Point(231, 163);
+            this.txtTop.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTop.Name = "txtTop";
+            this.txtTop.Size = new System.Drawing.Size(57, 32);
+            this.txtTop.TabIndex = 2;
+            this.txtTop.Text = "0";
+            this.txtTop.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(36, 167);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(166, 23);
+            this.label31.TabIndex = 9;
+            this.label31.Text = "Padding Layout:";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(36, 101);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(118, 23);
+            this.label33.TabIndex = 12;
+            this.label33.Text = "Page Size :";
+            // 
+            // txtPrinterSize
+            // 
+            this.txtPrinterSize.BackColor = System.Drawing.Color.White;
+            this.txtPrinterSize.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrinterSize.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrinterSize.Location = new System.Drawing.Point(231, 97);
+            this.txtPrinterSize.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrinterSize.Name = "txtPrinterSize";
+            this.txtPrinterSize.Size = new System.Drawing.Size(290, 32);
+            this.txtPrinterSize.TabIndex = 1;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(36, 57);
+            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(147, 23);
+            this.label35.TabIndex = 8;
+            this.label35.Text = "Printer  Type :";
             // 
             // tabPage4
             // 
             this.tabPage4.Location = new System.Drawing.Point(4, 53);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1184, 558);
+            this.tabPage4.Size = new System.Drawing.Size(1182, 558);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "API configuration for web";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -927,7 +1159,7 @@
             // 
             this.tabPage5.Location = new System.Drawing.Point(4, 53);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1184, 558);
+            this.tabPage5.Size = new System.Drawing.Size(1182, 558);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Customer invoice setup";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -936,7 +1168,7 @@
             // 
             this.tabPage6.Location = new System.Drawing.Point(4, 53);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1184, 558);
+            this.tabPage6.Size = new System.Drawing.Size(1182, 558);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "VAT setup";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -945,7 +1177,7 @@
             // 
             this.tabPage7.Location = new System.Drawing.Point(4, 53);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1184, 558);
+            this.tabPage7.Size = new System.Drawing.Size(1182, 558);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Bank setup";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -969,6 +1201,9 @@
             this.panel3.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.GroupBox1.ResumeLayout(false);
+            this.GroupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1035,6 +1270,22 @@
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TabPage tabPage7;
+        internal System.Windows.Forms.GroupBox GroupBox1;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        internal System.Windows.Forms.TextBox textLeft;
+        internal System.Windows.Forms.TextBox textBottom;
+        internal System.Windows.Forms.TextBox textRight;
+        private System.Windows.Forms.ComboBox printerType;
+        internal System.Windows.Forms.Button cmdSave;
+        internal System.Windows.Forms.Button cmdClose;
+        internal System.Windows.Forms.TextBox txtTop;
+        internal System.Windows.Forms.Label label31;
+        internal System.Windows.Forms.Label label33;
+        internal System.Windows.Forms.TextBox txtPrinterSize;
+        internal System.Windows.Forms.Label label35;
 
     }
 }
