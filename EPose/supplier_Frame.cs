@@ -39,7 +39,8 @@ namespace EPose
         {
             String searchValue = searchBox.Text;
             SupplierModel sup = new SupplierModel();
-            dynamic suppliers = sup.where(sup, "name like '%" + searchValue + "%'");
+            dynamic suppliers = sup.where(sup, "name like '%" + searchValue + "%'  or email like '%" + searchValue + "%' or mobile like '%"+ searchValue + "%'");
+
             if (suppliers.Count > 0)
             {
                 this.employeeLabel.Text = "" + suppliers.Count;
@@ -54,7 +55,6 @@ namespace EPose
                private void searchBox_Leave(object sender, EventArgs e)
                {
                    changeColor(searchBox, "out");
-                   searchBox.Text = "Search by name";
                }
 
                private void searchBox_Enter(object sender, EventArgs e)
