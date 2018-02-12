@@ -28,13 +28,6 @@ namespace EPose
             foreach(var p in products){
                 productItems.Rows.Add(p.barcode, p.name, "10", p.sale_price, p.vat+"%", "2%", p.sale_price * 1);
             }
-           
-           // if (product != null)
-           // {
-           //  productItems.Rows.Add(product.barcode, product.name, "10", product.sale_price, "15%", "2%", product.sale_price * 1);
-           //  productItems.Rows[0].Selected = true;
-           // }
-          
         }
 
         private void barcode_KeyDown(object sender, KeyEventArgs e)
@@ -51,6 +44,7 @@ namespace EPose
             String barcod = barcode.Text;
             if (barcod == "")
             {
+                search_products = null;
                 productItems.Rows.Clear();
             }
             else
@@ -59,12 +53,12 @@ namespace EPose
                 dynamic products = pm.where(pm, "barcode like '%" + barcod + "%'");
                 if (products.Count > 0)
                 {
-                    // this.invoice.addProduct(products[0]);
                     add(products);
                 }
                 else
                 {
                     productItems.Rows.Clear();
+                    search_products = null;
                 }
             }
         }
@@ -72,8 +66,15 @@ namespace EPose
         private void productItems_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Enter) {
-                 this.invoice.addProduct(search_products[productItems.SelectedRows[0].Index]);
-                this.Close();
+                MessageBox.Show("" + search_products.Count);
+                if (search_products != null && search_products.Count > 0 && productItems.SelectedRows[0].Index < search_products.Count)
+                {
+                    this.invoice.addProduct(search_products[productItems.SelectedRows[0].Index]);
+                    this.Close();
+                }
+                else {
+                    MessageBox.Show("No product found");
+                }
             }
         }
 

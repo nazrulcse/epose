@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,10 +38,15 @@ namespace EPose
 
         private void barcodeInput_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Return) {
+            if (e.KeyCode == Keys.Return)
+            {
                 if (barcodeInput.Text == "")
                 {
-                    receivedAmount.Focus();
+                    if (invoiceItems.RowCount > 1)
+                    {
+                        textBoxCustomer.Focus();
+                    }
+                    return;
                 }
                 else
                 {
@@ -51,7 +57,8 @@ namespace EPose
                     {
                         addProduct(products[0]);
                     }
-                    else {
+                    else
+                    {
                         MessageBox.Show("Product Not Available");
                     }
                 }
@@ -60,19 +67,23 @@ namespace EPose
 
         public void addProduct(dynamic product)
         {
-            topDisplay.Text = "1" + product.unit + " @ " + product.sale_price + " Tk";
-            double total = product.sale_price * 1;
-            sumOfprice += total;
-            //calculate vat per product
-            double vat = product.sale_price * (product.vat/100);
-            //add per product vat to total vat
-            sumOfVat += vat;
-            this.invoiceItems.Rows.Add(product.barcode, product.name, product.unit, product.sale_price, product.vat + "%", "0%", total);
-            barcodeInput.Text = "";
-            totalTextBox.Text = "" + sumOfprice;
-            textBoxVat.Text = "" + sumOfVat;
-            textBoxNetDue.Text = "" + (sumOfprice + sumOfVat);
-            createLineItem(product);
+            if (this.inv != null)
+            {
+                topDisplay.Text = "1" + product.unit + " @ " + product.sale_price + " Tk";
+                double total = product.sale_price * 1;
+                this.inv.invoice_total += total;
+                //calculate vat per product
+                double vat = product.sale_price * (product.vat / 100);
+                //add per product vat to total vat
+                this.inv.vat += vat;
+                this.invoiceItems.Rows.Add(product.barcode, product.name, product.unit, product.sale_price, product.vat + "%", "0%", total);
+                barcodeInput.Text = "";
+                updateAmount();
+                createLineItem(product);
+            }
+            else {
+                MessageBox.Show("Invoice not initialize", "No invoice");
+            }
         }
 
         public void createLineItem(dynamic product) {
@@ -86,7 +97,7 @@ namespace EPose
             inv_item.total = product.sale_price;
             inv_item.name = product.name;
             inv_item.invoice_id = this.inv.id;
-            //inv_item.date = DateTime.Today;
+            inv_item.date = DateTime.Today;
             inv_item.create(inv_item);
         }
 
@@ -119,6 +130,15 @@ namespace EPose
                         MessageBox.Show("Invoice not initialize");
                     }
                     break;
+                case (Keys.Return):
+                    if(this.inv == null) {
+                        DialogResult result = MessageDialog.Show("New Invoice!", "Invoice not initialize! Do you want to create new Invoice?");
+                        if(result == DialogResult.Yes) {
+                            createInvoice();
+                        }
+                        return true;
+                    }
+                    break;
             }
             return base.ProcessCmdKey(ref msg, keyData);
         }
@@ -137,15 +157,16 @@ namespace EPose
             invoicePanel.Width = Convert.ToInt32(this.Width - 320);
         }
 
+        // Remove invoice item
         private void button7_Click(object sender, EventArgs e)
         {
             try
             {
                 int SelectedRow = invoiceItems.SelectedRows[0].Index; ;
                 dynamic cellValue = invoiceItems.Rows[SelectedRow].Cells["total"].Value;
-                double total = Convert.ToDouble(Convert.ToString(cellValue));
-                sumOfprice -= total;
-                totalTextBox.Text = "" + sumOfprice;
+                float total = Convert.ToDouble(Convert.ToString(cellValue));
+                this.inv.invoice_total -= total;
+                updateAmount();
                 invoiceItems.Rows.RemoveAt(SelectedRow);
             }
             catch (Exception exception)
@@ -167,6 +188,14 @@ namespace EPose
         {
             PosReceipt psr = new PosReceipt(this.inv);
             psr.print();
+        }
+
+        public void updateAmount() {
+            totalTextBox.Text = "" + this.inv.invoice_total;
+            textBoxVat.Text = "" + this.inv.vat;
+            textBoxDiscount.Text = "" + this.inv.discount;
+            this.inv.net_total = (this.inv.invoice_total + this.inv.vat - this.inv.discount);
+            textBoxNetDue.Text = "" + this.inv.net_total;
         }
 
         public void createInvoice() {
@@ -224,17 +253,39 @@ namespace EPose
         {
             if (e.KeyCode == Keys.Enter)
             {
-                String name = textBoxCustomer.Text;
-                String aaa = name.Substring(name.IndexOf('(') + 1);
-                String id = aaa.Substring(0, aaa.IndexOf(')'));
-               
-               CustomerModel cust = new CustomerModel();
-               dynamic customers = cust.where(cust,"id = "+id);
-               textBoxCreditLimit.Text = ""+customers[0].credit_limit;
-               textBoxBalance.Text = ""+customers[0].initial_balance;
-
-               inv.update_attribute(inv, "customer_id",id,inv.id);
-                 
+                if (textBoxCustomer.Text != "")
+                {
+                    String id = "";
+                    String name = textBoxCustomer.Text;
+                    String aaa = name.Substring(name.IndexOf('(') + 1);
+                    if (aaa.IndexOf(')') != -1)
+                    {
+                        id = aaa.Substring(0, aaa.IndexOf(')'));
+                    }
+                    else {
+                        MessageBox.Show("Invalid Customer", "Invalid!");
+                        return;
+                    }
+                    CustomerModel cust = new CustomerModel();
+                    dynamic customers = cust.where(cust, "id = " + id);
+                    if (customers.Count > 0)
+                    {
+                        if (this.inv != null)
+                        {
+                            textBoxCreditLimit.Text = "" + customers[0].credit_limit;
+                            textBoxBalance.Text = "" + customers[0].initial_balance;
+                            inv.update_attribute(inv, "customer_id", id, inv.id);
+                        }
+                        else {
+                            MessageBox.Show("Invoice not initialized", "Not Found!");
+                        }
+                    }
+                    else {
+                        MessageBox.Show("Customer Not Found", "Not Found!");
+                        return;
+                    }
+                }
+                textBoxDiscount.Focus();
             }
         }
 
@@ -248,15 +299,14 @@ namespace EPose
             changeColor(barcodeInput, "out");
         }
 
-        private void textBoxDiscount_KeyDown_1(object sender, KeyEventArgs e)
+        private void textBoxDiscount_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {   //take the discount amount from the text box
                 double discountAmount = Convert.ToDouble(textBoxDiscount.Text);
-                double totalamount = sumOfVat+sumOfprice;
-                double amountAfterDisount = totalamount - discountAmount;
-                textBoxNetDue.Text = "" + amountAfterDisount;
-                textBoxDiscount.BackColor = Color.LawnGreen;
+                this.inv.discount = discountAmount;
+                updateAmount();
+                receivedAmount.Focus();
             }
 
         }
@@ -267,8 +317,10 @@ namespace EPose
             {
                 double amountReceived = Convert.ToDouble(receivedAmount.Text);
                 double netDueAmount = Convert.ToDouble(textBoxNetDue.Text);
-                textBoxChange.Text = "" + (amountReceived - netDueAmount);
-                textBoxChange.BackColor = Color.Red;
+                textBoxChange.Text = "" + (amountReceived - this.inv.net_total);
+                textBoxChange.Focus();
+                payment_Frame pf = new payment_Frame(this.inv, this);
+                pf.Show();
             }
         }
 
@@ -284,13 +336,44 @@ namespace EPose
 
         private void textBoxDiscount_Enter(object sender, EventArgs e)
         {
-            //textBoxDiscount.Text = "";
             changeColor(textBoxDiscount, "enter");
         }
 
         private void textBoxDiscount_Leave(object sender, EventArgs e)
         {
             changeColor(textBoxDiscount, "out");
+        }
+
+        private void receivedAmount_Enter(object sender, EventArgs e)
+        {
+            changeColor(receivedAmount, "enter");
+        }
+
+        private void receivedAmount_Leave(object sender, EventArgs e)
+        {
+            changeColor(receivedAmount, "out");
+        }
+
+        private void textBoxChange_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Return) {
+                DialogResult result = MessageDialog.Show("Print!", "Are you want to print the receipt now!");
+                if (result == DialogResult.Yes)
+                {
+                    PosReceipt ps = new PosReceipt(this.inv);
+                    ps.print();
+                }
+            }
+        }
+
+        private void textBoxChange_Enter(object sender, EventArgs e)
+        {
+            changeColor(textBoxChange, "enter");
+        }
+
+        private void textBoxChange_Leave(object sender, EventArgs e)
+        {
+            changeColor(textBoxChange, "out");
         }
     }
 

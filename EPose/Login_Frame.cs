@@ -87,42 +87,21 @@ namespace EPose
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            String userId = userid.Text;
+            /*String userId = userid.Text;
             String userPassword = password.Text;
-
-
-            //InvoiceModel inv = new InvoiceModel();
-            //dynamic invoice = inv.find(inv, "636538841229883");
-            //InvoiceItemModel invi = new InvoiceItemModel();
-            //dynamic items = invi.where(invi, "invoice_id = '" + invoice.id + "'");
-            //Console.WriteLine("" + invoice.id);
-            //Console.WriteLine(items);
-            //MessageBox.Show("dsf");
-            //PosReceipt ps = new PosReceipt(invoice);
-            //ps.print();
-
-            //EmployeeModel em = new EmployeeModel();
-            //dynamic employee = em.find_by(em, "login_id", userId);
-            //if(userId == "" || userPassword == "") {
-              //  MessageBox.Show("Please input your user ID and Password");
-                //return;
-            //}
-            //if (employee != null)
-            //{
-              //  Boolean matchPassword = BCryptHelper.CheckPassword(userPassword, employee.password);
-                //if (matchPassword)
-                //{
-                    Main_Frame main = new Main_Frame();
-                    main.Show();
-                    this.Hide();
-                //}
-                //else {
-                  //  MessageBox.Show("Invalid password for login ID: " + userId, "Invalid password");
-                //}
-            //}
-            //else {
-              //  MessageBox.Show("No employee found with ID: " + userId, "Invalid Login");
-            //}
+            if (userId == "" || userPassword == "")
+            {
+                MessageBox.Show("Please input your user ID and Password");
+                userid.Focus();
+                return;
+            }
+            else
+            {
+                authenticateUser(userId, userPassword);
+            }*/
+            Main_Frame main = new Main_Frame();
+            main.Show();
+            this.Hide();
         }
 
         private void cancel_Click(object sender, EventArgs e)
@@ -138,6 +117,92 @@ namespace EPose
 
         public void loadFromFile() { 
         
+        }
+
+        private void authenticateUser(String userId, String userPassword) {
+            //InvoiceModel inv = new InvoiceModel();
+            //dynamic invoice = inv.find(inv, "636538841229883");
+            //InvoiceItemModel invi = new InvoiceItemModel();
+            //dynamic items = invi.where(invi, "invoice_id = '" + invoice.id + "'");
+            //Console.WriteLine("" + invoice.id);
+            //Console.WriteLine(items);
+            //MessageBox.Show("dsf");
+            //PosReceipt ps = new PosReceipt(invoice);
+            //ps.print();
+
+            EmployeeModel em = new EmployeeModel();
+            dynamic employee = em.find_by(em, "login_id", userId);
+            if (employee != null)
+            {
+                Boolean matchPassword = BCryptHelper.CheckPassword(userPassword, employee.password);
+                if (matchPassword)
+                {
+                  Main_Frame main = new Main_Frame();
+                  main.Show();
+                  this.Hide();
+                }
+                else 
+                {
+                    password.Focus();
+                  MessageBox.Show("Invalid password for login ID: " + userId, "Invalid password");
+                }
+            }
+            else 
+            {
+                userid.Focus();
+                MessageBox.Show("No employee found with ID: " + userId, "Invalid Login");
+            }
+        }
+
+        private void userid_Enter(object sender, EventArgs e)
+        {
+            userid.BackColor = Color.Aqua;
+        }
+        private void userid_Leave(object sender, EventArgs e)
+        {
+            userid.BackColor = Color.FromName("white");
+        }
+
+        private void password_Enter(object sender, EventArgs e)
+        {
+            password.BackColor = Color.Aqua;
+        }
+
+        private void password_Leave(object sender, EventArgs e)
+        {
+            password.BackColor = Color.FromName("white");
+        }
+
+        private void userid_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Return) {
+              String userId = userid.Text;
+              String userPassword = password.Text;
+              if (userId != "" && userPassword != "")
+              {
+                  authenticateUser(userId, userPassword);
+              }
+              else if(userId != "") {
+                  password.Focus();
+              }
+            }
+        }
+
+        private void password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Return)
+            {
+                String userId = userid.Text;
+                String userPassword = password.Text;
+                if (userId != "" && userPassword != "")
+                {
+                    authenticateUser(userId, userPassword);
+                }
+                else if (userPassword != "")
+                {
+                    userid.Focus();
+                }
+            }
         }
     }
 }
