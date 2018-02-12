@@ -14,7 +14,7 @@ namespace EPose.Service
         public static void run() {
             Console.WriteLine("Sync service started...");
            // DepartmentService.perform();
-            EmployeeService.perform();
+            //EmployeeService.perform();
             //ProductService.perform();
             //SupplierService.perform();
            // CustomerService.perform();

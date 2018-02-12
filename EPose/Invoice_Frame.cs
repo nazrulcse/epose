@@ -17,7 +17,6 @@ namespace EPose
         Product_Frame pro = new Product_Frame();
         InvoiceModel inv;
         double sumOfprice = 0.0;
-        double sumOfVat = 0.0;
         public Invoice_Frame()
         {
             InitializeComponent();
@@ -131,13 +130,7 @@ namespace EPose
                     }
                     break;
                 case (Keys.Return):
-                    if(this.inv == null) {
-                        DialogResult result = MessageDialog.Show("New Invoice!", "Invoice not initialize! Do you want to create new Invoice?");
-                        if(result == DialogResult.Yes) {
-                            createInvoice();
-                        }
-                        return true;
-                    }
+                    checkForInvoice();
                     break;
             }
             return base.ProcessCmdKey(ref msg, keyData);
@@ -186,8 +179,17 @@ namespace EPose
 
         private void buttonReport_Click(object sender, EventArgs e)
         {
-            PosReceipt psr = new PosReceipt(this.inv);
-            psr.print();
+            DialogResult result = MessageDialog.Show("Print!", "Are you want to print the receipt now!");
+            if (result == DialogResult.Yes)
+            {
+                PosReceipt psr = new PosReceipt(this.inv);
+                psr.print();
+            }
+            result = MessageDialog.Show("Next Invoice!", "Is this invoice close and process next invoice?");
+            if (result == DialogResult.Yes)
+            {
+                resetInvoice();
+            }
         }
 
         public void updateAmount() {
@@ -232,6 +234,57 @@ namespace EPose
             log.ref_id = inv.id;
             log.department_id = inv.department_id;
             log.create(log);
+        }
+
+        public Boolean deleteInvoiceItem(dynamic lists) {
+            foreach(dynamic list in lists) {
+                list.delete(list);
+            }
+            return true;
+        }
+
+        public Boolean deleteInvoicePayment(dynamic lists)
+        {
+            foreach (dynamic list in lists)
+            {
+                list.delete(list);
+            }
+            return true;
+        }
+
+        public Boolean deleteInvoiceLog()
+        {
+            return false;
+        }
+
+        public void resetInvoice(Boolean create = true) {
+            this.inv = null;
+            this.receivedAmount.Text = "0.0";
+            this.textBoxCustomer.Text = "";
+            this.textBoxCreditLimit.Text = "0.0";
+            this.textBox12.Text = "0.0";
+            this.textBoxBalance.Text = "0.0";
+            this.totalTextBox.Text = "0.0";
+            this.textBoxVat.Text = "0.0";
+            this.textBoxDiscount.Text = "0.0";
+            this.textBoxNetDue.Text = "0.0";
+            this.textBoxChange.Text = "0.0";
+            this.textBox9.Text = "0.0";
+            this.barcodeInput.Text = "";
+            this.invoiceItems.Rows.Clear();
+            this.barcodeInput.Focus();
+            if (create)
+            {
+                createInvoice();
+            }
+            else {
+                invoiceNumber.Text = "Create Invoice(Ctrl + N)";
+            }
+        }
+
+        public void updateInvoice() {
+            this.inv.save(this.inv);
+            ActivityLogModel.track("invoices", "update", this.inv.id);
         }
 
         public AutoCompleteStringCollection getCustomerName()
@@ -307,8 +360,9 @@ namespace EPose
                 this.inv.discount = discountAmount;
                 updateAmount();
                 receivedAmount.Focus();
+                payment_Frame pf = new payment_Frame(this.inv, this);
+                pf.Show();
             }
-
         }
 
         private void receivedAmount_KeyDown(object sender, KeyEventArgs e)
@@ -319,8 +373,7 @@ namespace EPose
                 double netDueAmount = Convert.ToDouble(textBoxNetDue.Text);
                 textBoxChange.Text = "" + (amountReceived - this.inv.net_total);
                 textBoxChange.Focus();
-                payment_Frame pf = new payment_Frame(this.inv, this);
-                pf.Show();
+                updateInvoice();
             }
         }
 
@@ -363,6 +416,11 @@ namespace EPose
                     PosReceipt ps = new PosReceipt(this.inv);
                     ps.print();
                 }
+                result = MessageDialog.Show("Next Invoice!", "Is this invoice close and process next invoice?");
+                if (result == DialogResult.Yes)
+                {
+                    resetInvoice();
+                }
             }
         }
 
@@ -375,7 +433,50 @@ namespace EPose
         {
             changeColor(textBoxChange, "out");
         }
-    }
 
-       
+        private void voidInvoice_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageDialog.Show("Delete Invoice!", "Are you sure want to delete invoice");
+            if (result == DialogResult.Yes)
+            {
+                if(checkForInvoice()) {
+                    InvoiceItemModel invitem = new InvoiceItemModel();
+                    invitem.delete(invitem, "invoice_id='" + this.inv.id + "'");
+
+                    PaymentModel payment = new PaymentModel();
+                    payment.delete(payment, "invoice_id='" + this.inv.id + "'");
+
+                    inv.delete(this.inv);
+                    resetInvoice(false);
+                }
+            }
+        }
+
+        private Boolean checkForInvoice() {
+            if (this.inv == null)
+            {
+                DialogResult result = MessageDialog.Show("New Invoice!", "Invoice not initialize! Do you want to create new Invoice?");
+                if (result == DialogResult.Yes)
+                {
+                    createInvoice();
+                }
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+        private void nextInvoice_Click(object sender, EventArgs e)
+        {
+            if (this.inv != null)
+            {
+                DialogResult result = MessageDialog.Show("New Invoice!", "Do you want to complete current invoice and process next invoice?");
+                if (result == DialogResult.Yes)
+                {
+                    resetInvoice();
+                }
+            }
+        }
+    }
 }

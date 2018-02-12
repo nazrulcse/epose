@@ -94,11 +94,18 @@ namespace EPose.Orm
             return getFromDatabase(modelObject, query);
         }
        
-        public object delete(dynamic modelObject, string condition)
+        public object delete(dynamic modelObject, string condition = "")
         {
             var table_name = modelObject.getTable();
             Type objType = modelObject.GetType();
-            var query = "delete from " + table_name + " " + condition;
+            var query = "";
+            if (condition != "")
+            {
+                query = "delete from " + table_name + " where(" + condition + ")";
+            }
+            else {
+                query = "delete from " + table_name + " where id=" + modelObject.id;
+            }
             return getFromDatabase(modelObject, query);
         }
 
@@ -126,6 +133,9 @@ namespace EPose.Orm
             }
         }
 
+        public object save(dynamic modelObject) {
+            return update_attributes(modelObject, "");
+        }
 
         public object update_attribute(dynamic modelObject, string fieldName,String value,string id)
         {

@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Invoice_Frame));
             this.topPanel = new System.Windows.Forms.Panel();
             this.invoiceNumber = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.voidInvoice = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -85,6 +85,9 @@
             this.label15 = new System.Windows.Forms.Label();
             this.textBoxCustomer = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.holdInvoice = new System.Windows.Forms.Button();
+            this.nextInvoice = new System.Windows.Forms.Button();
+            this.Keyboard = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
             this.topLeftPanel.SuspendLayout();
             this.panelBody.SuspendLayout();
@@ -271,6 +274,7 @@
             // invoiceItems
             // 
             this.invoiceItems.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.invoiceItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.invoiceItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.invoiceItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EName,
@@ -290,62 +294,61 @@
             // EName
             // 
             this.EName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.EName.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.EName.DefaultCellStyle = dataGridViewCellStyle1;
             this.EName.HeaderText = "Sl No";
             this.EName.Name = "EName";
             // 
             // Email
             // 
             this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Email.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Email.DefaultCellStyle = dataGridViewCellStyle2;
             this.Email.HeaderText = "Item Name";
             this.Email.Name = "Email";
             // 
             // Department
             // 
             this.Department.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Department.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Department.DefaultCellStyle = dataGridViewCellStyle3;
             this.Department.HeaderText = "Unite";
             this.Department.Name = "Department";
             // 
             // Price
             // 
             this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Price.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Price.DefaultCellStyle = dataGridViewCellStyle4;
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
             // 
             // vat
             // 
             this.vat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.vat.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.vat.DefaultCellStyle = dataGridViewCellStyle5;
             this.vat.HeaderText = "VAT";
             this.vat.Name = "vat";
             // 
             // discount
             // 
             this.discount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.discount.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.discount.DefaultCellStyle = dataGridViewCellStyle6;
             this.discount.HeaderText = "Disc(%)";
             this.discount.Name = "discount";
             // 
             // total
             // 
             this.total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.total.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.total.DefaultCellStyle = dataGridViewCellStyle7;
             this.total.HeaderText = "Total";
             this.total.Name = "total";
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.panel6);
@@ -360,37 +363,45 @@
             // 
             this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Controls.Add(this.button1);
+            this.panel8.Controls.Add(this.holdInvoice);
+            this.panel8.Controls.Add(this.nextInvoice);
+            this.panel8.Controls.Add(this.Keyboard);
+            this.panel8.Controls.Add(this.voidInvoice);
             this.panel8.Controls.Add(this.button2);
             this.panel8.Controls.Add(this.button3);
             this.panel8.Controls.Add(this.button10);
             this.panel8.Controls.Add(this.buttonReport);
             this.panel8.Controls.Add(this.button7);
-            this.panel8.Location = new System.Drawing.Point(5, 337);
+            this.panel8.Location = new System.Drawing.Point(2, 337);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(322, 214);
+            this.panel8.Size = new System.Drawing.Size(325, 230);
             this.panel8.TabIndex = 36;
             // 
-            // button1
+            // voidInvoice
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(110, 39);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 58);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Void";
-            this.button1.UseVisualStyleBackColor = false;
+            this.voidInvoice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.voidInvoice.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.voidInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.voidInvoice.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.voidInvoice.ForeColor = System.Drawing.Color.White;
+            this.voidInvoice.Location = new System.Drawing.Point(110, 89);
+            this.voidInvoice.Margin = new System.Windows.Forms.Padding(2);
+            this.voidInvoice.Name = "voidInvoice";
+            this.voidInvoice.Size = new System.Drawing.Size(99, 58);
+            this.voidInvoice.TabIndex = 7;
+            this.voidInvoice.Text = "Void";
+            this.voidInvoice.UseVisualStyleBackColor = false;
+            this.voidInvoice.Click += new System.EventHandler(this.voidInvoice_Click);
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(4, 39);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(4, 89);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 58);
@@ -400,10 +411,12 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(213, 39);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(213, 89);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(103, 58);
@@ -413,10 +426,12 @@
             // 
             // button10
             // 
-            this.button10.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(111, 113);
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Location = new System.Drawing.Point(111, 162);
             this.button10.Margin = new System.Windows.Forms.Padding(2);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(99, 58);
@@ -427,24 +442,28 @@
             // 
             // buttonReport
             // 
-            this.buttonReport.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.buttonReport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonReport.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonReport.Location = new System.Drawing.Point(5, 113);
+            this.buttonReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.buttonReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonReport.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonReport.ForeColor = System.Drawing.Color.White;
+            this.buttonReport.Location = new System.Drawing.Point(5, 162);
             this.buttonReport.Margin = new System.Windows.Forms.Padding(2);
             this.buttonReport.Name = "buttonReport";
             this.buttonReport.Size = new System.Drawing.Size(102, 58);
             this.buttonReport.TabIndex = 3;
-            this.buttonReport.Text = "Report(F5)";
+            this.buttonReport.Text = "Receipt(F5)";
             this.buttonReport.UseVisualStyleBackColor = false;
             this.buttonReport.Click += new System.EventHandler(this.buttonReport_Click);
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(214, 113);
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(214, 162);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(103, 58);
@@ -466,10 +485,10 @@
             this.panel9.Controls.Add(this.textBoxVat);
             this.panel9.Controls.Add(this.label4);
             this.panel9.Controls.Add(this.label11);
-            this.panel9.Location = new System.Drawing.Point(5, 142);
+            this.panel9.Location = new System.Drawing.Point(2, 140);
             this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(322, 191);
+            this.panel9.Size = new System.Drawing.Size(325, 191);
             this.panel9.TabIndex = 35;
             // 
             // textBoxDiscount
@@ -592,10 +611,10 @@
             this.panel6.Controls.Add(this.label15);
             this.panel6.Controls.Add(this.textBoxCustomer);
             this.panel6.Controls.Add(this.label14);
-            this.panel6.Location = new System.Drawing.Point(5, 5);
+            this.panel6.Location = new System.Drawing.Point(2, 2);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(322, 133);
+            this.panel6.Size = new System.Drawing.Size(325, 133);
             this.panel6.TabIndex = 33;
             // 
             // textBox14
@@ -708,10 +727,57 @@
             this.label14.TabIndex = 16;
             this.label14.Text = "Customer";
             // 
+            // holdInvoice
+            // 
+            this.holdInvoice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.holdInvoice.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.holdInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.holdInvoice.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.holdInvoice.ForeColor = System.Drawing.Color.White;
+            this.holdInvoice.Location = new System.Drawing.Point(111, 17);
+            this.holdInvoice.Margin = new System.Windows.Forms.Padding(2);
+            this.holdInvoice.Name = "holdInvoice";
+            this.holdInvoice.Size = new System.Drawing.Size(99, 58);
+            this.holdInvoice.TabIndex = 10;
+            this.holdInvoice.Text = "Hold";
+            this.holdInvoice.UseVisualStyleBackColor = false;
+            // 
+            // nextInvoice
+            // 
+            this.nextInvoice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.nextInvoice.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nextInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextInvoice.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextInvoice.ForeColor = System.Drawing.Color.White;
+            this.nextInvoice.Location = new System.Drawing.Point(5, 17);
+            this.nextInvoice.Margin = new System.Windows.Forms.Padding(2);
+            this.nextInvoice.Name = "nextInvoice";
+            this.nextInvoice.Size = new System.Drawing.Size(102, 58);
+            this.nextInvoice.TabIndex = 9;
+            this.nextInvoice.Text = "Next Invoice";
+            this.nextInvoice.UseVisualStyleBackColor = false;
+            this.nextInvoice.Click += new System.EventHandler(this.nextInvoice_Click);
+            // 
+            // Keyboard
+            // 
+            this.Keyboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.Keyboard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Keyboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Keyboard.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Keyboard.ForeColor = System.Drawing.Color.White;
+            this.Keyboard.Location = new System.Drawing.Point(214, 17);
+            this.Keyboard.Margin = new System.Windows.Forms.Padding(2);
+            this.Keyboard.Name = "Keyboard";
+            this.Keyboard.Size = new System.Drawing.Size(103, 58);
+            this.Keyboard.TabIndex = 8;
+            this.Keyboard.Text = "Keyboard";
+            this.Keyboard.UseVisualStyleBackColor = false;
+            // 
             // Invoice_Frame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1122, 802);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.invoicePanel);
@@ -791,9 +857,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBoxDiscount;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button voidInvoice;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button holdInvoice;
+        private System.Windows.Forms.Button nextInvoice;
+        private System.Windows.Forms.Button Keyboard;
 
 
     }

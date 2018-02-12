@@ -21,7 +21,7 @@ namespace EPose.Model
             return "activity_logs";
         }
 
-        public static Boolean track(String model, String action, String ref_id, String dpt_id) {
+        public static Boolean track(String model, String action, String ref_id) {
             ActivityLogModel log = new ActivityLogModel();
             log.model = model;
             log.action = action;

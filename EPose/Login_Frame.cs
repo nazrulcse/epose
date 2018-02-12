@@ -23,35 +23,18 @@ namespace EPose
         public Login_Frame()
         {
             InitializeComponent();
+            this.ActiveControl = userid;
         }
 
         private void Login_Frame_Load(object sender, EventArgs e)
         {
-           //SyncService.run();
+           SyncService.run();
            DepartmentSettings.getData();
            branch.Text = DepartmentSettings.DepartmentId;
            branch.Enabled = false;
-
-
-            //read dataBase Information from external file And save to the application temporary memory
-            List<string> value = new List<string>();
-            string startupPath = System.IO.Directory.GetCurrentDirectory();
-            foreach (var line in File.ReadAllLines(startupPath+"/DatabaseConnectionFile.txt"))
-            {
-              value.Add(line);
-           }
-              string[] databaseInformation = value.ToArray();
-              SQLConn.ServerMySQL = databaseInformation[0];
-              SQLConn.PortMySQL = databaseInformation[1];
-              SQLConn.UserNameMySQL = databaseInformation[2]; 
-              SQLConn.PwdMySQL = databaseInformation[3];
-              SQLConn.DBNameMySQL = databaseInformation[4];
-              SQLConn.SaveData();
-
-              
-              
-              Console.WriteLine(startupPath);
-              
+           userid.Focus();
+           loadDatabaseSettings();
+           //read dataBase Information from external file And save to the application temporary memory
         }
 
         private void topHeader_MouseDown(object sender, MouseEventArgs e)
@@ -203,6 +186,23 @@ namespace EPose
                     userid.Focus();
                 }
             }
+        }
+
+        private void loadDatabaseSettings() {
+            List<string> value = new List<string>();
+            string startupPath = System.IO.Directory.GetCurrentDirectory();
+            foreach (var line in File.ReadAllLines(startupPath + "/DatabaseConnectionFile.txt"))
+            {
+                value.Add(line);
+            }
+            string[] databaseInformation = value.ToArray();
+            SQLConn.ServerMySQL = databaseInformation[0];
+            SQLConn.PortMySQL = databaseInformation[1];
+            SQLConn.UserNameMySQL = databaseInformation[2];
+            SQLConn.PwdMySQL = databaseInformation[3];
+            SQLConn.DBNameMySQL = databaseInformation[4];
+            SQLConn.SaveData();
+            userid.Focus();
         }
     }
 }

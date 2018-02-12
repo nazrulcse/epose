@@ -8,17 +8,18 @@ using System.Net.Http.Headers;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using EPose.Model;
+using EPose;
 
 namespace Service
 {
     class WebAPI
     {
-        //public const string API = "http://accounts.tangailenterprise.com";
         public const string API = "http://159.89.170.58/api/v1/";
         public static HttpResponseMessage getRequest(String action_url, String model)
         {
+            DepartmentSettings.getData();
             string URL = API + "" + action_url;
-            string urlParameters = "?department_id=1";
+            string urlParameters = "?department_id=" + DepartmentSettings.DepartmentId;
 
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(URL);

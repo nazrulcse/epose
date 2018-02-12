@@ -86,7 +86,7 @@ namespace EPose
                         payment.transaction_token = new Random().Next(1000) + invoice.id;
                         payment.date = DateTime.Today;
                         payment.create(payment);
-                        bool status = ActivityLogModel.track("payment", "create", payment.id, DepartmentSettings.DepartmentId);
+                        bool status = ActivityLogModel.track("payment", "create", payment.id);
                         paymentList.Rows.Add(payment.id, payment.payment_type, payment.invoice_id, payment.amount, payment.transaction_token, payment.date);
                         netDue -= payment.amount;
                         netDue = Math.Round(netDue, 2);

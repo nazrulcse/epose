@@ -41,8 +41,8 @@ namespace EPose
 
         private void barcode_TextChanged(object sender, EventArgs e)
         {
-            String barcod = barcode.Text;
-            if (barcod == "")
+            String inputVal = barcode.Text;
+            if (inputVal == "")
             {
                 search_products = null;
                 productItems.Rows.Clear();
@@ -50,7 +50,7 @@ namespace EPose
             else
             {
                 ProductModel pm = new ProductModel();
-                dynamic products = pm.where(pm, "barcode like '%" + barcod + "%'");
+                dynamic products = pm.where(pm, "barcode like '%" + inputVal + "%' OR name like '%" + inputVal + "%'");
                 if (products.Count > 0)
                 {
                     add(products);
@@ -66,7 +66,6 @@ namespace EPose
         private void productItems_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Enter) {
-                MessageBox.Show("" + search_products.Count);
                 if (search_products != null && search_products.Count > 0 && productItems.SelectedRows[0].Index < search_products.Count)
                 {
                     this.invoice.addProduct(search_products[productItems.SelectedRows[0].Index]);
