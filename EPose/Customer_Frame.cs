@@ -25,7 +25,7 @@ namespace EPose
             CustomerModel cust = new CustomerModel();
             dynamic customers = cust.all(cust);
             foreach( var customer in customers){
-                customerList.Rows.Add(customer.id, customer.name, customer.company, customer.address, customer.city, customer.email, customer.mobile, customer.department_id, customer.initial_balance, customer.credit_limit);
+                customerList.Rows.Add(customer.id, customer.name, customer.company, customer.address, customer.city, customer.email, customer.mobile, customer.initial_balance, customer.credit_limit);
             }
             this.customerLabel.Text = "" + customers.Count;
         }
@@ -42,7 +42,7 @@ namespace EPose
                 customerList.Rows.Clear();
                 foreach (var customer in customers)
                 {
-                    customerList.Rows.Add(customer.id, customer.name, customer.company, customer.address, customer.city, customer.email, customer.mobile, customer.department_id, customer.initial_balance, customer.credit_limit);
+                    customerList.Rows.Add(customer.id, customer.name, customer.company, customer.address, customer.city, customer.email, customer.mobile, customer.initial_balance, customer.credit_limit);
                 }
             }
             

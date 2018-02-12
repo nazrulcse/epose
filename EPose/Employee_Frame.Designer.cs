@@ -36,6 +36,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee_Frame));
             this.dataPanel = new System.Windows.Forms.Panel();
             this.employeeList = new System.Windows.Forms.DataGridView();
             this.EName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,9 +62,10 @@
             // 
             this.dataPanel.Controls.Add(this.employeeList);
             this.dataPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataPanel.Location = new System.Drawing.Point(3, 133);
+            this.dataPanel.Location = new System.Drawing.Point(4, 163);
+            this.dataPanel.Margin = new System.Windows.Forms.Padding(4);
             this.dataPanel.Name = "dataPanel";
-            this.dataPanel.Size = new System.Drawing.Size(983, 504);
+            this.dataPanel.Size = new System.Drawing.Size(1311, 621);
             this.dataPanel.TabIndex = 4;
             // 
             // employeeList
@@ -85,18 +87,20 @@
             this.employeeList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.employeeList.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.employeeList.Location = new System.Drawing.Point(0, 0);
+            this.employeeList.Margin = new System.Windows.Forms.Padding(4);
             this.employeeList.Name = "employeeList";
             this.employeeList.RowHeadersWidth = 52;
-            this.employeeList.Size = new System.Drawing.Size(983, 504);
+            this.employeeList.Size = new System.Drawing.Size(1311, 621);
             this.employeeList.TabIndex = 0;
             // 
             // EName
             // 
             this.EName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2, 0, 2, 2);
             this.EName.DefaultCellStyle = dataGridViewCellStyle1;
+            this.EName.FillWeight = 80F;
             this.EName.HeaderText = "Name";
             this.EName.MinimumWidth = 10;
             this.EName.Name = "EName";
@@ -105,9 +109,9 @@
             // 
             this.Designation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Designation.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Designation.FillWeight = 120F;
+            this.Designation.FillWeight = 80F;
             this.Designation.HeaderText = "Designation";
             this.Designation.MinimumWidth = 10;
             this.Designation.Name = "Designation";
@@ -117,6 +121,7 @@
             this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Email.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Email.FillWeight = 120F;
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
             // 
@@ -165,9 +170,10 @@
             this.all_employee.AutoSize = true;
             this.all_employee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.all_employee.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.all_employee.Location = new System.Drawing.Point(774, 19);
+            this.all_employee.Location = new System.Drawing.Point(1032, 23);
+            this.all_employee.Margin = new System.Windows.Forms.Padding(4);
             this.all_employee.Name = "all_employee";
-            this.all_employee.Size = new System.Drawing.Size(191, 24);
+            this.all_employee.Size = new System.Drawing.Size(236, 29);
             this.all_employee.TabIndex = 1;
             this.all_employee.Text = "All Employee Including ";
             this.all_employee.UseVisualStyleBackColor = true;
@@ -177,9 +183,10 @@
             this.active_employee.AutoSize = true;
             this.active_employee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.active_employee.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.active_employee.Location = new System.Drawing.Point(776, 49);
+            this.active_employee.Location = new System.Drawing.Point(1035, 60);
+            this.active_employee.Margin = new System.Windows.Forms.Padding(4);
             this.active_employee.Name = "active_employee";
-            this.active_employee.Size = new System.Drawing.Size(180, 24);
+            this.active_employee.Size = new System.Drawing.Size(226, 29);
             this.active_employee.TabIndex = 2;
             this.active_employee.Text = "Only Active Employee";
             this.active_employee.UseVisualStyleBackColor = true;
@@ -188,53 +195,63 @@
             // 
             this.searchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.searchBox.Font = new System.Drawing.Font("Bookman Old Style", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBox.Location = new System.Drawing.Point(11, 49);
+            this.searchBox.Location = new System.Drawing.Point(15, 60);
+            this.searchBox.Margin = new System.Windows.Forms.Padding(4);
             this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(293, 30);
+            this.searchBox.Size = new System.Drawing.Size(390, 35);
             this.searchBox.TabIndex = 1;
             this.searchBox.Text = "Search by name";
             this.searchBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.searchBox.Enter += new System.EventHandler(this.searchBox_Enter);
+            this.searchBox.Leave += new System.EventHandler(this.searchBox_Leave);
             // 
             // employeeLabel
             // 
             this.employeeLabel.AutoSize = true;
             this.employeeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeLabel.Location = new System.Drawing.Point(94, 19);
+            this.employeeLabel.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.employeeLabel.Location = new System.Drawing.Point(125, 23);
+            this.employeeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.employeeLabel.Name = "employeeLabel";
-            this.employeeLabel.Size = new System.Drawing.Size(29, 16);
+            this.employeeLabel.Size = new System.Drawing.Size(36, 20);
             this.employeeLabel.TabIndex = 3;
             this.employeeLabel.Text = "123";
-            
             // 
             // controlPanel
             // 
+            this.controlPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("controlPanel.BackgroundImage")));
+            this.controlPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.controlPanel.Controls.Add(this.label1);
             this.controlPanel.Controls.Add(this.employeeLabel);
             this.controlPanel.Controls.Add(this.searchBox);
             this.controlPanel.Controls.Add(this.active_employee);
             this.controlPanel.Controls.Add(this.all_employee);
             this.controlPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.controlPanel.Location = new System.Drawing.Point(3, 40);
+            this.controlPanel.Location = new System.Drawing.Point(4, 49);
+            this.controlPanel.Margin = new System.Windows.Forms.Padding(4);
             this.controlPanel.Name = "controlPanel";
-            this.controlPanel.Size = new System.Drawing.Size(983, 93);
+            this.controlPanel.Size = new System.Drawing.Size(1311, 114);
             this.controlPanel.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 22);
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(25, 23);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.Size = new System.Drawing.Size(92, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "Total  Result:";
-                       // 
+            // 
             // Employee_Frame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(989, 640);
+            this.ClientSize = new System.Drawing.Size(1319, 788);
             this.Controls.Add(this.dataPanel);
             this.Controls.Add(this.controlPanel);
+            this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Name = "Employee_Frame";
             this.Text = "Employee";
             this.Controls.SetChildIndex(this.controlPanel, 0);
@@ -256,6 +273,7 @@
         private System.Windows.Forms.Label employeeLabel;
         private System.Windows.Forms.Panel controlPanel;
         private System.Windows.Forms.DataGridView employeeList;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn EName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Designation;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
@@ -264,7 +282,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Country;
         private System.Windows.Forms.DataGridViewTextBoxColumn Department;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private System.Windows.Forms.Label label1;
 
     }
 }

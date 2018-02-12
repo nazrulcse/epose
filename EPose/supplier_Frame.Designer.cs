@@ -29,20 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(supplier_Frame));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.searchBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.employeeLabel = new System.Windows.Forms.Label();
             this.supplierList = new System.Windows.Forms.DataGridView();
             this.EName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Designation = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,7 +47,9 @@
             this.Joining = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Country = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.searchBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.employeeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -81,40 +79,11 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.supplierList);
-            this.panel1.Location = new System.Drawing.Point(3, 148);
+            this.panel1.Location = new System.Drawing.Point(4, 182);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(725, 275);
+            this.panel1.Size = new System.Drawing.Size(967, 338);
             this.panel1.TabIndex = 4;
-            // 
-            // searchBox
-            // 
-            this.searchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.searchBox.Font = new System.Drawing.Font("Bookman Old Style", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBox.Location = new System.Drawing.Point(5, 96);
-            this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(293, 30);
-            this.searchBox.TabIndex = 5;
-            this.searchBox.Text = "Search by name";
-            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Total  Result:";
-            // 
-            // employeeLabel
-            // 
-            this.employeeLabel.AutoSize = true;
-            this.employeeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeLabel.Location = new System.Drawing.Point(79, 52);
-            this.employeeLabel.Name = "employeeLabel";
-            this.employeeLabel.Size = new System.Drawing.Size(29, 16);
-            this.employeeLabel.TabIndex = 7;
-            this.employeeLabel.Text = "123";
             // 
             // supplierList
             // 
@@ -130,23 +99,23 @@
             this.Phone,
             this.Joining,
             this.Country,
-            this.Department,
-            this.Address});
+            this.Department});
             this.supplierList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.supplierList.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.supplierList.Location = new System.Drawing.Point(0, 0);
+            this.supplierList.Margin = new System.Windows.Forms.Padding(4);
             this.supplierList.Name = "supplierList";
             this.supplierList.RowHeadersWidth = 52;
-            this.supplierList.Size = new System.Drawing.Size(725, 275);
+            this.supplierList.Size = new System.Drawing.Size(967, 338);
             this.supplierList.TabIndex = 5;
             // 
             // EName
             // 
             this.EName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(2, 0, 2, 2);
-            this.EName.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(2, 0, 2, 2);
+            this.EName.DefaultCellStyle = dataGridViewCellStyle8;
             this.EName.HeaderText = "Id";
             this.EName.MinimumWidth = 10;
             this.EName.Name = "EName";
@@ -154,9 +123,9 @@
             // Designation
             // 
             this.Designation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Designation.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Designation.DefaultCellStyle = dataGridViewCellStyle9;
             this.Designation.FillWeight = 120F;
             this.Designation.HeaderText = "Name";
             this.Designation.MinimumWidth = 10;
@@ -165,62 +134,93 @@
             // Email
             // 
             this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Email.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Email.DefaultCellStyle = dataGridViewCellStyle10;
             this.Email.HeaderText = "Company";
             this.Email.Name = "Email";
             // 
             // Phone
             // 
             this.Phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Phone.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Phone.DefaultCellStyle = dataGridViewCellStyle11;
             this.Phone.HeaderText = "Adress";
             this.Phone.Name = "Phone";
             // 
             // Joining
             // 
             this.Joining.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Joining.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Joining.DefaultCellStyle = dataGridViewCellStyle12;
+            this.Joining.FillWeight = 80F;
             this.Joining.HeaderText = "City";
             this.Joining.Name = "Joining";
             // 
             // Country
             // 
             this.Country.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Country.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Country.DefaultCellStyle = dataGridViewCellStyle13;
             this.Country.HeaderText = "Email";
             this.Country.Name = "Country";
             // 
             // Department
             // 
             this.Department.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Department.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Department.DefaultCellStyle = dataGridViewCellStyle14;
             this.Department.HeaderText = "Mobile";
             this.Department.Name = "Department";
             // 
-            // Address
+            // searchBox
             // 
-            this.Address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Address.DefaultCellStyle = dataGridViewCellStyle16;
-            this.Address.HeaderText = "Department Id";
-            this.Address.Name = "Address";
+            this.searchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.searchBox.Font = new System.Drawing.Font("Bookman Old Style", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBox.Location = new System.Drawing.Point(7, 118);
+            this.searchBox.Margin = new System.Windows.Forms.Padding(4);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(390, 35);
+            this.searchBox.TabIndex = 5;
+            this.searchBox.Text = "Search by name";
+            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
+            this.searchBox.Enter += new System.EventHandler(this.searchBox_Enter);
+            this.searchBox.Leave += new System.EventHandler(this.searchBox_Leave);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(779, 90);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 20);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Total  Result:";
+            // 
+            // employeeLabel
+            // 
+            this.employeeLabel.AutoSize = true;
+            this.employeeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeLabel.Location = new System.Drawing.Point(896, 90);
+            this.employeeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.employeeLabel.Name = "employeeLabel";
+            this.employeeLabel.Size = new System.Drawing.Size(36, 20);
+            this.employeeLabel.TabIndex = 7;
+            this.employeeLabel.Text = "123";
             // 
             // supplier_Frame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 426);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(975, 524);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.employeeLabel);
             this.Controls.Add(this.searchBox);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Blue;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "supplier_Frame";
             this.Text = "supplier";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -254,7 +254,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Joining;
         private System.Windows.Forms.DataGridViewTextBoxColumn Country;
         private System.Windows.Forms.DataGridViewTextBoxColumn Department;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
 
     }
 }
