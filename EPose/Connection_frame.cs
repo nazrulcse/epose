@@ -9,14 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Data;
-using System.Drawing;
 using System.Diagnostics;
-using System.Windows.Forms;
-using System.Linq;
 using System.Xml.Linq;
 using System.IO;
 
@@ -48,13 +42,9 @@ namespace EPose
             foreach (var line in File.ReadAllLines("D:/epose/New folder/DatabaseConnectionFile.txt"))
             {
                 value.Add(line);
-                
             }
             string[] a = value.ToArray();
-
             Console.WriteLine(value);
-
-
             txtServerHost.Text = SQLConn.ServerMySQL;
             txtPort.Text = SQLConn.PortMySQL;
             txtUserName.Text = SQLConn.UserNameMySQL;
@@ -64,8 +54,7 @@ namespace EPose
             txtTillId.Text = DepartmentSettings.TillId;
             textBoxVatChalan.Text = DepartmentSettings.vatChalan;
             textBoxVatRegestration.Text = DepartmentSettings.vatRegstration;
-            textBoxAdress.Text = DepartmentSettings.address; 
-                ;
+            textBoxAdress.Text = DepartmentSettings.address;
         }
 
 

@@ -207,8 +207,12 @@
             this.password.Location = new System.Drawing.Point(244, 147);
             this.password.Margin = new System.Windows.Forms.Padding(2);
             this.password.Name = "password";
+            this.password.PasswordChar = '*';
             this.password.Size = new System.Drawing.Size(269, 29);
             this.password.TabIndex = 3;
+            this.password.Enter += new System.EventHandler(this.password_Enter);
+            this.password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.password_KeyDown);
+            this.password.Leave += new System.EventHandler(this.password_Leave);
             // 
             // label2
             // 
@@ -243,6 +247,9 @@
             this.userid.Name = "userid";
             this.userid.Size = new System.Drawing.Size(269, 29);
             this.userid.TabIndex = 0;
+            this.userid.Enter += new System.EventHandler(this.userid_Enter);
+            this.userid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.userid_KeyDown);
+            this.userid.Leave += new System.EventHandler(this.userid_Leave);
             // 
             // topHeader
             // 

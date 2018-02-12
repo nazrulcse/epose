@@ -15,6 +15,11 @@ namespace EPose.Model
         public string barcode { get; set; }
         public DateTime date { get; set; }
         public string customer_id { get; set; }
+        public double invoice_total { get; set; }
+        public double vat { get; set; }
+        public double discount { get; set; }
+        public double net_total { get; set; }
+        public Boolean is_paid { get; set; }
 
         public string getTable() {
             return "invoices";

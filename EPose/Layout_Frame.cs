@@ -55,16 +55,11 @@ namespace EPose
 
         private void btnexit_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("", "Are you want to Close The Form?", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageDialog.Show("Window Close Confirmation", "Are you sure want to close this window");
             if (dialogResult == DialogResult.Yes)
             {
                 this.Close();
             }
-            else if (dialogResult == DialogResult.No)
-            {
-               
-            }
-
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -101,12 +96,11 @@ namespace EPose
         public void changeColor(TextBox box, String ev) {
             if (ev == "enter")
             {
-                box.BackColor = Color.FromName("ActiveCaption");
+                box.BackColor = Color.Aqua;
             }
             else {
                 box.BackColor = Color.FromName("white");
             }
         }
-
     }
 }

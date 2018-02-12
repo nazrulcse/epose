@@ -75,6 +75,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlartBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlartBox.Designer.cs">
+      <DependentUpon>AlartBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="BoothClosing_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,7 @@
     <Compile Include="MemberShip_Frame.Designer.cs">
       <DependentUpon>MemberShip_Frame.cs</DependentUpon>
     </Compile>
+    <Compile Include="MessageDialog.cs" />
     <Compile Include="Model\ActivityLogModel.cs" />
     <Compile Include="Model\CustomerModel.cs" />
     <Compile Include="Model\DepartmentModel.cs" />
@@ -259,6 +266,9 @@
     <Compile Include="Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AlartBox.resx">
+      <DependentUpon>AlartBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BoothClosing_Frame.resx">
       <DependentUpon>BoothClosing_Frame.cs</DependentUpon>
     </EmbeddedResource>

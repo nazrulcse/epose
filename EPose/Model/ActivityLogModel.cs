@@ -21,6 +21,16 @@ namespace EPose.Model
             return "activity_logs";
         }
 
+        public static Boolean track(String model, String action, String ref_id, String dpt_id) {
+            ActivityLogModel log = new ActivityLogModel();
+            log.model = model;
+            log.action = action;
+            log.date = DateTime.Now;
+            log.ref_id = ref_id;
+            log.department_id = DepartmentSettings.DepartmentId;
+            dynamic status = log.create(log);
+            return status != null;
+        }
 
         public Array attrAccess()
         {

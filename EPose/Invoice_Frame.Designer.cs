@@ -139,6 +139,7 @@
             this.barcodeInput.Size = new System.Drawing.Size(252, 26);
             this.barcodeInput.TabIndex = 1;
             this.barcodeInput.Enter += new System.EventHandler(this.barcodeInput_Enter);
+            this.barcodeInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.barcodeInput_KeyDown);
             this.barcodeInput.Leave += new System.EventHandler(this.barcodeInput_Leave);
             // 
             // label17
@@ -203,6 +204,9 @@
             this.textBoxChange.TabIndex = 39;
             this.textBoxChange.Text = "0.0";
             this.textBoxChange.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxChange.Enter += new System.EventHandler(this.textBoxChange_Enter);
+            this.textBoxChange.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxChange_KeyDown);
+            this.textBoxChange.Leave += new System.EventHandler(this.textBoxChange_Leave);
             // 
             // label10
             // 
@@ -242,14 +246,17 @@
             // receivedAmount
             // 
             this.receivedAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.receivedAmount.Font = new System.Drawing.Font("Bookman Old Style", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receivedAmount.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.receivedAmount.Location = new System.Drawing.Point(107, 24);
             this.receivedAmount.Margin = new System.Windows.Forms.Padding(2);
-            this.receivedAmount.Multiline = true;
             this.receivedAmount.Name = "receivedAmount";
-            this.receivedAmount.Size = new System.Drawing.Size(136, 25);
+            this.receivedAmount.Size = new System.Drawing.Size(136, 26);
             this.receivedAmount.TabIndex = 44;
+            this.receivedAmount.Text = "0.0";
+            this.receivedAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.receivedAmount.Enter += new System.EventHandler(this.receivedAmount_Enter);
             this.receivedAmount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.receivedAmount_KeyDown);
+            this.receivedAmount.Leave += new System.EventHandler(this.receivedAmount_Leave);
             // 
             // invoicePanel
             // 
@@ -469,7 +476,7 @@
             // 
             this.textBoxDiscount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDiscount.Location = new System.Drawing.Point(179, 145);
+            this.textBoxDiscount.Location = new System.Drawing.Point(179, 100);
             this.textBoxDiscount.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDiscount.Name = "textBoxDiscount";
             this.textBoxDiscount.Size = new System.Drawing.Size(134, 31);
@@ -477,14 +484,15 @@
             this.textBoxDiscount.Text = "0.0";
             this.textBoxDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxDiscount.Enter += new System.EventHandler(this.textBoxDiscount_Enter);
-            this.textBoxDiscount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxDiscount_KeyDown_1);
+            this.textBoxDiscount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxDiscount_KeyDown);
             this.textBoxDiscount.Leave += new System.EventHandler(this.textBoxDiscount_Leave);
             // 
             // textBoxNetDue
             // 
             this.textBoxNetDue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxNetDue.Enabled = false;
             this.textBoxNetDue.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNetDue.Location = new System.Drawing.Point(180, 101);
+            this.textBoxNetDue.Location = new System.Drawing.Point(180, 145);
             this.textBoxNetDue.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNetDue.Name = "textBoxNetDue";
             this.textBoxNetDue.ReadOnly = true;
@@ -498,7 +506,7 @@
             this.labelDue.BackColor = System.Drawing.Color.Transparent;
             this.labelDue.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDue.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelDue.Location = new System.Drawing.Point(9, 100);
+            this.labelDue.Location = new System.Drawing.Point(9, 144);
             this.labelDue.Name = "labelDue";
             this.labelDue.Size = new System.Drawing.Size(163, 31);
             this.labelDue.TabIndex = 48;
@@ -508,6 +516,7 @@
             // totalTextBox
             // 
             this.totalTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.totalTextBox.Enabled = false;
             this.totalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalTextBox.Location = new System.Drawing.Point(179, 10);
             this.totalTextBox.Margin = new System.Windows.Forms.Padding(4);
@@ -533,6 +542,7 @@
             // textBoxVat
             // 
             this.textBoxVat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxVat.Enabled = false;
             this.textBoxVat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxVat.Location = new System.Drawing.Point(179, 56);
             this.textBoxVat.Margin = new System.Windows.Forms.Padding(4);
@@ -548,11 +558,11 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label4.Location = new System.Drawing.Point(9, 145);
+            this.label4.Location = new System.Drawing.Point(9, 100);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(163, 31);
             this.label4.TabIndex = 31;
-            this.label4.Text = "Total discount";
+            this.label4.Text = "Total Discount";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
@@ -564,7 +574,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(163, 31);
             this.label11.TabIndex = 30;
-            this.label11.Text = "Total vat";
+            this.label11.Text = "Total VAT";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel6
@@ -641,7 +651,7 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label16.Location = new System.Drawing.Point(217, 67);
+            this.label16.Location = new System.Drawing.Point(211, 67);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(83, 18);
             this.label16.TabIndex = 32;
@@ -653,7 +663,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label13.Location = new System.Drawing.Point(17, 65);
+            this.label13.Location = new System.Drawing.Point(16, 66);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(77, 18);
             this.label13.TabIndex = 30;
@@ -665,7 +675,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label15.Location = new System.Drawing.Point(125, 67);
+            this.label15.Location = new System.Drawing.Point(123, 67);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(52, 18);
             this.label15.TabIndex = 31;
