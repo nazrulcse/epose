@@ -28,20 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.paymentList = new System.Windows.Forms.DataGridView();
-            this.EName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Designation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Joining = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.amountTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -62,97 +55,28 @@
             this.mobileButton = new System.Windows.Forms.Button();
             this.debitButton = new System.Windows.Forms.Button();
             this.cashButton = new System.Windows.Forms.Button();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Joining = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Designation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paymentList = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.paymentList)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.paymentList)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.paymentList);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 40);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(4, 49);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(634, 181);
+            this.panel1.Size = new System.Drawing.Size(845, 223);
             this.panel1.TabIndex = 4;
-            // 
-            // paymentList
-            // 
-            this.paymentList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.paymentList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.paymentList.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.paymentList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.paymentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.paymentList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.EName,
-            this.Designation,
-            this.Email,
-            this.Joining,
-            this.Column1,
-            this.Column2});
-            this.paymentList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.paymentList.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.paymentList.Location = new System.Drawing.Point(0, 0);
-            this.paymentList.Name = "paymentList";
-            this.paymentList.RowHeadersWidth = 52;
-            this.paymentList.Size = new System.Drawing.Size(634, 181);
-            this.paymentList.TabIndex = 13;
-            // 
-            // EName
-            // 
-            this.EName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(2, 0, 2, 2);
-            this.EName.DefaultCellStyle = dataGridViewCellStyle7;
-            this.EName.HeaderText = "Id";
-            this.EName.MinimumWidth = 10;
-            this.EName.Name = "EName";
-            // 
-            // Designation
-            // 
-            this.Designation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Designation.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Designation.FillWeight = 120F;
-            this.Designation.HeaderText = "payment Type";
-            this.Designation.MinimumWidth = 10;
-            this.Designation.Name = "Designation";
-            // 
-            // Email
-            // 
-            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Email.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Email.HeaderText = "Invoice Id";
-            this.Email.Name = "Email";
-            // 
-            // Joining
-            // 
-            this.Joining.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Joining.DefaultCellStyle = dataGridViewCellStyle10;
-            this.Joining.HeaderText = "Amount";
-            this.Joining.Name = "Joining";
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle11;
-            this.Column1.HeaderText = "transaction token";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle12;
-            this.Column2.HeaderText = "Date";
-            this.Column2.Name = "Column2";
             // 
             // panel2
             // 
@@ -163,20 +87,20 @@
             this.panel2.Controls.Add(this.mobileButton);
             this.panel2.Controls.Add(this.debitButton);
             this.panel2.Controls.Add(this.cashButton);
-            this.panel2.Location = new System.Drawing.Point(3, 221);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(4, 272);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(633, 193);
+            this.panel2.Size = new System.Drawing.Size(844, 238);
             this.panel2.TabIndex = 5;
             // 
             // amountTextBox
             // 
             this.amountTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.amountTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.amountTextBox.Location = new System.Drawing.Point(130, 6);
-            this.amountTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.amountTextBox.Location = new System.Drawing.Point(173, 7);
+            this.amountTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.amountTextBox.Name = "amountTextBox";
-            this.amountTextBox.Size = new System.Drawing.Size(462, 29);
+            this.amountTextBox.Size = new System.Drawing.Size(615, 34);
             this.amountTextBox.TabIndex = 2;
             this.amountTextBox.Text = "0.0";
             this.amountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -199,9 +123,11 @@
             this.groupBox1.Controls.Add(this.threeButton);
             this.groupBox1.Controls.Add(this.twoButton);
             this.groupBox1.Controls.Add(this.oneButton);
-            this.groupBox1.Location = new System.Drawing.Point(130, 33);
+            this.groupBox1.Location = new System.Drawing.Point(173, 41);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(462, 151);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(616, 186);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
@@ -214,9 +140,10 @@
             this.zeroButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.zeroButton.Font = new System.Drawing.Font("Verdana", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.zeroButton.ForeColor = System.Drawing.Color.White;
-            this.zeroButton.Location = new System.Drawing.Point(25, 13);
+            this.zeroButton.Location = new System.Drawing.Point(33, 16);
+            this.zeroButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.zeroButton.Name = "zeroButton";
-            this.zeroButton.Size = new System.Drawing.Size(45, 38);
+            this.zeroButton.Size = new System.Drawing.Size(60, 47);
             this.zeroButton.TabIndex = 17;
             this.zeroButton.Text = "0";
             this.zeroButton.UseVisualStyleBackColor = false;
@@ -231,9 +158,10 @@
             this.dotButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.dotButton.Font = new System.Drawing.Font("Verdana", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dotButton.ForeColor = System.Drawing.Color.White;
-            this.dotButton.Location = new System.Drawing.Point(217, 105);
+            this.dotButton.Location = new System.Drawing.Point(289, 129);
+            this.dotButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dotButton.Name = "dotButton";
-            this.dotButton.Size = new System.Drawing.Size(45, 38);
+            this.dotButton.Size = new System.Drawing.Size(60, 47);
             this.dotButton.TabIndex = 15;
             this.dotButton.Text = ".";
             this.dotButton.UseVisualStyleBackColor = false;
@@ -248,9 +176,10 @@
             this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.clearButton.Font = new System.Drawing.Font("Verdana", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearButton.ForeColor = System.Drawing.Color.White;
-            this.clearButton.Location = new System.Drawing.Point(155, 105);
+            this.clearButton.Location = new System.Drawing.Point(207, 129);
+            this.clearButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(45, 38);
+            this.clearButton.Size = new System.Drawing.Size(60, 47);
             this.clearButton.TabIndex = 15;
             this.clearButton.Text = "CL";
             this.clearButton.UseVisualStyleBackColor = false;
@@ -265,9 +194,10 @@
             this.sevenButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.sevenButton.Font = new System.Drawing.Font("Verdana", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sevenButton.ForeColor = System.Drawing.Color.White;
-            this.sevenButton.Location = new System.Drawing.Point(217, 58);
+            this.sevenButton.Location = new System.Drawing.Point(289, 71);
+            this.sevenButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sevenButton.Name = "sevenButton";
-            this.sevenButton.Size = new System.Drawing.Size(45, 38);
+            this.sevenButton.Size = new System.Drawing.Size(60, 47);
             this.sevenButton.TabIndex = 14;
             this.sevenButton.Text = "7";
             this.sevenButton.UseVisualStyleBackColor = false;
@@ -282,9 +212,10 @@
             this.sixButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.sixButton.Font = new System.Drawing.Font("Verdana", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sixButton.ForeColor = System.Drawing.Color.White;
-            this.sixButton.Location = new System.Drawing.Point(154, 59);
+            this.sixButton.Location = new System.Drawing.Point(205, 73);
+            this.sixButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sixButton.Name = "sixButton";
-            this.sixButton.Size = new System.Drawing.Size(45, 38);
+            this.sixButton.Size = new System.Drawing.Size(60, 47);
             this.sixButton.TabIndex = 14;
             this.sixButton.Text = "6";
             this.sixButton.UseVisualStyleBackColor = false;
@@ -296,10 +227,10 @@
             this.paymentButton.FlatAppearance.BorderSize = 0;
             this.paymentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.paymentButton.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paymentButton.Location = new System.Drawing.Point(279, 11);
-            this.paymentButton.Margin = new System.Windows.Forms.Padding(2);
+            this.paymentButton.Location = new System.Drawing.Point(372, 14);
+            this.paymentButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.paymentButton.Name = "paymentButton";
-            this.paymentButton.Size = new System.Drawing.Size(163, 132);
+            this.paymentButton.Size = new System.Drawing.Size(217, 162);
             this.paymentButton.TabIndex = 4;
             this.paymentButton.Text = "PAYMENT";
             this.paymentButton.UseVisualStyleBackColor = false;
@@ -314,9 +245,10 @@
             this.fiveButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.fiveButton.Font = new System.Drawing.Font("Verdana", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fiveButton.ForeColor = System.Drawing.Color.White;
-            this.fiveButton.Location = new System.Drawing.Point(90, 59);
+            this.fiveButton.Location = new System.Drawing.Point(120, 73);
+            this.fiveButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fiveButton.Name = "fiveButton";
-            this.fiveButton.Size = new System.Drawing.Size(45, 38);
+            this.fiveButton.Size = new System.Drawing.Size(60, 47);
             this.fiveButton.TabIndex = 13;
             this.fiveButton.Text = "5";
             this.fiveButton.UseVisualStyleBackColor = false;
@@ -331,9 +263,10 @@
             this.nineButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.nineButton.Font = new System.Drawing.Font("Verdana", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nineButton.ForeColor = System.Drawing.Color.White;
-            this.nineButton.Location = new System.Drawing.Point(90, 106);
+            this.nineButton.Location = new System.Drawing.Point(120, 130);
+            this.nineButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nineButton.Name = "nineButton";
-            this.nineButton.Size = new System.Drawing.Size(45, 38);
+            this.nineButton.Size = new System.Drawing.Size(60, 47);
             this.nineButton.TabIndex = 12;
             this.nineButton.Text = "9";
             this.nineButton.UseVisualStyleBackColor = false;
@@ -348,9 +281,10 @@
             this.eightButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.eightButton.Font = new System.Drawing.Font("Verdana", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eightButton.ForeColor = System.Drawing.Color.White;
-            this.eightButton.Location = new System.Drawing.Point(25, 105);
+            this.eightButton.Location = new System.Drawing.Point(33, 129);
+            this.eightButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.eightButton.Name = "eightButton";
-            this.eightButton.Size = new System.Drawing.Size(45, 38);
+            this.eightButton.Size = new System.Drawing.Size(60, 47);
             this.eightButton.TabIndex = 11;
             this.eightButton.Text = "8";
             this.eightButton.UseVisualStyleBackColor = false;
@@ -365,9 +299,10 @@
             this.fourButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.fourButton.Font = new System.Drawing.Font("Verdana", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fourButton.ForeColor = System.Drawing.Color.White;
-            this.fourButton.Location = new System.Drawing.Point(25, 59);
+            this.fourButton.Location = new System.Drawing.Point(33, 73);
+            this.fourButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fourButton.Name = "fourButton";
-            this.fourButton.Size = new System.Drawing.Size(45, 38);
+            this.fourButton.Size = new System.Drawing.Size(60, 47);
             this.fourButton.TabIndex = 10;
             this.fourButton.Text = "4";
             this.fourButton.UseVisualStyleBackColor = false;
@@ -382,9 +317,10 @@
             this.threeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.threeButton.Font = new System.Drawing.Font("Verdana", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.threeButton.ForeColor = System.Drawing.Color.White;
-            this.threeButton.Location = new System.Drawing.Point(217, 11);
+            this.threeButton.Location = new System.Drawing.Point(289, 14);
+            this.threeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.threeButton.Name = "threeButton";
-            this.threeButton.Size = new System.Drawing.Size(45, 38);
+            this.threeButton.Size = new System.Drawing.Size(60, 47);
             this.threeButton.TabIndex = 9;
             this.threeButton.Text = "3";
             this.threeButton.UseVisualStyleBackColor = false;
@@ -399,9 +335,10 @@
             this.twoButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.twoButton.Font = new System.Drawing.Font("Verdana", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.twoButton.ForeColor = System.Drawing.Color.White;
-            this.twoButton.Location = new System.Drawing.Point(154, 13);
+            this.twoButton.Location = new System.Drawing.Point(205, 16);
+            this.twoButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.twoButton.Name = "twoButton";
-            this.twoButton.Size = new System.Drawing.Size(45, 38);
+            this.twoButton.Size = new System.Drawing.Size(60, 47);
             this.twoButton.TabIndex = 9;
             this.twoButton.Text = "2";
             this.twoButton.UseVisualStyleBackColor = false;
@@ -416,9 +353,10 @@
             this.oneButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.oneButton.Font = new System.Drawing.Font("Verdana", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.oneButton.ForeColor = System.Drawing.Color.White;
-            this.oneButton.Location = new System.Drawing.Point(90, 12);
+            this.oneButton.Location = new System.Drawing.Point(120, 15);
+            this.oneButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.oneButton.Name = "oneButton";
-            this.oneButton.Size = new System.Drawing.Size(45, 38);
+            this.oneButton.Size = new System.Drawing.Size(60, 47);
             this.oneButton.TabIndex = 8;
             this.oneButton.Text = "1";
             this.oneButton.UseVisualStyleBackColor = false;
@@ -433,9 +371,10 @@
             this.cardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cardButton.Font = new System.Drawing.Font("Verdana", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cardButton.ForeColor = System.Drawing.Color.White;
-            this.cardButton.Location = new System.Drawing.Point(24, 58);
+            this.cardButton.Location = new System.Drawing.Point(32, 71);
+            this.cardButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cardButton.Name = "cardButton";
-            this.cardButton.Size = new System.Drawing.Size(80, 36);
+            this.cardButton.Size = new System.Drawing.Size(107, 44);
             this.cardButton.TabIndex = 7;
             this.cardButton.Text = "Card";
             this.cardButton.UseVisualStyleBackColor = false;
@@ -450,9 +389,10 @@
             this.mobileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mobileButton.Font = new System.Drawing.Font("Verdana", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mobileButton.ForeColor = System.Drawing.Color.White;
-            this.mobileButton.Location = new System.Drawing.Point(24, 100);
+            this.mobileButton.Location = new System.Drawing.Point(32, 123);
+            this.mobileButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mobileButton.Name = "mobileButton";
-            this.mobileButton.Size = new System.Drawing.Size(80, 36);
+            this.mobileButton.Size = new System.Drawing.Size(107, 44);
             this.mobileButton.TabIndex = 7;
             this.mobileButton.Text = "Mobile";
             this.mobileButton.UseVisualStyleBackColor = false;
@@ -467,9 +407,10 @@
             this.debitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.debitButton.Font = new System.Drawing.Font("Verdana", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.debitButton.ForeColor = System.Drawing.Color.White;
-            this.debitButton.Location = new System.Drawing.Point(24, 142);
+            this.debitButton.Location = new System.Drawing.Point(32, 175);
+            this.debitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.debitButton.Name = "debitButton";
-            this.debitButton.Size = new System.Drawing.Size(80, 36);
+            this.debitButton.Size = new System.Drawing.Size(107, 44);
             this.debitButton.TabIndex = 7;
             this.debitButton.Text = "Debit";
             this.debitButton.UseVisualStyleBackColor = false;
@@ -484,32 +425,110 @@
             this.cashButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cashButton.Font = new System.Drawing.Font("Verdana", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cashButton.ForeColor = System.Drawing.Color.White;
-            this.cashButton.Location = new System.Drawing.Point(24, 16);
+            this.cashButton.Location = new System.Drawing.Point(32, 20);
+            this.cashButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cashButton.Name = "cashButton";
-            this.cashButton.Size = new System.Drawing.Size(80, 36);
+            this.cashButton.Size = new System.Drawing.Size(107, 44);
             this.cashButton.TabIndex = 7;
             this.cashButton.Text = "Cash";
             this.cashButton.UseVisualStyleBackColor = false;
             this.cashButton.Click += new System.EventHandler(this.cashButton_Click);
             // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Column2.HeaderText = "Date";
+            this.Column2.Name = "Column2";
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Column1.HeaderText = "transaction token";
+            this.Column1.Name = "Column1";
+            // 
+            // Joining
+            // 
+            this.Joining.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Joining.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Joining.HeaderText = "Amount";
+            this.Joining.Name = "Joining";
+            // 
+            // Email
+            // 
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Email.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Email.HeaderText = "Invoice Id";
+            this.Email.Name = "Email";
+            // 
+            // Designation
+            // 
+            this.Designation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Designation.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Designation.FillWeight = 120F;
+            this.Designation.HeaderText = "payment Type";
+            this.Designation.MinimumWidth = 10;
+            this.Designation.Name = "Designation";
+            // 
+            // EName
+            // 
+            this.EName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2, 0, 2, 2);
+            this.EName.DefaultCellStyle = dataGridViewCellStyle1;
+            this.EName.HeaderText = "Id";
+            this.EName.MinimumWidth = 10;
+            this.EName.Name = "EName";
+            // 
+            // paymentList
+            // 
+            this.paymentList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.paymentList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.paymentList.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.paymentList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.paymentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.paymentList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.EName,
+            this.Designation,
+            this.Email,
+            this.Joining,
+            this.Column1,
+            this.Column2});
+            this.paymentList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.paymentList.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.paymentList.Location = new System.Drawing.Point(0, 0);
+            this.paymentList.Margin = new System.Windows.Forms.Padding(4);
+            this.paymentList.Name = "paymentList";
+            this.paymentList.RowHeadersWidth = 52;
+            this.paymentList.Size = new System.Drawing.Size(845, 223);
+            this.paymentList.TabIndex = 13;
+            // 
             // payment_Frame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 419);
+            this.ClientSize = new System.Drawing.Size(853, 516);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Name = "payment_Frame";
             this.Text = "payment_Frame";
             this.Load += new System.EventHandler(this.payment_Frame_Load);
             this.Controls.SetChildIndex(this.panel2, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.paymentList)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.paymentList)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -117,6 +117,12 @@
     <Compile Include="DailyHighlights_Frame.Designer.cs">
       <DependentUpon>DailyHighlights_Frame.cs</DependentUpon>
     </Compile>
+    <Compile Include="DailySale_Frame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DailySale_Frame.Designer.cs">
+      <DependentUpon>DailySale_Frame.cs</DependentUpon>
+    </Compile>
     <Compile Include="DamageProduct_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DailyHighlights_Frame.resx">
       <DependentUpon>DailyHighlights_Frame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DailySale_Frame.resx">
+      <DependentUpon>DailySale_Frame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DamageProduct_Frame.resx">
       <DependentUpon>DamageProduct_Frame.cs</DependentUpon>
