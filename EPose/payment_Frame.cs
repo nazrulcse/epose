@@ -93,7 +93,9 @@ namespace EPose
                         payment.invoice_id = invoice.id;
                         payment.amount = paid_amount;
                         payment.transaction_token = new Random().Next(1000) + invoice.id;
-                        payment.date = DateTime.Today;
+                        var dateAndTime = DateTime.Now;
+                        var date = dateAndTime.Date;
+                        payment.date = date;
                         payment.create(payment);
                         bool status = ActivityLogModel.track("payment", "create", payment.id);
                         paymentList.Rows.Add(payment.id, payment.payment_type, payment.invoice_id, payment.amount, payment.transaction_token, payment.date);

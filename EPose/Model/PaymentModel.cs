@@ -24,7 +24,7 @@ namespace EPose.Model
 
         public Array attrAccess()
         {
-            return new String[] { "id", "payment_type", "invoice_id", "amount", "transaction_token", "date"};
+            return new String[] { "id", "payment_type", "invoice_id", "amount", "transaction_token", "date" };
         }
     }
 

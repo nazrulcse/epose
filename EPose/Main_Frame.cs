@@ -139,5 +139,10 @@ namespace EPose
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void tillClosingButton_Click(object sender, EventArgs e)
+        {
+            new TillClosing_Frame().Show();
+        }
     }
 }
