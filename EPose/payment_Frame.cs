@@ -17,6 +17,8 @@ namespace EPose
         dynamic invoice;
         Invoice_Frame invoice_form;
         double netDue;
+        String paymentType = "";
+        String numberOfKeyBoard = "";
         public payment_Frame( dynamic invoice, Invoice_Frame invf)
         {
             InitializeComponent();
@@ -24,7 +26,7 @@ namespace EPose
             this.invoice = invoice;
             this.invoice_form = invf;
             this.netDue = invoice.net_total;
-            this.ActiveControl = paymentType;
+            this.ActiveControl = amountTextBox;
         }
 
         private void payment_Frame_Load(object sender, EventArgs e)
@@ -36,7 +38,7 @@ namespace EPose
         {
             if (e.KeyChar == 13)
             {
-                var payment_type = this.paymentType.GetItemText(this.paymentType.SelectedItem);
+                var payment_type = this.paymentType;
                 if (payment_type != "")
                 {
                     amountTextBox.Focus();
@@ -58,7 +60,7 @@ namespace EPose
         {
             if (keyData == (Keys.Control | Keys.T))
             {
-                paymentType.Focus();
+                //paymentType.Focus();
                 return true;
             }
             else if (keyData == (Keys.Control | Keys.A))
@@ -70,7 +72,7 @@ namespace EPose
 
         private Boolean processPayment(String amount) {
             double paid_amount = Convert.ToDouble(amount);
-            if (paid_amount > 0)
+            if (paid_amount > 0 && paid_amount <= netDue)
             {
                 if (netDue > 0)
                 {
@@ -80,7 +82,14 @@ namespace EPose
                         PaymentModel payment = new PaymentModel();
                         var ms = (DateTime.Now - DateTime.MinValue).TotalMilliseconds * 10;
                         payment.id = ms.ToString();
-                        payment.payment_type = this.paymentType.GetItemText(this.paymentType.SelectedItem);
+                        if (this.paymentType == "")
+                        {
+                            payment.payment_type = "Cash";
+                        }
+                        else
+                        {
+                         payment.payment_type = this.paymentType;
+                        }
                         payment.invoice_id = invoice.id;
                         payment.amount = paid_amount;
                         payment.transaction_token = new Random().Next(1000) + invoice.id;
@@ -101,7 +110,10 @@ namespace EPose
                 }
             }
             else {
-                if (netDue <= 0)
+                    MessageBox.Show("Amount should not be 0 or grater than due amount");
+                
+            }
+            if (netDue <= 0)
                 {
                     DialogResult result = MessageDialog.Show("Amount Paid!", "Invoice amount fully paid! Do you want to close payment form?");
                     if (result == DialogResult.Yes)
@@ -109,10 +121,6 @@ namespace EPose
                         this.Close();
                     }
                 }
-                else {
-                    MessageBox.Show("Amount should not be 0");
-                }
-            }
             amountTextBox.Focus();
             amountTextBox.Text = "" + netDue;
             return true;
@@ -126,6 +134,105 @@ namespace EPose
         private void amountTextBox_Leave(object sender, EventArgs e)
         {
             changeColor(amountTextBox, "out");
+        }
+        private void cashButton_Click(object sender, EventArgs e)
+        {
+            paymentType = "Cash";
+        }
+
+        private void rocketButton_Click(object sender, EventArgs e)
+        {
+            paymentType = "Rocket";
+        }
+
+        private void bikasButton_Click(object sender, EventArgs e)
+        {
+            paymentType = "Bikash";
+        }
+
+        private void cardButton_Click(object sender, EventArgs e)
+        {
+            paymentType = "Card";
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            amountTextBox.Text = "";
+            numberOfKeyBoard = "";
+        }
+
+        private void zeroButton_Click(object sender, EventArgs e)
+        {
+            numberOfKeyBoard = numberOfKeyBoard + 0;
+            amountTextBox.Text = numberOfKeyBoard;
+        }
+
+        private void oneButton_Click(object sender, EventArgs e)
+        {
+            numberOfKeyBoard = numberOfKeyBoard + 1;
+            amountTextBox.Text = numberOfKeyBoard;
+        }
+
+        private void threeButton_Click(object sender, EventArgs e)
+        {
+            numberOfKeyBoard = numberOfKeyBoard + 3;
+            amountTextBox.Text = numberOfKeyBoard;
+        }
+
+        private void twoButton_Click(object sender, EventArgs e)
+        {
+            numberOfKeyBoard = numberOfKeyBoard + 2;
+            amountTextBox.Text = numberOfKeyBoard;
+        }
+
+        private void fourButton_Click(object sender, EventArgs e)
+        {
+            numberOfKeyBoard = numberOfKeyBoard + 4;
+            amountTextBox.Text = numberOfKeyBoard;
+        }
+
+        private void fiveButton_Click(object sender, EventArgs e)
+        {
+            numberOfKeyBoard = numberOfKeyBoard + 5;
+            amountTextBox.Text = numberOfKeyBoard;
+        }
+
+        private void sixButton_Click(object sender, EventArgs e)
+        {
+            numberOfKeyBoard = numberOfKeyBoard + 6;
+            amountTextBox.Text = numberOfKeyBoard;
+        }
+
+        private void sevenButton_Click(object sender, EventArgs e)
+        {
+            numberOfKeyBoard = numberOfKeyBoard + 7;
+            amountTextBox.Text = numberOfKeyBoard;
+        }
+
+        private void eightButton_Click(object sender, EventArgs e)
+        {
+            numberOfKeyBoard = numberOfKeyBoard + 8;
+            amountTextBox.Text = numberOfKeyBoard;
+        }
+
+        private void nineButton_Click(object sender, EventArgs e)
+        {
+            numberOfKeyBoard = numberOfKeyBoard + 9;
+            amountTextBox.Text = numberOfKeyBoard;
+        }
+
+        private void dotButton_Click(object sender, EventArgs e)
+        {
+            numberOfKeyBoard = numberOfKeyBoard + ".";
+            amountTextBox.Text = numberOfKeyBoard;
+        }
+
+        private void paymentButton_Click(object sender, EventArgs e)
+        {
+            if (amountTextBox.Text != "")
+            {
+                processPayment(amountTextBox.Text);
+            }
         }
     }
 }

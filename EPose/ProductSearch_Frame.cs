@@ -32,7 +32,7 @@ namespace EPose
 
         private void barcode_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Return)
+            if (e.KeyCode == Keys.Return && productItems.RowCount>1)
             {
                 productItems.Rows[0].Selected = true;
                 productItems.Focus();
@@ -75,6 +75,16 @@ namespace EPose
                     MessageBox.Show("No product found");
                 }
             }
+        }
+
+        private void barcode_Leave(object sender, EventArgs e)
+        {
+            changeColor(barcode, "out");
+        }
+
+        private void barcode_Enter(object sender, EventArgs e)
+        {
+            changeColor(barcode, "enter");
         }
 
     }
