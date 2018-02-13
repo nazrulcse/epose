@@ -13,12 +13,18 @@ namespace EPose
 {
     public partial class TillClosing_Frame : Layout_Frame
     {
+        double totalCashPayment;
+        double totalBkashPayment;
+        double totalCashRocketPayment;
+        double totalCardPayment;
+        double totalPayment;
+
         public TillClosing_Frame()
         {
             InitializeComponent();
 
             PaymentModel payment = new PaymentModel();
-            dynamic totalCash = payment.where(payment,"date = ");
+            dynamic payments = payment.where(payment,"date = ");
             
 
         }
