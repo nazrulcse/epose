@@ -58,7 +58,7 @@ namespace EPose
 
         private void btnDailySales_Click(object sender, EventArgs e)
         {
-            new DailyHighlights_Frame().Show();
+            new DailySale_Frame().Show();
         }
 
         private void btnCategory_Click(object sender, EventArgs e)

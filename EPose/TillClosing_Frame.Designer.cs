@@ -149,7 +149,7 @@
             this.currencySettings.Size = new System.Drawing.Size(356, 362);
             this.currencySettings.TabIndex = 0;
             this.currencySettings.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.currencySettings_CellEndEdit);
-            this.currencySettings.KeyDown += new System.Windows.Forms.KeyEventHandler(this.currencySettings_KeyDown);
+            //this.currencySettings.KeyDown += new System.Windows.Forms.KeyEventHandler(this.currencySettings_KeyDown);
             // 
             // value
             // 
