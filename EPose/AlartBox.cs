@@ -12,11 +12,27 @@ namespace EPose
 {
     public partial class AlartBox : Form
     {
-        public AlartBox(String title, String msg)
+        public AlartBox(String title, String msg, String iconText = "")
         {
             InitializeComponent();
             formTitle.Text = title;
             message.Text = msg;
+            if (iconText != "")
+            {
+                setIcon(iconText);
+            }
+        }
+
+        public void setIcon(String iconText)
+        {
+          if (iconText == "print")
+          {
+              icon.Image = EPose.Properties.Resources.print;
+          }
+          else if (iconText == "error")
+          {
+                icon.Image = EPose.Properties.Resources.error;
+          }
         }
     }
 }

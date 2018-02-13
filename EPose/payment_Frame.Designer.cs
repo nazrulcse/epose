@@ -59,8 +59,8 @@
             this.twoButton = new System.Windows.Forms.Button();
             this.oneButton = new System.Windows.Forms.Button();
             this.cardButton = new System.Windows.Forms.Button();
-            this.rocketButton = new System.Windows.Forms.Button();
-            this.bikasButton = new System.Windows.Forms.Button();
+            this.mobileButton = new System.Windows.Forms.Button();
+            this.debitButton = new System.Windows.Forms.Button();
             this.cashButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.paymentList)).BeginInit();
@@ -160,8 +160,8 @@
             this.panel2.Controls.Add(this.amountTextBox);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.cardButton);
-            this.panel2.Controls.Add(this.rocketButton);
-            this.panel2.Controls.Add(this.bikasButton);
+            this.panel2.Controls.Add(this.mobileButton);
+            this.panel2.Controls.Add(this.debitButton);
             this.panel2.Controls.Add(this.cashButton);
             this.panel2.Location = new System.Drawing.Point(3, 221);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
@@ -208,6 +208,7 @@
             // zeroButton
             // 
             this.zeroButton.BackColor = System.Drawing.Color.Silver;
+            this.zeroButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.zeroButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
             this.zeroButton.FlatAppearance.BorderSize = 0;
             this.zeroButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -224,6 +225,7 @@
             // dotButton
             // 
             this.dotButton.BackColor = System.Drawing.Color.Silver;
+            this.dotButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dotButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
             this.dotButton.FlatAppearance.BorderSize = 0;
             this.dotButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -240,6 +242,7 @@
             // clearButton
             // 
             this.clearButton.BackColor = System.Drawing.Color.Silver;
+            this.clearButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.clearButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
             this.clearButton.FlatAppearance.BorderSize = 0;
             this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -256,6 +259,7 @@
             // sevenButton
             // 
             this.sevenButton.BackColor = System.Drawing.Color.Silver;
+            this.sevenButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sevenButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
             this.sevenButton.FlatAppearance.BorderSize = 0;
             this.sevenButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -272,6 +276,7 @@
             // sixButton
             // 
             this.sixButton.BackColor = System.Drawing.Color.Silver;
+            this.sixButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sixButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
             this.sixButton.FlatAppearance.BorderSize = 0;
             this.sixButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -288,6 +293,7 @@
             // paymentButton
             // 
             this.paymentButton.BackColor = System.Drawing.Color.Lavender;
+            this.paymentButton.FlatAppearance.BorderSize = 0;
             this.paymentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.paymentButton.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paymentButton.Location = new System.Drawing.Point(279, 11);
@@ -302,6 +308,7 @@
             // fiveButton
             // 
             this.fiveButton.BackColor = System.Drawing.Color.Silver;
+            this.fiveButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fiveButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
             this.fiveButton.FlatAppearance.BorderSize = 0;
             this.fiveButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -318,6 +325,7 @@
             // nineButton
             // 
             this.nineButton.BackColor = System.Drawing.Color.Silver;
+            this.nineButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.nineButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
             this.nineButton.FlatAppearance.BorderSize = 0;
             this.nineButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -334,6 +342,7 @@
             // eightButton
             // 
             this.eightButton.BackColor = System.Drawing.Color.Silver;
+            this.eightButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eightButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
             this.eightButton.FlatAppearance.BorderSize = 0;
             this.eightButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -350,6 +359,7 @@
             // fourButton
             // 
             this.fourButton.BackColor = System.Drawing.Color.Silver;
+            this.fourButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fourButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
             this.fourButton.FlatAppearance.BorderSize = 0;
             this.fourButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -366,6 +376,7 @@
             // threeButton
             // 
             this.threeButton.BackColor = System.Drawing.Color.Silver;
+            this.threeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.threeButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
             this.threeButton.FlatAppearance.BorderSize = 0;
             this.threeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -382,6 +393,7 @@
             // twoButton
             // 
             this.twoButton.BackColor = System.Drawing.Color.Silver;
+            this.twoButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.twoButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
             this.twoButton.FlatAppearance.BorderSize = 0;
             this.twoButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -398,6 +410,7 @@
             // oneButton
             // 
             this.oneButton.BackColor = System.Drawing.Color.Silver;
+            this.oneButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.oneButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
             this.oneButton.FlatAppearance.BorderSize = 0;
             this.oneButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -414,12 +427,13 @@
             // cardButton
             // 
             this.cardButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
+            this.cardButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
             this.cardButton.FlatAppearance.BorderSize = 0;
-            this.cardButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cardButton.Font = new System.Drawing.Font("Verdana", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cardButton.ForeColor = System.Drawing.Color.White;
-            this.cardButton.Location = new System.Drawing.Point(24, 142);
+            this.cardButton.Location = new System.Drawing.Point(24, 58);
             this.cardButton.Name = "cardButton";
             this.cardButton.Size = new System.Drawing.Size(80, 36);
             this.cardButton.TabIndex = 7;
@@ -427,44 +441,47 @@
             this.cardButton.UseVisualStyleBackColor = false;
             this.cardButton.Click += new System.EventHandler(this.cardButton_Click);
             // 
-            // rocketButton
+            // mobileButton
             // 
-            this.rocketButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
-            this.rocketButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
-            this.rocketButton.FlatAppearance.BorderSize = 0;
-            this.rocketButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.rocketButton.Font = new System.Drawing.Font("Verdana", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rocketButton.ForeColor = System.Drawing.Color.White;
-            this.rocketButton.Location = new System.Drawing.Point(24, 58);
-            this.rocketButton.Name = "rocketButton";
-            this.rocketButton.Size = new System.Drawing.Size(80, 36);
-            this.rocketButton.TabIndex = 7;
-            this.rocketButton.Text = "Rocket";
-            this.rocketButton.UseVisualStyleBackColor = false;
-            this.rocketButton.Click += new System.EventHandler(this.rocketButton_Click);
+            this.mobileButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
+            this.mobileButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.mobileButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
+            this.mobileButton.FlatAppearance.BorderSize = 0;
+            this.mobileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mobileButton.Font = new System.Drawing.Font("Verdana", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mobileButton.ForeColor = System.Drawing.Color.White;
+            this.mobileButton.Location = new System.Drawing.Point(24, 100);
+            this.mobileButton.Name = "mobileButton";
+            this.mobileButton.Size = new System.Drawing.Size(80, 36);
+            this.mobileButton.TabIndex = 7;
+            this.mobileButton.Text = "Mobile";
+            this.mobileButton.UseVisualStyleBackColor = false;
+            this.mobileButton.Click += new System.EventHandler(this.mobileButton_Click);
             // 
-            // bikasButton
+            // debitButton
             // 
-            this.bikasButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
-            this.bikasButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
-            this.bikasButton.FlatAppearance.BorderSize = 0;
-            this.bikasButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bikasButton.Font = new System.Drawing.Font("Verdana", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bikasButton.ForeColor = System.Drawing.Color.White;
-            this.bikasButton.Location = new System.Drawing.Point(24, 100);
-            this.bikasButton.Name = "bikasButton";
-            this.bikasButton.Size = new System.Drawing.Size(80, 36);
-            this.bikasButton.TabIndex = 7;
-            this.bikasButton.Text = "Bkash";
-            this.bikasButton.UseVisualStyleBackColor = false;
-            this.bikasButton.Click += new System.EventHandler(this.bikasButton_Click);
+            this.debitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
+            this.debitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.debitButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
+            this.debitButton.FlatAppearance.BorderSize = 0;
+            this.debitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.debitButton.Font = new System.Drawing.Font("Verdana", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.debitButton.ForeColor = System.Drawing.Color.White;
+            this.debitButton.Location = new System.Drawing.Point(24, 142);
+            this.debitButton.Name = "debitButton";
+            this.debitButton.Size = new System.Drawing.Size(80, 36);
+            this.debitButton.TabIndex = 7;
+            this.debitButton.Text = "Debit";
+            this.debitButton.UseVisualStyleBackColor = false;
+            this.debitButton.Click += new System.EventHandler(this.debitButton_Click);
             // 
             // cashButton
             // 
-            this.cashButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
+            this.cashButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
+            this.cashButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cashButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
             this.cashButton.FlatAppearance.BorderSize = 0;
-            this.cashButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cashButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cashButton.Font = new System.Drawing.Font("Verdana", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cashButton.ForeColor = System.Drawing.Color.White;
             this.cashButton.Location = new System.Drawing.Point(24, 16);
@@ -517,8 +534,8 @@
         private System.Windows.Forms.Button twoButton;
         private System.Windows.Forms.Button oneButton;
         private System.Windows.Forms.Button cardButton;
-        private System.Windows.Forms.Button rocketButton;
-        private System.Windows.Forms.Button bikasButton;
+        private System.Windows.Forms.Button mobileButton;
+        private System.Windows.Forms.Button debitButton;
         private System.Windows.Forms.Button cashButton;
         private System.Windows.Forms.DataGridView paymentList;
         private System.Windows.Forms.DataGridViewTextBoxColumn EName;

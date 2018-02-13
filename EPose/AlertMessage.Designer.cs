@@ -118,7 +118,7 @@
             // 
             // yes
             // 
-            this.yes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
+            this.yes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(63)))), ((int)(((byte)(58)))));
             this.yes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.yes.DialogResult = System.Windows.Forms.DialogResult.Yes;
             this.yes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -140,6 +140,7 @@
             this.message.Padding = new System.Windows.Forms.Padding(5, 10, 5, 5);
             this.message.Size = new System.Drawing.Size(346, 98);
             this.message.TabIndex = 12;
+            this.message.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // icon
             // 

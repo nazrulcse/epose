@@ -31,19 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlartBox));
             this.titleBar = new System.Windows.Forms.Panel();
             this.formTitle = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.yes = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.laftBorder = new System.Windows.Forms.Panel();
             this.bottomBorder = new System.Windows.Forms.Panel();
             this.rightBorder = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.message = new System.Windows.Forms.Label();
+            this.icon = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.titleBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // titleBar
@@ -69,17 +69,6 @@
             this.formTitle.TabIndex = 3;
             this.formTitle.Text = "Close Window";
             this.formTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(5, 3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // yes
             // 
@@ -141,23 +130,12 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.message);
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.icon);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(3, 36);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(391, 89);
             this.panel1.TabIndex = 7;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(65, 89);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
             // 
             // message
             // 
@@ -168,6 +146,29 @@
             this.message.Padding = new System.Windows.Forms.Padding(5, 10, 5, 5);
             this.message.Size = new System.Drawing.Size(326, 89);
             this.message.TabIndex = 1;
+            this.message.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // icon
+            // 
+            this.icon.Dock = System.Windows.Forms.DockStyle.Left;
+            this.icon.Image = global::EPose.Properties.Resources.ask;
+            this.icon.Location = new System.Drawing.Point(0, 0);
+            this.icon.Name = "icon";
+            this.icon.Size = new System.Drawing.Size(65, 89);
+            this.icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.icon.TabIndex = 0;
+            this.icon.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(5, 3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(29, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // AlartBox
             // 
@@ -187,9 +188,9 @@
             this.Text = "AlartBox";
             this.TopMost = true;
             this.titleBar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -205,7 +206,7 @@
         private System.Windows.Forms.Panel bottomBorder;
         private System.Windows.Forms.Panel rightBorder;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox icon;
         private System.Windows.Forms.Label message;
     }
 }

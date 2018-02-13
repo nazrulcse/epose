@@ -9,16 +9,16 @@ namespace EPose
 {
     public class MessageDialog
     {
-        public static DialogResult Show(String title, String msg)
+        public static DialogResult Show(String title, String msg, String icon = "")
         {
-            AlartBox alt = new AlartBox(title, msg);
+            AlartBox alt = new AlartBox(title, msg, icon);
             return alt.ShowDialog();
         }
 
-        public static DialogResult ShowAlert(String msg, String title = "Alert Message", String icon = "")
+        public static void ShowAlert(String msg, String title = "Alert Message", String icon = "")
         {
             AlertMessage alt = new AlertMessage(title, msg, icon);
-            return alt.ShowDialog();
+            alt.ShowDialog();
         }
     }
 }

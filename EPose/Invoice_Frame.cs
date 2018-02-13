@@ -170,7 +170,13 @@ namespace EPose
 
         private void button10_Click(object sender, EventArgs e)
         {
-            new payment_Frame(inv, this).Show();
+            if (this.inv != null)
+            {
+                new payment_Frame(inv, this).Show();
+            }
+            else {
+                MessageDialog.ShowAlert("No invoice found", "Alert Message", "warning");
+            }
         }
 
         public void paidAmount(String amount) {
@@ -179,7 +185,7 @@ namespace EPose
 
         private void buttonReport_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageDialog.Show("Print!", "Are you want to print the receipt now!");
+            DialogResult result = MessageDialog.Show("Print!", "Are you want to print the receipt now!", "print");
             if (result == DialogResult.Yes)
             {
                 PosReceipt psr = new PosReceipt(this.inv);

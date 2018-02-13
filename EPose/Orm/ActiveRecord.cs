@@ -221,7 +221,7 @@ namespace EPose.Orm
         {
             //try
             //{
-            Console.WriteLine("Query: " + query);
+                Console.WriteLine("Query: " + query);
                 SQLConn.ConnDB();
                 SQLConn.cmd = new MySqlCommand(query, SQLConn.conn);
                 SQLConn.dr = SQLConn.cmd.ExecuteReader();

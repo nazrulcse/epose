@@ -60,7 +60,6 @@ namespace EPose
         {
             if (keyData == (Keys.Control | Keys.T))
             {
-                //paymentType.Focus();
                 return true;
             }
             else if (keyData == (Keys.Control | Keys.A))
@@ -68,6 +67,31 @@ namespace EPose
                 amountTextBox.Focus();
             }
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        public void selectPaymentType() {
+          resetPaymentType();
+          switch(paymentType) {
+              case "Cash":
+                  cashButton.BackColor = Color.FromArgb(92, 184, 92);
+                  break;
+              case "Mobile":
+                  mobileButton.BackColor = Color.FromArgb(92, 184, 92);
+                  break;
+              case "Card":
+                  cardButton.BackColor = Color.FromArgb(92, 184, 92);
+                  break;
+              case "Debit":
+                  debitButton.BackColor = Color.FromArgb(92, 184, 92);
+                  break;
+          }
+        }
+
+        public void resetPaymentType() {
+            cashButton.BackColor = Color.FromArgb(0, 165, 223);
+            cardButton.BackColor = Color.FromArgb(0, 165, 223);
+            debitButton.BackColor = Color.FromArgb(0, 165, 223);
+            mobileButton.BackColor = Color.FromArgb(0, 165, 223);
         }
 
         private Boolean processPayment(String amount) {
@@ -93,12 +117,18 @@ namespace EPose
                         payment.invoice_id = invoice.id;
                         payment.amount = paid_amount;
                         payment.transaction_token = new Random().Next(1000) + invoice.id;
-                        payment.date = DateTime.Today;
+                        payment.date = DateTime.Now.ToString("yyyy-MM-dd");
                         payment.create(payment);
                         bool status = ActivityLogModel.track("payment", "create", payment.id);
-                        paymentList.Rows.Add(payment.id, payment.payment_type, payment.invoice_id, payment.amount, payment.transaction_token, payment.date);
-                        netDue -= payment.amount;
-                        netDue = Math.Round(netDue, 2);
+                        if (status)
+                        {
+                            paymentList.Rows.Add(payment.id, payment.payment_type, payment.invoice_id, payment.amount, payment.transaction_token, payment.date);
+                            netDue -= payment.amount;
+                            netDue = Math.Round(netDue, 2);
+                        }
+                        else {
+                            MessageDialog.ShowAlert("Unable to make payment! Please try again or contact admin", "Alert Message", "error");
+                        }
                     }
                 }
                 else {
@@ -138,21 +168,25 @@ namespace EPose
         private void cashButton_Click(object sender, EventArgs e)
         {
             paymentType = "Cash";
+            selectPaymentType();
         }
 
-        private void rocketButton_Click(object sender, EventArgs e)
+        private void mobileButton_Click(object sender, EventArgs e)
         {
-            paymentType = "Rocket";
+            paymentType = "Mobile";
+            selectPaymentType();
         }
 
-        private void bikasButton_Click(object sender, EventArgs e)
+        private void debitButton_Click(object sender, EventArgs e)
         {
-            paymentType = "Bikash";
+            paymentType = "Debit";
+            selectPaymentType();
         }
 
         private void cardButton_Click(object sender, EventArgs e)
         {
             paymentType = "Card";
+            selectPaymentType();
         }
 
         private void clearButton_Click(object sender, EventArgs e)

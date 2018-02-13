@@ -27,11 +27,19 @@ namespace EPose
         {
           if (iconText == "warning")
           {
-              icon.Image = EPose.Properties.Resources.warning;           
+              icon.Image = EPose.Properties.Resources.warning;
+              titleBar.BackColor = Color.FromArgb(240, 173, 78);
+              laftBorder.BackColor = Color.FromArgb(240, 173, 78);
+              rightBorder.BackColor = Color.FromArgb(240, 173, 78);
+              bottomBorder.BackColor = Color.FromArgb(240, 173, 78);
           }
           else if (iconText == "error")
           {
-                icon.Image = EPose.Properties.Resources.error;           
+                icon.Image = EPose.Properties.Resources.error;
+                titleBar.BackColor = Color.FromArgb(212, 63, 58);
+                laftBorder.BackColor = Color.FromArgb(212, 63, 58);
+                rightBorder.BackColor = Color.FromArgb(212, 63, 58);
+                bottomBorder.BackColor = Color.FromArgb(212, 63, 58);
           }
         }
     }

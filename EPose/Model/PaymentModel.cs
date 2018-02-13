@@ -14,7 +14,7 @@ namespace EPose.Model
         public string invoice_id { get; set; }
         public double amount { get; set; }
         public string transaction_token { get; set; }
-        public DateTime date { get; set; }
+        public string date { get; set; }
 
 
         public string getTable()
