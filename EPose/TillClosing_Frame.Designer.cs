@@ -28,34 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TillClosing_Frame));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dateLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.currencySettings = new System.Windows.Forms.DataGridView();
+            this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pices = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.debitLabel = new System.Windows.Forms.Label();
+            this.mobileLabel = new System.Windows.Forms.Label();
+            this.cardLabel = new System.Windows.Forms.Label();
             this.cashSaleLabel = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.label26 = new System.Windows.Forms.Label();
+            this.totalLabel = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.cashOnDrawer = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.currencySettings)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +68,7 @@
             this.dateLabel.AutoSize = true;
             this.dateLabel.BackColor = System.Drawing.Color.Transparent;
             this.dateLabel.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateLabel.Location = new System.Drawing.Point(696, 54);
+            this.dateLabel.Location = new System.Drawing.Point(633, 59);
             this.dateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dateLabel.MinimumSize = new System.Drawing.Size(15, 0);
             this.dateLabel.Name = "dateLabel";
@@ -75,7 +79,6 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.AllowDrop = true;
-            this.tableLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tableLayoutPanel1.BackgroundImage")));
             this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 2;
@@ -85,8 +88,8 @@
             this.tableLayoutPanel1.Controls.Add(this.label3, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(57, 100);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(47, 100);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.62136F));
@@ -123,24 +126,59 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.currencySettings);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 56);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(356, 362);
             this.panel1.TabIndex = 9;
             // 
-            // label4
+            // currencySettings
             // 
-            this.label4.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(2, 7);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.MinimumSize = new System.Drawing.Size(15, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 27);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Note";
+            this.currencySettings.AllowUserToAddRows = false;
+            this.currencySettings.AllowUserToDeleteRows = false;
+            this.currencySettings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.currencySettings.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.value,
+            this.sname,
+            this.pices});
+            this.currencySettings.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.currencySettings.Location = new System.Drawing.Point(0, 0);
+            this.currencySettings.Name = "currencySettings";
+            this.currencySettings.Size = new System.Drawing.Size(356, 362);
+            this.currencySettings.TabIndex = 0;
+            this.currencySettings.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.currencySettings_CellEndEdit);
+            this.currencySettings.KeyDown += new System.Windows.Forms.KeyEventHandler(this.currencySettings_KeyDown);
+            // 
+            // value
+            // 
+            this.value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.value.DefaultCellStyle = dataGridViewCellStyle1;
+            this.value.HeaderText = "Value";
+            this.value.Name = "value";
+            this.value.ReadOnly = true;
+            this.value.Visible = false;
+            // 
+            // sname
+            // 
+            this.sname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sname.DefaultCellStyle = dataGridViewCellStyle2;
+            this.sname.HeaderText = "Currency Items";
+            this.sname.Name = "sname";
+            // 
+            // pices
+            // 
+            this.pices.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = "0";
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Aqua;
+            this.pices.DefaultCellStyle = dataGridViewCellStyle3;
+            this.pices.HeaderText = "Pices";
+            this.pices.Name = "pices";
             // 
             // panel2
             // 
@@ -148,17 +186,14 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label26);
-            this.panel2.Controls.Add(this.label25);
-            this.panel2.Controls.Add(this.label23);
-            this.panel2.Controls.Add(this.label21);
-            this.panel2.Controls.Add(this.label19);
+            this.panel2.Controls.Add(this.debitLabel);
+            this.panel2.Controls.Add(this.mobileLabel);
+            this.panel2.Controls.Add(this.cardLabel);
             this.panel2.Controls.Add(this.cashSaleLabel);
             this.panel2.Controls.Add(this.label18);
-            this.panel2.Controls.Add(this.shapeContainer1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(364, 56);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(357, 362);
             this.panel2.TabIndex = 10;
@@ -185,9 +220,9 @@
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.MinimumSize = new System.Drawing.Size(15, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(149, 23);
+            this.label5.Size = new System.Drawing.Size(148, 23);
             this.label5.TabIndex = 27;
-            this.label5.Text = "Bikash Sale = ";
+            this.label5.Text = "Mobile Sale = ";
             // 
             // label1
             // 
@@ -198,84 +233,58 @@
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.MinimumSize = new System.Drawing.Size(15, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 23);
+            this.label1.Size = new System.Drawing.Size(141, 23);
             this.label1.TabIndex = 26;
-            this.label1.Text = "Rocket sale  = ";
+            this.label1.Text = "Debit sale  = ";
             // 
-            // label26
+            // debitLabel
             // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(122, 236);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label26.MinimumSize = new System.Drawing.Size(15, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(90, 17);
-            this.label26.TabIndex = 25;
-            this.label26.Text = "Total taka :";
+            this.debitLabel.AutoSize = true;
+            this.debitLabel.BackColor = System.Drawing.Color.Transparent;
+            this.debitLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.debitLabel.Location = new System.Drawing.Point(251, 186);
+            this.debitLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.debitLabel.MinimumSize = new System.Drawing.Size(15, 0);
+            this.debitLabel.Name = "debitLabel";
+            this.debitLabel.Size = new System.Drawing.Size(48, 18);
+            this.debitLabel.TabIndex = 17;
+            this.debitLabel.Text = "3309";
             // 
-            // label25
+            // mobileLabel
             // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(252, 236);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label25.MinimumSize = new System.Drawing.Size(15, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(44, 17);
-            this.label25.TabIndex = 23;
-            this.label25.Text = "3309";
+            this.mobileLabel.AutoSize = true;
+            this.mobileLabel.BackColor = System.Drawing.Color.Transparent;
+            this.mobileLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mobileLabel.Location = new System.Drawing.Point(251, 145);
+            this.mobileLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.mobileLabel.MinimumSize = new System.Drawing.Size(15, 0);
+            this.mobileLabel.Name = "mobileLabel";
+            this.mobileLabel.Size = new System.Drawing.Size(48, 18);
+            this.mobileLabel.TabIndex = 15;
+            this.mobileLabel.Text = "3309";
             // 
-            // label23
+            // cardLabel
             // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(251, 186);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label23.MinimumSize = new System.Drawing.Size(15, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(48, 18);
-            this.label23.TabIndex = 17;
-            this.label23.Text = "3309";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(251, 145);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.MinimumSize = new System.Drawing.Size(15, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(48, 18);
-            this.label21.TabIndex = 15;
-            this.label21.Text = "3309";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(251, 106);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.MinimumSize = new System.Drawing.Size(15, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(48, 18);
-            this.label19.TabIndex = 13;
-            this.label19.Text = "3309";
+            this.cardLabel.AutoSize = true;
+            this.cardLabel.BackColor = System.Drawing.Color.Transparent;
+            this.cardLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cardLabel.Location = new System.Drawing.Point(251, 106);
+            this.cardLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.cardLabel.MinimumSize = new System.Drawing.Size(15, 0);
+            this.cardLabel.Name = "cardLabel";
+            this.cardLabel.Size = new System.Drawing.Size(48, 18);
+            this.cardLabel.TabIndex = 13;
+            this.cardLabel.Text = "3309";
             // 
             // cashSaleLabel
             // 
             this.cashSaleLabel.AutoSize = true;
             this.cashSaleLabel.BackColor = System.Drawing.Color.Transparent;
             this.cashSaleLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cashSaleLabel.Location = new System.Drawing.Point(335, 76);
+            this.cashSaleLabel.Location = new System.Drawing.Point(251, 61);
             this.cashSaleLabel.MinimumSize = new System.Drawing.Size(20, 0);
             this.cashSaleLabel.Name = "cashSaleLabel";
-            this.cashSaleLabel.Size = new System.Drawing.Size(64, 25);
+            this.cashSaleLabel.Size = new System.Drawing.Size(48, 18);
             this.cashSaleLabel.TabIndex = 11;
             this.cashSaleLabel.Text = "3309";
             // 
@@ -292,31 +301,38 @@
             this.label18.TabIndex = 10;
             this.label18.Text = "Cash Sale = ";
             // 
-            // shapeContainer1
+            // label26
             // 
-            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(357, 362);
-            this.shapeContainer1.TabIndex = 24;
-            this.shapeContainer1.TabStop = false;
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.Transparent;
+            this.label26.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(560, 533);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.MinimumSize = new System.Drawing.Size(15, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(90, 17);
+            this.label26.TabIndex = 25;
+            this.label26.Text = "Total taka :";
             // 
-            // lineShape1
+            // totalLabel
             // 
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 35;
-            this.lineShape1.X2 = 352;
-            this.lineShape1.Y1 = 225;
-            this.lineShape1.Y2 = 224;
+            this.totalLabel.AutoSize = true;
+            this.totalLabel.BackColor = System.Drawing.Color.Transparent;
+            this.totalLabel.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalLabel.Location = new System.Drawing.Point(690, 533);
+            this.totalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.totalLabel.MinimumSize = new System.Drawing.Size(15, 0);
+            this.totalLabel.Name = "totalLabel";
+            this.totalLabel.Size = new System.Drawing.Size(44, 17);
+            this.totalLabel.TabIndex = 23;
+            this.totalLabel.Text = "3309";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(150, 523);
+            this.label13.Location = new System.Drawing.Point(208, 533);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.MinimumSize = new System.Drawing.Size(15, 0);
             this.label13.Name = "label13";
@@ -324,23 +340,23 @@
             this.label13.TabIndex = 8;
             this.label13.Text = "Total taka :";
             // 
-            // label14
+            // cashOnDrawer
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(242, 523);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.MinimumSize = new System.Drawing.Size(15, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(44, 17);
-            this.label14.TabIndex = 9;
-            this.label14.Text = "3309";
+            this.cashOnDrawer.AutoSize = true;
+            this.cashOnDrawer.BackColor = System.Drawing.Color.Transparent;
+            this.cashOnDrawer.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cashOnDrawer.Location = new System.Drawing.Point(300, 533);
+            this.cashOnDrawer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.cashOnDrawer.MinimumSize = new System.Drawing.Size(15, 0);
+            this.cashOnDrawer.Name = "cashOnDrawer";
+            this.cashOnDrawer.Size = new System.Drawing.Size(44, 17);
+            this.cashOnDrawer.TabIndex = 9;
+            this.cashOnDrawer.Text = "3309";
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(415, 554);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox10.Location = new System.Drawing.Point(444, 562);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(97, 20);
             this.textBox10.TabIndex = 20;
@@ -349,7 +365,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(330, 553);
+            this.label15.Location = new System.Drawing.Point(330, 561);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.MinimumSize = new System.Drawing.Size(15, 0);
             this.label15.Name = "label15";
@@ -359,8 +375,8 @@
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(415, 585);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox11.Location = new System.Drawing.Point(446, 593);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(97, 20);
             this.textBox11.TabIndex = 22;
@@ -369,7 +385,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(298, 584);
+            this.label16.Location = new System.Drawing.Point(298, 592);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.MinimumSize = new System.Drawing.Size(15, 0);
             this.label16.Name = "label16";
@@ -381,31 +397,35 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(815, 632);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
+            this.Controls.Add(this.cashOnDrawer);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.dateLabel);
-            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "TillClosing_Frame";
             this.Text = "TillClosing_Frame";
             this.Load += new System.EventHandler(this.TillClosing_Frame_Load);
             this.Controls.SetChildIndex(this.dateLabel, 0);
             this.Controls.SetChildIndex(this.tableLayoutPanel1, 0);
             this.Controls.SetChildIndex(this.label13, 0);
-            this.Controls.SetChildIndex(this.label14, 0);
+            this.Controls.SetChildIndex(this.cashOnDrawer, 0);
             this.Controls.SetChildIndex(this.label15, 0);
+            this.Controls.SetChildIndex(this.totalLabel, 0);
+            this.Controls.SetChildIndex(this.label26, 0);
             this.Controls.SetChildIndex(this.textBox10, 0);
             this.Controls.SetChildIndex(this.label16, 0);
             this.Controls.SetChildIndex(this.textBox11, 0);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.currencySettings)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -421,24 +441,25 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label debitLabel;
+        private System.Windows.Forms.Label mobileLabel;
+        private System.Windows.Forms.Label cardLabel;
         private System.Windows.Forms.Label cashSaleLabel;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label cashOnDrawer;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
+        private System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView currencySettings;
+        private System.Windows.Forms.DataGridViewTextBoxColumn value;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pices;
     }
 }
