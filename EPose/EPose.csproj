@@ -266,6 +266,12 @@
     <Compile Include="Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
+    <Compile Include="TillClosing_Frame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TillClosing_Frame.Designer.cs">
+      <DependentUpon>TillClosing_Frame.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AlartBox.resx">
       <DependentUpon>AlartBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,6 +362,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TillClosing_Frame.resx">
+      <DependentUpon>TillClosing_Frame.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="eposeDataSet1.xsc">
       <DependentUpon>eposeDataSet1.xsd</DependentUpon>

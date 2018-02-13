@@ -85,7 +85,6 @@ namespace EPose.Orm
             return getFromDatabase(modelObject, query);
         }
 
-
         public object where(dynamic modelObject, string condition)
         {
             var table_name = modelObject.getTable();
