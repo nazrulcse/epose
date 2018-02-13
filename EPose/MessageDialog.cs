@@ -14,5 +14,11 @@ namespace EPose
             AlartBox alt = new AlartBox(title, msg);
             return alt.ShowDialog();
         }
+
+        public static DialogResult ShowAlert(String msg, String title = "Alert Message", String icon = "")
+        {
+            AlertMessage alt = new AlertMessage(title, msg, icon);
+            return alt.ShowDialog();
+        }
     }
 }

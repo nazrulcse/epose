@@ -30,7 +30,6 @@ namespace EPose.Orm
                     {
                         tempValue = rdr.GetValue(i);
                     }
-                    Console.WriteLine(rdr.GetName(i));
                     var property = obj.GetProperty(rdr.GetName(i));
                     if (property != null)
                     {

@@ -112,15 +112,37 @@ namespace EPose.Orm
         {
             var table_name = modelObject.getTable();
             Type objType = modelObject.GetType();
-            StringBuilder table_columns = new StringBuilder();
-            StringBuilder table_values = new StringBuilder();
+            StringBuilder set_columns = new StringBuilder();
             var arrFields = modelObject.attrAccess();
             for (var i = 0; i < arrFields.Length; i++)
             {
                 string field = arrFields[i];
+                PropertyInfo pi = objType.GetProperty(field);
+                if (pi != null)
+                {
+                    if (field.ToString() == "id")
+                    {
+                        continue;
+                    }
+                    var fieldValue = pi.GetValue(modelObject, null);
+                    if (set_columns.ToString() != "")
+                    {
+                        set_columns.Append(", ");
+                    }
+                    set_columns.Append(field.ToString());
+                    set_columns.Append("=");
+                    set_columns.Append("'" + fieldValue + "'");
+                };
             }
-            var query = "update" + table_name + " set (" + table_columns + ") VALUES (" + table_values + ")";
-            Console.WriteLine("update " + table_name + " set (" + table_columns + ") VALUES (" + table_values + ");");
+            var query = "UPDATE " + table_name + " SET " + set_columns;
+            if (condition == "")
+            {
+                query += " where(id='" + modelObject.id + "')";
+            }
+            else {
+                query += " where(" + condition + ")";
+            }
+            Console.WriteLine(query);
             var objResult = executeQuery(query);
             if (objResult)
             {
