@@ -44,7 +44,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.cashSaleLabel = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
@@ -147,7 +147,7 @@
             this.panel2.Controls.Add(this.label23);
             this.panel2.Controls.Add(this.label21);
             this.panel2.Controls.Add(this.label19);
-            this.panel2.Controls.Add(this.label17);
+            this.panel2.Controls.Add(this.cashSaleLabel);
             this.panel2.Controls.Add(this.label18);
             this.panel2.Controls.Add(this.shapeContainer1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -252,17 +252,17 @@
             this.label19.TabIndex = 13;
             this.label19.Text = "3309";
             // 
-            // label17
+            // cashSaleLabel
             // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(335, 76);
-            this.label17.MinimumSize = new System.Drawing.Size(20, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(64, 25);
-            this.label17.TabIndex = 11;
-            this.label17.Text = "3309";
+            this.cashSaleLabel.AutoSize = true;
+            this.cashSaleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.cashSaleLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cashSaleLabel.Location = new System.Drawing.Point(335, 76);
+            this.cashSaleLabel.MinimumSize = new System.Drawing.Size(20, 0);
+            this.cashSaleLabel.Name = "cashSaleLabel";
+            this.cashSaleLabel.Size = new System.Drawing.Size(64, 25);
+            this.cashSaleLabel.TabIndex = 11;
+            this.cashSaleLabel.Text = "3309";
             // 
             // label18
             // 
@@ -402,7 +402,7 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label cashSaleLabel;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
