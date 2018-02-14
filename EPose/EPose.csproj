@@ -252,6 +252,11 @@
     </Compile>
     <Compile Include="Service\ActionPerform.cs" />
     <Compile Include="Service\Object_Model\Employee.cs" />
+    <Compile Include="Service\PosService\InvoiceItemService.cs" />
+    <Compile Include="Service\PosService\InvoiceService.cs" />
+    <Compile Include="Service\PosService\MemberShipService.cs" />
+    <Compile Include="Service\PosService\PaymentService.cs" />
+    <Compile Include="Service\PostResponse.cs" />
     <Compile Include="Service\SyncService.cs" />
     <Compile Include="Service\Sync\DownStream.cs" />
     <Compile Include="Service\Sync\UpStream.cs" />
@@ -418,7 +423,6 @@
   <ItemGroup>
     <Folder Include="Properties\DataSources\" />
     <Folder Include="Resources\" />
-    <Folder Include="Service\PosService\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="images\ask.png" />

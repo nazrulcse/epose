@@ -80,10 +80,5 @@ namespace EPose.Service.Sync
                 return response.Content.ReadAsAsync<IEnumerable<CustomerModel>>().Result;
             }
         }
-
-
-       
-
-
     }
 }

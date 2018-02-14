@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,12 +9,14 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using EPose.Model;
 using EPose;
+using Newtonsoft.Json.Linq;
 
 namespace Service
 {
     class WebAPI
     {
-        public const string API = "http://159.89.170.58/api/v1/";
+        //public const string API = "http://159.89.170.58/api/v1/";
+        public const string API = "http://ed3a0f98.ngrok.io/api/v1/";
         public static HttpResponseMessage getRequest(String action_url, String model)
         {
             DepartmentSettings.getData();
@@ -28,14 +30,30 @@ namespace Service
             client.DefaultRequestHeaders.Accept.Add(
             new MediaTypeWithQualityHeaderValue("application/json"));
             // List data response.
-            try {
+            try
+            {
                 HttpResponseMessage response = client.GetAsync(urlParameters).Result;  // Blocking call!
                 return response;
             }
-            catch( Exception ex){
+            catch (Exception ex)
+            {
                 MessageBox.Show("Error: " + ex.Message.ToString());
                 return client.GetAsync(urlParameters).Result;
             }
+        }
+
+        public static string postRequest(String action_url, String data)
+        {
+            string URL = API + "" + action_url;
+            var client = new HttpClient();
+            var content = new StringContent(data, Encoding.UTF8, "application/json");
+            HttpResponseMessage response = client.PostAsync(URL, content).Result;
+
+            if (response.IsSuccessStatusCode) {
+                string contentx = response.Content.ReadAsStringAsync().Result;
+                return contentx;
+            }
+            return "";
         }
     }
 }

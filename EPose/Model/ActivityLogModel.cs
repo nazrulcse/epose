@@ -1,4 +1,5 @@
 ﻿using EPose.Orm;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,10 @@ namespace EPose.Model
 {
     class ActivityLogModel : ActiveRecord
     {
-        public string id { get; set; }
+        public int id { get; set; }
         public string model { get; set; }
         public string action { get; set; }
-        public DateTime date { get; set; }
+        public dynamic date { get; set; }
         public string ref_id { get; set; }
         public string department_id { get; set; }
 
@@ -30,6 +31,17 @@ namespace EPose.Model
             log.department_id = DepartmentSettings.DepartmentId;
             dynamic status = log.create(log);
             return status != null;
+        }
+
+        public static void remove(string responseObject) {
+            try {
+                JObject json = JObject.Parse(responseObject);
+                //string ids = responseObject.data;
+                Console.WriteLine("Response data: " + json.GetValue("data"));
+            }
+            catch(Exception ex) {
+
+            }
         }
 
         public Array attrAccess()

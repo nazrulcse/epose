@@ -13,7 +13,7 @@ namespace EPose.Model
         public string number { get; set; }
         public string department_id { get; set; }
         public string barcode { get; set; }
-        public DateTime date { get; set; }
+        public dynamic date { get; set; }
         public string customer_id { get; set; }
         public double invoice_total { get; set; }
         public double vat { get; set; }
@@ -27,7 +27,7 @@ namespace EPose.Model
 
         public Array attrAccess()
         {
-            return new String[] { "id", "number", "department_id", "barcode", "date", "customer_id" };
+            return new String[] { "id", "number", "department_id", "barcode", "date", "customer_id", "invoice_total", "vat", "discount", "net_total" };
         }
     }
 }

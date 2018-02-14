@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EPose.Service.WebService;
+using EPose.Service.PosService;
 
 namespace EPose.Service
 {
@@ -13,6 +14,7 @@ namespace EPose.Service
     {
         public static void run() {
             Console.WriteLine("Sync service started...");
+            InvoiceService.perform();
            // DepartmentService.perform();
             //EmployeeService.perform();
             //ProductService.perform();

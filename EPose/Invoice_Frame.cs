@@ -28,6 +28,7 @@ namespace EPose
         {
             setWindowSize();
             textBoxCustomer.AutoCompleteCustomSource = this.getCustomerName();
+            DepartmentSettings.getData();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -213,12 +214,12 @@ namespace EPose
                 var ms = (DateTime.Now - DateTime.MinValue).TotalMilliseconds * 10;
                 inv.id = ms.ToString();
                 inv.number = "IN" + ms.ToString();
-                inv.date = DateTime.Today;
-                inv.department_id = "1";
+                inv.date = DateTime.Now.ToString("yyyy-MM-DD");
+                inv.department_id = DepartmentSettings.DepartmentId;
                 dynamic invoice = inv.create(inv);
                 if (invoice != null)
                 {
-                    TrackLog();
+                    ActivityLogModel.track("invoice", "create", this.inv.id);
                     invoiceNumber.Text = "" + invoice.number;
                 }
                 else
@@ -230,32 +231,6 @@ namespace EPose
             {
                 invoiceNumber.Text = "Error: " + ex.Message.ToString();
             }
-        }
-
-        public void TrackLog() {
-            ActivityLogModel log = new ActivityLogModel();
-            log.model = "invoice";
-            log.action = "create";
-            log.date = DateTime.Now;
-            log.ref_id = inv.id;
-            log.department_id = inv.department_id;
-            log.create(log);
-        }
-
-        public Boolean deleteInvoiceItem(dynamic lists) {
-            foreach(dynamic list in lists) {
-                list.delete(list);
-            }
-            return true;
-        }
-
-        public Boolean deleteInvoicePayment(dynamic lists)
-        {
-            foreach (dynamic list in lists)
-            {
-                list.delete(list);
-            }
-            return true;
         }
 
         public Boolean deleteInvoiceLog()
@@ -290,7 +265,7 @@ namespace EPose
 
         public void updateInvoice() {
             this.inv.save(this.inv);
-            ActivityLogModel.track("invoices", "update", this.inv.id);
+            ActivityLogModel.track("invoice", "update", this.inv.id);
         }
 
         public AutoCompleteStringCollection getCustomerName()
@@ -442,16 +417,14 @@ namespace EPose
 
         private void voidInvoice_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageDialog.Show("Delete Invoice!", "Are you sure want to delete invoice");
+            DialogResult result = MessageDialog.Show("Delete Invoice!", "Are you sure want to delete invoice", "warning");
             if (result == DialogResult.Yes)
             {
                 if(checkForInvoice()) {
                     InvoiceItemModel invitem = new InvoiceItemModel();
                     invitem.delete(invitem, "invoice_id='" + this.inv.id + "'");
-
                     PaymentModel payment = new PaymentModel();
                     payment.delete(payment, "invoice_id='" + this.inv.id + "'");
-
                     inv.delete(this.inv);
                     resetInvoice(false);
                 }

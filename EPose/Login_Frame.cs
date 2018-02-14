@@ -28,7 +28,6 @@ namespace EPose
 
         private void Login_Frame_Load(object sender, EventArgs e)
         {
-           SyncService.run();
            DepartmentSettings.getData();
            branch.Text = DepartmentSettings.DepartmentId;
            branch.Enabled = false;
@@ -83,8 +82,9 @@ namespace EPose
                 authenticateUser(userId, userPassword);
             }*/
             Main_Frame main = new Main_Frame();
-            main.Show();
+            //main.Show();
             this.Hide();
+            SyncService.run();
         }
 
         private void cancel_Click(object sender, EventArgs e)

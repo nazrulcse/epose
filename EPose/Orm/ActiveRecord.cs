@@ -59,7 +59,7 @@ namespace EPose.Orm
             var table_name = modelObject.getTable();
             var query = "Select * from " + table_name + " where id = '" + id + "'";
             dynamic objects = getFromDatabase(modelObject, query);
-            if (objects != null)
+            if (objects != null && objects.Count > 0)
             {
                 return objects[0];
             }
