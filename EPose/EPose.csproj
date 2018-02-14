@@ -261,9 +261,7 @@
     <Compile Include="Service\WebService\EmployeeService.cs" />
     <Compile Include="Service\WebService\ProductService.cs" />
     <Compile Include="Service\WebService\SupplierService.cs" />
-    <Compile Include="Settings_Frame.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Settings_Frame.cs" />
     <Compile Include="Settings_Frame.Designer.cs">
       <DependentUpon>Settings_Frame.cs</DependentUpon>
     </Compile>
