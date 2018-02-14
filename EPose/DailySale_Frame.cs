@@ -26,7 +26,7 @@ namespace EPose
 
         private void DailySale_Frame_Load(object sender, EventArgs e)
         {
-            dateLabel.Text = DateTime.Now.ToString("dd.MM.yyy");
+           dateLabel.Text = DateTime.Now.ToString("dd.MM.yyy");
            PaymentModel pay = new PaymentModel();
            string date = DateTime.Now.ToString("yyyy-MM-dd");
            dynamic payments = pay.where(pay, "date = '" + date + "'");
@@ -38,7 +38,6 @@ namespace EPose
                    paymentList.Rows.Add(payment.id, payment.payment_type, payment.invoice_id, payment.amount, payment.transaction_token, payment.date);
 
                }
-
            }
         }
     }
