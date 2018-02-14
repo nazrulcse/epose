@@ -65,6 +65,13 @@ namespace EPose
                 memberList.Focus();
             }
         }
+        private void memberList_SelectionChanged(object sender, EventArgs e)
+        {
+            int SelectedRow = memberList.CurrentCell.RowIndex;
+            dynamic cellValue = memberList.Rows[SelectedRow].Cells["Point"].Value;
+            String point = Convert.ToString(cellValue);
+            pointLabel.Text = point;
+        }
 
         private void memberList_KeyDown(object sender, KeyEventArgs e)
         {
@@ -73,7 +80,7 @@ namespace EPose
                 int SelectedRow = memberList.SelectedRows[0].Index;
                 dynamic cellValue = memberList.Rows[SelectedRow].Cells["Point"].Value;
                 double point = Convert.ToDouble(Convert.ToString(cellValue));
-                double sumOfPoint = point +(total_price/100);
+                double sumOfPoint = point + (total_price / 100);
 
                 dynamic cellValueOfId = memberList.Rows[SelectedRow].Cells["Id"].Value;
                 String id = Convert.ToString(cellValueOfId);
@@ -82,11 +89,16 @@ namespace EPose
                 memberShipModel.update_attributeForMember(memberShipModel, "point", sumOfPoint, id);
                 memberShipModel.update_attributeForMember(memberShipModel, "last_point", point, id);
 
-               // this.invoice.addProduct(search_products[productItems.SelectedRows[0].Index]);
+                ActivityLogModel log = new ActivityLogModel();
+                log.model = "membership";
+                log.action = "update";
+                log.date = DateTime.Now.ToString("yyyy-MM-dd");
+                log.ref_id = id;
+                log.create(log);
+
+                // this.invoice.addProduct(search_products[productItems.SelectedRows[0].Index]);
                 this.Close();
             }
         }
-
-        
     }
 }

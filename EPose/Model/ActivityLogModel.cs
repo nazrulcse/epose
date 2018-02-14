@@ -26,7 +26,7 @@ namespace EPose.Model
             ActivityLogModel log = new ActivityLogModel();
             log.model = model;
             log.action = action;
-            log.date = DateTime.Now;
+            log.date = DateTime.Now.ToString("yyyy-MM-dd");
             log.ref_id = ref_id;
             log.department_id = DepartmentSettings.DepartmentId;
             dynamic status = log.create(log);

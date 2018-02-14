@@ -85,7 +85,7 @@ namespace EPose
 
         private void button8_Click(object sender, EventArgs e)
         {
-            new DamageProduct_Frame().Show();
+            new ActivityLog_Frame().Show();
         }
 
         private void button9_Click(object sender, EventArgs e)

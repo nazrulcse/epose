@@ -120,7 +120,7 @@ namespace EPose
                     }
                     break;
                 case (Keys.Control | Keys.M):
-                    MemberShip_Frame memberShip = new MemberShip_Frame(sumOfprice);
+                    MemberShip_Frame memberShip = new MemberShip_Frame(this.inv.invoice_total);
                     memberShip.Show();
                     break;
                 case (Keys.Control | Keys.A):
@@ -468,6 +468,6 @@ namespace EPose
                     resetInvoice();
                 }
             }
-        }
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                              
     }
 }

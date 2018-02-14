@@ -75,6 +75,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivityLog_Frame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActivityLog_Frame.Designer.cs">
+      <DependentUpon>ActivityLog_Frame.cs</DependentUpon>
+    </Compile>
     <Compile Include="AlartBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -290,6 +296,9 @@
     <Compile Include="TillClosing_Frame.Designer.cs">
       <DependentUpon>TillClosing_Frame.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ActivityLog_Frame.resx">
+      <DependentUpon>ActivityLog_Frame.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AlartBox.resx">
       <DependentUpon>AlartBox.cs</DependentUpon>
     </EmbeddedResource>
