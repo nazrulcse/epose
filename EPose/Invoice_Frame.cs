@@ -116,7 +116,7 @@ namespace EPose
                     }
                     break;
                 case (Keys.Control | Keys.M):
-                    MemberShip_Frame memberShip = new MemberShip_Frame(sumOfprice);
+                    MemberShip_Frame memberShip = new MemberShip_Frame(this.inv.invoice_total);
                     memberShip.Show();
                     break;
                 case (Keys.Control | Keys.A):
@@ -236,7 +236,7 @@ namespace EPose
             ActivityLogModel log = new ActivityLogModel();
             log.model = "invoice";
             log.action = "create";
-            log.date = DateTime.Now;
+            log.date = DateTime.Now.ToString("yyyy-MM-dd");
             log.ref_id = inv.id;
             log.department_id = inv.department_id;
             log.create(log);
@@ -483,6 +483,6 @@ namespace EPose
                     resetInvoice();
                 }
             }
-        }
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                              
     }
 }
