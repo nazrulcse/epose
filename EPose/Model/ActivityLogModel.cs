@@ -9,7 +9,7 @@ namespace EPose.Model
 {
     class ActivityLogModel : ActiveRecord
     {
-        public string id { get; set; }
+        public int id { get; set; }
         public string model { get; set; }
         public string action { get; set; }
         public DateTime date { get; set; }

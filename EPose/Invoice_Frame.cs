@@ -213,7 +213,7 @@ namespace EPose
                 var ms = (DateTime.Now - DateTime.MinValue).TotalMilliseconds * 10;
                 inv.id = ms.ToString();
                 inv.number = "IN" + ms.ToString();
-                inv.date = DateTime.Today;
+                inv.date = DateTime.Now.ToString("yyyy-MM-dd");
                 inv.department_id = "1";
                 dynamic invoice = inv.create(inv);
                 if (invoice != null)

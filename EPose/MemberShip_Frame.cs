@@ -86,6 +86,13 @@ namespace EPose
                 this.Close();
             }
         }
+        private void memberList_SelectionChanged(object sender, EventArgs e)
+        {
+            int SelectedRow = memberList.CurrentCell.RowIndex;
+            dynamic cellValue = memberList.Rows[SelectedRow].Cells["Point"].Value;
+            String point = Convert.ToString(cellValue);
+            pointLabel.Text = point;
+        }
 
         
     }
