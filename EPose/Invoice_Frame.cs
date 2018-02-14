@@ -1,4 +1,5 @@
 ﻿using EPose.Model;
+using EPose.Service.Sync;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -91,6 +92,7 @@ namespace EPose
             var ms = (DateTime.Now - DateTime.MinValue).TotalMilliseconds * 10;
             inv_item.id = "INT" + ms.ToString();
             inv_item.quantity = 1;
+            inv_item.product_id = product.id;
             inv_item.unit = product.unit;
             inv_item.price = product.sale_price;
             inv_item.vat = product.vat;
@@ -99,6 +101,7 @@ namespace EPose
             inv_item.invoice_id = this.inv.id;
             inv_item.date = DateTime.Today;
             inv_item.create(inv_item);
+            ActivityLogModel.track("invoice_item", "create", inv_item.id);
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -125,6 +128,7 @@ namespace EPose
                     {
                         payment_Frame payment = new payment_Frame(this.inv, this);
                         payment.Show();
+                        updateInvoice();
                     }
                     else {
                         MessageBox.Show("Invoice not initialize");
@@ -141,6 +145,7 @@ namespace EPose
         {
             payment_Frame payment = new payment_Frame(this.inv, this);
             payment.Show();
+            updateInvoice();
         }
 
         public void setWindowSize() {
@@ -173,6 +178,7 @@ namespace EPose
         {
             if (this.inv != null)
             {
+                updateInvoice();
                 new payment_Frame(inv, this).Show();
             }
             else {
@@ -208,13 +214,14 @@ namespace EPose
         }
 
         public void createInvoice() {
-            try
-            {
+           // try
+           // {
+                UpStream.perform();
                 this.inv = new InvoiceModel();
                 var ms = (DateTime.Now - DateTime.MinValue).TotalMilliseconds * 10;
                 inv.id = ms.ToString();
                 inv.number = "IN" + ms.ToString();
-                inv.date = DateTime.Now.ToString("yyyy-MM-DD");
+                inv.date = DateTime.Now.ToString("yyyy-MM-dd");
                 inv.department_id = DepartmentSettings.DepartmentId;
                 dynamic invoice = inv.create(inv);
                 if (invoice != null)
@@ -226,16 +233,21 @@ namespace EPose
                 {
                     invoiceNumber.Text = "Unable to create Invoice";
                 }
-            }
-            catch (Exception ex)
-            {
-                invoiceNumber.Text = "Error: " + ex.Message.ToString();
-            }
+            //}
+            //catch (Exception ex)
+            //{
+              //  invoiceNumber.Text = "Error: " + ex.Message.ToString();
+            //}
         }
 
         public Boolean deleteInvoiceLog()
         {
             return false;
+        }
+
+        public void paymentCompleted() {
+            updateInvoice();
+            UpStream.perform();
         }
 
         public void resetInvoice(Boolean create = true) {
@@ -352,9 +364,9 @@ namespace EPose
             {
                 double amountReceived = Convert.ToDouble(receivedAmount.Text);
                 double netDueAmount = Convert.ToDouble(textBoxNetDue.Text);
-                textBoxChange.Text = "" + (amountReceived - this.inv.net_total);
+                double changeAmount = (amountReceived - this.inv.net_total);
+                textBoxChange.Text = changeAmount > 0 ? "" + changeAmount : "0";
                 textBoxChange.Focus();
-                updateInvoice();
             }
         }
 

@@ -22,9 +22,9 @@ namespace EPose
 
         private void InvoiceReport_Frame_Load(object sender, EventArgs e)
         {
-            SQLConn.ConnDB();
+            MySqlConnection conn = SQLConn.ConnDB();
             string sql = "SELECT * FROM invoices";
-            MySqlDataAdapter adptr = new MySqlDataAdapter(sql, SQLConn.conn);
+            MySqlDataAdapter adptr = new MySqlDataAdapter(sql, conn);
             DataSet ds = new DataSet();
             adptr.Fill(ds, "DataSet1");
 

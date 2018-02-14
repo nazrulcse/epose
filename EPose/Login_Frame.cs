@@ -12,6 +12,7 @@ using EPose.Model;
 using EPose.Service;
 using DevOne.Security.Cryptography.BCrypt;
 using System.IO;
+using EPose.Service.Sync;
 
 namespace EPose
 {
@@ -82,9 +83,8 @@ namespace EPose
                 authenticateUser(userId, userPassword);
             }*/
             Main_Frame main = new Main_Frame();
-            //main.Show();
+            main.Show();
             this.Hide();
-            SyncService.run();
         }
 
         private void cancel_Click(object sender, EventArgs e)

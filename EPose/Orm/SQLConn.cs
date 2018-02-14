@@ -47,15 +47,17 @@ namespace EPose.Orm
 			}
 		}
 
-		public static void ConnDB()
+        public static MySqlConnection ConnDB()
 		{
-			conn.Close();
-			try {
-                conn.ConnectionString = "Server = '" + ServerMySQL + "';  " + "Port = '" + PortMySQL + "'; " + "Database = '" + DBNameMySQL + "'; " + "user id = '" + UserNameMySQL + "'; " + "password = '" + PwdMySQL + "';" + " convert zero datetime=True";
-                conn.Open();
+            //conn.Close();
+            MySqlConnection con = new MySqlConnection();
+            try {
+                con.ConnectionString = "Server = '" + ServerMySQL + "';  " + "Port = '" + PortMySQL + "'; " + "Database = '" + DBNameMySQL + "'; " + "user id = '" + UserNameMySQL + "'; " + "password = '" + PwdMySQL + "';" + " convert zero datetime=True";
+                con.Open();
 			} catch  {
 				Interaction.MsgBox("The system failed to establish a connection", MsgBoxStyle.Information, "Database Settings");
 			}
+            return con;
 		}
 
 		public static void DisconnMy()

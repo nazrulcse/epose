@@ -43,10 +43,7 @@ namespace EPose.Orm
 
         private static object GetDBNullValue(string typeFullName)
         {
-
             typeFullName = typeFullName.ToLower();
-            Console.WriteLine("Field: " + typeFullName);
-
             if (typeFullName == "string")
             {
                 return String.Empty;

@@ -108,21 +108,23 @@ namespace EPose
                         payment.id = ms.ToString();
                         if (this.paymentType == "")
                         {
-                            payment.payment_type = "Cash";
+                            payment.payment_method = "Cash";
                         }
                         else
                         {
-                         payment.payment_type = this.paymentType;
+                            payment.payment_method = this.paymentType;
                         }
                         payment.invoice_id = invoice.id;
                         payment.amount = paid_amount;
+                        payment.customer_id = invoice.customer_id;
+                        payment.department_id = invoice.department_id;
                         payment.transaction_token = new Random().Next(1000) + invoice.id;
                         payment.date = DateTime.Now.ToString("yyyy-MM-dd");
                         payment.create(payment);
                         bool status = ActivityLogModel.track("payment", "create", payment.id);
                         if (status)
                         {
-                            paymentList.Rows.Add(payment.id, payment.payment_type, payment.invoice_id, payment.amount, payment.transaction_token, payment.date);
+                            paymentList.Rows.Add(payment.id, payment.payment_method, payment.invoice_id, payment.amount, payment.transaction_token, payment.date);
                             netDue -= payment.amount;
                             netDue = Math.Round(netDue, 2);
                         }
@@ -150,6 +152,7 @@ namespace EPose
                     {
                         this.Close();
                     }
+                    this.invoice_form.paymentCompleted();
                 }
             amountTextBox.Focus();
             amountTextBox.Text = "" + netDue;

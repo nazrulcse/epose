@@ -36,8 +36,11 @@ namespace EPose.Model
         public static void remove(string responseObject) {
             try {
                 JObject json = JObject.Parse(responseObject);
-                //string ids = responseObject.data;
-                Console.WriteLine("Response data: " + json.GetValue("data"));
+                var ids = json.GetValue("applied_activies").ToString();
+                if(ids != "" && ids != null) {
+                    ActivityLogModel act = new ActivityLogModel();
+                    act.delete(act, "id IN (" + ids + ")");
+                }
             }
             catch(Exception ex) {
 

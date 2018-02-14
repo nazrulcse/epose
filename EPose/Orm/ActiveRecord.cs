@@ -198,34 +198,38 @@ namespace EPose.Orm
         }
 
         public Boolean executeQuery(String query) {
-            try
-            {
-                SQLConn.ConnDB();
-                SQLConn.cmd = new MySqlCommand(query, SQLConn.conn);
+           // try
+           // {
+                Console.WriteLine("Query: " + query);
+                MySqlConnection conn = SQLConn.ConnDB();
+                SQLConn.cmd = new MySqlCommand(query, conn);
                 SQLConn.cmd.ExecuteNonQuery();
+                conn.Close();
                 return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("" + ex.Message.ToString());
-                return false;
-            }
-            finally
-            {
-                SQLConn.cmd.Dispose();
-                SQLConn.conn.Close();
-            }
+            //}
+            //catch (Exception ex)
+           // {
+             //   MessageDialog.ShowAlert("" + ex.Message.ToString());
+               // return false;
+            //}
+            //finally
+            //{
+              //  SQLConn.cmd.Dispose();
+                //SQLConn.conn.Close();
+            //}
         }
 
         public object readExecuteQuery(dynamic objectModel, String query)
         {
             //try
             //{
+                //MySqlConnection conn = new MySqlConnection();
                 Console.WriteLine("Query: " + query);
-                SQLConn.ConnDB();
-                SQLConn.cmd = new MySqlCommand(query, SQLConn.conn);
+                MySqlConnection conn = SQLConn.ConnDB();
+                SQLConn.cmd = new MySqlCommand(query, conn);
                 SQLConn.dr = SQLConn.cmd.ExecuteReader();
-               var objectList = ObjectBuilder.DataReader2Obj(SQLConn.dr, objectModel);
+                var objectList = ObjectBuilder.DataReader2Obj(SQLConn.dr, objectModel);
+                conn.Close();
                 return objectList;
             //}
             //catch (Exception ex)

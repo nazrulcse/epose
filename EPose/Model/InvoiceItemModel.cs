@@ -12,8 +12,9 @@ namespace EPose.Model
         public string id { get; set; }
         public string name { get; set; }
         public string invoice_id { get; set; }
+        public string product_id { get; set; }
         public double price { get; set; }
-        public DateTime date { get; set; }
+        public dynamic date { get; set; }
         public double total { get; set; }
         public float quantity { get; set; }
         public string unit { get; set; }
@@ -27,7 +28,7 @@ namespace EPose.Model
 
         public Array attrAccess()
         {
-            return new String[] { "id", "vat", "name", "invoice_id", "price", "total", "quantity", "unit", "discount" };
+            return new String[] { "id", "vat", "name", "invoice_id", "price", "total", "quantity", "unit", "discount", "product_id"};
         }
     }
 }

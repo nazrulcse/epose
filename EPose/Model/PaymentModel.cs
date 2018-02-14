@@ -10,7 +10,9 @@ namespace EPose.Model
     class PaymentModel : ActiveRecord
     {
         public string id { get; set; }
-        public string payment_type { get; set; }
+        public string payment_method { get; set; }
+        public string department_id { get; set; }
+        public string customer_id { get; set; }
         public string invoice_id { get; set; }
         public double amount { get; set; }
         public string transaction_token { get; set; }
@@ -23,7 +25,7 @@ namespace EPose.Model
 
         public Array attrAccess()
         {
-            return new String[] { "id", "payment_type", "invoice_id", "amount", "transaction_token", "date" };
+            return new String[] { "id", "payment_method", "department_id", "customer_id", "invoice_id", "amount", "transaction_token", "date" };
         }
     }
 
