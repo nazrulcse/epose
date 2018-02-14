@@ -58,9 +58,6 @@ namespace EPose
                 setting.printer_type = printerType;
                 setting.printer_size = printerSize;
                 setting.padding_layout = paddidngLayout;
-
-
-
                 setting = (SettingsModel)setting.create(setting);
                 MessageBox.Show("Settings Save Succesfully");
             }

@@ -16,7 +16,6 @@ namespace EPose.Model
         public string transaction_token { get; set; }
         public dynamic date { get; set; }
 
-
         public string getTable()
         {
             return "payments";
