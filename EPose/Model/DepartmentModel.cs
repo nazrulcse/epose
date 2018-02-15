@@ -17,6 +17,8 @@ namespace EPose.Model
         public string company_id { get; set; }
         public string action { get; set; }
         public string log_id { get; set; }
+        public string email { get; set; }
+        public string mobile { get; set; }
 
 
         public string getTable()

@@ -22,9 +22,10 @@ namespace EPose.Model
         public string department_id { get; set; }
         public string designation { get; set; }
         public string action { get; set; }
-        public DateTime joining_date { get; set; }
+        public dynamic joining_date { get; set; }
         public bool is_active { get; set; }
         public string log_id { get; set; }
+        public string user_id { get; set; }
         
 
         public string getTable()
