@@ -7,6 +7,8 @@ using EPose.Model;
 using System.Net.Http;
 using Service;
 using System.Windows.Forms;
+using System.Threading;
+using EPose.Service.WebService;
 
 namespace EPose.Service.Sync
 {
@@ -67,6 +69,22 @@ namespace EPose.Service.Sync
             }
         }
 
+        public static IEnumerable<MemberShipModel> syncMemberships()
+        {
+            HttpResponseMessage response = WebAPI.getRequest("members", "memberships");  // Blocking call!
+            if (response.IsSuccessStatusCode)
+            {
+                return response.Content.ReadAsAsync<IEnumerable<MemberShipModel>>().Result;
+            }
+            else
+            {
+                MessageBox.Show("Api response with status: " + (int)response.StatusCode);
+                return response.Content.ReadAsAsync<IEnumerable<MemberShipModel>>().Result;
+            }
+        }
+
+        
+
         public static IEnumerable<CustomerModel> syncCustomer()
         {
             HttpResponseMessage response = WebAPI.getRequest("pos/customers", "customers");  // Blocking call!
@@ -79,6 +97,23 @@ namespace EPose.Service.Sync
                 MessageBox.Show("Api response with status: " + (int)response.StatusCode);
                 return response.Content.ReadAsAsync<IEnumerable<CustomerModel>>().Result;
             }
+        }
+
+
+
+        public static void perform()
+        {
+            new Thread(() =>
+            {
+                Thread.CurrentThread.IsBackground = true;
+                Console.WriteLine("Thread running......");
+                CustomerService.perform();
+                DepartmentService.perform();
+                EmployeeService.perform();
+                MemberShipWebService.perform();
+                ProductService.perform();
+                SupplierService.perform();
+            }).Start();
         }
     }
 }

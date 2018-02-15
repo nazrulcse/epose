@@ -99,7 +99,7 @@ namespace EPose
             inv_item.total = product.sale_price;
             inv_item.name = product.name;
             inv_item.invoice_id = this.inv.id;
-            inv_item.date = DateTime.Today;
+            inv_item.date = DateTime.Now.ToString("yyyy-MM-dd");
             inv_item.create(inv_item);
             ActivityLogModel.track("invoice_item", "create", inv_item.id);
         }
@@ -120,8 +120,20 @@ namespace EPose
                     }
                     break;
                 case (Keys.Control | Keys.M):
-                    MemberShip_Frame memberShip = new MemberShip_Frame(this.inv.invoice_total);
-                    memberShip.Show();
+                    if( this.inv != null){
+                        if (inv.invoice_total > 0)
+                        {
+                            MemberShip_Frame memberShip = new MemberShip_Frame(this.inv.invoice_total);
+                            memberShip.Show();
+                        }
+                        else {
+                            MessageBox.Show("Please Select Some Product First");
+                        }
+                    }
+                    else{
+                        MessageBox.Show("Invoice Not Initialize! Please Create Invoice First");
+                    }
+                    
                     break;
                 case (Keys.Control | Keys.A):
                     if (this.inv != null)

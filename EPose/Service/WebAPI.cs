@@ -15,8 +15,8 @@ namespace Service
 {
     class WebAPI
     {
-        //public const string API = "http://159.89.170.58/api/v1/";
-        public const string API = "http://ed3a0f98.ngrok.io/api/v1/";
+
+        public const string API = "http://15214125.ngrok.io/api/v1/";
         public static HttpResponseMessage getRequest(String action_url, String model)
         {
             DepartmentSettings.getData();

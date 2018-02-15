@@ -22,6 +22,7 @@ namespace EPose.Service.Sync
                 InvoiceService.perform();
                 InvoiceItemService.perform();
                 PaymentService.perform();
+                MemberShipService.perform();
             }).Start();
         }
     }

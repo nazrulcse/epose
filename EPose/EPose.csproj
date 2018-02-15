@@ -270,6 +270,7 @@
     <Compile Include="Service\WebService\CustomerService.cs" />
     <Compile Include="Service\WebService\DepartmentService.cs" />
     <Compile Include="Service\WebService\EmployeeService.cs" />
+    <Compile Include="Service\WebService\MemberShipWebService.cs" />
     <Compile Include="Service\WebService\ProductService.cs" />
     <Compile Include="Service\WebService\SupplierService.cs" />
     <Compile Include="Settings_Frame.cs">
@@ -450,6 +451,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\member.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

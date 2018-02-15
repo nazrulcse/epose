@@ -13,6 +13,7 @@ using EPose.Service;
 using DevOne.Security.Cryptography.BCrypt;
 using System.IO;
 using EPose.Service.Sync;
+using EPose.Service.WebService;
 
 namespace EPose
 {
@@ -34,6 +35,9 @@ namespace EPose
            branch.Enabled = false;
            userid.Focus();
            loadDatabaseSettings();
+          DownStream.perform();
+           //MemberShipWebService.perform();
+
            //read dataBase Information from external file And save to the application temporary memory
         }
 

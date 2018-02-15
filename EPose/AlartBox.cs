@@ -29,6 +29,10 @@ namespace EPose
           {
               icon.Image = EPose.Properties.Resources.print;
           }
+          else if (iconText == "member")
+          {
+              icon.Image = EPose.Properties.Resources.member;
+          }
           else if (iconText == "error")
           {
                 icon.Image = EPose.Properties.Resources.error;

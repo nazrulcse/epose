@@ -85,11 +85,11 @@ namespace EPose.Orm
             return getFromDatabase(modelObject, query);
         }
 
-        public object where(dynamic modelObject, string condition)
+        public object where(dynamic modelObject, string condition, string options = "ORDER BY id ASC")
         {
             var table_name = modelObject.getTable();
             Type objType = modelObject.GetType();
-            var query = "Select * from " + table_name + " where(" + condition + ")";
+            var query = "Select * from " + table_name + " where(" + condition + ") " + options;
             return getFromDatabase(modelObject, query);
         }
        

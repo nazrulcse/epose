@@ -52,7 +52,7 @@ namespace EPose
                     {
                       status = "Active";
                     }
-                    memberList.Rows.Add(mem.id, mem.name, mem.email, mem.mobile, mem.adress, mem.point, status);
+                    memberList.Rows.Add(mem.id, mem.name, mem.email, mem.mobile, mem.address, Math.Round(mem.point,2), status);
                 }
             }
         }
@@ -79,25 +79,37 @@ namespace EPose
             {
                 int SelectedRow = memberList.SelectedRows[0].Index;
                 dynamic cellValue = memberList.Rows[SelectedRow].Cells["Point"].Value;
-                double point = Convert.ToDouble(Convert.ToString(cellValue));
-                double sumOfPoint = point + (total_price / 100);
 
-                dynamic cellValueOfId = memberList.Rows[SelectedRow].Cells["Id"].Value;
-                String id = Convert.ToString(cellValueOfId);
+                    if (memberList.SelectedRows[0].Index < memberList.Rows.Count - 1)
+                    {
+                        DialogResult result = MessageDialog.Show("Membership Selection!", " Do you want to select this member?", "member");
+                        if (result == DialogResult.Yes)
+                        {
+                            double point = Convert.ToDouble(Convert.ToString(cellValue));
+                            double sumOfPoint = point + (total_price / 100);
 
-                MemberShipModel memberShipModel = new MemberShipModel();
-                memberShipModel.update_attributeForMember(memberShipModel, "point", sumOfPoint, id);
-                memberShipModel.update_attributeForMember(memberShipModel, "last_point", point, id);
+                            dynamic cellValueOfId = memberList.Rows[SelectedRow].Cells["Id"].Value;
+                            String id = Convert.ToString(cellValueOfId);
 
-                ActivityLogModel log = new ActivityLogModel();
-                log.model = "membership";
-                log.action = "update";
-                log.date = DateTime.Now.ToString("yyyy-MM-dd");
-                log.ref_id = id;
-                log.create(log);
+                            MemberShipModel memberShipModel = new MemberShipModel();
+                            memberShipModel.update_attributeForMember(memberShipModel, "point", sumOfPoint, id);
+                            memberShipModel.update_attributeForMember(memberShipModel, "last_point", point, id);
 
-                // this.invoice.addProduct(search_products[productItems.SelectedRows[0].Index]);
-                this.Close();
+                            ActivityLogModel log = new ActivityLogModel();
+                            log.model = "membership";
+                            log.action = "update";
+                            log.date = DateTime.Now.ToString("yyyy-MM-dd");
+                            log.ref_id = id;
+                            log.create(log);
+
+                            // this.invoice.addProduct(search_products[productItems.SelectedRows[0].Index]);
+                            this.Close();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("please select a row");
+                    }
             }
         }
     }
