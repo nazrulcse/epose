@@ -10,11 +10,11 @@ namespace EPose.Service.WebService
     class EmployeeService
     {
 
-        public static void perform()
+        public static void perform(string url = "activities/employees")
         {
             int i = 0;
             String[] successRecords = new String[100];
-            dynamic employees = DownStream.syncEmployee();
+            dynamic employees = DownStream.syncEmployee(url);
             
             foreach (var employee in employees)
             {

@@ -35,7 +35,7 @@ namespace EPose
            branch.Enabled = false;
            userid.Focus();
            loadDatabaseSettings();
-         DownStream.perform();
+          // DownStream.perform();
            //MemberShipWebService.perform();
 
            //read dataBase Information from external file And save to the application temporary memory

@@ -81,6 +81,12 @@
     <Compile Include="ActivityLog_Frame.Designer.cs">
       <DependentUpon>ActivityLog_Frame.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSettings.Designer.cs">
+      <DependentUpon>AdminSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="AlartBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +305,9 @@
     </Compile>
     <EmbeddedResource Include="ActivityLog_Frame.resx">
       <DependentUpon>ActivityLog_Frame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSettings.resx">
+      <DependentUpon>AdminSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AlartBox.resx">
       <DependentUpon>AlartBox.cs</DependentUpon>

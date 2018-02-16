@@ -203,7 +203,7 @@ namespace EPose.Orm
                 Console.WriteLine("Query: " + query);
                 MySqlConnection conn = SQLConn.ConnDB();
                 SQLConn.cmd = new MySqlCommand(query, conn);
-                SQLConn.cmd.ExecuteNonQuery();
+                 SQLConn.cmd.ExecuteNonQuery();
                 conn.Close();
                 return true;
             //}

@@ -8,11 +8,11 @@ namespace EPose.Service.WebService
 {
     class CustomerService
     {
-        public static void perform()
+        public static void perform(string url = "activities/customers")
         {
             int i = 0;
             String[] successRecords = new String[100];
-            dynamic customers = DownStream.syncCustomer();
+            dynamic customers = DownStream.syncCustomer(url);
             foreach (var customer in customers)
             {
                 try

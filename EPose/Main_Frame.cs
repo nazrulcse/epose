@@ -144,5 +144,10 @@ namespace EPose
         {
             new TillClosing_Frame().Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new AdminSettings().Show();
+        }
     }
 }

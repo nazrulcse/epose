@@ -14,9 +14,9 @@ namespace EPose.Service.Sync
 {
     class DownStream
     {
-        public static IEnumerable<DepartmentModel> syncDepartment()
+        public static IEnumerable<DepartmentModel> syncDepartment(string url)
         {
-            HttpResponseMessage response = WebAPI.getRequest("departments", "deparments");  // Blocking call!
+            HttpResponseMessage response = WebAPI.getRequest(url, "deparments");  // Blocking call!
             if (response.IsSuccessStatusCode)
             {
                 return response.Content.ReadAsAsync<IEnumerable<DepartmentModel>>().Result;
@@ -28,9 +28,9 @@ namespace EPose.Service.Sync
             }
         }
 
-        public static IEnumerable<EmployeeModel> syncEmployee()
+        public static IEnumerable<EmployeeModel> syncEmployee(string url)
         {
-            HttpResponseMessage response = WebAPI.getRequest("employees", "employees");  // Blocking call!
+            HttpResponseMessage response = WebAPI.getRequest(url, "employees");  // Blocking call!
             if (response.IsSuccessStatusCode)
             {
                 return response.Content.ReadAsAsync<IEnumerable<EmployeeModel>>().Result;
@@ -42,9 +42,9 @@ namespace EPose.Service.Sync
             }
         }
 
-        public static IEnumerable<SupplierModel> syncSupplier()
+        public static IEnumerable<SupplierModel> syncSupplier(string url)
         {
-            HttpResponseMessage response = WebAPI.getRequest("pos/suppliers", "suppliers");  // Blocking call!
+            HttpResponseMessage response = WebAPI.getRequest(url, "suppliers");  // Blocking call!
             if (response.IsSuccessStatusCode)
             {
                 return response.Content.ReadAsAsync<IEnumerable<SupplierModel>>().Result;
@@ -55,9 +55,9 @@ namespace EPose.Service.Sync
                 return response.Content.ReadAsAsync<IEnumerable<SupplierModel>>().Result;
             }
         }
-        public static IEnumerable<ProductModel> syncProduct()
+        public static IEnumerable<ProductModel> syncProduct(string url)
         {
-            HttpResponseMessage response = WebAPI.getRequest("pos/products", "products");  // Blocking call!
+            HttpResponseMessage response = WebAPI.getRequest(url, "products");  // Blocking call!
             if (response.IsSuccessStatusCode)
             {
                 return response.Content.ReadAsAsync<IEnumerable<ProductModel>>().Result;
@@ -69,9 +69,9 @@ namespace EPose.Service.Sync
             }
         }
 
-        public static IEnumerable<MemberShipModel> syncMemberships()
+        public static IEnumerable<MemberShipModel> syncMemberships(string url)
         {
-            HttpResponseMessage response = WebAPI.getRequest("members", "memberships");  // Blocking call!
+            HttpResponseMessage response = WebAPI.getRequest(url, "memberships");  // Blocking call!
             if (response.IsSuccessStatusCode)
             {
                 return response.Content.ReadAsAsync<IEnumerable<MemberShipModel>>().Result;
@@ -83,11 +83,11 @@ namespace EPose.Service.Sync
             }
         }
 
-        
 
-        public static IEnumerable<CustomerModel> syncCustomer()
+
+        public static IEnumerable<CustomerModel> syncCustomer(string url)
         {
-            HttpResponseMessage response = WebAPI.getRequest("pos/customers", "customers");  // Blocking call!
+            HttpResponseMessage response = WebAPI.getRequest(url, "customers");  // Blocking call!
             if (response.IsSuccessStatusCode)
             {
                 return response.Content.ReadAsAsync<IEnumerable<CustomerModel>>().Result;
@@ -107,12 +107,12 @@ namespace EPose.Service.Sync
             {
                 Thread.CurrentThread.IsBackground = true;
                 Console.WriteLine("Thread running......");
-                CustomerService.perform();
-                DepartmentService.perform();
-                EmployeeService.perform();
+               CustomerService.perform();
+               DepartmentService.perform();
+               EmployeeService.perform();
                 MemberShipWebService.perform();
-                ProductService.perform();
-                SupplierService.perform();
+               ProductService.perform();
+               SupplierService.perform();
             }).Start();
         }
     }

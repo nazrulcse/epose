@@ -31,8 +31,6 @@ namespace EPose.Model
         public string log_id { get; set; }
         public string action { get; set; }
 
-
-
         public string getTable()
         {
             return "products";
@@ -40,7 +38,7 @@ namespace EPose.Model
 
         public Array attrAccess()
         {
-            return new String[] { "id", "barcode", "name", "description", "department", "category", "sub_category", "model", "brand", "unit", "re_order_level", "cost_price", "sale_price", "expirable", "discountable", "stock", "is_active", "vat", "product_code" };
+            return new String[] { "id", "barcode", "name", "description", "department", "category", "sub_category", "model", "brand", "unit", "re_order_level", "cost_price", "sale_price", "expirable", "discountable", "stock", "is_active", "vat"};
         }
     }
 }

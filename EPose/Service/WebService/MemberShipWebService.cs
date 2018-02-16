@@ -9,16 +9,16 @@ namespace EPose.Service.WebService
 {
     class MemberShipWebService
     {
-    public static void perform()
+        public static void perform(string url = "/activities/memberships")
         {
             int i = 0;
             String[] successRecords = new String[100];
-            dynamic memberships = DownStream.syncMemberships();
+            dynamic memberships = DownStream.syncMemberships(url);
             Console.WriteLine("" + memberships);
             foreach (var membership in memberships)
             {
-               // try
-                //{
+                try
+                {
                     var response = ActionPerform.perform(membership, membership.action);
                     if (response)
                     {
@@ -28,12 +28,12 @@ namespace EPose.Service.WebService
                     {
                         Console.WriteLine("Unable to create membership");
                     }
-                //}
-                //catch (Exception ex)
-                //{
-                  //  Console.WriteLine("Error: " + ex.Message.ToString());
-                //}
-                //UpStream.webAcknowledgement(successRecords);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message.ToString());
+                }
+                UpStream.webAcknowledgement(successRecords);
             }
         }
 

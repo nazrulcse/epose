@@ -9,10 +9,11 @@ namespace EPose.Service.WebService
 {
     class DepartmentService
     {
-        public static void perform() {
+        public static void perform(string url = "activities/departments")
+        {
             int i = 0;
-            String[] successRecords = new String[100]; 
-            dynamic departments = DownStream.syncDepartment();
+            String[] successRecords = new String[100];
+            dynamic departments = DownStream.syncDepartment(url);
             foreach(var department in departments) {
                 try {
                     var response = ActionPerform.perform(department, department.action);

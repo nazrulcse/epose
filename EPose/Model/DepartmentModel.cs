@@ -29,7 +29,7 @@ namespace EPose.Model
 
         public Array attrAccess()
         {
-            return new String[] { "id", "name", "address", "company_id" };
+            return new String[] { "id", "name","description","image","company_id","email","mobile" };
         }
 
     }

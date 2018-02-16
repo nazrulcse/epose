@@ -10,11 +10,11 @@ namespace EPose.Service.WebService
     class ProductService
     {
 
-        public static void perform()
+        public static void perform(string url = "activities/products")
         {
             int i = 0;
             String[] successRecords = new String[100];
-            dynamic products = DownStream.syncProduct();
+            dynamic products = DownStream.syncProduct(url);
             Console.WriteLine("" + products);
             foreach (var product in products)
             {

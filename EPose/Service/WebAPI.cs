@@ -16,7 +16,7 @@ namespace Service
     class WebAPI
     {
 
-        public const string API = "http://a422bb11.ngrok.io/api/v1/";
+        public const string API = "http://32dacdb3.ngrok.io/api/v1/";
         public static HttpResponseMessage getRequest(String action_url, String model)
         {
             DepartmentSettings.getData();
@@ -25,7 +25,7 @@ namespace Service
 
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(URL);
-            Console.WriteLine("API URL: " + URL);
+            Console.WriteLine("API URL: " + URL+urlParameters);
             // Add an Accept header for JSON format.
             client.DefaultRequestHeaders.Accept.Add(
             new MediaTypeWithQualityHeaderValue("application/json"));

@@ -25,7 +25,7 @@ namespace EPose.Service
                     break;
                 }
                 default: {
-                   
+                    response = modelObject.create(modelObject);
                     break;
                 }
             }

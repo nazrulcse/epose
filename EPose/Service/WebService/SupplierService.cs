@@ -10,11 +10,11 @@ namespace EPose.Service.WebService
     class SupplierService
     {
 
-        public static void perform()
+        public static void perform(string url = "activities/suppliers")
         {
             int i = 0;
             String[] successRecords = new String[100];
-            dynamic suppliers = DownStream.syncSupplier();
+            dynamic suppliers = DownStream.syncSupplier(url);
             foreach (var supplier in suppliers)
             {
                 try
