@@ -29,11 +29,6 @@ namespace EPose
         private string TstUserNameMySQL;
         private string TstPwdMySQL;
         private string TstDBNameMySQL;
-        private string DepartmentId;
-        private string vatChalan;
-        private string vatRegestration;
-        private string vatAdress;
-        
 
         private void Connection_frame_Load(object sender, EventArgs e)
         {

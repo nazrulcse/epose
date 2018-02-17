@@ -116,7 +116,7 @@ namespace EPose
                         createInvoice();
                     }
                     else {
-                        MessageBox.Show("Complete Current Invoice");
+                        MessageDialog.ShowAlert("Complete Current Invoice First", "Alert Message", "warning");
                     }
                     break;
                 case (Keys.Control | Keys.M):
@@ -131,7 +131,7 @@ namespace EPose
                         }
                     }
                     else{
-                        MessageBox.Show("Invoice Not Initialize! Please Create Invoice First");
+                        MessageDialog.ShowAlert("No invoice found", "Alert Message", "warning");
                     }
                     
                     break;
@@ -143,7 +143,7 @@ namespace EPose
                         updateInvoice();
                     }
                     else {
-                        MessageBox.Show("Invoice not initialize");
+                        MessageDialog.ShowAlert("No invoice found", "Alert Message", "warning");
                     }
                     break;
                 case (Keys.Return):
@@ -182,7 +182,7 @@ namespace EPose
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Please Select a Row");
+                MessageDialog.ShowAlert("Please Select a row", "Alert Message", "warning");
             }
         }
 
@@ -226,8 +226,8 @@ namespace EPose
         }
 
         public void createInvoice() {
-           // try
-           // {
+            try
+            {
                 UpStream.perform();
                 this.inv = new InvoiceModel();
                 var ms = (DateTime.Now - DateTime.MinValue).TotalMilliseconds * 10;
@@ -245,11 +245,11 @@ namespace EPose
                 {
                     invoiceNumber.Text = "Unable to create Invoice";
                 }
-            //}
-            //catch (Exception ex)
-            //{
-              //  invoiceNumber.Text = "Error: " + ex.Message.ToString();
-            //}
+            }
+            catch (Exception ex)
+            {
+                invoiceNumber.Text = "Error: " + ex.Message.ToString();
+           }
         }
 
         public Boolean deleteInvoiceLog()
@@ -321,7 +321,7 @@ namespace EPose
                         id = aaa.Substring(0, aaa.IndexOf(')'));
                     }
                     else {
-                        MessageBox.Show("Invalid Customer", "Invalid!");
+                        MessageDialog.ShowAlert("Invalid Customer", "Alert Message", "warning");
                         return;
                     }
                     CustomerModel cust = new CustomerModel();
@@ -335,11 +335,11 @@ namespace EPose
                             inv.update_attribute(inv, "customer_id", id, inv.id);
                         }
                         else {
-                            MessageBox.Show("Invoice not initialized", "Not Found!");
+                            MessageDialog.ShowAlert("Invoice not initialized", "Alert Message", "warning");
                         }
                     }
                     else {
-                        MessageBox.Show("Customer Not Found", "Not Found!");
+                        MessageDialog.ShowAlert("Customer Not Found", "Alert Message", "warning");
                         return;
                     }
                 }

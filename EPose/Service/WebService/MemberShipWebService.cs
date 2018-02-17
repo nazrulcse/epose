@@ -14,7 +14,7 @@ namespace EPose.Service.WebService
             int i = 0;
             String[] successRecords = new String[100];
             dynamic memberships = DownStream.syncMemberships(url);
-            Console.WriteLine("" + memberships);
+           // Console.WriteLine("" + memberships);
             foreach (var membership in memberships)
             {
                 try

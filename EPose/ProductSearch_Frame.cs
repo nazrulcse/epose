@@ -72,7 +72,7 @@ namespace EPose
                     this.Close();
                 }
                 else {
-                    MessageBox.Show("No product found");
+                    MessageDialog.ShowAlert("No Product found", "Alert Message", "warning");
                 }
             }
         }

@@ -14,7 +14,7 @@ namespace EPose.Service.Sync
 {
     class DownStream
     {
-        public static IEnumerable<DepartmentModel> syncDepartment(string url)
+        public static object syncDepartment(string url)
         {
             HttpResponseMessage response = WebAPI.getRequest(url, "deparments");  // Blocking call!
             if (response.IsSuccessStatusCode)
@@ -23,12 +23,12 @@ namespace EPose.Service.Sync
             }
             else
             {
-                MessageBox.Show("Api response with status: " + (int)response.StatusCode);
-                return response.Content.ReadAsAsync<IEnumerable<DepartmentModel>>().Result;
+                Console.WriteLine("Api response with status: " + (int)response.StatusCode);
+                return  new List<DepartmentModel>();;
             }
         }
 
-        public static IEnumerable<EmployeeModel> syncEmployee(string url)
+        public static object syncEmployee(string url)
         {
             HttpResponseMessage response = WebAPI.getRequest(url, "employees");  // Blocking call!
             if (response.IsSuccessStatusCode)
@@ -37,12 +37,12 @@ namespace EPose.Service.Sync
             }
             else
             {
-                MessageBox.Show("Api response with status: " + (int)response.StatusCode);
-                return response.Content.ReadAsAsync<IEnumerable<EmployeeModel>>().Result;
+                Console.WriteLine("Api response with status: " + (int)response.StatusCode);
+                return new List<EmployeeModel>();
             }
         }
 
-        public static IEnumerable<SupplierModel> syncSupplier(string url)
+        public static object syncSupplier(string url)
         {
             HttpResponseMessage response = WebAPI.getRequest(url, "suppliers");  // Blocking call!
             if (response.IsSuccessStatusCode)
@@ -51,11 +51,11 @@ namespace EPose.Service.Sync
             }
             else
             {
-                MessageBox.Show("Api response with status: " + (int)response.StatusCode);
-                return response.Content.ReadAsAsync<IEnumerable<SupplierModel>>().Result;
+                Console.WriteLine("Api response with status: " + (int)response.StatusCode);
+                return new List<SupplierModel>();
             }
         }
-        public static IEnumerable<ProductModel> syncProduct(string url)
+        public static object syncProduct(string url)
         {
             HttpResponseMessage response = WebAPI.getRequest(url, "products");  // Blocking call!
             if (response.IsSuccessStatusCode)
@@ -64,12 +64,12 @@ namespace EPose.Service.Sync
             }
             else
             {
-                MessageBox.Show("Api response with status: " + (int)response.StatusCode);
-                return response.Content.ReadAsAsync<IEnumerable<ProductModel>>().Result;
+                Console.WriteLine("Api response with status: " + (int)response.StatusCode);
+                return new List<ProductModel>();
             }
         }
 
-        public static IEnumerable<MemberShipModel> syncMemberships(string url)
+        public static object syncMemberships(string url)
         {
             HttpResponseMessage response = WebAPI.getRequest(url, "memberships");  // Blocking call!
             if (response.IsSuccessStatusCode)
@@ -78,14 +78,14 @@ namespace EPose.Service.Sync
             }
             else
             {
-                MessageBox.Show("Api response with status: " + (int)response.StatusCode);
-                return response.Content.ReadAsAsync<IEnumerable<MemberShipModel>>().Result;
+                Console.WriteLine("Api response with status: " + (int)response.StatusCode);
+                return new List<MemberShipModel>();
             }
         }
 
 
 
-        public static IEnumerable<CustomerModel> syncCustomer(string url)
+        public static object syncCustomer(string url)
         {
             HttpResponseMessage response = WebAPI.getRequest(url, "customers");  // Blocking call!
             if (response.IsSuccessStatusCode)
@@ -94,8 +94,8 @@ namespace EPose.Service.Sync
             }
             else
             {
-                MessageBox.Show("Api response with status: " + (int)response.StatusCode);
-                return response.Content.ReadAsAsync<IEnumerable<CustomerModel>>().Result;
+                Console.WriteLine("Api response with status: " + (int)response.StatusCode);
+                return new List<CustomerModel>();
             }
         }
 
@@ -113,6 +113,7 @@ namespace EPose.Service.Sync
                 MemberShipWebService.perform();
                ProductService.perform();
                SupplierService.perform();
+               
             }).Start();
         }
     }

@@ -14,6 +14,7 @@ using DevOne.Security.Cryptography.BCrypt;
 using System.IO;
 using EPose.Service.Sync;
 using EPose.Service.WebService;
+using System.Timers;
 
 namespace EPose
 {
@@ -35,10 +36,6 @@ namespace EPose
            branch.Enabled = false;
            userid.Focus();
            loadDatabaseSettings();
-          // DownStream.perform();
-           //MemberShipWebService.perform();
-
-           //read dataBase Information from external file And save to the application temporary memory
         }
 
         private void topHeader_MouseDown(object sender, MouseEventArgs e)
@@ -89,6 +86,18 @@ namespace EPose
             Main_Frame main = new Main_Frame();
             main.Show();
             this.Hide();
+
+            System.Timers.Timer aTimer = new System.Timers.Timer();
+            aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+            aTimer.Interval = 20000;
+            aTimer.Enabled = true;
+        }
+
+        private void OnTimedEvent(object sender, ElapsedEventArgs e)
+        {
+            //throw new NotImplementedException();
+            Console.WriteLine("Syns started...........");
+           // DownStream.perform();
         }
 
         private void cancel_Click(object sender, EventArgs e)
