@@ -21,7 +21,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox44</rd:DefaultName>
         <Top>3.64064cm</Top>
-        <Left>7.27858cm</Left>
+        <Left>8.08228cm</Left>
         <Height>0.65292cm</Height>
         <Width>3.12759cm</Width>
         <Style>
@@ -451,7 +451,7 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet2</DataSetName>
         <Top>1.71816in</Top>
-        <Left>0.60725in</Left>
+        <Left>0.88in</Left>
         <Height>0.5in</Height>
         <Width>6in</Width>
         <ZIndex>1</ZIndex>
@@ -461,36 +461,6 @@
           </Border>
         </Style>
       </Tablix>
-      <Textbox Name="Textbox19">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Customer Name: Md Nazrul Islam</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox19</rd:DefaultName>
-        <Top>1.09722in</Top>
-        <Left>2.60725in</Left>
-        <Height>0.26666in</Height>
-        <Width>2.11775in</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Textbox Name="Textbox1">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -516,13 +486,6 @@
               <TextRun>
                 <Value xml:space="preserve">                      </Value>
                 <Style />
-              </TextRun>
-              <TextRun>
-                <Value>Dhaka Branch</Value>
-                <Style>
-                  <FontFamily>Arial Black</FontFamily>
-                  <FontSize>12pt</FontSize>
-                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -571,7 +534,7 @@
         <Left>2.01558in</Left>
         <Height>0.82499in</Height>
         <Width>3.18333in</Width>
-        <ZIndex>3</ZIndex>
+        <ZIndex>2</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -627,7 +590,7 @@
         <Left>5.60725in</Left>
         <Height>0.82499in</Height>
         <Width>1.4in</Width>
-        <ZIndex>4</ZIndex>
+        <ZIndex>3</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -687,8 +650,8 @@
         <Top>2.96667in</Top>
         <Left>5.49058in</Left>
         <Height>0.74167in</Height>
-        <Width>1.51667in</Width>
-        <ZIndex>5</ZIndex>
+        <Width>0.95in</Width>
+        <ZIndex>4</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -717,8 +680,8 @@
         <Top>3.86771in</Top>
         <Left>0.39058in</Left>
         <Height>0.26666in</Height>
-        <Width>4.93442in</Width>
-        <ZIndex>6</ZIndex>
+        <Width>1.32609in</Width>
+        <ZIndex>5</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -750,7 +713,7 @@
         <Left>0.95987in</Left>
         <Height>0.26666in</Height>
         <Width>4.93442in</Width>
-        <ZIndex>7</ZIndex>
+        <ZIndex>6</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -775,11 +738,11 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <Top>0.61333in</Top>
-        <Left>0.82167in</Left>
+        <Top>0.24666in</Top>
+        <Left>0.27167in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
-        <ZIndex>8</ZIndex>
+        <ZIndex>7</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -805,11 +768,191 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>branch_name</rd:DefaultName>
-        <Top>1.12167in</Top>
-        <Left>0.82167in</Left>
+        <Top>0.68332in</Top>
+        <Left>0.27167in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="customerName">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!customerName.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>customerName</rd:DefaultName>
+        <Top>1.09667in</Top>
+        <Left>2.42392in</Left>
+        <Height>0.25in</Height>
+        <Width>1.98942in</Width>
         <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="total1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!total.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>total1</rd:DefaultName>
+        <Top>2.95278in</Top>
+        <Left>6.555in</Left>
+        <Height>0.25in</Height>
+        <Width>0.60833in</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="advance">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!advance.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>advance</rd:DefaultName>
+        <Top>3.27223in</Top>
+        <Left>6.49614in</Left>
+        <Height>0.25in</Height>
+        <Width>0.79167in</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="due">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!due.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>due</rd:DefaultName>
+        <Top>3.55in</Top>
+        <Left>6.555in</Left>
+        <Height>0.275in</Height>
+        <Width>0.56667in</Width>
+        <ZIndex>12</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="takaInWords">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!takaInWords.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>takaInWords</rd:DefaultName>
+        <Top>3.86771in</Top>
+        <Left>1.88in</Left>
+        <Height>0.25in</Height>
+        <Width>1in</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="invoiceNo">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!invoiceNo.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>invoiceNo</rd:DefaultName>
+        <Top>1.09667in</Top>
+        <Left>6.555in</Left>
+        <Height>0.25in</Height>
+        <Width>1.21667in</Width>
+        <ZIndex>14</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -824,7 +967,7 @@
     <Height>5.05208in</Height>
     <Style />
   </Body>
-  <Width>7.1375in</Width>
+  <Width>8.09667in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>
@@ -914,6 +1057,30 @@
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="branch_name">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="customerName">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="total">
+      <DataType>Float</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="advance">
+      <DataType>Float</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="due">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="takaInWords">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="invoiceNo">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
