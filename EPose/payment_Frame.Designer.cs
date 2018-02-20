@@ -43,6 +43,7 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonCredit = new System.Windows.Forms.Button();
             this.amountTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.zeroButton = new System.Windows.Forms.Button();
@@ -62,7 +63,6 @@
             this.mobileButton = new System.Windows.Forms.Button();
             this.debitButton = new System.Windows.Forms.Button();
             this.cashButton = new System.Windows.Forms.Button();
-            this.buttonCredit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.paymentList)).BeginInit();
             this.panel2.SuspendLayout();
@@ -172,11 +172,29 @@
             this.panel2.Size = new System.Drawing.Size(844, 265);
             this.panel2.TabIndex = 5;
             // 
+            // buttonCredit
+            // 
+            this.buttonCredit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
+            this.buttonCredit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCredit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
+            this.buttonCredit.FlatAppearance.BorderSize = 0;
+            this.buttonCredit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCredit.Font = new System.Drawing.Font("Verdana", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCredit.ForeColor = System.Drawing.Color.White;
+            this.buttonCredit.Location = new System.Drawing.Point(32, 212);
+            this.buttonCredit.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCredit.Name = "buttonCredit";
+            this.buttonCredit.Size = new System.Drawing.Size(107, 44);
+            this.buttonCredit.TabIndex = 9;
+            this.buttonCredit.Text = "Credit";
+            this.buttonCredit.UseVisualStyleBackColor = false;
+            this.buttonCredit.Click += new System.EventHandler(this.buttonCredit_Click);
+            // 
             // amountTextBox
             // 
             this.amountTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.amountTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.amountTextBox.Location = new System.Drawing.Point(173, 7);
+            this.amountTextBox.Location = new System.Drawing.Point(173, 17);
             this.amountTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.amountTextBox.Name = "amountTextBox";
             this.amountTextBox.Size = new System.Drawing.Size(615, 34);
@@ -202,7 +220,7 @@
             this.groupBox1.Controls.Add(this.threeButton);
             this.groupBox1.Controls.Add(this.twoButton);
             this.groupBox1.Controls.Add(this.oneButton);
-            this.groupBox1.Location = new System.Drawing.Point(173, 41);
+            this.groupBox1.Location = new System.Drawing.Point(173, 51);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -512,24 +530,6 @@
             this.cashButton.Text = "Cash";
             this.cashButton.UseVisualStyleBackColor = false;
             this.cashButton.Click += new System.EventHandler(this.cashButton_Click);
-            // 
-            // buttonCredit
-            // 
-            this.buttonCredit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
-            this.buttonCredit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCredit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
-            this.buttonCredit.FlatAppearance.BorderSize = 0;
-            this.buttonCredit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCredit.Font = new System.Drawing.Font("Verdana", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCredit.ForeColor = System.Drawing.Color.White;
-            this.buttonCredit.Location = new System.Drawing.Point(32, 212);
-            this.buttonCredit.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonCredit.Name = "buttonCredit";
-            this.buttonCredit.Size = new System.Drawing.Size(107, 44);
-            this.buttonCredit.TabIndex = 9;
-            this.buttonCredit.Text = "Credit";
-            this.buttonCredit.UseVisualStyleBackColor = false;
-            this.buttonCredit.Click += new System.EventHandler(this.buttonCredit_Click);
             // 
             // payment_Frame
             // 

@@ -17,7 +17,6 @@ namespace EPose
     {
         Product_Frame pro = new Product_Frame();
         InvoiceModel inv;
-        double sumOfprice = 0.0;
         public Invoice_Frame()
         {
             InitializeComponent();
@@ -235,6 +234,7 @@ namespace EPose
                 inv.number = "IN" + ms.ToString();
                 inv.date = DateTime.Now.ToString("yyyy-MM-dd");
                 inv.department_id = DepartmentSettings.DepartmentId;
+                inv.till_id = DepartmentSettings.TillId;
                 dynamic invoice = inv.create(inv);
                 if (invoice != null)
                 {
@@ -482,6 +482,16 @@ namespace EPose
                     resetInvoice();
                 }
             }
+        }
+
+        private void recepentA4Button_Click(object sender, EventArgs e)
+        {
+            //DialogResult result = MessageDialog.Show("Print A4 Recepent!", "Are you want to print the A4 receipt now!", "print");
+           // if (result == DialogResult.Yes)
+           // {
+           //     InvoiceReport_Frame recept = new InvoiceReport_Frame(this.inv);
+            //    recept.Show();
+           // }
         }                                                                                                                                                                                                                                                                                                                                                                                                                                              
     }
 }

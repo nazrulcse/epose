@@ -1,4 +1,5 @@
 ﻿using EPose.Service;
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -148,6 +149,13 @@ namespace EPose
         private void button1_Click(object sender, EventArgs e)
         {
             new AdminSettings().Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            
+            
+            new InvoiceReport_Frame().Show();
         }
     }
 }

@@ -65,7 +65,7 @@
             this.Keyboard = new System.Windows.Forms.Button();
             this.voidInvoice = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.recepentA4Button = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.buttonReport = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -106,7 +106,7 @@
             this.topPanel.Controls.Add(this.topDisplay);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(4, 49);
-            this.topPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(4);
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1488, 158);
             this.topPanel.TabIndex = 4;
@@ -129,7 +129,7 @@
             this.topLeftPanel.Controls.Add(this.label17);
             this.topLeftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.topLeftPanel.Location = new System.Drawing.Point(0, 87);
-            this.topLeftPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topLeftPanel.Margin = new System.Windows.Forms.Padding(4);
             this.topLeftPanel.Name = "topLeftPanel";
             this.topLeftPanel.Size = new System.Drawing.Size(1019, 71);
             this.topLeftPanel.TabIndex = 52;
@@ -184,7 +184,7 @@
             this.panelBody.Controls.Add(this.receivedAmount);
             this.panelBody.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelBody.Location = new System.Drawing.Point(4, 907);
-            this.panelBody.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelBody.Margin = new System.Windows.Forms.Padding(4);
             this.panelBody.Name = "panelBody";
             this.panelBody.Size = new System.Drawing.Size(1488, 76);
             this.panelBody.TabIndex = 5;
@@ -293,7 +293,7 @@
             this.invoiceItems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.invoiceItems.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.invoiceItems.Location = new System.Drawing.Point(0, 0);
-            this.invoiceItems.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.invoiceItems.Margin = new System.Windows.Forms.Padding(4);
             this.invoiceItems.Name = "invoiceItems";
             this.invoiceItems.Size = new System.Drawing.Size(951, 700);
             this.invoiceItems.TabIndex = 9;
@@ -375,7 +375,7 @@
             this.panel8.Controls.Add(this.Keyboard);
             this.panel8.Controls.Add(this.voidInvoice);
             this.panel8.Controls.Add(this.button2);
-            this.panel8.Controls.Add(this.button3);
+            this.panel8.Controls.Add(this.recepentA4Button);
             this.panel8.Controls.Add(this.button10);
             this.panel8.Controls.Add(this.buttonReport);
             this.panel8.Controls.Add(this.button7);
@@ -462,20 +462,21 @@
             this.button2.Text = "Return(F5)";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // recepentA4Button
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(284, 110);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(137, 71);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Remove Item";
-            this.button3.UseVisualStyleBackColor = false;
+            this.recepentA4Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.recepentA4Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.recepentA4Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.recepentA4Button.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.recepentA4Button.ForeColor = System.Drawing.Color.White;
+            this.recepentA4Button.Location = new System.Drawing.Point(284, 110);
+            this.recepentA4Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.recepentA4Button.Name = "recepentA4Button";
+            this.recepentA4Button.Size = new System.Drawing.Size(137, 71);
+            this.recepentA4Button.TabIndex = 5;
+            this.recepentA4Button.Text = "Recepent A4";
+            this.recepentA4Button.UseVisualStyleBackColor = false;
+            this.recepentA4Button.Click += new System.EventHandler(this.recepentA4Button_Click);
             // 
             // button10
             // 
@@ -549,7 +550,7 @@
             this.textBoxDiscount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDiscount.Location = new System.Drawing.Point(239, 123);
-            this.textBoxDiscount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxDiscount.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxDiscount.Name = "textBoxDiscount";
             this.textBoxDiscount.Size = new System.Drawing.Size(178, 37);
             this.textBoxDiscount.TabIndex = 54;
@@ -565,7 +566,7 @@
             this.textBoxNetDue.Enabled = false;
             this.textBoxNetDue.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNetDue.Location = new System.Drawing.Point(240, 178);
-            this.textBoxNetDue.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxNetDue.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxNetDue.Name = "textBoxNetDue";
             this.textBoxNetDue.ReadOnly = true;
             this.textBoxNetDue.Size = new System.Drawing.Size(181, 37);
@@ -592,7 +593,7 @@
             this.totalTextBox.Enabled = false;
             this.totalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalTextBox.Location = new System.Drawing.Point(239, 12);
-            this.totalTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.totalTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.totalTextBox.Name = "totalTextBox";
             this.totalTextBox.ReadOnly = true;
             this.totalTextBox.Size = new System.Drawing.Size(178, 37);
@@ -619,7 +620,7 @@
             this.textBoxVat.Enabled = false;
             this.textBoxVat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxVat.Location = new System.Drawing.Point(239, 69);
-            this.textBoxVat.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxVat.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxVat.Name = "textBoxVat";
             this.textBoxVat.ReadOnly = true;
             this.textBoxVat.Size = new System.Drawing.Size(181, 37);
@@ -874,7 +875,7 @@
         private System.Windows.Forms.TextBox textBoxDiscount;
         private System.Windows.Forms.Button voidInvoice;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button recepentA4Button;
         private System.Windows.Forms.Button holdInvoice;
         private System.Windows.Forms.Button nextInvoice;
         private System.Windows.Forms.Button Keyboard;
