@@ -228,7 +228,7 @@ namespace EPose
         public void createInvoice() {
             try
             {
-                UpStream.perform();
+               // UpStream.perform();
                 this.inv = new InvoiceModel();
                 var ms = (DateTime.Now - DateTime.MinValue).TotalMilliseconds * 10;
                 inv.id = ms.ToString();
@@ -259,7 +259,7 @@ namespace EPose
 
         public void paymentCompleted() {
             updateInvoice();
-            UpStream.perform();
+            //UpStream.perform();
         }
 
         public void resetInvoice(Boolean create = true) {
@@ -319,11 +319,13 @@ namespace EPose
                     if (aaa.IndexOf(')') != -1)
                     {
                         id = aaa.Substring(0, aaa.IndexOf(')'));
+                        this.inv.customer_id = id;
                     }
                     else {
                         MessageDialog.ShowAlert("Invalid Customer", "Alert Message", "warning");
                         return;
                     }
+                   
                     CustomerModel cust = new CustomerModel();
                     dynamic customers = cust.where(cust, "id = " + id);
                     if (customers.Count > 0)

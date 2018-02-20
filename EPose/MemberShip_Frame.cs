@@ -92,8 +92,8 @@ namespace EPose
                             String id = Convert.ToString(cellValueOfId);
 
                             MemberShipModel memberShipModel = new MemberShipModel();
-                            memberShipModel.update_attributeForMember(memberShipModel, "point", sumOfPoint, id);
-                            memberShipModel.update_attributeForMember(memberShipModel, "last_point", point, id);
+                            memberShipModel.update_attributeForSingleRow(memberShipModel, "point", sumOfPoint, id);
+                            memberShipModel.update_attributeForSingleRow(memberShipModel, "last_point", point, id);
 
                             ActivityLogModel log = new ActivityLogModel();
                             log.model = "membership";

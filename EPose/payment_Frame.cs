@@ -31,7 +31,11 @@ namespace EPose
 
         private void payment_Frame_Load(object sender, EventArgs e)
         {
-            amountTextBox.Text = "" + netDue; 
+            amountTextBox.Text = "" + netDue;
+
+            if (this.invoice.customer_id == null) {
+                buttonCredit.Hide();
+            }
         }
 
         private void paymentType_KeyPress(object sender, KeyPressEventArgs e)
@@ -270,6 +274,24 @@ namespace EPose
             {
                 processPayment(amountTextBox.Text);
             }
+        }
+
+        private void buttonCredit_Click(object sender, EventArgs e)
+        {
+            paymentType = "Credit";
+            selectPaymentType();
+             DialogResult dialogResult = MessageDialog.Show("Confirm Payment", "Are you want to make the payment By Credit?? ");
+             if (dialogResult == DialogResult.Yes)
+             {
+                 InvoiceModel invoice = new InvoiceModel();
+                 invoice.update_attributeForSingleRow(invoice, "is_credit",1,this.invoice.id);
+
+                 DialogResult result = MessageDialog.Show("Your Payment Complete!", "Do you want to close payment form?");
+                 if (result == DialogResult.Yes)
+                 {
+                     this.Close();
+                 }
+             }
         }
     }
 }

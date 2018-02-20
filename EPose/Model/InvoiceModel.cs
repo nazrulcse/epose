@@ -20,6 +20,7 @@ namespace EPose.Model
         public double discount { get; set; }
         public double net_total { get; set; }
         public Boolean is_paid { get; set; }
+        public int is_credit { get; set; }
 
         public string getTable() {
             return "invoices";
@@ -27,7 +28,7 @@ namespace EPose.Model
 
         public Array attrAccess()
         {
-            return new String[] { "id", "number", "department_id", "barcode", "date", "customer_id", "invoice_total", "vat", "discount", "net_total" };
+            return new String[] { "id", "number", "department_id", "barcode", "date", "customer_id", "invoice_total", "vat", "discount", "net_total", "is_credit" };
         }
     }
 }

@@ -175,7 +175,7 @@ namespace EPose.Orm
             }
         }
 
-        public object update_attributeForMember(dynamic modelObject, string fieldName, double value, string id)
+        public object update_attributeForSingleRow(dynamic modelObject, string fieldName, dynamic value, string id)
         {
             var table_name = modelObject.getTable();
             Type objType = modelObject.GetType();
