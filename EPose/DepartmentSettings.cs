@@ -19,6 +19,8 @@ namespace EPose
         public static string vatChalan;
         public static string vatRegstration;
         public static string address;
+        public static string branchName;
+        public static Bitmap logo;
 
         public static void getData()
         {
@@ -29,6 +31,7 @@ namespace EPose
                 TillId = Interaction.GetSetting(AppName, "DptSection", "Till_Id", "1");
                 vatChalan = Interaction.GetSetting(AppName, "DptSection", "vat_chalan", "1");
                 vatRegstration = Interaction.GetSetting(AppName, "DptSection", "vat_regestration", "1");
+                branchName = Interaction.GetSetting(AppName, "DptSection", "branch_name", "1");
                 address = Interaction.GetSetting(AppName, "DptSection", "adress", "1");
             }
             catch
@@ -44,7 +47,9 @@ namespace EPose
             Interaction.SaveSetting(AppName, "DptSection", "Till_Id", TillId);
             Interaction.SaveSetting(AppName, "DptSection", "vat_chalan", vatChalan);
             Interaction.SaveSetting(AppName, "DptSection", "vat_regestration", vatRegstration);
+            Interaction.SaveSetting(AppName, "DptSection", "branch_name", branchName);
             Interaction.SaveSetting(AppName, "DptSection", "adress", address);
+            Interaction.SaveSetting(AppName, "DptSection", "logo", logo.ToString());
             Interaction.MsgBox("Department settings are saved.", MsgBoxStyle.Information);
         }
     }

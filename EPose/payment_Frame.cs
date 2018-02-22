@@ -26,6 +26,7 @@ namespace EPose
             this.invoice = invoice;
             this.invoice_form = invf;
             this.netDue = invoice.net_total;
+            invoice.net_due = invoice.net_total;
             this.ActiveControl = amountTextBox;
         }
 
@@ -131,6 +132,7 @@ namespace EPose
                             paymentList.Rows.Add(payment.id, payment.payment_method, payment.invoice_id, payment.amount, payment.transaction_token, payment.date);
                             netDue -= payment.amount;
                             netDue = Math.Round(netDue, 2);
+                            invoice.net_due = netDue;
                         }
                         else {
                             MessageDialog.ShowAlert("Unable to make payment! Please try again or contact admin", "Alert Message", "error");

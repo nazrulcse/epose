@@ -21,7 +21,8 @@ namespace EPose.Model
         public double discount { get; set; }
         public double net_total { get; set; }
         public Boolean is_paid { get; set; }
-        public int is_credit { get; set; }
+        public Boolean is_credit { get; set; }
+        public double net_due { get; set; }
 
         public string getTable() {
             return "invoices";

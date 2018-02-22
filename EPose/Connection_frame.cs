@@ -29,6 +29,8 @@ namespace EPose
         private string TstUserNameMySQL;
         private string TstPwdMySQL;
         private string TstDBNameMySQL;
+        Image i;
+        Bitmap bitmap;
 
         private void Connection_frame_Load(object sender, EventArgs e)
         {
@@ -41,7 +43,9 @@ namespace EPose
             txtTillId.Text = DepartmentSettings.TillId;
             textBoxVatChalan.Text = DepartmentSettings.vatChalan;
             textBoxVatRegestration.Text = DepartmentSettings.vatRegstration;
+            textBoxBranchName.Text = DepartmentSettings.branchName;
             textBoxAdress.Text = DepartmentSettings.address;
+            pictureBox4.Image = DepartmentSettings.logo;
         }
 
 
@@ -146,10 +150,32 @@ namespace EPose
             DepartmentSettings.TillId = txtTillId.Text;
             DepartmentSettings.vatChalan = textBoxVatChalan.Text;
             DepartmentSettings.vatRegstration = textBoxVatRegestration.Text;
+            DepartmentSettings.branchName = textBoxBranchName.Text;
             DepartmentSettings.address = textBoxAdress.Text;
+            DepartmentSettings.logo = bitmap;
             DepartmentSettings.SaveData();
         }
-
+       
+         
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            DialogResult result = ofd.ShowDialog(); // Show the dialog.
+            if (result == DialogResult.OK) // Test result.
+            {
+                
+                try
+                {
+                    i = Image.FromFile(ofd.FileName);
+                    bitmap = (Bitmap)i;
+                    pictureBox4.Image = bitmap;
+                }
+                catch (IOException)
+                {
+                }
+            }
+           
+        }
        
     }
 }

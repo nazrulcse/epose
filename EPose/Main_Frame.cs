@@ -153,9 +153,7 @@ namespace EPose
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
-            
-            new InvoiceReport_Frame().Show();
+           
         }
     }
 }

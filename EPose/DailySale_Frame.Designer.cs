@@ -37,8 +37,8 @@
             this.label = new System.Windows.Forms.Label();
             this.dateLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+//            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+//            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.totalLabel = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -98,22 +98,22 @@
             // 
             // shapeContainer1
             // 
-            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(406, 339);
-            this.shapeContainer1.TabIndex = 48;
-            this.shapeContainer1.TabStop = false;
+           // this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
+           // this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+           // this.shapeContainer1.Name = "shapeContainer1";
+          //  this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            //this.lineShape1});
+           // this.shapeContainer1.Size = new System.Drawing.Size(406, 339);
+           // this.shapeContainer1.TabIndex = 48;
+           // this.shapeContainer1.TabStop = false;
             // 
             // lineShape1
             // 
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 0;
-            this.lineShape1.X2 = 327;
-            this.lineShape1.Y1 = 185;
-            this.lineShape1.Y2 = 185;
+           // this.lineShape1.Name = "lineShape1";
+           // this.lineShape1.X1 = 0;
+           // this.lineShape1.X2 = 327;
+           // this.lineShape1.Y1 = 185;
+           // this.lineShape1.Y2 = 185;
             // 
             // totalLabel
             // 
@@ -250,7 +250,7 @@
             this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.label26);
             this.panel1.Controls.Add(this.totalLabel);
-            this.panel1.Controls.Add(this.shapeContainer1);
+            //this.panel1.Controls.Add(this.shapeContainer1);
             this.panel1.Location = new System.Drawing.Point(695, 153);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(408, 341);
@@ -402,8 +402,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Joining;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
+        //private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
+        //private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label18;

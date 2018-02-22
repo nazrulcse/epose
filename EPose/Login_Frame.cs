@@ -86,7 +86,6 @@ namespace EPose
             Main_Frame main = new Main_Frame();
             main.Show();
             this.Hide();
-
             System.Timers.Timer aTimer = new System.Timers.Timer();
             aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
             aTimer.Interval = 20000;

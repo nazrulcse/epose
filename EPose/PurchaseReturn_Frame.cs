@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EPose.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +27,42 @@ namespace EPose
         private void employeeList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void search_invoice_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Return) {
+                string number = search_invoice.Text;
+                InvoiceModel inv = new InvoiceModel();
+                dynamic invoices = inv.where(inv, "lower(number) like '%" + number.ToLower() + "%'");
+                if (invoices.Count > 0)
+                {
+                    foreach(dynamic invoice in invoices) {
+                        invoiceList.Rows.Add(invoice.id, invoice.number, invoice.customer_id, invoice.date, invoice.net_total);
+                    }
+                    invoiceList.Rows[0].Selected = true;
+                    invoiceList.Focus();
+                }
+                else {
+                    MessageDialog.ShowAlert("Invoice not found");
+                }
+            }
+        }
+
+        private void invoiceList_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (invoiceList.Rows.Count > 1)
+                {
+                    MessageDialog.ShowAlert("Invoice Selected " + invoiceList.SelectedRows[0].Index);
+                    this.Close();
+                }
+                else
+                {
+                    MessageDialog.ShowAlert("No Product found", "Alert Message", "warning");
+                }
+            }
         }
     }
 }

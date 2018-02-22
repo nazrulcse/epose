@@ -1,4 +1,4 @@
-﻿using EPose.Model;
+﻿ using EPose.Model;
 using EPose.Service.Sync;
 using System;
 using System.Collections.Generic;
@@ -486,12 +486,18 @@ namespace EPose
 
         private void recepentA4Button_Click(object sender, EventArgs e)
         {
-            //DialogResult result = MessageDialog.Show("Print A4 Recepent!", "Are you want to print the A4 receipt now!", "print");
-           // if (result == DialogResult.Yes)
-           // {
-           //     InvoiceReport_Frame recept = new InvoiceReport_Frame(this.inv);
-            //    recept.Show();
-           // }
-        }                                                                                                                                                                                                                                                                                                                                                                                                                                              
+            DialogResult result = MessageDialog.Show("Print A4 Recepent!", "Are you want to print the A4 receipt now!", "print");
+            if (result == DialogResult.Yes)
+            {
+               InvoiceReport_Frame recept = new InvoiceReport_Frame(this.inv);
+              recept.Show();
+            }
+        }
+
+        private void sales_return_Click(object sender, EventArgs e)
+        {
+            PurchaseReturn_Frame pf = new PurchaseReturn_Frame();
+            pf.Show();
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                          
     }
 }
