@@ -179,7 +179,7 @@
             this.panelBody.Controls.Add(this.label12);
             this.panelBody.Controls.Add(this.receivedAmount);
             this.panelBody.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBody.Location = new System.Drawing.Point(3, 683);
+            this.panelBody.Location = new System.Drawing.Point(3, 745);
             this.panelBody.Name = "panelBody";
             this.panelBody.Size = new System.Drawing.Size(1089, 62);
             this.panelBody.TabIndex = 5;
@@ -268,7 +268,7 @@
             this.invoicePanel.Location = new System.Drawing.Point(3, 168);
             this.invoicePanel.Margin = new System.Windows.Forms.Padding(2);
             this.invoicePanel.Name = "invoicePanel";
-            this.invoicePanel.Size = new System.Drawing.Size(713, 515);
+            this.invoicePanel.Size = new System.Drawing.Size(713, 577);
             this.invoicePanel.TabIndex = 0;
             // 
             // invoiceItems
@@ -288,7 +288,7 @@
             this.invoiceItems.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.invoiceItems.Location = new System.Drawing.Point(0, 0);
             this.invoiceItems.Name = "invoiceItems";
-            this.invoiceItems.Size = new System.Drawing.Size(713, 515);
+            this.invoiceItems.Size = new System.Drawing.Size(713, 577);
             this.invoiceItems.TabIndex = 9;
             // 
             // EName
@@ -356,7 +356,7 @@
             this.panel1.Location = new System.Drawing.Point(756, 168);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(336, 515);
+            this.panel1.Size = new System.Drawing.Size(336, 577);
             this.panel1.TabIndex = 6;
             // 
             // panel8
@@ -780,7 +780,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1095, 748);
+            this.ClientSize = new System.Drawing.Size(1095, 810);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.invoicePanel);
             this.Controls.Add(this.topPanel);

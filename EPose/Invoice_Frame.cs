@@ -206,14 +206,13 @@ namespace EPose
             DialogResult result = MessageDialog.Show("Print!", "Are you want to print the receipt now!", "print");
             if (result == DialogResult.Yes)
             {
-                PosReceipt psr = new PosReceipt(this.inv);
-                psr.print();
+                new PrinterSelect_Frame(this.inv).Show();
             }
-            result = MessageDialog.Show("Next Invoice!", "Is this invoice close and process next invoice?");
-            if (result == DialogResult.Yes)
-            {
-                resetInvoice();
-            }
+          //  result = MessageDialog.Show("Next Invoice!", "Is this invoice close and process next invoice?");
+          //  if (result == DialogResult.Yes)
+          //  {
+           //   resetInvoice();
+          //  }
         }
 
         public void updateAmount() {

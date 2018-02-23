@@ -18,9 +18,11 @@ namespace EPose
         const int FIRST_COL_PAD = 15;
         const int SECOND_COL_PAD = 7;
         const int THIRD_COL_PAD = 10;
+        public string printer_name; 
 
-        public PosReceipt(dynamic inv) {
+        public PosReceipt(dynamic inv, string printer = null) {
             this.invoice = inv;
+            this.printer_name = printer;
             DepartmentSettings.getData();
         }
 
@@ -29,9 +31,11 @@ namespace EPose
                 {
                     Font printFont = new Font("Arial", 8);
                     PrintDocument pd = new PrintDocument();
-                    pd.PrintPage += new PrintPageEventHandler
-                       (this.perform);
-                    pd.Print();
+                    if(this.printer_name != null) {
+                        pd.PrinterSettings.PrinterName = this.printer_name;
+                    }
+                    pd.PrintPage += new PrintPageEventHandler(this.perform);
+                    //pd.Print();
                 }
                 catch(Exception ex) {
                     MessageBox.Show(ex.Message);
@@ -65,15 +69,23 @@ namespace EPose
             //g.DrawString(GenerateHeader(), ft, Brushes.Black, rectf, stringFormat);
         }
 
+       
+
         public String GenerateHeader() {
+
+            CustomerModel customer = new CustomerModel();
+            dynamic customers = customer.find(customer, this.invoice.customer_id);
+            PaymentModel payment = new PaymentModel();
+            dynamic payments = payment.where(payment, "invoice_id='" + this.invoice.id + "'");
+
             var sb = new StringBuilder();
             sb.AppendLine("Tangail Enterprise");
-            sb.AppendLine("Dhaka Branch".PadLeft(0));
-            sb.AppendLine("Road #3, House #262, Mirpur-12, DOHS, Dhaka".PadLeft(20));
+            sb.AppendLine(DepartmentSettings.branchName.PadLeft(0));
+            sb.AppendLine(DepartmentSettings.address.PadLeft(20));
             sb.AppendLine("-----------------------------------------------------------------");
-            sb.AppendLine("VAT CHALAN (VAT-11)");
+            sb.AppendLine("VAT CHALAN ("+DepartmentSettings.vatChalan+")");
             sb.AppendLine("VAT Reg: 170012542");
-            sb.AppendLine("Customer Name: Md Nazrul Islam");
+            sb.AppendLine(customers.name);
             sb.AppendLine("------------------------------------------------------------------");
             sb.Append("Item/Decription".PadRight(FIRST_COL_PAD));
             sb.Append("|".PadLeft(21));
@@ -101,7 +113,7 @@ namespace EPose
             sb.AppendLine("                                                Net Due:" + (total + vat));
             sb.AppendLine("                                                   Paid:" + (total + vat + 111));
             sb.AppendLine("                                                 Change:" + 111);
-            sb.AppendLine("Payment Mode:");
+            sb.AppendLine("Payment Mode:" + payments[0].payment_method);
             sb.AppendLine("--------------------------------------------------------------");
             sb.AppendLine("CASH                                                    " + (total + vat));
             sb.AppendLine("--------------------------------------------------------------");
