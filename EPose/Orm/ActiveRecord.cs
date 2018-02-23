@@ -85,6 +85,7 @@ namespace EPose.Orm
             return getFromDatabase(modelObject, query);
         }
 
+      
         public object where(dynamic modelObject, string condition, string options = "ORDER BY id ASC")
         {
             var table_name = modelObject.getTable();

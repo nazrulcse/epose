@@ -83,13 +83,17 @@ namespace EPose
             {
                 authenticateUser(userId, userPassword);
             }*/
+           // InvoiceModel inv = new InvoiceModel();
+           //dynamic invoice = inv.find(inv, "636548960494211");
             Main_Frame main = new Main_Frame();
             main.Show();
-            this.Hide();
-            System.Timers.Timer aTimer = new System.Timers.Timer();
-            aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-            aTimer.Interval = 20000;
-            aTimer.Enabled = true;
+            //this.Hide();
+           // InvoiceReport_Frame ir = new InvoiceReport_Frame(invoice);
+           // ir.Show();
+            //System.Timers.Timer aTimer = new System.Timers.Timer();
+            //aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+            //aTimer.Interval = 20000;
+            //aTimer.Enabled = true;
         }
 
         private void OnTimedEvent(object sender, ElapsedEventArgs e)

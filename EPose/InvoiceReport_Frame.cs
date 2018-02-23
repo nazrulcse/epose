@@ -18,7 +18,7 @@ namespace EPose
     public partial class InvoiceReport_Frame : Form
     {
         dynamic invoice;
-       
+        double receivedAmount = 0.0;
 
         public InvoiceReport_Frame(dynamic invoice)
         {
@@ -44,17 +44,17 @@ namespace EPose
                 reportViewer1.LocalReport.LoadReportDefinition(fs);
             }
 
-            string total = "" + Math.Round(this.invoice.invoice_total * 1.0, 2);
+            string total = "" + Math.Round((this.invoice.invoice_total - this.invoice.discount) * 1.0, 2);
             string[] splitTotal = total.Split('.');
             string beforeDot = NumberToWords(Int32.Parse(splitTotal[0]));
             string afterDot = "";
             if (splitTotal.Length > 1)
             {
-                afterDot = splitTotal[1];
+                afterDot = NumberToWords(Int32.Parse(splitTotal[1]));
                 afterDot = " " + afterDot + " Paisa";
             }
 
-            ReportParameter[] parameters = new ReportParameter[12];
+            ReportParameter[] parameters = new ReportParameter[14];
             parameters[0] = new ReportParameter("date", ""+ DateTime.Now.ToString("yyyy-MM-dd"));
             parameters[1] = new ReportParameter("branch_name", DepartmentSettings.branchName);
             if (this.invoice.customer_id != null)
@@ -71,15 +71,27 @@ namespace EPose
                 parameters[3] = new ReportParameter("customerAdress"," ");
                 parameters[4] = new ReportParameter("phone", " ");
             }
+
+            PaymentModel pay = new PaymentModel();
+
+            dynamic payments = pay.where(pay, "invoice_id='" + this.invoice.id + "'");
+            foreach (dynamic payment in payments)
+            {
+                receivedAmount += payment.amount;
+            }
+
+
             string dueAfterRound = ""+Math.Round(this.invoice.net_due, 2);
-            string totalAfterRound = "" + Math.Round(this.invoice.net_total, 2);
+            string totalAfterRound = "" + Math.Round(this.invoice.invoice_total, 2);
             parameters[5] = new ReportParameter("due", dueAfterRound);
             parameters[6] = new ReportParameter("invoiceNo", this.invoice.number);
             parameters[7] = new ReportParameter("total", totalAfterRound);
             parameters[8] = new ReportParameter("address", DepartmentSettings.address);
             parameters[9] = new ReportParameter("vatChalanNo", " " + DepartmentSettings.vatChalan);
             parameters[10] = new ReportParameter("totalInWord", beforeDot + " Taka" + afterDot);
-            parameters[11] = new ReportParameter("discount", " "+this.invoice.discount);
+            parameters[11] = new ReportParameter("discount", " " + this.invoice.discount);
+            parameters[12] = new ReportParameter("netAmount", " " + this.invoice.net_total);
+            parameters[13] = new ReportParameter("receivedAmount", " " + this.receivedAmount);
                 reportViewer1.LocalReport.DataSources.Clear();
                 reportViewer1.LocalReport.SetParameters(parameters);
                 reportViewer1.ProcessingMode = ProcessingMode.Local;
