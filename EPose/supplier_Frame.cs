@@ -17,7 +17,7 @@ namespace EPose
         {
             InitializeComponent();
             this.setTitle("Supplier Window");
-
+            supplierList.DefaultCellStyle.ForeColor = Color.Black;
            SupplierModel sup = new SupplierModel();
            dynamic suppliers = sup.all(sup);
 
