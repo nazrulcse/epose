@@ -31,10 +31,6 @@ namespace EPose.Service.Sync
                 try
                 {
                     HttpResponseMessage response = client.DeleteAsync(urlParameters).Result;  // Blocking call!
-                    if (response.IsSuccessStatusCode)
-                    {
-                        MessageDialog.ShowAlert("Success log delete");
-                    }
                 }
                 catch (Exception ex)
                 {

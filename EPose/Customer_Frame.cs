@@ -18,6 +18,7 @@ namespace EPose
             InitializeComponent();
             this.setTitle("Customer Window");
             this.ActiveControl = searchBox;
+            customerList.DefaultCellStyle.ForeColor = Color.Black;
         }
 
         private void Customer_Load(object sender, EventArgs e)

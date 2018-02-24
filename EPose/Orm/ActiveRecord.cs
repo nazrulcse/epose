@@ -165,7 +165,7 @@ namespace EPose.Orm
             return update_attributes(modelObject, "");
         }
 
-        public object update_attribute(dynamic modelObject, string fieldName,String value,string id)
+        public object update_attribute(dynamic modelObject, string fieldName, String value, string id)
         {
             var table_name = modelObject.getTable();
             Type objType = modelObject.GetType();

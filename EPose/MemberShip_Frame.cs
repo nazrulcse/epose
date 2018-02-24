@@ -14,12 +14,14 @@ namespace EPose
     public partial class MemberShip_Frame : Layout_Frame
     {
         double total_price;
-        public MemberShip_Frame( double total_price)
+        dynamic invoice;
+        public MemberShip_Frame(dynamic invoice)
         {
             InitializeComponent();
             this.ActiveControl = textBoxMobile;
             this.setTitle("Membership Window");
-            this.total_price = total_price;
+            this.invoice = invoice;
+            this.total_price = this.invoice.invoice_total;
         }
 
         private void MemberShip_Frame_Load(object sender, EventArgs e)
@@ -91,7 +93,9 @@ namespace EPose
                             MemberShipModel memberShipModel = new MemberShipModel();
                             memberShipModel.update_attributeForSingleRow(memberShipModel, "point", sumOfPoint, id);
                             memberShipModel.update_attributeForSingleRow(memberShipModel, "last_point", point, id);
-
+                            this.invoice.point = sumOfPoint;
+                            this.invoice.lastPoint = point;
+                            
                             ActivityLogModel log = new ActivityLogModel();
                             log.model = "membership";
                             log.action = "update";

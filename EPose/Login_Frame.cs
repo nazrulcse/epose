@@ -72,7 +72,7 @@ namespace EPose
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            /*String userId = userid.Text;
+            String userId = userid.Text;
             String userPassword = password.Text;
             if (userId == "" || userPassword == "")
             {
@@ -83,20 +83,14 @@ namespace EPose
             else
             {
                 authenticateUser(userId, userPassword);
-            }*/
+            }
             //InvoiceModel inv = new InvoiceModel();
             //dynamic invoice = inv.find(inv, "636548960494211");
             //InvoiceReport_Frame ir = new InvoiceReport_Frame(invoice);
             //ir.Show();
-            Main_Frame main = new Main_Frame();
-            main.Show();
-            this.Hide();
-            if(DepartmentSettings.is_master_till()) {
-               // System.Timers.Timer aTimer = new System.Timers.Timer();
-               // aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-               // aTimer.Interval = 20000;
-               // aTimer.Enabled = true;
-            }
+            //Main_Frame main = new Main_Frame();
+            //main.Show();
+            //this.Hide();
         }
 
         private void OnTimedEvent(object sender, ElapsedEventArgs e)
@@ -121,18 +115,8 @@ namespace EPose
         }
 
         private void authenticateUser(String userId, String userPassword) {
-            //InvoiceModel inv = new InvoiceModel();
-            //dynamic invoice = inv.find(inv, "636538841229883");
-            //InvoiceItemModel invi = new InvoiceItemModel();
-            //dynamic items = invi.where(invi, "invoice_id = '" + invoice.id + "'");
-            //Console.WriteLine("" + invoice.id);
-            //Console.WriteLine(items);
-            //MessageBox.Show("dsf");
-            //PosReceipt ps = new PosReceipt(invoice);
-            //ps.print();
-
             EmployeeModel em = new EmployeeModel();
-            dynamic employee = em.find_by(em, "login_id", userId);
+            dynamic employee = em.find_by(em, "user_id", userId);
             if (employee != null)
             {
                 Boolean matchPassword = BCryptHelper.CheckPassword(userPassword, employee.password);
@@ -140,6 +124,13 @@ namespace EPose
                 {
                   Main_Frame main = new Main_Frame();
                   main.Show();
+                  if (DepartmentSettings.is_master_till())
+                  {
+                      System.Timers.Timer aTimer = new System.Timers.Timer();
+                      aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+                      aTimer.Interval = 900000;
+                      aTimer.Enabled = true;
+                  }
                   this.Hide();
                 }
                 else 

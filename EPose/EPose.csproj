@@ -208,6 +208,7 @@
     <Compile Include="Model\ProductModel.cs" />
     <Compile Include="Model\SettingsModel.cs" />
     <Compile Include="Model\SupplierModel.cs" />
+    <Compile Include="Model\TillClosingModel.cs" />
     <Compile Include="Model_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +218,12 @@
     <Compile Include="Orm\ActiveRecord.cs" />
     <Compile Include="Orm\ObjectBuilder.cs" />
     <Compile Include="Orm\SQLConn.cs" />
+    <Compile Include="PaymentList_Frame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentList_Frame.Designer.cs">
+      <DependentUpon>PaymentList_Frame.cs</DependentUpon>
+    </Compile>
     <Compile Include="payment_Frame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -365,6 +372,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Model_Frame.resx">
       <DependentUpon>Model_Frame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentList_Frame.resx">
+      <DependentUpon>PaymentList_Frame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="payment_Frame.resx">
       <DependentUpon>payment_Frame.cs</DependentUpon>

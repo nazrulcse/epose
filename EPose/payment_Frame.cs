@@ -286,12 +286,19 @@ namespace EPose
              if (dialogResult == DialogResult.Yes)
              {
                  InvoiceModel invoice = new InvoiceModel();
-                 invoice.update_attributeForSingleRow(invoice, "is_credit",1,this.invoice.id);
-
-                 DialogResult result = MessageDialog.Show("Your Payment Complete!", "Do you want to close payment form?");
-                 if (result == DialogResult.Yes)
+                 var response = invoice.update_attribute(invoice, "is_credit", "1", this.invoice.id);
+                 if (response != null)
                  {
-                     this.Close();
+                     this.invoice_form.paymentCompleted();
+                     DialogResult result = MessageDialog.Show("Your Payment Complete!", "Do you want to close payment form?");
+                     if (result == DialogResult.Yes)
+                     {
+                         this.Close();
+                     }
+                 }
+                 else
+                 {
+                     MessageDialog.ShowAlert("Payment Error!", "Unable to create payment, Please contact with admin!");
                  }
              }
         }

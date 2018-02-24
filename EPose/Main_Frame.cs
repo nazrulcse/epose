@@ -44,6 +44,7 @@ namespace EPose
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
@@ -101,7 +102,7 @@ namespace EPose
 
         private void button6_Click(object sender, EventArgs e)
         {
-           // new payment_Frame().Show();
+            new PaymentList_Frame().Show();
         }
 
         private void btnDatabaseConfig_Click(object sender, EventArgs e)

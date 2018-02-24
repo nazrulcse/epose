@@ -120,11 +120,15 @@ namespace EPose
                         MessageDialog.ShowAlert("Complete Current Invoice First", "Alert Message", "warning");
                     }
                     break;
+                case (Keys.Control | Keys.P):
+                    PrinterSelect_Frame pf = new PrinterSelect_Frame(this.inv);
+                    pf.Show();
+                    break;
                 case (Keys.Control | Keys.M):
                     if( this.inv != null){
                         if (inv.invoice_total > 0)
                         {
-                            MemberShip_Frame memberShip = new MemberShip_Frame(this.inv.invoice_total);
+                            MemberShip_Frame memberShip = new MemberShip_Frame(this.inv);
                             memberShip.Show();
                         }
                         else {
@@ -210,11 +214,6 @@ namespace EPose
             {
                 new PrinterSelect_Frame(this.inv).Show();
             }
-          //  result = MessageDialog.Show("Next Invoice!", "Is this invoice close and process next invoice?");
-          //  if (result == DialogResult.Yes)
-          //  {
-           //   resetInvoice();
-          //  }
         }
 
         public void updateAmount() {
@@ -228,7 +227,7 @@ namespace EPose
         public void createInvoice() {
             try
             {
-               // UpStream.perform();
+                UpStream.perform();
                 this.inv = new InvoiceModel();
                 var ms = (DateTime.Now - DateTime.MinValue).TotalMilliseconds * 10;
                 inv.id = ms.ToString();
@@ -261,7 +260,7 @@ namespace EPose
 
         public void paymentCompleted() {
             updateInvoice();
-            //UpStream.perform();
+            UpStream.perform();
         }
 
         public void resetInvoice(Boolean create = true) {
