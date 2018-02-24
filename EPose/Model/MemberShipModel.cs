@@ -16,7 +16,7 @@ namespace EPose.Model
         public string address { get; set; }
         public double point { get; set; }
         public string code { get; set; }
-        public string last_point { get; set; }
+        public double last_point { get; set; }
         public bool is_active { get; set; }
         public string action { get; set; }
         public string log_id { get; set; }

@@ -23,6 +23,8 @@ namespace EPose.Model
         public Boolean is_paid { get; set; }
         public int is_credit { get; set; }
         public double net_due { get; set; }
+        public double point { get; set; }
+        public double lastPoint { get; set; }
 
         public string getTable() {
             return "invoices";

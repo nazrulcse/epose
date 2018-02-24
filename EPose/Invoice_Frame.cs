@@ -122,7 +122,7 @@ namespace EPose
                     if( this.inv != null){
                         if (inv.invoice_total > 0)
                         {
-                            MemberShip_Frame memberShip = new MemberShip_Frame(this.inv.invoice_total);
+                            MemberShip_Frame memberShip = new MemberShip_Frame(this.inv);
                             memberShip.Show();
                         }
                         else {

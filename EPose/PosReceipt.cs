@@ -35,7 +35,7 @@ namespace EPose
                         pd.PrinterSettings.PrinterName = this.printer_name;
                     }
                     pd.PrintPage += new PrintPageEventHandler(this.perform);
-                    //pd.Print();
+                    pd.Print();
                 }
                 catch(Exception ex) {
                     MessageBox.Show(ex.Message);
@@ -113,12 +113,18 @@ namespace EPose
             sb.AppendLine("                                                Net Due:" + (total + vat));
             sb.AppendLine("                                                   Paid:" + (total + vat + 111));
             sb.AppendLine("                                                 Change:" + 111);
-            sb.AppendLine("Payment Mode:" + payments[0].payment_method);
+
+            String paymentType = "";
+            if (payments.Count > 0)
+            {
+                paymentType = payments[0].payment_method;
+            }
+            sb.AppendLine("Payment Mode:" + paymentType);
             sb.AppendLine("--------------------------------------------------------------");
             sb.AppendLine("CASH                                                    " + (total + vat));
             sb.AppendLine("--------------------------------------------------------------");
-            sb.AppendLine("Current Bonus Point : 27.50");
-            sb.AppendLine("Current Bonus Point : 57.72");
+            sb.AppendLine("Current Bonus Point :" + this.invoice.point);
+            sb.AppendLine("Last Bonus Point :" + this.invoice.lastPoint);
             sb.AppendLine("---------------------------------------------------------------");
             sb.AppendLine("Sold item cannot be refunded but be exchanged");
             sb.AppendLine("within 72 hours with revevant recepit.");
@@ -128,6 +134,8 @@ namespace EPose
             Console.WriteLine(sb.ToString());
             return sb.ToString();
         }
+
+       
 
         public String GenerateBody()
         {
