@@ -19,15 +19,12 @@ namespace EPose
             InitializeComponent();
             this.ActiveControl = textBoxMobile;
             this.setTitle("Membership Window");
-
             this.total_price = total_price;
-            
-           
         }
 
         private void MemberShip_Frame_Load(object sender, EventArgs e)
         {
-           
+            DepartmentSettings.getData();  
         }
 
        
@@ -100,9 +97,8 @@ namespace EPose
                             log.action = "update";
                             log.date = DateTime.Now.ToString("yyyy-MM-dd");
                             log.ref_id = id;
+                            log.department_id = DepartmentSettings.DepartmentId;
                             log.create(log);
-
-                            // this.invoice.addProduct(search_products[productItems.SelectedRows[0].Index]);
                             this.Close();
                         }
                     }

@@ -26,10 +26,9 @@ namespace EPose.Model
             return "departments";
         }
 
-
         public Array attrAccess()
         {
-            return new String[] { "id", "name","description","image","company_id","email","mobile" };
+            return new String[] { "id", "name", "description", "image", "company_id", "email", "mobile" };
         }
 
     }

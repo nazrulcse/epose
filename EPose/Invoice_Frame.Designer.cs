@@ -134,12 +134,11 @@
             // barcodeInput
             // 
             this.barcodeInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.barcodeInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barcodeInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.barcodeInput.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.barcodeInput.Location = new System.Drawing.Point(81, 14);
-            this.barcodeInput.Margin = new System.Windows.Forms.Padding(2);
+            this.barcodeInput.Location = new System.Drawing.Point(93, 11);
             this.barcodeInput.Name = "barcodeInput";
-            this.barcodeInput.Size = new System.Drawing.Size(252, 26);
+            this.barcodeInput.Size = new System.Drawing.Size(632, 35);
             this.barcodeInput.TabIndex = 1;
             this.barcodeInput.Enter += new System.EventHandler(this.barcodeInput_Enter);
             this.barcodeInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.barcodeInput_KeyDown);
@@ -148,12 +147,12 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Centaur", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Centaur", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label17.Location = new System.Drawing.Point(10, 16);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(65, 21);
+            this.label17.Size = new System.Drawing.Size(82, 27);
             this.label17.TabIndex = 45;
             this.label17.Text = "Barcode";
             // 
@@ -790,6 +789,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation;
             this.Text = "Invoice";
             this.Load += new System.EventHandler(this.Invoice_Frame_Load);
+            this.Shown += new System.EventHandler(this.Invoice_Frame_Shown);
             this.Controls.SetChildIndex(this.panelBody, 0);
             this.Controls.SetChildIndex(this.topPanel, 0);
             this.Controls.SetChildIndex(this.invoicePanel, 0);

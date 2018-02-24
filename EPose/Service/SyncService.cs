@@ -13,8 +13,8 @@ namespace EPose.Service
     class SyncService
     {
         public static void run() {
-            Console.WriteLine("Sync service started...");
-            InvoiceService.perform();
+            //Console.WriteLine("Sync service started...");
+            //InvoiceService.perform();
             //MemberShipService.perform();
            // DepartmentService.perform();
             //EmployeeService.perform();

@@ -37,8 +37,7 @@ namespace EPose
 
             try
             {
-
-            var fileName = "D:/Development/Projects/epose/EPose/invoice_Report.rdlc";
+            var fileName = AppDomain.CurrentDomain.BaseDirectory + "../../" + "invoice_Report.rdlc";
             using (var fs = new FileStream(fileName, FileMode.Open, FileAccess.Read))
             {
                 reportViewer1.LocalReport.LoadReportDefinition(fs);
@@ -80,8 +79,7 @@ namespace EPose
                 receivedAmount += payment.amount;
             }
 
-
-            string dueAfterRound = ""+Math.Round(this.invoice.net_due, 2);
+            string dueAfterRound = "" + Math.Round(this.invoice.net_due, 2);
             string totalAfterRound = "" + Math.Round(this.invoice.invoice_total, 2);
             parameters[5] = new ReportParameter("due", dueAfterRound);
             parameters[6] = new ReportParameter("invoiceNo", this.invoice.number);
@@ -91,7 +89,7 @@ namespace EPose
             parameters[10] = new ReportParameter("totalInWord", beforeDot + " Taka" + afterDot);
             parameters[11] = new ReportParameter("discount", " " + this.invoice.discount);
             parameters[12] = new ReportParameter("netAmount", " " + this.invoice.net_total);
-            parameters[13] = new ReportParameter("receivedAmount", " " + this.receivedAmount);
+            parameters[13] = new ReportParameter("receivedAmount", " " + Math.Round(this.receivedAmount, 2));
                 reportViewer1.LocalReport.DataSources.Clear();
                 reportViewer1.LocalReport.SetParameters(parameters);
                 reportViewer1.ProcessingMode = ProcessingMode.Local;

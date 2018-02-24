@@ -67,6 +67,7 @@ namespace EPose.Service.PosService
                     data.invoice_total = invoice.invoice_total;
                     data.discount = invoice.discount;
                     data.vat = invoice.vat;
+                    data.till_id = invoice.till_id;
                     data.net_total = invoice.net_total;
                     data.department_id = invoice.department_id;
                     data.customer_id = invoice.customer_id;

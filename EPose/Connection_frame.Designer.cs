@@ -52,6 +52,9 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.master_till = new System.Windows.Forms.CheckBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.branch_logo = new System.Windows.Forms.PictureBox();
             this.browseButton = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -69,14 +72,15 @@
             this.txtTillId = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.logoUploader = new System.Windows.Forms.OpenFileDialog();
+            this.upload_logo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.GroupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.branch_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -85,7 +89,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(553, 37);
+            this.panel1.Size = new System.Drawing.Size(569, 37);
             this.panel1.TabIndex = 4;
             // 
             // Label6
@@ -316,7 +320,7 @@
             this.tabControl1.Location = new System.Drawing.Point(3, 40);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(567, 389);
+            this.tabControl1.Size = new System.Drawing.Size(583, 436);
             this.tabControl1.TabIndex = 30;
             // 
             // tabPage1
@@ -326,7 +330,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(559, 363);
+            this.tabPage1.Size = new System.Drawing.Size(575, 410);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Database";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -337,14 +341,17 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(559, 363);
+            this.tabPage2.Size = new System.Drawing.Size(575, 410);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Department";
+            this.tabPage2.Text = "Department & Till";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.pictureBox4);
+            this.groupBox2.Controls.Add(this.upload_logo);
+            this.groupBox2.Controls.Add(this.master_till);
+            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.branch_logo);
             this.groupBox2.Controls.Add(this.browseButton);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.label15);
@@ -365,16 +372,45 @@
             this.groupBox2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(553, 357);
+            this.groupBox2.Size = new System.Drawing.Size(569, 404);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Department Settings";
             // 
+            // master_till
+            // 
+            this.master_till.AutoSize = true;
+            this.master_till.Location = new System.Drawing.Point(211, 312);
+            this.master_till.Name = "master_till";
+            this.master_till.Size = new System.Drawing.Size(95, 20);
+            this.master_till.TabIndex = 32;
+            this.master_till.Text = "Master Till";
+            this.master_till.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            this.label17.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(39, 309);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(153, 28);
+            this.label17.TabIndex = 31;
+            this.label17.Text = "Is it master Till?";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // branch_logo
+            // 
+            this.branch_logo.Location = new System.Drawing.Point(481, 22);
+            this.branch_logo.Name = "branch_logo";
+            this.branch_logo.Size = new System.Drawing.Size(76, 64);
+            this.branch_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.branch_logo.TabIndex = 30;
+            this.branch_logo.TabStop = false;
+            // 
             // browseButton
             // 
-            this.browseButton.Location = new System.Drawing.Point(242, 207);
+            this.browseButton.Location = new System.Drawing.Point(212, 207);
             this.browseButton.Name = "browseButton";
-            this.browseButton.Size = new System.Drawing.Size(85, 31);
+            this.browseButton.Size = new System.Drawing.Size(113, 31);
             this.browseButton.TabIndex = 29;
             this.browseButton.Text = "Browse";
             this.browseButton.UseVisualStyleBackColor = true;
@@ -383,9 +419,9 @@
             // label16
             // 
             this.label16.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(75, 206);
+            this.label16.Location = new System.Drawing.Point(38, 209);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(153, 28);
+            this.label16.Size = new System.Drawing.Size(167, 28);
             this.label16.TabIndex = 28;
             this.label16.Text = "Select Logo";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -393,9 +429,9 @@
             // label15
             // 
             this.label15.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(76, 172);
+            this.label15.Location = new System.Drawing.Point(39, 175);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(153, 28);
+            this.label15.Size = new System.Drawing.Size(167, 28);
             this.label15.TabIndex = 27;
             this.label15.Text = "Baranch Name:";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -405,29 +441,29 @@
             this.textBoxBranchName.BackColor = System.Drawing.Color.White;
             this.textBoxBranchName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxBranchName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBranchName.Location = new System.Drawing.Point(242, 173);
+            this.textBoxBranchName.Location = new System.Drawing.Point(212, 173);
             this.textBoxBranchName.Name = "textBoxBranchName";
-            this.textBoxBranchName.Size = new System.Drawing.Size(174, 27);
+            this.textBoxBranchName.Size = new System.Drawing.Size(247, 27);
             this.textBoxBranchName.TabIndex = 26;
             // 
             // textBoxAdress
             // 
             this.textBoxAdress.Font = new System.Drawing.Font("Verdana", 12F);
-            this.textBoxAdress.Location = new System.Drawing.Point(241, 249);
+            this.textBoxAdress.Location = new System.Drawing.Point(211, 249);
             this.textBoxAdress.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAdress.Name = "textBoxAdress";
-            this.textBoxAdress.Size = new System.Drawing.Size(174, 42);
+            this.textBoxAdress.Size = new System.Drawing.Size(247, 42);
             this.textBoxAdress.TabIndex = 25;
             this.textBoxAdress.Text = "";
             // 
             // label14
             // 
             this.label14.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(75, 243);
+            this.label14.Location = new System.Drawing.Point(38, 246);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(153, 28);
+            this.label14.Size = new System.Drawing.Size(167, 28);
             this.label14.TabIndex = 24;
-            this.label14.Text = "Adress :";
+            this.label14.Text = "Adress:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // textBoxVatChalan
@@ -435,17 +471,17 @@
             this.textBoxVatChalan.BackColor = System.Drawing.Color.White;
             this.textBoxVatChalan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxVatChalan.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxVatChalan.Location = new System.Drawing.Point(242, 95);
+            this.textBoxVatChalan.Location = new System.Drawing.Point(212, 95);
             this.textBoxVatChalan.Name = "textBoxVatChalan";
-            this.textBoxVatChalan.Size = new System.Drawing.Size(174, 27);
+            this.textBoxVatChalan.Size = new System.Drawing.Size(247, 27);
             this.textBoxVatChalan.TabIndex = 19;
             // 
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(76, 136);
+            this.label11.Location = new System.Drawing.Point(39, 139);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(153, 28);
+            this.label11.Size = new System.Drawing.Size(167, 28);
             this.label11.TabIndex = 22;
             this.label11.Text = "Vat Regestration:";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -455,31 +491,31 @@
             this.textBoxVatRegestration.BackColor = System.Drawing.Color.White;
             this.textBoxVatRegestration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxVatRegestration.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxVatRegestration.Location = new System.Drawing.Point(242, 133);
+            this.textBoxVatRegestration.Location = new System.Drawing.Point(212, 133);
             this.textBoxVatRegestration.Name = "textBoxVatRegestration";
-            this.textBoxVatRegestration.Size = new System.Drawing.Size(174, 27);
+            this.textBoxVatRegestration.Size = new System.Drawing.Size(247, 27);
             this.textBoxVatRegestration.TabIndex = 20;
             // 
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(76, 98);
+            this.label13.Location = new System.Drawing.Point(39, 101);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(139, 28);
+            this.label13.Size = new System.Drawing.Size(167, 28);
             this.label13.TabIndex = 21;
             this.label13.Text = "Vat Chalan:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // exitForm
             // 
-            this.exitForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
+            this.exitForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(63)))), ((int)(((byte)(58)))));
             this.exitForm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exitForm.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
             this.exitForm.FlatAppearance.BorderSize = 0;
             this.exitForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitForm.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitForm.ForeColor = System.Drawing.Color.White;
-            this.exitForm.Location = new System.Drawing.Point(441, 303);
+            this.exitForm.Location = new System.Drawing.Point(462, 355);
             this.exitForm.Name = "exitForm";
             this.exitForm.Size = new System.Drawing.Size(97, 38);
             this.exitForm.TabIndex = 18;
@@ -498,7 +534,7 @@
             this.saveDepartment.ForeColor = System.Drawing.Color.White;
             this.saveDepartment.Image = ((System.Drawing.Image)(resources.GetObject("saveDepartment.Image")));
             this.saveDepartment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.saveDepartment.Location = new System.Drawing.Point(331, 303);
+            this.saveDepartment.Location = new System.Drawing.Point(366, 355);
             this.saveDepartment.Name = "saveDepartment";
             this.saveDepartment.Size = new System.Drawing.Size(85, 38);
             this.saveDepartment.TabIndex = 17;
@@ -512,17 +548,17 @@
             this.txtDepartmentId.BackColor = System.Drawing.Color.White;
             this.txtDepartmentId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDepartmentId.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDepartmentId.Location = new System.Drawing.Point(242, 22);
+            this.txtDepartmentId.Location = new System.Drawing.Point(212, 22);
             this.txtDepartmentId.Name = "txtDepartmentId";
-            this.txtDepartmentId.Size = new System.Drawing.Size(174, 27);
+            this.txtDepartmentId.Size = new System.Drawing.Size(247, 27);
             this.txtDepartmentId.TabIndex = 13;
             // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(76, 58);
+            this.label7.Location = new System.Drawing.Point(39, 61);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(139, 28);
+            this.label7.Size = new System.Drawing.Size(167, 28);
             this.label7.TabIndex = 16;
             this.label7.Text = "Till Setting ID:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -532,38 +568,53 @@
             this.txtTillId.BackColor = System.Drawing.Color.White;
             this.txtTillId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTillId.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTillId.Location = new System.Drawing.Point(242, 59);
+            this.txtTillId.Location = new System.Drawing.Point(212, 59);
             this.txtTillId.Name = "txtTillId";
-            this.txtTillId.Size = new System.Drawing.Size(174, 27);
+            this.txtTillId.Size = new System.Drawing.Size(247, 27);
             this.txtTillId.TabIndex = 14;
             // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(76, 19);
+            this.label8.Location = new System.Drawing.Point(39, 22);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(139, 28);
+            this.label8.Size = new System.Drawing.Size(167, 28);
             this.label8.TabIndex = 15;
-            this.label8.Text = "Code :";
+            this.label8.Text = "Department Code:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // pictureBox4
+            // logoUploader
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(481, 22);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(57, 57);
-            this.pictureBox4.TabIndex = 30;
-            this.pictureBox4.TabStop = false;
+            this.logoUploader.FileName = "openFileDialog2";
+            this.logoUploader.FileOk += new System.ComponentModel.CancelEventHandler(this.logoUploader_FileOk);
+            // 
+            // upload_logo
+            // 
+            this.upload_logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(223)))));
+            this.upload_logo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.upload_logo.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
+            this.upload_logo.FlatAppearance.BorderSize = 0;
+            this.upload_logo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.upload_logo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.upload_logo.ForeColor = System.Drawing.Color.White;
+            this.upload_logo.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.upload_logo.Location = new System.Drawing.Point(478, 96);
+            this.upload_logo.Name = "upload_logo";
+            this.upload_logo.Size = new System.Drawing.Size(79, 38);
+            this.upload_logo.TabIndex = 33;
+            this.upload_logo.Text = "Logo";
+            this.upload_logo.UseVisualStyleBackColor = false;
+            this.upload_logo.Click += new System.EventHandler(this.upload_logo_Click);
             // 
             // Connection_frame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(573, 432);
+            this.ClientSize = new System.Drawing.Size(589, 479);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Connection_frame";
@@ -579,7 +630,7 @@
             this.tabPage2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.branch_logo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -626,7 +677,11 @@
         internal System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button browseButton;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox branch_logo;
+        private System.Windows.Forms.CheckBox master_till;
+        internal System.Windows.Forms.Label label17;
+        private System.Windows.Forms.OpenFileDialog logoUploader;
+        private System.Windows.Forms.Button upload_logo;
 
     }
 }

@@ -83,8 +83,6 @@ namespace EPose.Service.Sync
             }
         }
 
-
-
         public static object syncCustomer(string url)
         {
             HttpResponseMessage response = WebAPI.getRequest(url, "customers");  // Blocking call!
@@ -99,21 +97,18 @@ namespace EPose.Service.Sync
             }
         }
 
-
-
         public static void perform()
         {
             new Thread(() =>
             {
                 Thread.CurrentThread.IsBackground = true;
                 Console.WriteLine("Thread running......");
-               CustomerService.perform();
-               DepartmentService.perform();
-               EmployeeService.perform();
-                MemberShipWebService.perform();
-               ProductService.perform();
-               SupplierService.perform();
-               
+                //CustomerService.perform();
+                //DepartmentService.perform();
+                //EmployeeService.perform();
+                //MemberShipWebService.perform();
+                ProductService.perform();
+                //SupplierService.perform();
             }).Start();
         }
     }

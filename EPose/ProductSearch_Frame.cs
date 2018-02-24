@@ -26,7 +26,7 @@ namespace EPose
             productItems.Rows.Clear();
             this.search_products = products;
             foreach(var p in products){
-                productItems.Rows.Add(p.barcode, p.name, "10", p.sale_price, p.vat+"%", "2%", p.sale_price * 1);
+                productItems.Rows.Add(p.barcode, p.name, p.unit, Math.Round(p.sale_price, 2), p.vat + "%", "2%", Math.Round(p.sale_price, 2));
             }
         }
 

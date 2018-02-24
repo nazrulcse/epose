@@ -34,6 +34,8 @@ namespace EPose
 
         private void Connection_frame_Load(object sender, EventArgs e)
         {
+            SQLConn.getData();
+            DepartmentSettings.getData();
             txtServerHost.Text = SQLConn.ServerMySQL;
             txtPort.Text = SQLConn.PortMySQL;
             txtUserName.Text = SQLConn.UserNameMySQL;
@@ -45,7 +47,8 @@ namespace EPose
             textBoxVatRegestration.Text = DepartmentSettings.vatRegstration;
             textBoxBranchName.Text = DepartmentSettings.branchName;
             textBoxAdress.Text = DepartmentSettings.address;
-            pictureBox4.Image = DepartmentSettings.logo;
+            branch_logo.Image = new Bitmap(DepartmentSettings.logo);
+            master_till.Checked = DepartmentSettings.is_master_till();
         }
 
 
@@ -106,29 +109,14 @@ namespace EPose
                     SQLConn.conn.ConnectionString = "Server = '" + TstServerMySQL + "';  " + "Port = '" + TstPortMySQL + "'; " + "Database = '" + TstDBNameMySQL + "'; " + "user id = '" + TstUserNameMySQL + "'; " + "password = '" + TstPwdMySQL + "'";
                     SQLConn.conn.Open();
 
-                  SQLConn.DBNameMySQL = txtDatabase.Text;
+                    SQLConn.DBNameMySQL = txtDatabase.Text;
                     SQLConn.ServerMySQL = txtServerHost.Text;
-                   SQLConn.UserNameMySQL = txtUserName.Text;
-                   SQLConn.PortMySQL = txtPort.Text;
+                    SQLConn.UserNameMySQL = txtUserName.Text;
+                    SQLConn.PortMySQL = txtPort.Text;
                     SQLConn.PwdMySQL = txtPassword.Text;
-                   //SQLConn.department_Id = txtDepartmentId.Text;
+                    SQLConn.SaveData();
 
-                   SQLConn.SaveData();
-                    string startupPath = System.IO.Directory.GetCurrentDirectory();
-                    using (StreamWriter objWriter = new StreamWriter(startupPath+"/DatabaseConnectionFile.txt"))
-                    {
-                        objWriter.WriteLine(txtServerHost.Text);
-                        objWriter.WriteLine(txtPort.Text);
-                        objWriter.WriteLine(txtUserName.Text);
-                        objWriter.WriteLine(txtPassword.Text);
-                        objWriter.WriteLine(txtDatabase.Text);
-                    
-                        MessageBox.Show("Details have been saved to file");
-                    }
-
-
-
-                    this.Close();
+                    MessageDialog.ShowAlert("Settings saved successfully");
                 }
                 catch
                 {
@@ -152,7 +140,7 @@ namespace EPose
             DepartmentSettings.vatRegstration = textBoxVatRegestration.Text;
             DepartmentSettings.branchName = textBoxBranchName.Text;
             DepartmentSettings.address = textBoxAdress.Text;
-            DepartmentSettings.logo = bitmap;
+            DepartmentSettings.master_till = master_till.Checked ? "1" : "0";
             DepartmentSettings.SaveData();
         }
        
@@ -163,18 +151,37 @@ namespace EPose
             DialogResult result = ofd.ShowDialog(); // Show the dialog.
             if (result == DialogResult.OK) // Test result.
             {
-                
                 try
                 {
                     i = Image.FromFile(ofd.FileName);
                     bitmap = (Bitmap)i;
-                    pictureBox4.Image = bitmap;
+                    branch_logo.Image = bitmap;
                 }
                 catch (IOException)
                 {
                 }
             }
            
+        }
+
+        private void logoUploader_FileOk(object sender, CancelEventArgs e)
+        {
+              
+        }
+
+        private void upload_logo_Click(object sender, EventArgs e)
+        {
+            // open file dialog   
+            OpenFileDialog open = new OpenFileDialog();
+            // image filters  
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                // display image in picture box  
+                branch_logo.Image = new Bitmap(open.FileName);
+                // image file path  
+                DepartmentSettings.logo = open.FileName;
+            }  
         }
        
     }

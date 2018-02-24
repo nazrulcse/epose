@@ -32,10 +32,11 @@ namespace EPose
         private void Login_Frame_Load(object sender, EventArgs e)
         {
            DepartmentSettings.getData();
-           branch.Text = DepartmentSettings.DepartmentId;
+           branch.Text = DepartmentSettings.branchName;
            branch.Enabled = false;
            userid.Focus();
-           loadDatabaseSettings();
+           //MessageBox.Show("path: " + AppDomain.CurrentDomain.BaseDirectory + "../../");
+           //loadDatabaseSettings();
         }
 
         private void topHeader_MouseDown(object sender, MouseEventArgs e)
@@ -83,24 +84,25 @@ namespace EPose
             {
                 authenticateUser(userId, userPassword);
             }*/
-           // InvoiceModel inv = new InvoiceModel();
-           //dynamic invoice = inv.find(inv, "636548960494211");
+            //InvoiceModel inv = new InvoiceModel();
+            //dynamic invoice = inv.find(inv, "636548960494211");
+            //InvoiceReport_Frame ir = new InvoiceReport_Frame(invoice);
+            //ir.Show();
             Main_Frame main = new Main_Frame();
             main.Show();
-            //this.Hide();
-           // InvoiceReport_Frame ir = new InvoiceReport_Frame(invoice);
-           // ir.Show();
-            //System.Timers.Timer aTimer = new System.Timers.Timer();
-            //aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-            //aTimer.Interval = 20000;
-            //aTimer.Enabled = true;
+            this.Hide();
+            if(DepartmentSettings.is_master_till()) {
+               // System.Timers.Timer aTimer = new System.Timers.Timer();
+               // aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+               // aTimer.Interval = 20000;
+               // aTimer.Enabled = true;
+            }
         }
 
         private void OnTimedEvent(object sender, ElapsedEventArgs e)
         {
-            //throw new NotImplementedException();
             Console.WriteLine("Syns started...........");
-           // DownStream.perform();
+            DownStream.perform();
         }
 
         private void cancel_Click(object sender, EventArgs e)

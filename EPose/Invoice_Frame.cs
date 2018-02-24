@@ -69,14 +69,16 @@ namespace EPose
         {
             if (this.inv != null)
             {
-                topDisplay.Text = "1" + product.unit + " @ " + product.sale_price + " Tk";
+                topDisplay.Text = "1" + product.unit + " @ " + Math.Round(product.sale_price, 2) + " Tk";
                 double total = product.sale_price * 1;
+                total = Math.Round(total, 2);
                 this.inv.invoice_total += total;
                 //calculate vat per product
                 double vat = product.sale_price * (product.vat / 100);
+                vat = Math.Round(vat, 2);
                 //add per product vat to total vat
                 this.inv.vat += vat;
-                this.invoiceItems.Rows.Add(product.barcode, product.name, product.unit, product.sale_price, product.vat + "%", "0%", total);
+                this.invoiceItems.Rows.Add(product.barcode, product.name, product.unit, Math.Round(product.sale_price, 2), Math.Round(product.vat, 2) + "%", "0%", total);
                 barcodeInput.Text = "";
                 updateAmount();
                 createLineItem(product);
@@ -234,6 +236,7 @@ namespace EPose
                 inv.date = DateTime.Now.ToString("yyyy-MM-dd");
                 inv.department_id = DepartmentSettings.DepartmentId;
                 inv.till_id = DepartmentSettings.TillId;
+                inv.barcode = inv.number;
                 dynamic invoice = inv.create(inv);
                 if (invoice != null)
                 {
@@ -497,6 +500,15 @@ namespace EPose
         {
             PurchaseReturn_Frame pf = new PurchaseReturn_Frame();
             pf.Show();
+        }
+
+        private void Invoice_Frame_Shown(object sender, EventArgs e)
+        {
+            DialogResult result = MessageDialog.Show("New Invoice", "Do you want to create new invoice?");
+            if (result == DialogResult.Yes)
+            {
+                this.createInvoice();
+            }
         }                                                                                                                                                                                                                                                                                                                                                                                                                                          
     }
 }
