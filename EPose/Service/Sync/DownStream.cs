@@ -103,12 +103,12 @@ namespace EPose.Service.Sync
             {
                 Thread.CurrentThread.IsBackground = true;
                 Console.WriteLine("Thread running......");
-                //CustomerService.perform();
-                //DepartmentService.perform();
-                //EmployeeService.perform();
-                //MemberShipWebService.perform();
+                CustomerService.perform();
+                DepartmentService.perform();
+                EmployeeService.perform();
+                MemberShipWebService.perform();
                 ProductService.perform();
-                //SupplierService.perform();
+                SupplierService.perform();
             }).Start();
         }
     }

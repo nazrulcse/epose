@@ -15,7 +15,7 @@ namespace EPose
     {
         double total_price;
         dynamic invoice;
-        public MemberShip_Frame(dynamic invoice)
+        public MemberShip_Frame(dynamic invoice = null)
         {
             InitializeComponent();
             this.ActiveControl = textBoxMobile;
@@ -74,7 +74,7 @@ namespace EPose
 
         private void memberList_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter && this.invoice != null)
             {
                 int SelectedRow = memberList.SelectedRows[0].Index;
                 dynamic cellValue = memberList.Rows[SelectedRow].Cells["Point"].Value;

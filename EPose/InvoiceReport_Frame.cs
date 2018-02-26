@@ -35,8 +35,8 @@ namespace EPose
             DataSet ds = new DataSet();
             adptr.Fill(ds, "DataSet2");
 
-            try
-            {
+          //  try
+          //  {
             var fileName = AppDomain.CurrentDomain.BaseDirectory + "../../" + "invoice_Report.rdlc";
             using (var fs = new FileStream(fileName, FileMode.Open, FileAccess.Read))
             {
@@ -96,11 +96,11 @@ namespace EPose
                 reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet2", ds.Tables[0]));
                 reportViewer1.LocalReport.Refresh();
                 reportViewer1.RefreshReport();
-            }
-            catch (Exception ex)
-            {
-                MessageDialog.ShowAlert("Error: " + ex.Message.ToString());
-            }
+           // }
+            //catch (Exception ex)
+            //{
+              //  MessageDialog.ShowAlert("Error: " + ex.Message.ToString());
+            //}
         }
 
 

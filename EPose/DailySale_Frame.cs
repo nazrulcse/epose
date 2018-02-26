@@ -30,6 +30,8 @@ namespace EPose
             string date = DateTime.Now.ToString("yyyy-MM-dd");
             loadSales(date);
             loadDailyTransaction();
+            loadInvoice();
+           // this.ActiveControl = textBoxSearchInvoice;
         }
 
 
@@ -72,28 +74,32 @@ namespace EPose
             cashSaleLabel.Text = "" + Math.Round(totalCashPayment, 2);
         }
 
-        public void loadDailyTransaction() { 
-        
-             dateLabel.Text = DateTime.Now.ToString("dd.MM.yyy");
-             PaymentModel pay = new PaymentModel();
-             string date = DateTime.Now.ToString("yyyy-MM-dd");
-             dynamic payments = pay.where(pay, "date = '" + date + "'");
+        public void loadDailyTransaction()
+        {
 
-             if (payments.Count > 0)
-             {
-                 foreach (var payment in payments)
-                 {
-                     paymentList.Rows.Add(payment.id, payment.payment_method, payment.invoice_id, payment.amount, payment.transaction_token, payment.date);
-                 }
-             }
+            dateLabel.Text = DateTime.Now.ToString("dd.MM.yyy");
+            PaymentModel pay = new PaymentModel();
+            string date = DateTime.Now.ToString("yyyy-MM-dd");
+            dynamic payments = pay.where(pay, "date = '" + date + "'");
+
+            if (payments.Count > 0)
+            {
+                foreach (var payment in payments)
+                {
+                    paymentList.Rows.Add(payment.id, payment.payment_method, payment.invoice_id, payment.amount, payment.transaction_token, payment.date);
+                }
+            }
+
         }
+
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             String searchValue = dateTimePicker1.Value.ToString("yyyy-MM-dd");
             InvoiceModel inv = new InvoiceModel();
             dynamic invoices = inv.where(inv, "till_id = '" + DepartmentSettings.TillId + "' and date ='" + searchValue + "'");
 
-            if(invoices.Count>0){
+            if (invoices.Count > 0)
+            {
                 string invoiceIds = null;
                 foreach (var invoice in invoices)
                 {
@@ -117,16 +123,76 @@ namespace EPose
             else
             {
                 paymentList.Rows.Clear();
-                totalLabel.Text = "" ;
-                cardLabel.Text = "" ;
-                mobileLabel.Text = "" ;
-                debitLabel.Text = "" ;
+                totalLabel.Text = "";
+                cardLabel.Text = "";
+                mobileLabel.Text = "";
+                debitLabel.Text = "";
                 cashSaleLabel.Text = "";
             }
+        }
 
+        public void loadInvoice()
+        {
+            InvoiceModel inv = new InvoiceModel();
+            dynamic invoices = inv.all(inv);
+            loadInvoiceData(invoices);
+        }
 
+        private void dateTimePickerSearchInvoice_ValueChanged(object sender, EventArgs e)
+        {
+             String searchValue = dateTimePickerSearchInvoice.Value.ToString("yyyy-MM-dd");
+            InvoiceModel inv = new InvoiceModel();
+            dynamic invoices = inv.where(inv," date ='" + searchValue + "'");
 
-          
+            loadInvoiceData(invoices);
+        }
+
+        private void textBoxSearchInvoice_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Return)
+            {
+                string number = textBoxSearchInvoice.Text;
+                InvoiceModel inv = new InvoiceModel();
+                dynamic invoices = inv.where(inv, "lower(number) like '%" + number.ToLower() + "%'");
+                loadInvoiceData(invoices);
+            }
+        }
+
+        public void loadInvoiceData(dynamic invoices) {
+          if (invoices.Count > 0)
+                {
+                    invoiceList.Rows.Clear();
+                    foreach (dynamic invoice in invoices)
+                    {
+                        string paymentType = "";
+                        PaymentModel pay = new PaymentModel();
+                        dynamic payments = pay.where(pay, "invoice_id ='" + invoice.id + "'");
+                        if (payments.Count > 0)
+                        {
+                            foreach (var payment in payments)
+                            {
+                                paymentType += (paymentType == "" ? payment.payment_method : "," + payment.payment_method);
+                            }
+                        }
+                        invoiceList.Rows.Add(invoice.id, invoice.number, invoice.customer_id, invoice.date.ToString("yyyy-MM-dd"), invoice.net_total, paymentType);
+                    }
+                }
+                else
+                {
+                    invoiceList.Rows.Clear();
+                    MessageDialog.ShowAlert("Invoice not found");
+                }
+        }
+
+        private void textBoxSearchInvoice_Leave(object sender, EventArgs e)
+        {
+            changeColor(textBoxSearchInvoice, "out");
+           
+        }
+
+        private void textBoxSearchInvoice_Enter(object sender, EventArgs e)
+        {
+            changeColor(textBoxSearchInvoice, "enter");
         }
     }
 }

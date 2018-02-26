@@ -35,6 +35,7 @@ namespace EPose
            branch.Text = DepartmentSettings.branchName;
            branch.Enabled = false;
            userid.Focus();
+           runSync();
            //MessageBox.Show("path: " + AppDomain.CurrentDomain.BaseDirectory + "../../");
            //loadDatabaseSettings();
         }
@@ -76,9 +77,9 @@ namespace EPose
             String userPassword = password.Text;
             if (userId == "" || userPassword == "")
             {
-                MessageBox.Show("Please input your user ID and Password");
-                userid.Focus();
-                return;
+               MessageBox.Show("Please input your user ID and Password");
+               userid.Focus();
+               return;
             }
             else
             {
@@ -88,9 +89,9 @@ namespace EPose
             //dynamic invoice = inv.find(inv, "636548960494211");
             //InvoiceReport_Frame ir = new InvoiceReport_Frame(invoice);
             //ir.Show();
-            //Main_Frame main = new Main_Frame();
-            //main.Show();
-            //this.Hide();
+          // Main_Frame main = new Main_Frame();
+           // main.Show();
+           // this.Hide();
         }
 
         private void OnTimedEvent(object sender, ElapsedEventArgs e)
@@ -124,13 +125,6 @@ namespace EPose
                 {
                   Main_Frame main = new Main_Frame();
                   main.Show();
-                  if (DepartmentSettings.is_master_till())
-                  {
-                      System.Timers.Timer aTimer = new System.Timers.Timer();
-                      aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-                      aTimer.Interval = 900000;
-                      aTimer.Enabled = true;
-                  }
                   this.Hide();
                 }
                 else 
@@ -212,6 +206,18 @@ namespace EPose
             SQLConn.DBNameMySQL = databaseInformation[4];
             SQLConn.SaveData();
             userid.Focus();
+        }
+
+        public void runSync()
+        {
+            Console.WriteLine("Run Sync.........");
+            if (DepartmentSettings.is_master_till())
+            {
+                System.Timers.Timer aTimer = new System.Timers.Timer();
+                aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+                aTimer.Interval = 240000;
+                aTimer.Enabled = true;
+            }
         }
     }
 }

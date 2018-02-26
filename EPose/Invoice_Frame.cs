@@ -69,23 +69,54 @@ namespace EPose
         {
             if (this.inv != null)
             {
-                topDisplay.Text = "1" + product.unit + " @ " + Math.Round(product.sale_price, 2) + " Tk";
-                double total = product.sale_price * 1;
-                total = Math.Round(total, 2);
-                this.inv.invoice_total += total;
-                //calculate vat per product
-                double vat = product.sale_price * (product.vat / 100);
-                vat = Math.Round(vat, 2);
-                //add per product vat to total vat
-                this.inv.vat += vat;
-                this.invoiceItems.Rows.Add(product.barcode, product.name, product.unit, Math.Round(product.sale_price, 2), Math.Round(product.vat, 2) + "%", "0%", total);
-                barcodeInput.Text = "";
-                updateAmount();
-                createLineItem(product);
+                int existing_item = searchExistingItem(product.id);
+                if (existing_item != -1)
+                {
+                    DataGridViewRow selected_row = invoiceItems.Rows[existing_item];
+                    int quantity = Int32.Parse(selected_row.Cells["quantity"].Value.ToString());
+                    double total = product.sale_price;
+                    this.inv.invoice_total += total;
+                    quantity += 1;
+                    total *= quantity;
+                    selected_row.Cells["quantity"].Value = quantity;
+                    selected_row.Cells["total"].Value = total;
+                    double invoiceVat = product.sale_price * (product.vat / 100);
+                    invoiceVat = Math.Round(invoiceVat, 2);
+                    this.inv.vat += invoiceVat;
+                    barcodeInput.Text = "";
+                    updateAmount();
+                }
+                else {
+                    topDisplay.Text = "1" + product.unit + " @ " + Math.Round(product.sale_price, 2) + " Tk";
+                    double total = product.sale_price * 1;
+                    total = Math.Round(total, 2);
+                    this.inv.invoice_total += total;
+                    //calculate vat per product
+                    double vat = product.sale_price * (product.vat / 100);
+                    vat = Math.Round(vat, 2);
+                    //add per product vat to total vat
+                    this.inv.vat += vat;
+                    this.invoiceItems.Rows.Add(product.id, product.barcode, product.name, product.unit, Math.Round(product.sale_price, 2), 1, Math.Round(product.vat, 2), "0%", total);
+                    barcodeInput.Text = "";
+                    updateAmount();
+                    createLineItem(product);
+                }
             }
             else {
                 MessageBox.Show("Invoice not initialize", "No invoice");
             }
+        }
+
+        public int searchExistingItem(String product_id)
+        {
+            foreach (DataGridViewRow row in invoiceItems.Rows)
+            {
+                if (row.Cells[0].Value != null && row.Cells[0].Value.ToString() == product_id)
+                {
+                    return row.Index;
+                }
+            }
+            return -1;
         }
 
         public void createLineItem(dynamic product) {
@@ -169,7 +200,7 @@ namespace EPose
             int windowWidth = Screen.PrimaryScreen.Bounds.Width;
             int windowHeight = Screen.PrimaryScreen.Bounds.Height;
             this.Width = (windowWidth - 200);
-            this.Height = (windowHeight - 100);
+            this.Height = 810; //(windowHeight - 100);
             invoicePanel.Width = Convert.ToInt32(this.Width - 320);
         }
 
@@ -508,6 +539,12 @@ namespace EPose
             {
                 this.createInvoice();
             }
+        }
+
+        private void btnMembership_Click(object sender, EventArgs e)
+        {
+            MemberShip_Frame msf = new MemberShip_Frame();
+            msf.Show();
         }                                                                                                                                                                                                                                                                                                                                                                                                                                          
     }
 }
