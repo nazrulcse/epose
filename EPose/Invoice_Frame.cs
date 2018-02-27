@@ -74,17 +74,31 @@ namespace EPose
                 {
                     DataGridViewRow selected_row = invoiceItems.Rows[existing_item];
                     int quantity = Int32.Parse(selected_row.Cells["quantity"].Value.ToString());
+                    string item_id = selected_row.Cells["invoiceItemId"].Value.ToString();
                     double total = product.sale_price;
                     this.inv.invoice_total += total;
                     quantity += 1;
-                    total *= quantity;
-                    selected_row.Cells["quantity"].Value = quantity;
-                    selected_row.Cells["total"].Value = total;
-                    double invoiceVat = product.sale_price * (product.vat / 100);
-                    invoiceVat = Math.Round(invoiceVat, 2);
-                    this.inv.vat += invoiceVat;
-                    barcodeInput.Text = "";
-                    updateAmount();
+                    InvoiceItemModel inv_item = new InvoiceItemModel();
+                    dynamic obj_invoice_item = inv_item.find(inv_item, item_id);
+                    if (obj_invoice_item != null)
+                    {
+                        total *= quantity;
+                        selected_row.Cells["quantity"].Value = quantity;
+                        selected_row.Cells["total"].Value = total;
+                        double invoiceVat = product.sale_price * (product.vat / 100);
+                        invoiceVat = Math.Round(invoiceVat * quantity, 2);
+                        this.inv.vat += invoiceVat;
+                        obj_invoice_item.quantity = quantity;
+                        obj_invoice_item.total = total;
+                        obj_invoice_item.vat = invoiceVat;
+                        obj_invoice_item.save(obj_invoice_item);
+                        barcodeInput.Text = "";
+                        updateAmount();
+                    }
+                    else
+                    {
+                        MessageDialog.ShowAlert("Unable to process the product item!");
+                    }
                 }
                 else {
                     topDisplay.Text = "1" + product.unit + " @ " + Math.Round(product.sale_price, 2) + " Tk";
@@ -96,10 +110,10 @@ namespace EPose
                     vat = Math.Round(vat, 2);
                     //add per product vat to total vat
                     this.inv.vat += vat;
-                    this.invoiceItems.Rows.Add(product.id, product.barcode, product.name, product.unit, Math.Round(product.sale_price, 2), 1, Math.Round(product.vat, 2), "0%", total);
+                    string item_id = createLineItem(product);
+                    this.invoiceItems.Rows.Add(product.id, item_id, product.barcode, product.name, product.unit, Math.Round(product.sale_price, 2), 1, Math.Round(product.vat, 2), "0%", total);
                     barcodeInput.Text = "";
                     updateAmount();
-                    createLineItem(product);
                 }
             }
             else {
@@ -119,7 +133,7 @@ namespace EPose
             return -1;
         }
 
-        public void createLineItem(dynamic product) {
+        public string createLineItem(dynamic product) {
             InvoiceItemModel inv_item = new InvoiceItemModel();
             var ms = (DateTime.Now - DateTime.MinValue).TotalMilliseconds * 10;
             inv_item.id = "INT" + ms.ToString();
@@ -134,6 +148,7 @@ namespace EPose
             inv_item.date = DateTime.Now.ToString("yyyy-MM-dd");
             inv_item.create(inv_item);
             ActivityLogModel.track("invoice_item", "create", inv_item.id);
+            return inv_item.id;
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -487,6 +502,7 @@ namespace EPose
                     resetInvoice(false);
                 }
             }
+
         }
 
         private Boolean checkForInvoice() {
@@ -545,6 +561,11 @@ namespace EPose
         {
             MemberShip_Frame msf = new MemberShip_Frame();
             msf.Show();
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            new Customer_Frame().Show();
         }                                                                                                                                                                                                                                                                                                                                                                                                                                          
     }
 }

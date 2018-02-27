@@ -54,37 +54,39 @@
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.MediumTurquoise;
-            this.label5.Location = new System.Drawing.Point(117, 48);
+            this.label5.Location = new System.Drawing.Point(8, 44);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(549, 45);
+            this.label5.Size = new System.Drawing.Size(290, 32);
             this.label5.TabIndex = 14;
             this.label5.Text = "Please Insert Mobile Number";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // textBoxMobile
             // 
             this.textBoxMobile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxMobile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMobile.Location = new System.Drawing.Point(247, 95);
-            this.textBoxMobile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxMobile.Location = new System.Drawing.Point(11, 78);
+            this.textBoxMobile.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMobile.Name = "textBoxMobile";
-            this.textBoxMobile.Size = new System.Drawing.Size(290, 30);
+            this.textBoxMobile.Size = new System.Drawing.Size(287, 26);
             this.textBoxMobile.TabIndex = 2;
             this.textBoxMobile.TextChanged += new System.EventHandler(this.txtMembership_TextChanged);
+            this.textBoxMobile.Enter += new System.EventHandler(this.textBoxMobile_Enter);
             this.textBoxMobile.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxMobile_KeyDown);
+            this.textBoxMobile.Leave += new System.EventHandler(this.textBoxMobile_Leave);
             // 
             // pointLabel
             // 
             this.pointLabel.AutoSize = true;
             this.pointLabel.BackColor = System.Drawing.Color.Transparent;
             this.pointLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pointLabel.Location = new System.Drawing.Point(488, 140);
-            this.pointLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.pointLabel.MinimumSize = new System.Drawing.Size(27, 0);
+            this.pointLabel.Location = new System.Drawing.Point(573, 81);
+            this.pointLabel.MinimumSize = new System.Drawing.Size(20, 0);
             this.pointLabel.Name = "pointLabel";
-            this.pointLabel.Size = new System.Drawing.Size(45, 25);
+            this.pointLabel.Size = new System.Drawing.Size(34, 18);
             this.pointLabel.TabIndex = 43;
             this.pointLabel.Text = "0.0";
             // 
@@ -93,25 +95,27 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(243, 138);
-            this.label18.MinimumSize = new System.Drawing.Size(20, 0);
+            this.label18.Location = new System.Drawing.Point(380, 78);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.MinimumSize = new System.Drawing.Size(15, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(238, 29);
+            this.label18.Size = new System.Drawing.Size(188, 23);
             this.label18.TabIndex = 42;
             this.label18.Text = "Membership Point:";
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.memberList);
-            this.panel1.Location = new System.Drawing.Point(4, 183);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(3, 109);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(774, 284);
+            this.panel1.Size = new System.Drawing.Size(615, 268);
             this.panel1.TabIndex = 4;
             // 
             // memberList
             // 
-            this.memberList.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.memberList.BackgroundColor = System.Drawing.Color.White;
+            this.memberList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.memberList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.memberList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -124,9 +128,8 @@
             this.memberList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.memberList.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.memberList.Location = new System.Drawing.Point(0, 0);
-            this.memberList.Margin = new System.Windows.Forms.Padding(4);
             this.memberList.Name = "memberList";
-            this.memberList.Size = new System.Drawing.Size(774, 284);
+            this.memberList.Size = new System.Drawing.Size(615, 268);
             this.memberList.TabIndex = 13;
             this.memberList.SelectionChanged += new System.EventHandler(this.memberList_SelectionChanged);
             this.memberList.KeyDown += new System.Windows.Forms.KeyEventHandler(this.memberList_KeyDown);
@@ -189,23 +192,24 @@
             // 
             // MemberShip_Frame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 468);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(621, 380);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pointLabel);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.textBoxMobile);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "MemberShip_Frame";
             this.Text = "MemberShip_Frame";
             this.Load += new System.EventHandler(this.MemberShip_Frame_Load);
-            this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.textBoxMobile, 0);
             this.Controls.SetChildIndex(this.label18, 0);
             this.Controls.SetChildIndex(this.pointLabel, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.memberList)).EndInit();
             this.ResumeLayout(false);

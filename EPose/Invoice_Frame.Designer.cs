@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Invoice_Frame));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new System.Windows.Forms.Panel();
             this.invoiceNumber = new System.Windows.Forms.Label();
             this.topLeftPanel = new System.Windows.Forms.Panel();
@@ -53,15 +54,6 @@
             this.receivedAmount = new System.Windows.Forms.TextBox();
             this.invoicePanel = new System.Windows.Forms.Panel();
             this.invoiceItems = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.holdInvoice = new System.Windows.Forms.Button();
@@ -92,6 +84,16 @@
             this.label15 = new System.Windows.Forms.Label();
             this.textBoxCustomer = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invoiceItemId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.topPanel.SuspendLayout();
             this.topLeftPanel.SuspendLayout();
             this.panelBody.SuspendLayout();
@@ -221,6 +223,7 @@
             this.btnCustomer.TabIndex = 46;
             this.btnCustomer.Text = "Customer";
             this.btnCustomer.UseVisualStyleBackColor = false;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // textBox9
             // 
@@ -316,6 +319,7 @@
             this.invoiceItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.invoiceItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
+            this.invoiceItemId,
             this.EName,
             this.Email,
             this.Department,
@@ -330,73 +334,6 @@
             this.invoiceItems.Name = "invoiceItems";
             this.invoiceItems.Size = new System.Drawing.Size(713, 577);
             this.invoiceItems.TabIndex = 9;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.Visible = false;
-            // 
-            // EName
-            // 
-            this.EName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.EName.DefaultCellStyle = dataGridViewCellStyle15;
-            this.EName.HeaderText = "Sl No";
-            this.EName.Name = "EName";
-            // 
-            // Email
-            // 
-            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Email.DefaultCellStyle = dataGridViewCellStyle16;
-            this.Email.HeaderText = "Item Name";
-            this.Email.Name = "Email";
-            // 
-            // Department
-            // 
-            this.Department.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Department.DefaultCellStyle = dataGridViewCellStyle17;
-            this.Department.HeaderText = "Unite";
-            this.Department.Name = "Department";
-            // 
-            // Price
-            // 
-            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Price.DefaultCellStyle = dataGridViewCellStyle18;
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
-            // 
-            // quantity
-            // 
-            this.quantity.HeaderText = "Qty";
-            this.quantity.Name = "quantity";
-            // 
-            // vat
-            // 
-            this.vat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.vat.DefaultCellStyle = dataGridViewCellStyle19;
-            this.vat.HeaderText = "VAT%";
-            this.vat.Name = "vat";
-            // 
-            // discount
-            // 
-            this.discount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.discount.DefaultCellStyle = dataGridViewCellStyle20;
-            this.discount.HeaderText = "Disc(%)";
-            this.discount.Name = "discount";
-            // 
-            // total
-            // 
-            this.total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.total.DefaultCellStyle = dataGridViewCellStyle21;
-            this.total.HeaderText = "Total";
-            this.total.Name = "total";
             // 
             // panel1
             // 
@@ -826,6 +763,81 @@
             this.label14.TabIndex = 16;
             this.label14.Text = "Customer";
             // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
+            // invoiceItemId
+            // 
+            this.invoiceItemId.HeaderText = "invoice_item_id";
+            this.invoiceItemId.Name = "invoiceItemId";
+            this.invoiceItemId.Visible = false;
+            // 
+            // EName
+            // 
+            this.EName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.EName.DefaultCellStyle = dataGridViewCellStyle1;
+            this.EName.HeaderText = "Sl No";
+            this.EName.Name = "EName";
+            // 
+            // Email
+            // 
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Email.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Email.HeaderText = "Item Name";
+            this.Email.Name = "Email";
+            // 
+            // Department
+            // 
+            this.Department.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Department.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Department.HeaderText = "Unite";
+            this.Department.Name = "Department";
+            // 
+            // Price
+            // 
+            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Price.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            // 
+            // quantity
+            // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.quantity.DefaultCellStyle = dataGridViewCellStyle5;
+            this.quantity.HeaderText = "Qty";
+            this.quantity.Name = "quantity";
+            // 
+            // vat
+            // 
+            this.vat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.vat.DefaultCellStyle = dataGridViewCellStyle6;
+            this.vat.HeaderText = "VAT%";
+            this.vat.Name = "vat";
+            // 
+            // discount
+            // 
+            this.discount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.discount.DefaultCellStyle = dataGridViewCellStyle7;
+            this.discount.HeaderText = "Disc(%)";
+            this.discount.Name = "discount";
+            // 
+            // total
+            // 
+            this.total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.total.DefaultCellStyle = dataGridViewCellStyle8;
+            this.total.HeaderText = "Total";
+            this.total.Name = "total";
+            // 
             // Invoice_Frame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -910,7 +922,10 @@
         private System.Windows.Forms.Button holdInvoice;
         private System.Windows.Forms.Button nextInvoice;
         private System.Windows.Forms.Button Keyboard;
+        private System.Windows.Forms.Button btnMembership;
+        private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invoiceItemId;
         private System.Windows.Forms.DataGridViewTextBoxColumn EName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Department;
@@ -919,8 +934,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn vat;
         private System.Windows.Forms.DataGridViewTextBoxColumn discount;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
-        private System.Windows.Forms.Button btnMembership;
-        private System.Windows.Forms.Button btnCustomer;
 
 
     }

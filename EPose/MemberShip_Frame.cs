@@ -21,7 +21,10 @@ namespace EPose
             this.ActiveControl = textBoxMobile;
             this.setTitle("Membership Window");
             this.invoice = invoice;
-            this.total_price = this.invoice.invoice_total;
+            if (this.invoice != null) {
+                this.total_price = this.invoice.invoice_total;
+            }
+            
         }
 
         private void MemberShip_Frame_Load(object sender, EventArgs e)
@@ -53,6 +56,10 @@ namespace EPose
                     }
                     memberList.Rows.Add(mem.id, mem.name, mem.email, mem.mobile, mem.address, Math.Round(mem.point,2), status);
                 }
+            }
+            else
+            {
+                memberList.Rows.Clear();
             }
         }
 
@@ -111,6 +118,16 @@ namespace EPose
                         MessageBox.Show("please select a row");
                     }
             }
+        }
+
+        private void textBoxMobile_Enter(object sender, EventArgs e)
+        {
+            changeColor(textBoxMobile, "enter");
+        }
+
+        private void textBoxMobile_Leave(object sender, EventArgs e)
+        {
+            changeColor(textBoxMobile, "out");
         }
     }
 }

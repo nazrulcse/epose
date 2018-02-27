@@ -75,23 +75,23 @@ namespace EPose
         {
             String userId = userid.Text;
             String userPassword = password.Text;
-            if (userId == "" || userPassword == "")
-            {
-               MessageBox.Show("Please input your user ID and Password");
-               userid.Focus();
-               return;
-            }
-            else
-            {
-                authenticateUser(userId, userPassword);
-            }
+         //   if (userId == "" || userPassword == "")
+           // {
+            //   MessageBox.Show("Please input your user ID and Password");
+             //  userid.Focus();
+           //    return;
+          //  }
+          //  else
+          //  {
+              //  authenticateUser(userId, userPassword);
+         //   }
             //InvoiceModel inv = new InvoiceModel();
             //dynamic invoice = inv.find(inv, "636548960494211");
             //InvoiceReport_Frame ir = new InvoiceReport_Frame(invoice);
             //ir.Show();
-          // Main_Frame main = new Main_Frame();
-           // main.Show();
-           // this.Hide();
+           Main_Frame main = new Main_Frame();
+            main.Show();
+            this.Hide();
         }
 
         private void OnTimedEvent(object sender, ElapsedEventArgs e)
@@ -116,28 +116,28 @@ namespace EPose
         }
 
         private void authenticateUser(String userId, String userPassword) {
-            EmployeeModel em = new EmployeeModel();
-            dynamic employee = em.find_by(em, "user_id", userId);
-            if (employee != null)
-            {
-                Boolean matchPassword = BCryptHelper.CheckPassword(userPassword, employee.password);
-                if (matchPassword)
-                {
+          //  EmployeeModel em = new EmployeeModel();
+          //  dynamic employee = em.find_by(em, "user_id", userId);
+          //  if (employee != null)
+           // {
+           //     Boolean matchPassword = BCryptHelper.CheckPassword(userPassword, employee.password);
+            //    if (matchPassword)
+             //   {
                   Main_Frame main = new Main_Frame();
                   main.Show();
                   this.Hide();
-                }
-                else 
-                {
-                    password.Focus();
-                  MessageBox.Show("Invalid password for login ID: " + userId, "Invalid password");
-                }
-            }
-            else 
-            {
-                userid.Focus();
-                MessageBox.Show("No employee found with ID: " + userId, "Invalid Login");
-            }
+             //   }
+             //   else 
+             //   {
+             //       password.Focus();
+              //    MessageBox.Show("Invalid password for login ID: " + userId, "Invalid password");
+              //  }
+          //  }
+          //  else 
+          //  {
+           //     userid.Focus();
+           //     MessageBox.Show("No employee found with ID: " + userId, "Invalid Login");
+          //  }
         }
 
         private void userid_Enter(object sender, EventArgs e)
@@ -215,7 +215,7 @@ namespace EPose
             {
                 System.Timers.Timer aTimer = new System.Timers.Timer();
                 aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-                aTimer.Interval = 240000;
+                aTimer.Interval = 300000;
                 aTimer.Enabled = true;
             }
         }

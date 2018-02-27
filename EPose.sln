@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{25C54B
 		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installer", "Installer\Installer.vdproj", "{293924B5-FFAF-416A-9B01-B2504D74D68C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CD_ROM|Any CPU = CD_ROM|Any CPU
@@ -29,6 +31,11 @@ Global
 		{29E7DA6E-0AE3-42D7-945E-9DA45F94CA8B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{29E7DA6E-0AE3-42D7-945E-9DA45F94CA8B}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
 		{29E7DA6E-0AE3-42D7-945E-9DA45F94CA8B}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{293924B5-FFAF-416A-9B01-B2504D74D68C}.CD_ROM|Any CPU.ActiveCfg = Release
+		{293924B5-FFAF-416A-9B01-B2504D74D68C}.Debug|Any CPU.ActiveCfg = Debug
+		{293924B5-FFAF-416A-9B01-B2504D74D68C}.DVD-5|Any CPU.ActiveCfg = Debug
+		{293924B5-FFAF-416A-9B01-B2504D74D68C}.Release|Any CPU.ActiveCfg = Release
+		{293924B5-FFAF-416A-9B01-B2504D74D68C}.SingleImage|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

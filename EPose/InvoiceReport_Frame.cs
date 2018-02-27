@@ -9,6 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -35,72 +36,72 @@ namespace EPose
             DataSet ds = new DataSet();
             adptr.Fill(ds, "DataSet2");
 
-          //  try
-          //  {
-            var fileName = AppDomain.CurrentDomain.BaseDirectory + "../../" + "invoice_Report.rdlc";
-            using (var fs = new FileStream(fileName, FileMode.Open, FileAccess.Read))
+            try
             {
-                reportViewer1.LocalReport.LoadReportDefinition(fs);
-            }
+                
+                Assembly assembly = Assembly.GetExecutingAssembly();
+                Stream stream = assembly.GetManifestResourceStream("EPose.invoice_Report.rdlc");
+                reportViewer1.LocalReport.LoadReportDefinition(stream);
+                reportViewer1.LocalReport.ReportEmbeddedResource = "EPose.invoice_Report.rdlc";
 
-            string total = "" + Math.Round((this.invoice.invoice_total - this.invoice.discount) * 1.0, 2);
-            string[] splitTotal = total.Split('.');
-            string beforeDot = NumberToWords(Int32.Parse(splitTotal[0]));
-            string afterDot = "";
-            if (splitTotal.Length > 1)
-            {
-                afterDot = NumberToWords(Int32.Parse(splitTotal[1]));
-                afterDot = " " + afterDot + " Paisa";
-            }
+                string total = "" + Math.Round((this.invoice.invoice_total - this.invoice.discount) * 1.0, 2);
+                string[] splitTotal = total.Split('.');
+                string beforeDot = NumberToWords(Int32.Parse(splitTotal[0]));
+                string afterDot = "";
+                if (splitTotal.Length > 1)
+                {
+                    afterDot = NumberToWords(Int32.Parse(splitTotal[1]));
+                    afterDot = " " + afterDot + " Paisa";
+                }
 
-            ReportParameter[] parameters = new ReportParameter[14];
-            parameters[0] = new ReportParameter("date", ""+ DateTime.Now.ToString("yyyy-MM-dd"));
-            parameters[1] = new ReportParameter("branch_name", DepartmentSettings.branchName);
-            if (this.invoice.customer_id != null)
-            {
-                CustomerModel customer = new CustomerModel();
-                dynamic customers = customer.find(customer, this.invoice.customer_id);
-                parameters[2] = new ReportParameter("customerName", " " + customers.name);
-                parameters[3] = new ReportParameter("customerAdress", " "+customers.address);
-                parameters[4] = new ReportParameter("phone", " "+customers.mobile);
+                ReportParameter[] parameters = new ReportParameter[14];
+                parameters[0] = new ReportParameter("date", ""+ DateTime.Now.ToString("yyyy-MM-dd"));
+                parameters[1] = new ReportParameter("branch_name", DepartmentSettings.branchName);
+                if (this.invoice.customer_id != null)
+                {
+                    CustomerModel customer = new CustomerModel();
+                    dynamic customers = customer.find(customer, this.invoice.customer_id);
+                    parameters[2] = new ReportParameter("customerName", " " + customers.name);
+                    parameters[3] = new ReportParameter("customerAdress", " "+customers.address);
+                    parameters[4] = new ReportParameter("phone", " "+customers.mobile);
 
-            }
-            else {
-                parameters[2] = new ReportParameter("customerName", " ");
-                parameters[3] = new ReportParameter("customerAdress"," ");
-                parameters[4] = new ReportParameter("phone", " ");
-            }
+                }
+                else {
+                    parameters[2] = new ReportParameter("customerName", " ");
+                    parameters[3] = new ReportParameter("customerAdress"," ");
+                    parameters[4] = new ReportParameter("phone", " ");
+                }
 
-            PaymentModel pay = new PaymentModel();
+                PaymentModel pay = new PaymentModel();
 
-            dynamic payments = pay.where(pay, "invoice_id='" + this.invoice.id + "'");
-            foreach (dynamic payment in payments)
-            {
-                receivedAmount += payment.amount;
-            }
+                dynamic payments = pay.where(pay, "invoice_id='" + this.invoice.id + "'");
+                foreach (dynamic payment in payments)
+                {
+                    receivedAmount += payment.amount;
+                }
 
-            string dueAfterRound = "" + Math.Round(this.invoice.net_due, 2);
-            string totalAfterRound = "" + Math.Round(this.invoice.invoice_total, 2);
-            parameters[5] = new ReportParameter("due", dueAfterRound);
-            parameters[6] = new ReportParameter("invoiceNo", this.invoice.number);
-            parameters[7] = new ReportParameter("total", totalAfterRound);
-            parameters[8] = new ReportParameter("address", DepartmentSettings.address);
-            parameters[9] = new ReportParameter("vatChalanNo", " " + DepartmentSettings.vatChalan);
-            parameters[10] = new ReportParameter("totalInWord", beforeDot + " Taka" + afterDot);
-            parameters[11] = new ReportParameter("discount", " " + this.invoice.discount);
-            parameters[12] = new ReportParameter("netAmount", " " + this.invoice.net_total);
-            parameters[13] = new ReportParameter("receivedAmount", " " + Math.Round(this.receivedAmount, 2));
+                string dueAfterRound = "" + Math.Round(this.invoice.net_due, 2);
+                string totalAfterRound = "" + Math.Round(this.invoice.invoice_total, 2);
+                parameters[5] = new ReportParameter("due", dueAfterRound);
+                parameters[6] = new ReportParameter("invoiceNo", this.invoice.number);
+                parameters[7] = new ReportParameter("total", totalAfterRound);
+                parameters[8] = new ReportParameter("address", DepartmentSettings.address);
+                parameters[9] = new ReportParameter("vatChalanNo", " " + DepartmentSettings.vatChalan);
+                parameters[10] = new ReportParameter("totalInWord", beforeDot + " Taka" + afterDot);
+                parameters[11] = new ReportParameter("discount", " " + this.invoice.discount);
+                parameters[12] = new ReportParameter("netAmount", " " + this.invoice.net_total);
+                parameters[13] = new ReportParameter("receivedAmount", " " + Math.Round(this.receivedAmount, 2));
                 reportViewer1.LocalReport.DataSources.Clear();
                 reportViewer1.LocalReport.SetParameters(parameters);
                 reportViewer1.ProcessingMode = ProcessingMode.Local;
                 reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet2", ds.Tables[0]));
                 reportViewer1.LocalReport.Refresh();
                 reportViewer1.RefreshReport();
-           // }
-            //catch (Exception ex)
-            //{
-              //  MessageDialog.ShowAlert("Error: " + ex.Message.ToString());
-            //}
+            }
+            catch (Exception ex)
+            {
+                MessageDialog.ShowAlert("Error: " + ex.Message.ToString());
+            }
         }
 
 

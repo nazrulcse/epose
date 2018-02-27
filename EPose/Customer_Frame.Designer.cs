@@ -100,9 +100,10 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.customerList);
-            this.panel1.Location = new System.Drawing.Point(3, 113);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(3, 115);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(882, 343);
+            this.panel1.Size = new System.Drawing.Size(880, 343);
             this.panel1.TabIndex = 17;
             // 
             // customerList
@@ -129,7 +130,7 @@
             this.customerList.Location = new System.Drawing.Point(0, 0);
             this.customerList.Name = "customerList";
             this.customerList.RowHeadersWidth = 52;
-            this.customerList.Size = new System.Drawing.Size(882, 343);
+            this.customerList.Size = new System.Drawing.Size(880, 343);
             this.customerList.TabIndex = 7;
             // 
             // EName
@@ -202,9 +203,9 @@
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Column1.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Column1.HeaderText = "Initial Balance";
+            this.Column1.HeaderText = "Total Due";
             this.Column1.Name = "Column1";
-            this.Column1.Width = 98;
+            this.Column1.Width = 79;
             // 
             // Column2
             // 
@@ -219,7 +220,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(716, 83);
+            this.label1.Location = new System.Drawing.Point(735, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 20);
             this.label1.TabIndex = 18;
@@ -228,10 +229,10 @@
             // searchBox
             // 
             this.searchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.searchBox.Font = new System.Drawing.Font("Bookman Old Style", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBox.Location = new System.Drawing.Point(238, 73);
+            this.searchBox.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBox.Location = new System.Drawing.Point(9, 78);
             this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(400, 30);
+            this.searchBox.Size = new System.Drawing.Size(392, 26);
             this.searchBox.TabIndex = 19;
             this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             this.searchBox.Enter += new System.EventHandler(this.searchBox_Enter);
@@ -242,47 +243,47 @@
             this.customerLabel.AutoSize = true;
             this.customerLabel.BackColor = System.Drawing.Color.Transparent;
             this.customerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerLabel.Location = new System.Drawing.Point(817, 84);
+            this.customerLabel.Location = new System.Drawing.Point(836, 84);
             this.customerLabel.Name = "customerLabel";
-            this.customerLabel.Size = new System.Drawing.Size(36, 20);
+            this.customerLabel.Size = new System.Drawing.Size(18, 20);
             this.customerLabel.TabIndex = 20;
-            this.customerLabel.Text = "123";
+            this.customerLabel.Text = "0";
             // 
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
-            this.label5.Location = new System.Drawing.Point(170, 41);
+            this.label5.Location = new System.Drawing.Point(6, 44);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(536, 29);
+            this.label5.Size = new System.Drawing.Size(430, 31);
             this.label5.TabIndex = 21;
-            this.label5.Text = "Search By Name/Email/Mobile";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Text = "Search By Name, Email or Mobile";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Customer_Frame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(886, 461);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.customerLabel);
             this.Controls.Add(this.searchBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "Customer_Frame";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Customer_Load);
-            this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.searchBox, 0);
             this.Controls.SetChildIndex(this.customerLabel, 0);
             this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

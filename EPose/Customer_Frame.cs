@@ -26,6 +26,7 @@ namespace EPose
             CustomerModel cust = new CustomerModel();
             dynamic customers = cust.all(cust);
             foreach( var customer in customers){
+                // TODO: Add customer total due to the list
                 customerList.Rows.Add(customer.id, customer.name, customer.company, customer.address, customer.city, customer.email, customer.mobile, customer.initial_balance, customer.credit_limit);
             }
             this.customerLabel.Text = "" + customers.Count;
@@ -38,7 +39,6 @@ namespace EPose
             dynamic customers = cus.where(cus, "name like '%" + searchValue + "%' or email like '%" + searchValue + "%' or mobile like '%"+ searchValue + "%'");
             if (customers.Count > 0)
             {
-
                 this.customerLabel.Text = "" + customers.Count;
                 customerList.Rows.Clear();
                 foreach (var customer in customers)
@@ -46,7 +46,10 @@ namespace EPose
                     customerList.Rows.Add(customer.id, customer.name, customer.company, customer.address, customer.city, customer.email, customer.mobile, customer.initial_balance, customer.credit_limit);
                 }
             }
-            
+            else
+            {
+                customerList.Rows.Clear();
+            }
         }
 
         private void searchBox_Enter(object sender, EventArgs e)

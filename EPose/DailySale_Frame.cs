@@ -23,6 +23,7 @@ namespace EPose
         {
             InitializeComponent();
             setTitle("Daily Sales Report");
+            invoiceList.AllowUserToAddRows = false;
         }
 
         private void DailySale_Frame_Load(object sender, EventArgs e)
@@ -31,7 +32,6 @@ namespace EPose
             loadSales(date);
             loadDailyTransaction();
             loadInvoice();
-           // this.ActiveControl = textBoxSearchInvoice;
         }
 
 
@@ -193,6 +193,25 @@ namespace EPose
         private void textBoxSearchInvoice_Enter(object sender, EventArgs e)
         {
             changeColor(textBoxSearchInvoice, "enter");
+        }
+
+        private void invoiceList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DialogResult result = MessageDialog.Show("Print!", "Are you want to print the receipt now!", "print");
+            if (result == DialogResult.Yes)
+            {
+                 int SelectedRow = invoiceList.CurrentCell.RowIndex;
+                 dynamic cellValue = invoiceList.Rows[SelectedRow].Cells["invoiceNo"].Value;
+                 string invoiceNumber = Convert.ToString(cellValue);
+                 InvoiceModel inv = new InvoiceModel();
+                 dynamic invoices = inv.find_by(inv, "number" ,invoiceNumber);
+
+                 if (invoices != null) {
+                     new PrinterSelect_Frame(invoices).Show();
+                 }
+
+                
+            }
         }
     }
 }

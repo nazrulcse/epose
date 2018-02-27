@@ -72,9 +72,6 @@ namespace EPose
        
 
         public String GenerateHeader() {
-
-            CustomerModel customer = new CustomerModel();
-            dynamic customers = customer.find(customer, this.invoice.customer_id);
             PaymentModel payment = new PaymentModel();
             dynamic payments = payment.where(payment, "invoice_id='" + this.invoice.id + "'");
 
@@ -84,8 +81,17 @@ namespace EPose
             sb.AppendLine(DepartmentSettings.address.PadLeft(20));
             sb.AppendLine("-----------------------------------------------------------------");
             sb.AppendLine("VAT CHALAN ("+DepartmentSettings.vatChalan+")");
-            sb.AppendLine("VAT Reg: 170012542");
-            sb.AppendLine(customers.name);
+            sb.AppendLine("VAT Reg: "+DepartmentSettings.vatRegstration);
+            CustomerModel customer = new CustomerModel();
+            if (this.invoice.customer_id != null)
+            {
+                dynamic customers = customer.find(customer, this.invoice.customer_id);
+                sb.AppendLine(customers.name);
+            }
+            else {
+                sb.AppendLine(" ");
+            }
+           
             sb.AppendLine("------------------------------------------------------------------");
             sb.Append("Item/Decription".PadRight(FIRST_COL_PAD));
             sb.Append("|".PadLeft(21));
@@ -99,20 +105,20 @@ namespace EPose
             foreach (dynamic item in items)
             {
                 Console.WriteLine("jhfv");
-                sb.Append("" + (i++) + ") PCODE1   [" + item.quantity + " @ " + item.price + "]".PadRight(FIRST_COL_PAD));
+                sb.Append("" + (i++) + ") PCODE1   [" + item.quantity + " @ " + Math.Round(item.price, 2) + "]".PadRight(FIRST_COL_PAD));
                 sb.Append("|".PadRight(SECOND_COL_PAD));
                 sb.AppendLine(string.Format("{0:0.00}", item.total).PadLeft(THIRD_COL_PAD));
                 sb.AppendLine(item.name.PadRight(FIRST_COL_PAD));
                 sb.AppendLine("------------------------------------------------------------------");
-                total += item.price;
+                total += item.total;
                 vat += item.vat;
             }
             sb.AppendLine("Subtotal Without VAT:                         " + total);
             sb.AppendLine("VAT(Applicable Item Only):                    " + vat);
             sb.AppendLine("                                           -----------------------");
-            sb.AppendLine("                                                Net Due:" + (total + vat));
-            sb.AppendLine("                                                   Paid:" + (total + vat + 111));
-            sb.AppendLine("                                                 Change:" + 111);
+            sb.AppendLine("                                                Net total:" + (total + vat));
+            sb.AppendLine("                                                   Paid:" + (total + vat));
+            sb.AppendLine("                                                 Change:" );
 
             String paymentType = "";
             if (payments.Count > 0)
