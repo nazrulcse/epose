@@ -25,7 +25,7 @@ namespace EPose
             this.setTitle("Payment Window"); 
             this.invoice = invoice;
             this.invoice_form = invf;
-            this.netDue = invoice.net_total;
+            this.netDue = Math.Round(invoice.net_total,2);
             invoice.net_due = invoice.net_total;
             this.ActiveControl = amountTextBox;
         }
@@ -100,7 +100,7 @@ namespace EPose
         }
 
         private Boolean processPayment(String amount) {
-            double paid_amount = Convert.ToDouble(amount);
+            double paid_amount = Math.Round(Convert.ToDouble(amount),2);
             if (paid_amount > 0 && paid_amount <= netDue)
             {
                 if (netDue > 0)

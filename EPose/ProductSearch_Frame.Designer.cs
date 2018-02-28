@@ -76,6 +76,7 @@
             // 
             // productItems
             // 
+            this.productItems.AllowUserToAddRows = false;
             this.productItems.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.productItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.productItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

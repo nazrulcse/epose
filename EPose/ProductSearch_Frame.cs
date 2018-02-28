@@ -66,7 +66,7 @@ namespace EPose
         private void productItems_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Enter) {
-                if (search_products != null && search_products.Count > 0 && productItems.SelectedRows[0].Index < search_products.Count)
+                if (search_products != null && search_products.Count > 0)
                 {
                     this.invoice.addProduct(search_products[productItems.SelectedRows[0].Index]);
                     this.Close();

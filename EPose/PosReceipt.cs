@@ -18,11 +18,13 @@ namespace EPose
         const int FIRST_COL_PAD = 15;
         const int SECOND_COL_PAD = 7;
         const int THIRD_COL_PAD = 10;
-        public string printer_name; 
+        public string printer_name;
+        double received;
 
-        public PosReceipt(dynamic inv, string printer = null) {
+        public PosReceipt(dynamic inv, string printer = null,double received = 0.0) {
             this.invoice = inv;
             this.printer_name = printer;
+            this.received = received;
             DepartmentSettings.getData();
         }
 
@@ -35,7 +37,7 @@ namespace EPose
                         pd.PrinterSettings.PrinterName = this.printer_name;
                     }
                     pd.PrintPage += new PrintPageEventHandler(this.perform);
-                    pd.Print();
+                   // pd.Print();
                 }
                 catch(Exception ex) {
                     MessageBox.Show(ex.Message);
@@ -101,7 +103,7 @@ namespace EPose
             dynamic items = invoice_item_obj.where(invoice_item_obj, "invoice_id = '" + this.invoice.id + "'");
             int i = 0;
             float total = 0;
-            float vat = 0;
+            double vat = 0;
             foreach (dynamic item in items)
             {
                 Console.WriteLine("jhfv");
@@ -111,14 +113,29 @@ namespace EPose
                 sb.AppendLine(item.name.PadRight(FIRST_COL_PAD));
                 sb.AppendLine("------------------------------------------------------------------");
                 total += item.total;
-                vat += item.vat;
+                double invoiceVat = item.vat;
+                vat += invoiceVat;
             }
-            sb.AppendLine("Subtotal Without VAT:                         " + total);
-            sb.AppendLine("VAT(Applicable Item Only):                    " + vat);
+            sb.AppendLine("Subtotal Without VAT:                         " + Math.Round(total, 2));
+            sb.AppendLine("VAT(Applicable Item Only):                    " + Math.Round(vat, 2));
             sb.AppendLine("                                           -----------------------");
-            sb.AppendLine("                                                Net total:" + (total + vat));
-            sb.AppendLine("                                                   Paid:" + (total + vat));
-            sb.AppendLine("                                                 Change:" );
+
+            double paid = 0.0;
+            double change = 0.0;
+            if(this.received == 0.0){
+                 paid = invoice.net_total;
+                 change = 0.0;
+            }
+            else{
+                paid = this.received;
+                change = this.received - invoice.net_total;
+            }
+
+
+            sb.AppendLine("                                                Net total:" + invoice.net_total);
+            sb.AppendLine("                                                 Discount:" + invoice.discount);
+            sb.AppendLine("                                                   Paid  :" + paid);
+            sb.AppendLine("                                                 Change  :" + change );
 
             String paymentType = "";
             if (payments.Count > 0)
@@ -127,7 +144,7 @@ namespace EPose
             }
             sb.AppendLine("Payment Mode:" + paymentType);
             sb.AppendLine("--------------------------------------------------------------");
-            sb.AppendLine("CASH                                                    " + (total + vat));
+            sb.AppendLine("CASH                                                    " + Math.Round((total + vat), 2));
             sb.AppendLine("--------------------------------------------------------------");
             sb.AppendLine("Current Bonus Point :" + this.invoice.point);
             sb.AppendLine("Last Bonus Point :" + this.invoice.lastPoint);

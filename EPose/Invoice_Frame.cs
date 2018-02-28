@@ -86,11 +86,10 @@ namespace EPose
                         selected_row.Cells["quantity"].Value = quantity;
                         selected_row.Cells["total"].Value = total;
                         double invoiceVat = product.sale_price * (product.vat / 100);
-                        invoiceVat = Math.Round(invoiceVat * quantity, 2);
                         this.inv.vat += invoiceVat;
                         obj_invoice_item.quantity = quantity;
                         obj_invoice_item.total = total;
-                        obj_invoice_item.vat = invoiceVat;
+                        obj_invoice_item.vat = invoiceVat * quantity;
                         obj_invoice_item.save(obj_invoice_item);
                         barcodeInput.Text = "";
                         updateAmount();
@@ -107,7 +106,6 @@ namespace EPose
                     this.inv.invoice_total += total;
                     //calculate vat per product
                     double vat = product.sale_price * (product.vat / 100);
-                    vat = Math.Round(vat, 2);
                     //add per product vat to total vat
                     this.inv.vat += vat;
                     string item_id = createLineItem(product);
@@ -141,12 +139,13 @@ namespace EPose
             inv_item.product_id = product.id;
             inv_item.unit = product.unit;
             inv_item.price = product.sale_price;
-            inv_item.vat = product.vat;
+            inv_item.vat = Math.Round(product.sale_price * (product.vat / 100), 2);
             inv_item.total = product.sale_price;
             inv_item.name = product.name;
             inv_item.invoice_id = this.inv.id;
             inv_item.date = DateTime.Now.ToString("yyyy-MM-dd");
             inv_item.create(inv_item);
+              textBoxVat.Text = "" + this.inv.vat;
             ActivityLogModel.track("invoice_item", "create", inv_item.id);
             return inv_item.id;
         }
@@ -258,16 +257,17 @@ namespace EPose
             DialogResult result = MessageDialog.Show("Print!", "Are you want to print the receipt now!", "print");
             if (result == DialogResult.Yes)
             {
-                new PrinterSelect_Frame(this.inv).Show();
+                double received = Convert.ToDouble(receivedAmount.Text);
+                new PrinterSelect_Frame(this.inv, received).Show();
             }
         }
 
         public void updateAmount() {
             totalTextBox.Text = "" + this.inv.invoice_total;
-            textBoxVat.Text = "" + this.inv.vat;
+            textBoxVat.Text = "" + Math.Round(this.inv.vat, 2);
             textBoxDiscount.Text = "" + this.inv.discount;
             this.inv.net_total = (this.inv.invoice_total + this.inv.vat - this.inv.discount);
-            textBoxNetDue.Text = "" + this.inv.net_total;
+            textBoxNetDue.Text = "" + Math.Round(this.inv.net_total,2);
         }
 
         public void createInvoice() {
@@ -425,7 +425,7 @@ namespace EPose
             {
                 double amountReceived = Convert.ToDouble(receivedAmount.Text);
                 double netDueAmount = Convert.ToDouble(textBoxNetDue.Text);
-                double changeAmount = (amountReceived - this.inv.net_total);
+                double changeAmount = Math.Round((amountReceived - this.inv.net_total),2);
                 textBoxChange.Text = changeAmount > 0 ? "" + changeAmount : "0";
                 textBoxChange.Focus();
             }
@@ -461,20 +461,43 @@ namespace EPose
             changeColor(receivedAmount, "out");
         }
 
+
         private void textBoxChange_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Return) {
-                DialogResult result = MessageDialog.Show("Print!", "Are you want to print the receipt now!");
-                if (result == DialogResult.Yes)
+                double amountReceived = Math.Round(Convert.ToDouble(receivedAmount.Text),2);
+                double DueAmount = Math.Round(Convert.ToDouble(textBoxNetDue.Text),2);
+
+                if (amountReceived > DueAmount)
                 {
-                    PosReceipt ps = new PosReceipt(this.inv);
-                    ps.print();
+                    String paymentInformation = "Total :" + this.inv.net_total + " Received :" + amountReceived + " Change:" + textBoxChange.Text;
+                    DialogResult result = MessageDialog.Show("Print!", paymentInformation+" Are you want to print the receipt now!");
+                    if (result == DialogResult.Yes)
+                    {
+                        PosReceipt ps = new PosReceipt(this.inv);
+                        ps.print();
+                    }
+                    result = MessageDialog.Show("Next Invoice!", "Is this invoice close and process next invoice?");
+                    if (result == DialogResult.Yes)
+                    {
+                        resetInvoice();
+                    }
                 }
-                result = MessageDialog.Show("Next Invoice!", "Is this invoice close and process next invoice?");
-                if (result == DialogResult.Yes)
+                else
                 {
-                    resetInvoice();
+                    DialogResult result = MessageDialog.Show("Print!", "Are you want to print the receipt now!");
+                    if (result == DialogResult.Yes)
+                    {
+                        PosReceipt ps = new PosReceipt(this.inv);
+                        ps.print();
+                    }
+                    result = MessageDialog.Show("Next Invoice!", "Is this invoice close and process next invoice?");
+                    if (result == DialogResult.Yes)
+                    {
+                        resetInvoice();
+                    }
                 }
+               
             }
         }
 

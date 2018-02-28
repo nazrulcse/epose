@@ -9,8 +9,10 @@ namespace EPose
 {
     public class MessageDialog
     {
+       
         public static DialogResult Show(String title, String msg, String icon = "")
         {
+            
             AlartBox alt = new AlartBox(title, msg, icon);
             return alt.ShowDialog();
         }

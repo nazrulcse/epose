@@ -14,10 +14,12 @@ namespace EPose
     public partial class PrinterSelect_Frame : Layout_Frame
     {
         dynamic inv;
-        public PrinterSelect_Frame( dynamic invoice)
+        double received = 0.0;
+        public PrinterSelect_Frame(dynamic invoice, double received = 0.0)
         {
             InitializeComponent();
             this.inv = invoice;
+            this.received = received;
         }
 
         private void PrinterSelect_Frame_Load(object sender, EventArgs e)
@@ -41,7 +43,7 @@ namespace EPose
                 string printer = lstPrinterList.GetItemText(lstPrinterList.SelectedItem);
                 if (printer != null && printer !="")
                 {
-                    PosReceipt pos = new PosReceipt(this.inv, printer);
+                    PosReceipt pos = new PosReceipt(this.inv, printer,this.received);
                     pos.print();
                 }
                 else {
