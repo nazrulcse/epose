@@ -212,7 +212,9 @@
             this.paymentList.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.paymentList.Location = new System.Drawing.Point(0, 0);
             this.paymentList.Name = "paymentList";
+            this.paymentList.ReadOnly = true;
             this.paymentList.RowHeadersWidth = 52;
+            this.paymentList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.paymentList.Size = new System.Drawing.Size(524, 276);
             this.paymentList.TabIndex = 15;
             // 
@@ -226,6 +228,7 @@
             this.EName.HeaderText = "Id";
             this.EName.MinimumWidth = 10;
             this.EName.Name = "EName";
+            this.EName.ReadOnly = true;
             this.EName.Width = 41;
             // 
             // Designation
@@ -238,6 +241,7 @@
             this.Designation.HeaderText = "Pay.Method";
             this.Designation.MinimumWidth = 10;
             this.Designation.Name = "Designation";
+            this.Designation.ReadOnly = true;
             // 
             // Email
             // 
@@ -247,6 +251,7 @@
             this.Email.DefaultCellStyle = dataGridViewCellStyle3;
             this.Email.HeaderText = "Invoice";
             this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
             // 
             // Joining
             // 
@@ -256,6 +261,7 @@
             this.Joining.DefaultCellStyle = dataGridViewCellStyle4;
             this.Joining.HeaderText = "Amount";
             this.Joining.Name = "Joining";
+            this.Joining.ReadOnly = true;
             // 
             // Column1
             // 
@@ -265,6 +271,7 @@
             this.Column1.DefaultCellStyle = dataGridViewCellStyle5;
             this.Column1.HeaderText = "T.Token";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
@@ -274,6 +281,7 @@
             this.Column2.DefaultCellStyle = dataGridViewCellStyle6;
             this.Column2.HeaderText = "Date";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // label9
             // 

@@ -129,7 +129,9 @@
             this.customerList.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.customerList.Location = new System.Drawing.Point(0, 0);
             this.customerList.Name = "customerList";
+            this.customerList.ReadOnly = true;
             this.customerList.RowHeadersWidth = 52;
+            this.customerList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.customerList.Size = new System.Drawing.Size(880, 343);
             this.customerList.TabIndex = 7;
             // 
@@ -143,6 +145,7 @@
             this.EName.HeaderText = "Id";
             this.EName.MinimumWidth = 10;
             this.EName.Name = "EName";
+            this.EName.ReadOnly = true;
             // 
             // Designation
             // 
@@ -154,6 +157,7 @@
             this.Designation.HeaderText = "Name";
             this.Designation.MinimumWidth = 10;
             this.Designation.Name = "Designation";
+            this.Designation.ReadOnly = true;
             // 
             // Email
             // 
@@ -163,6 +167,7 @@
             this.Email.DefaultCellStyle = dataGridViewCellStyle4;
             this.Email.HeaderText = "Company";
             this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
             // 
             // Phone
             // 
@@ -172,6 +177,7 @@
             this.Phone.DefaultCellStyle = dataGridViewCellStyle5;
             this.Phone.HeaderText = "Adress";
             this.Phone.Name = "Phone";
+            this.Phone.ReadOnly = true;
             // 
             // Joining
             // 
@@ -180,6 +186,7 @@
             this.Joining.DefaultCellStyle = dataGridViewCellStyle6;
             this.Joining.HeaderText = "City";
             this.Joining.Name = "Joining";
+            this.Joining.ReadOnly = true;
             // 
             // Country
             // 
@@ -188,6 +195,7 @@
             this.Country.DefaultCellStyle = dataGridViewCellStyle7;
             this.Country.HeaderText = "Email";
             this.Country.Name = "Country";
+            this.Country.ReadOnly = true;
             // 
             // Department
             // 
@@ -197,6 +205,7 @@
             this.Department.DefaultCellStyle = dataGridViewCellStyle8;
             this.Department.HeaderText = "Mobile";
             this.Department.Name = "Department";
+            this.Department.ReadOnly = true;
             // 
             // Column1
             // 
@@ -205,6 +214,7 @@
             this.Column1.DefaultCellStyle = dataGridViewCellStyle9;
             this.Column1.HeaderText = "Total Due";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Width = 79;
             // 
             // Column2
@@ -214,6 +224,7 @@
             this.Column2.DefaultCellStyle = dataGridViewCellStyle10;
             this.Column2.HeaderText = "Credit Limit";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             this.Column2.Width = 83;
             // 
             // label1

@@ -41,6 +41,8 @@
             this.sname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pices = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.labelCreditSale = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -99,7 +101,7 @@
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 88);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.62136F));
@@ -139,7 +141,7 @@
             this.panel1.Controls.Add(this.currencySettings);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 38);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(320, 232);
             this.panel1.TabIndex = 9;
@@ -192,6 +194,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.labelCreditSale);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label1);
@@ -202,17 +206,43 @@
             this.panel2.Controls.Add(this.label18);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(328, 38);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(321, 232);
             this.panel2.TabIndex = 10;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(56, 183);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.MinimumSize = new System.Drawing.Size(15, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(154, 23);
+            this.label10.TabIndex = 51;
+            this.label10.Text = "Credit sale   = ";
+            // 
+            // labelCreditSale
+            // 
+            this.labelCreditSale.AutoSize = true;
+            this.labelCreditSale.BackColor = System.Drawing.Color.Transparent;
+            this.labelCreditSale.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCreditSale.Location = new System.Drawing.Point(214, 186);
+            this.labelCreditSale.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelCreditSale.MinimumSize = new System.Drawing.Size(15, 0);
+            this.labelCreditSale.Name = "labelCreditSale";
+            this.labelCreditSale.Size = new System.Drawing.Size(18, 18);
+            this.labelCreditSale.TabIndex = 50;
+            this.labelCreditSale.Text = "0";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(22, 78);
+            this.label6.Location = new System.Drawing.Point(20, 65);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.MinimumSize = new System.Drawing.Size(15, 0);
             this.label6.Name = "label6";
@@ -225,33 +255,33 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(64, 119);
+            this.label5.Location = new System.Drawing.Point(56, 107);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.MinimumSize = new System.Drawing.Size(15, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(148, 23);
+            this.label5.Size = new System.Drawing.Size(155, 23);
             this.label5.TabIndex = 27;
-            this.label5.Text = "Mobile Sale = ";
+            this.label5.Text = "Mobile Sale  = ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(58, 162);
+            this.label1.Location = new System.Drawing.Point(56, 147);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.MinimumSize = new System.Drawing.Size(15, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 23);
+            this.label1.Size = new System.Drawing.Size(155, 23);
             this.label1.TabIndex = 26;
-            this.label1.Text = "Debit sale  = ";
+            this.label1.Text = "Debit sale    = ";
             // 
             // debitLabel
             // 
             this.debitLabel.AutoSize = true;
             this.debitLabel.BackColor = System.Drawing.Color.Transparent;
             this.debitLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.debitLabel.Location = new System.Drawing.Point(226, 162);
+            this.debitLabel.Location = new System.Drawing.Point(224, 147);
             this.debitLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.debitLabel.MinimumSize = new System.Drawing.Size(15, 0);
             this.debitLabel.Name = "debitLabel";
@@ -264,7 +294,7 @@
             this.mobileLabel.AutoSize = true;
             this.mobileLabel.BackColor = System.Drawing.Color.Transparent;
             this.mobileLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mobileLabel.Location = new System.Drawing.Point(226, 120);
+            this.mobileLabel.Location = new System.Drawing.Point(224, 107);
             this.mobileLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.mobileLabel.MinimumSize = new System.Drawing.Size(15, 0);
             this.mobileLabel.Name = "mobileLabel";
@@ -277,7 +307,7 @@
             this.cardLabel.AutoSize = true;
             this.cardLabel.BackColor = System.Drawing.Color.Transparent;
             this.cardLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cardLabel.Location = new System.Drawing.Point(226, 81);
+            this.cardLabel.Location = new System.Drawing.Point(224, 68);
             this.cardLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cardLabel.MinimumSize = new System.Drawing.Size(15, 0);
             this.cardLabel.Name = "cardLabel";
@@ -290,7 +320,7 @@
             this.cashSaleLabel.AutoSize = true;
             this.cashSaleLabel.BackColor = System.Drawing.Color.Transparent;
             this.cashSaleLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cashSaleLabel.Location = new System.Drawing.Point(226, 37);
+            this.cashSaleLabel.Location = new System.Drawing.Point(224, 24);
             this.cashSaleLabel.MinimumSize = new System.Drawing.Size(20, 0);
             this.cashSaleLabel.Name = "cashSaleLabel";
             this.cashSaleLabel.Size = new System.Drawing.Size(48, 18);
@@ -302,7 +332,7 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(80, 33);
+            this.label18.Location = new System.Drawing.Point(78, 20);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.MinimumSize = new System.Drawing.Size(15, 0);
             this.label18.Name = "label18";
@@ -328,7 +358,7 @@
             this.panel3.Controls.Add(this.cashOnDrawer);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Location = new System.Drawing.Point(6, 362);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(652, 122);
             this.panel3.TabIndex = 27;
@@ -353,7 +383,7 @@
             // textBoxKeepInDrawe
             // 
             this.textBoxKeepInDrawe.Location = new System.Drawing.Point(360, 53);
-            this.textBoxKeepInDrawe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxKeepInDrawe.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxKeepInDrawe.Name = "textBoxKeepInDrawe";
             this.textBoxKeepInDrawe.Size = new System.Drawing.Size(97, 20);
             this.textBoxKeepInDrawe.TabIndex = 36;
@@ -373,7 +403,7 @@
             // textBoxDifference
             // 
             this.textBoxDifference.Location = new System.Drawing.Point(360, 21);
-            this.textBoxDifference.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxDifference.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDifference.Name = "textBoxDifference";
             this.textBoxDifference.Size = new System.Drawing.Size(97, 20);
             this.textBoxDifference.TabIndex = 34;
@@ -525,7 +555,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(473, 55);
+            this.label7.Location = new System.Drawing.Point(467, 55);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.MinimumSize = new System.Drawing.Size(15, 0);
             this.label7.Name = "label7";
@@ -543,7 +573,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.dateLabel);
-            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "TillClosing_Frame";
             this.Text = "TillClosing_Frame";
             this.Load += new System.EventHandler(this.TillClosing_Frame_Load);
@@ -600,5 +630,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button closebutton;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label labelCreditSale;
     }
 }

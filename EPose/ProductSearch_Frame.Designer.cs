@@ -91,6 +91,8 @@
             this.productItems.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.productItems.Location = new System.Drawing.Point(0, 0);
             this.productItems.Name = "productItems";
+            this.productItems.ReadOnly = true;
+            this.productItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.productItems.Size = new System.Drawing.Size(806, 337);
             this.productItems.TabIndex = 10;
             this.productItems.KeyDown += new System.Windows.Forms.KeyEventHandler(this.productItems_KeyDown);
@@ -102,6 +104,7 @@
             this.EName.DefaultCellStyle = dataGridViewCellStyle1;
             this.EName.HeaderText = "Sl No";
             this.EName.Name = "EName";
+            this.EName.ReadOnly = true;
             // 
             // Email
             // 
@@ -110,6 +113,7 @@
             this.Email.DefaultCellStyle = dataGridViewCellStyle2;
             this.Email.HeaderText = "Item Name";
             this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
             // 
             // Department
             // 
@@ -118,6 +122,7 @@
             this.Department.DefaultCellStyle = dataGridViewCellStyle3;
             this.Department.HeaderText = "Unite";
             this.Department.Name = "Department";
+            this.Department.ReadOnly = true;
             // 
             // Price
             // 
@@ -126,6 +131,7 @@
             this.Price.DefaultCellStyle = dataGridViewCellStyle4;
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
             // 
             // vat
             // 
@@ -134,6 +140,7 @@
             this.vat.DefaultCellStyle = dataGridViewCellStyle5;
             this.vat.HeaderText = "VAT";
             this.vat.Name = "vat";
+            this.vat.ReadOnly = true;
             // 
             // discount
             // 
@@ -142,6 +149,7 @@
             this.discount.DefaultCellStyle = dataGridViewCellStyle6;
             this.discount.HeaderText = "Disc(%)";
             this.discount.Name = "discount";
+            this.discount.ReadOnly = true;
             // 
             // total
             // 
@@ -150,6 +158,7 @@
             this.total.DefaultCellStyle = dataGridViewCellStyle7;
             this.total.HeaderText = "Total";
             this.total.Name = "total";
+            this.total.ReadOnly = true;
             // 
             // label5
             // 

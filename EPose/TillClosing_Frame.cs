@@ -31,7 +31,9 @@ namespace EPose
         {
             setTitle("Till Closing Window");
             DepartmentSettings.getData();
-            dateLabel.Text = DateTime.Now.ToString("dd.MM.yyy");
+            string date = DateTime.Now.ToString("yyyy-MM-dd");
+            dateLabel.Text = date;
+            labelCreditSale.Text = "" + catculateCreditSale(date);
             loadSales();
             loadCurrencySettings();
             initial_balance = getInitialBalance();
@@ -183,6 +185,37 @@ namespace EPose
 
                 }
             }
+        }
+
+        public double catculateCreditSale(String date)
+        {
+
+            InvoiceModel inv = new InvoiceModel();
+            dynamic invoices = inv.where(inv, "is_credit = '1' and date ='" + date + "'");
+            double total = 0.0;
+            if (invoices.Count > 0)
+            {
+                foreach (var invoice in invoices)
+                {
+                    PaymentModel pay = new PaymentModel();
+                    dynamic payments = pay.where(pay, "invoice_id ='" + invoice.id + "'");
+                    if (payments.Count > 0)
+                    {
+                        double paymentAmount = 0.0;
+                        foreach (var payment in payments)
+                        {
+                            paymentAmount += payment.amount;
+                        }
+                        total += (invoice.net_total - paymentAmount);
+                    }
+                    else
+                    {
+                        total += invoice.net_total;
+                    }
+
+                }
+            }
+            return total;
         }
     }
 }

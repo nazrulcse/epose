@@ -80,10 +80,9 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.supplierList);
-            this.panel1.Location = new System.Drawing.Point(4, 138);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(3, 112);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(967, 382);
+            this.panel1.Size = new System.Drawing.Size(725, 310);
             this.panel1.TabIndex = 4;
             // 
             // supplierList
@@ -104,10 +103,11 @@
             this.supplierList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.supplierList.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.supplierList.Location = new System.Drawing.Point(0, 0);
-            this.supplierList.Margin = new System.Windows.Forms.Padding(4);
             this.supplierList.Name = "supplierList";
+            this.supplierList.ReadOnly = true;
             this.supplierList.RowHeadersWidth = 52;
-            this.supplierList.Size = new System.Drawing.Size(967, 382);
+            this.supplierList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.supplierList.Size = new System.Drawing.Size(725, 310);
             this.supplierList.TabIndex = 7;
             // 
             // EName
@@ -120,6 +120,7 @@
             this.EName.HeaderText = "Id";
             this.EName.MinimumWidth = 10;
             this.EName.Name = "EName";
+            this.EName.ReadOnly = true;
             // 
             // Designation
             // 
@@ -131,6 +132,7 @@
             this.Designation.HeaderText = "Name";
             this.Designation.MinimumWidth = 10;
             this.Designation.Name = "Designation";
+            this.Designation.ReadOnly = true;
             // 
             // Email
             // 
@@ -139,6 +141,7 @@
             this.Email.DefaultCellStyle = dataGridViewCellStyle3;
             this.Email.HeaderText = "Company";
             this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
             // 
             // Phone
             // 
@@ -147,6 +150,7 @@
             this.Phone.DefaultCellStyle = dataGridViewCellStyle4;
             this.Phone.HeaderText = "Adress";
             this.Phone.Name = "Phone";
+            this.Phone.ReadOnly = true;
             // 
             // Joining
             // 
@@ -156,6 +160,7 @@
             this.Joining.FillWeight = 80F;
             this.Joining.HeaderText = "City";
             this.Joining.Name = "Joining";
+            this.Joining.ReadOnly = true;
             // 
             // Country
             // 
@@ -164,6 +169,7 @@
             this.Country.DefaultCellStyle = dataGridViewCellStyle6;
             this.Country.HeaderText = "Email";
             this.Country.Name = "Country";
+            this.Country.ReadOnly = true;
             // 
             // Department
             // 
@@ -172,15 +178,15 @@
             this.Department.DefaultCellStyle = dataGridViewCellStyle7;
             this.Department.HeaderText = "Mobile";
             this.Department.Name = "Department";
+            this.Department.ReadOnly = true;
             // 
             // searchBox
             // 
             this.searchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.searchBox.Font = new System.Drawing.Font("Bookman Old Style", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBox.Location = new System.Drawing.Point(285, 95);
-            this.searchBox.Margin = new System.Windows.Forms.Padding(4);
+            this.searchBox.Location = new System.Drawing.Point(214, 77);
             this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(390, 35);
+            this.searchBox.Size = new System.Drawing.Size(293, 30);
             this.searchBox.TabIndex = 5;
             this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             this.searchBox.Enter += new System.EventHandler(this.searchBox_Enter);
@@ -189,22 +195,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(788, 101);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(591, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 20);
+            this.label1.Size = new System.Drawing.Size(92, 17);
             this.label1.TabIndex = 8;
             this.label1.Text = "Total  Result:";
             // 
             // employeeLabel
             // 
             this.employeeLabel.AutoSize = true;
+            this.employeeLabel.BackColor = System.Drawing.Color.Transparent;
             this.employeeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeLabel.Location = new System.Drawing.Point(905, 101);
-            this.employeeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.employeeLabel.Location = new System.Drawing.Point(679, 82);
             this.employeeLabel.Name = "employeeLabel";
-            this.employeeLabel.Size = new System.Drawing.Size(36, 20);
+            this.employeeLabel.Size = new System.Drawing.Size(32, 17);
             this.employeeLabel.TabIndex = 7;
             this.employeeLabel.Text = "123";
             // 
@@ -213,27 +219,28 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
-            this.label5.Location = new System.Drawing.Point(187, 53);
+            this.label5.Location = new System.Drawing.Point(140, 43);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(573, 36);
+            this.label5.Size = new System.Drawing.Size(430, 29);
             this.label5.TabIndex = 22;
             this.label5.Text = "Search By Name/Email/Mobile";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // supplier_Frame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(975, 524);
+            this.ClientSize = new System.Drawing.Size(731, 426);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.employeeLabel);
             this.Controls.Add(this.searchBox);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Blue;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "supplier_Frame";
             this.Text = "supplier";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));

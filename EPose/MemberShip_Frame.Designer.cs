@@ -114,7 +114,7 @@
             // 
             // memberList
             // 
-            this.memberList.BackgroundColor = System.Drawing.Color.White;
+            this.memberList.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.memberList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.memberList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.memberList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -129,6 +129,8 @@
             this.memberList.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.memberList.Location = new System.Drawing.Point(0, 0);
             this.memberList.Name = "memberList";
+            this.memberList.ReadOnly = true;
+            this.memberList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.memberList.Size = new System.Drawing.Size(615, 268);
             this.memberList.TabIndex = 13;
             this.memberList.SelectionChanged += new System.EventHandler(this.memberList_SelectionChanged);
@@ -141,6 +143,7 @@
             this.Id.DefaultCellStyle = dataGridViewCellStyle1;
             this.Id.HeaderText = "Id";
             this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
             // 
             // Email
             // 
@@ -149,6 +152,7 @@
             this.Email.DefaultCellStyle = dataGridViewCellStyle2;
             this.Email.HeaderText = "Name";
             this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
             // 
             // Department
             // 
@@ -157,6 +161,7 @@
             this.Department.DefaultCellStyle = dataGridViewCellStyle3;
             this.Department.HeaderText = "Email";
             this.Department.Name = "Department";
+            this.Department.ReadOnly = true;
             // 
             // Price
             // 
@@ -165,6 +170,7 @@
             this.Price.DefaultCellStyle = dataGridViewCellStyle4;
             this.Price.HeaderText = "Mobile";
             this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
             // 
             // vat
             // 
@@ -173,6 +179,7 @@
             this.vat.DefaultCellStyle = dataGridViewCellStyle5;
             this.vat.HeaderText = "Adress";
             this.vat.Name = "vat";
+            this.vat.ReadOnly = true;
             // 
             // Point
             // 
@@ -181,6 +188,7 @@
             this.Point.DefaultCellStyle = dataGridViewCellStyle6;
             this.Point.HeaderText = "Point";
             this.Point.Name = "Point";
+            this.Point.ReadOnly = true;
             // 
             // total
             // 
@@ -189,6 +197,7 @@
             this.total.DefaultCellStyle = dataGridViewCellStyle7;
             this.total.HeaderText = "Status";
             this.total.Name = "total";
+            this.total.ReadOnly = true;
             // 
             // MemberShip_Frame
             // 

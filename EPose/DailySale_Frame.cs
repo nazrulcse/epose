@@ -40,12 +40,6 @@ namespace EPose
         {
             clear_amount();
             paymentList.Rows.Clear();
-            /* PaymentModel pay = new PaymentModel();
-             //string date = DateTime.Now.ToString("yyyy-MM-dd");
-             dynamic payments = pay.where(pay, "date = '" + date + "'");
-
-              string date = DateTime.Now.ToString("yyyy-MM-dd");
-             */
             InvoiceModel inv = new InvoiceModel();
             dynamic invoices = inv.where(inv, "till_id = '" + DepartmentSettings.TillId + "' and date ='" + date + "'");
 
@@ -83,7 +77,7 @@ namespace EPose
                             default:
                                 break;
                         }
-                        paymentList.Rows.Add(payment.id, payment.payment_method, payment.invoice_id, payment.amount, payment.transaction_token, payment.date);
+                        paymentList.Rows.Add(payment.id, payment.payment_method, payment.invoice_id, Math.Round(payment.amount,2), payment.transaction_token, payment.date);
                     }
                 }
                 double total = totalPayment + catculateCreditSale(date);
