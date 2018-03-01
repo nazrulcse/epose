@@ -285,11 +285,11 @@ namespace EPose
              DialogResult dialogResult = MessageDialog.Show("Confirm Payment", "Are you want to make the payment By Credit?? ");
              if (dialogResult == DialogResult.Yes)
              {
+                 this.invoice_form.paymentCompleted();
                  InvoiceModel invoice = new InvoiceModel();
-                 var response = invoice.update_attribute(invoice, "is_credit", "1", this.invoice.id);
+                 var response = invoice.update_attributeForSingleRow(invoice, "is_credit", "1", this.invoice.id);
                  if (response != null)
                  {
-                     this.invoice_form.paymentCompleted();
                      DialogResult result = MessageDialog.Show("Your Payment Complete!", "Do you want to close payment form?");
                      if (result == DialogResult.Yes)
                      {
@@ -299,8 +299,9 @@ namespace EPose
                  else
                  {
                      MessageDialog.ShowAlert("Payment Error!", "Unable to create payment, Please contact with admin!");
-                 }
+                 } 
+                }
              }
         }
     }
-}
+
