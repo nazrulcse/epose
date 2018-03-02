@@ -329,26 +329,25 @@
             this.discount,
             this.total});
             this.invoiceItems.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.invoiceItems.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.invoiceItems.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.invoiceItems.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.invoiceItems.Location = new System.Drawing.Point(0, 0);
             this.invoiceItems.Name = "invoiceItems";
-            this.invoiceItems.ReadOnly = true;
             this.invoiceItems.Size = new System.Drawing.Size(713, 577);
             this.invoiceItems.TabIndex = 9;
+            this.invoiceItems.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.invoiceItems_CellBeginEdit);
+            this.invoiceItems.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.invoiceItems_CellEndEdit);
             // 
             // id
             // 
             this.id.HeaderText = "id";
             this.id.Name = "id";
-            this.id.ReadOnly = true;
             this.id.Visible = false;
             // 
             // invoiceItemId
             // 
             this.invoiceItemId.HeaderText = "invoice_item_id";
             this.invoiceItemId.Name = "invoiceItemId";
-            this.invoiceItemId.ReadOnly = true;
             this.invoiceItemId.Visible = false;
             // 
             // EName
@@ -358,7 +357,6 @@
             this.EName.DefaultCellStyle = dataGridViewCellStyle1;
             this.EName.HeaderText = "Sl No";
             this.EName.Name = "EName";
-            this.EName.ReadOnly = true;
             // 
             // Email
             // 
@@ -367,7 +365,6 @@
             this.Email.DefaultCellStyle = dataGridViewCellStyle2;
             this.Email.HeaderText = "Item Name";
             this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
             // 
             // Department
             // 
@@ -376,7 +373,6 @@
             this.Department.DefaultCellStyle = dataGridViewCellStyle3;
             this.Department.HeaderText = "Unite";
             this.Department.Name = "Department";
-            this.Department.ReadOnly = true;
             // 
             // Price
             // 
@@ -385,7 +381,6 @@
             this.Price.DefaultCellStyle = dataGridViewCellStyle4;
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
             // 
             // quantity
             // 
@@ -393,7 +388,6 @@
             this.quantity.DefaultCellStyle = dataGridViewCellStyle5;
             this.quantity.HeaderText = "Qty";
             this.quantity.Name = "quantity";
-            this.quantity.ReadOnly = true;
             // 
             // vat
             // 
@@ -402,7 +396,6 @@
             this.vat.DefaultCellStyle = dataGridViewCellStyle6;
             this.vat.HeaderText = "VAT%";
             this.vat.Name = "vat";
-            this.vat.ReadOnly = true;
             // 
             // discount
             // 
@@ -411,7 +404,6 @@
             this.discount.DefaultCellStyle = dataGridViewCellStyle7;
             this.discount.HeaderText = "Disc(%)";
             this.discount.Name = "discount";
-            this.discount.ReadOnly = true;
             // 
             // total
             // 
@@ -420,7 +412,6 @@
             this.total.DefaultCellStyle = dataGridViewCellStyle8;
             this.total.HeaderText = "Total";
             this.total.Name = "total";
-            this.total.ReadOnly = true;
             // 
             // panel1
             // 

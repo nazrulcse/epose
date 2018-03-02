@@ -242,6 +242,12 @@
     <Compile Include="payment_Frame.Designer.cs">
       <DependentUpon>payment_Frame.cs</DependentUpon>
     </Compile>
+    <Compile Include="Permission_frame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permission_frame.Designer.cs">
+      <DependentUpon>Permission_frame.cs</DependentUpon>
+    </Compile>
     <Compile Include="PosReceipt.cs" />
     <Compile Include="PrinterSelect_Frame.cs">
       <SubType>Form</SubType>
@@ -391,6 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="payment_Frame.resx">
       <DependentUpon>payment_Frame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permission_frame.resx">
+      <DependentUpon>Permission_frame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrinterSelect_Frame.resx">
       <DependentUpon>PrinterSelect_Frame.cs</DependentUpon>

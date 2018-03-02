@@ -17,6 +17,7 @@ namespace EPose
     {
         Product_Frame pro = new Product_Frame();
         InvoiceModel inv;
+        String cell_value = "";
         public Invoice_Frame()
         {
             InitializeComponent();
@@ -589,6 +590,53 @@ namespace EPose
         private void btnCustomer_Click(object sender, EventArgs e)
         {
             new Customer_Frame().Show();
-        }                                                                                                                                                                                                                                                                                                                                                                                                                                          
+        }
+
+        private void invoiceItems_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 5)
+            {
+                new Permission_frame(this).Show();
+                invoiceItems.CurrentCell = invoiceItems.Rows[invoiceItems.CurrentCell.RowIndex].Cells[invoiceItems.CurrentCell.ColumnIndex];
+            }
+            else
+            {
+                invoiceItems.CurrentCell.Value = cell_value;
+            }
+        }
+
+        public void changeCellValue() {
+            int columnIndex = invoiceItems.CurrentCell.ColumnIndex;
+            int rowIndex = invoiceItems.CurrentCell.RowIndex;
+            invoiceItems.Rows[rowIndex - 1].Cells[columnIndex].Value = cell_value;
+        }
+        public void SaveChangePriceToDatabase()
+        {
+            int columnIndex = invoiceItems.CurrentCell.ColumnIndex;
+            int rowIndex = invoiceItems.CurrentCell.RowIndex;
+
+            dynamic cellValueOfId = invoiceItems.Rows[rowIndex - 1].Cells["id"].Value;
+            dynamic price = invoiceItems.Rows[rowIndex - 1].Cells["Price"].Value;
+            string id = Convert.ToString(cellValueOfId);
+            ProductModel product = new ProductModel();
+             product = product.update_attributeForSingleRow(product, "sale_price", price, id);
+             if (product != null)
+             {
+                 MessageBox.Show("Successfully Change");
+             }
+             else {
+                 MessageBox.Show("Price Not Update");
+                 invoiceItems.Rows[rowIndex - 1].Cells[columnIndex].Value = cell_value;
+             }
+            
+        }
+        private void invoiceItems_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            cell_value = invoiceItems.SelectedCells[0].Value.ToString();
+            if (e.ColumnIndex != 5)
+            {
+                MessageBox.Show("This field is not editable");
+            }
+        }                                                                                                                                                                                                                                                                                                                                                                                                                               
     }
 }
